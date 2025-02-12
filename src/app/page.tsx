@@ -10,22 +10,22 @@ import Hero from "./components/Hero";
 import HeroTwo from "./components/HeroTwo";
 import AISelling from "./components/AISelling";
 import Carousel from "./components/Carousel";
+import BuyerFeatures from "./components/BuyerFeatures";
 
 export default function Home() {
   return (
     <div className="bg-white min-h-full flex flex-col items-center justify-center text-center p-6 overflow-hidden">
-      {/* Floating UI Elements */}
       <Navbar />
 
-      {/* Logo and Branding */}
       <Hero />
 
-      {/* QR Code */}
       <QRSection />
 
       <HeroTwo />
       <AISelling />
       <Carousel />
+
+      <BuyerFeatures />
     </div>
   );
 }

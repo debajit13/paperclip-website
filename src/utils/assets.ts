@@ -7,6 +7,14 @@ import paperclipLogoSmall from "../../public/paperclip-logo.png";
 import mobile from "../../public/mobile.png";
 import sellEasy from "../../public/sellEasy.png";
 import carousalImg from "../../public/carousal_img.png";
+import mobileTwo from "../../public/mobileTwo.png";
+import mobileTwoOverlap from "../../public/mobileTwoOverlap.png";
+import arrowTwo from "../../public/arrowTwo.png";
+import sparkleTwo from "../../public/sparkleTwo.png";
+import mobileThree from "../../public/mobileThree.png";
+import cart from "../../public/cart.png";
+import arrowThree from "../../public/arrowThree.png";
+import wow from "../../public/wow.png";
 
 export {
   paperClipLogo,
@@ -18,4 +26,12 @@ export {
   mobile,
   sellEasy,
   carousalImg,
+  mobileTwo,
+  mobileTwoOverlap,
+  arrowTwo,
+  sparkleTwo,
+  mobileThree,
+  cart,
+  arrowThree,
+  wow,
 };
