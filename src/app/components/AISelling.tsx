@@ -14,8 +14,6 @@ export default function AISelling() {
           saved, no hassle, feeling up-to-date and in control).
         </p>
       </div>
-
-      {/* AI Feature Card */}
     </section>
   );
 }
