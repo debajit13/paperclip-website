@@ -56,8 +56,8 @@ export default function Carousel() {
       {/* Left Arrow */}
       <button
         onClick={prevSlide}
-        className={`absolute left-0 top-1/2 mt-6 transform -translate-y-1/2 bg-transparent ${
-          currentSlide === 0 ? "text-gray-500" : "text-red-500"
+        className={`absolute left-0 top-1/2 mt-10 transform -translate-y-1/2 bg-transparent ${
+          currentSlide === 0 ? "text-[#94919129]" : "text-red-500"
         } p-3`}
         disabled={currentSlide === 0}
       >
@@ -67,9 +67,9 @@ export default function Carousel() {
       {/* Right Arrow */}
       <button
         onClick={nextSlide}
-        className={`absolute right-0 top-1/2 mt-6 transform -translate-y-1/2 bg-transparent ${
+        className={`absolute right-0 top-1/2 mt-10 transform -translate-y-1/2 bg-transparent ${
           currentSlide >= totalSlides - slidesPerView
-            ? "text-gray-500"
+            ? "text-[#94919129]"
             : "text-red-500"
         } p-3`}
         disabled={currentSlide >= totalSlides - slidesPerView}
