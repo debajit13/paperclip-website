@@ -3,7 +3,7 @@ import { paperclipLogoSmall } from "@/utils/assets";
 
 export default function Navbar() {
   return (
-    <nav className="flex items-center justify-between px-3 py-2 shadow-md bg-white rounded-[100px] fixed top-10 z-50 mx-auto">
+    <nav className="flex items-center justify-between px-3 py-2 shadow-md bg-white rounded-[100px] sticky top-10 z-50 mx-auto">
       {/* Logo */}
       <div className="flex items-center">
         <Image

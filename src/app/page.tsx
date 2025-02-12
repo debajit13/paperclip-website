@@ -9,6 +9,7 @@ import QRSection from "./components/QRSection";
 import Hero from "./components/Hero";
 import HeroTwo from "./components/HeroTwo";
 import AISelling from "./components/AISelling";
+import Carousel from "./components/Carousel";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
 
       <HeroTwo />
       <AISelling />
+      <Carousel />
     </div>
   );
 }
