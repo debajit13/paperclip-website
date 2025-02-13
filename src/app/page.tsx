@@ -11,6 +11,7 @@ import HeroTwo from "./components/HeroTwo";
 import AISelling from "./components/AISelling";
 import Carousel from "./components/Carousel";
 import BuyerFeatures from "./components/BuyerFeatures";
+import FooterSection from "./components/Footer";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <Carousel />
 
       <BuyerFeatures />
+      <FooterSection />
     </div>
   );
 }

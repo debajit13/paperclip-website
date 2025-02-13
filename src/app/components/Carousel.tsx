@@ -23,7 +23,7 @@ export default function Carousel() {
   };
 
   return (
-    <div className="w-screen max-w-[98%] mx-auto relative">
+    <div className="w-[98%] mx-auto relative">
       {/* Progress Bar */}
       <ProgressBar currentSlide={currentSlide} />
 

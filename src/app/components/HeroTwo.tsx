@@ -4,7 +4,7 @@ import AISelling from "./AISelling";
 
 export default function HeroTwo() {
   return (
-    <section className="text-center relative bg-gradient-to-t from-[#FFF2F3] to-white mt-20 w-screen">
+    <section className="text-center relative bg-gradient-to-b from-white via-[#FFF2F3] to-[#FFD1D6] mt-20 w-screen">
       <div className="flex flex-col items-center pt-10">
         <h1 className="text-2xl md:text-4xl font-semibold text-center font-poppins text-gray-900 leading-[48px] max-w-xl">
           From <span className="font-bold">AI Try-On</span> to{" "}

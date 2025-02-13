@@ -15,6 +15,16 @@ import mobileThree from "../../public/mobileThree.png";
 import cart from "../../public/cart.png";
 import arrowThree from "../../public/arrowThree.png";
 import wow from "../../public/wow.png";
+import frameLeft from "../../public/frameLeft.png";
+import frameRight from "../../public/frameRight.png";
+import referral from "../../public/referral.png";
+import animatedImg1 from "../../public/animatedImg1.png";
+import animatedImg2 from "../../public/animatedImg2.png";
+import animatedImg3 from "../../public/animatedImg3.png";
+import animatedImg4 from "../../public/animatedImg4.png";
+import animatedImg5 from "../../public/animatedImg5.png";
+import animatedImg6 from "../../public/animatedImg6.png";
+import animatedImg7 from "../../public/animatedImg7.png";
 
 export {
   paperClipLogo,
@@ -34,4 +44,14 @@ export {
   cart,
   arrowThree,
   wow,
+  frameLeft,
+  frameRight,
+  referral,
+  animatedImg1,
+  animatedImg2,
+  animatedImg3,
+  animatedImg4,
+  animatedImg5,
+  animatedImg6,
+  animatedImg7,
 };

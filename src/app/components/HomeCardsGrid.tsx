@@ -10,9 +10,9 @@ import { mobileThree, cart, arrowThree, wow } from "@/utils/assets";
 
 const HomeCardsGrid = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 max-w-screen mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 mx-auto w-full">
       {/* Large Card - Full Width */}
-      <div className="relative md:col-span-2 h-[584px] bg-gradient-to-t from-[#FC9CA8] to-[#FFF2F3] p-6 rounded-[32px] shadow-lg flex flex-col md:flex-row items-center text-left">
+      <div className="w-full relative md:col-span-2 h-[584px] bg-gradient-to-t from-[#FC9CA8] to-[#FFF2F3] p-6 rounded-[32px] shadow-lg flex flex-col md:flex-row items-center text-left">
         <div className="h-[80%] w-[40%] flex flex-col justify-between ml-6">
           <div>
             <h3 className="text-red-500 font-[600] text-[20px] leading-[28px] tracking-[2px] font-poppins">
