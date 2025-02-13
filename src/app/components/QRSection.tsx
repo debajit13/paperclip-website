@@ -1,10 +1,17 @@
 import React from "react";
 import Image from "next/image";
-import { qrCode, arrow, downloadNow } from "@/utils/assets";
+import {
+  qrCode,
+  arrow,
+  downloadNow,
+  animatedImg3,
+  animatedImg4,
+  animatedImg5,
+} from "@/utils/assets";
 
 const QRSection = () => {
   return (
-    <div className="relative flex flex-row items-center mt-20 ml-40">
+    <div className="relative flex flex-row items-center justify-center mt-20 ml-40 w-screen">
       <Image src={qrCode} alt="QR Code" width={152} height={152} />
 
       {/* Floating Text with Arrow */}
@@ -18,6 +25,28 @@ const QRSection = () => {
             height={120}
           />
         </div>
+      </div>
+
+      <div className="absolute left-[-80px] top-[120px]">
+        <Image src={animatedImg3} alt="animatedImg-3" width={220} height={94} />
+      </div>
+
+      <div className="absolute top-[130px] right-56">
+        <Image
+          src={animatedImg4}
+          alt="animatedImg-4"
+          width={200}
+          height={240}
+        />
+      </div>
+
+      <div className="absolute right-20">
+        <Image
+          src={animatedImg5}
+          alt="animatedImg-5"
+          width={100}
+          height={240}
+        />
       </div>
     </div>
   );

@@ -1,9 +1,13 @@
 import Image from "next/image";
 import { paperclipLogoSmall } from "@/utils/assets";
 
-export default function Navbar() {
+export default function Navbar({ customStyle }: { customStyle?: string }) {
   return (
-    <nav className="flex items-center justify-between px-3 py-2 shadow-md bg-white rounded-[100px] sticky top-10 z-50 mx-auto">
+    <nav
+      className={`flex items-center justify-between px-3 py-2 shadow-md bg-white rounded-[100px] sticky top-10 z-50 mx-auto ${
+        customStyle ?? ""
+      }`}
+    >
       {/* Logo */}
       <div className="flex items-center">
         <Image

@@ -25,6 +25,10 @@ import animatedImg4 from "../../public/animatedImg4.png";
 import animatedImg5 from "../../public/animatedImg5.png";
 import animatedImg6 from "../../public/animatedImg6.png";
 import animatedImg7 from "../../public/animatedImg7.png";
+import animatedImg8 from "../../public/animatedImg8.png";
+import animatedImg9 from "../../public/animatedImg9.png";
+import animatedImg10 from "../../public/animatedImg10.png";
+import animatedImg11 from "../../public/animatedImg11.png";
 
 export {
   paperClipLogo,
@@ -54,4 +58,8 @@ export {
   animatedImg5,
   animatedImg6,
   animatedImg7,
+  animatedImg8,
+  animatedImg9,
+  animatedImg10,
+  animatedImg11,
 };

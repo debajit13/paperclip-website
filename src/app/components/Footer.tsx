@@ -1,5 +1,12 @@
 import Image from "next/image";
 import {
+  animatedImg10,
+  animatedImg11,
+  animatedImg2,
+  animatedImg3,
+  animatedImg5,
+  animatedImg8,
+  animatedImg9,
   arrow,
   downloadNow,
   frameLeft,
@@ -89,8 +96,8 @@ export default function FooterSection() {
       </div>
 
       {/* Footer Section */}
-      <div className="mb-40">
-        <div className="relative flex flex-row items-center ml-40 transform mb-20">
+      <div className="w-full pb-40 relative">
+        <div className="relative flex flex-row items-center justify-center ml-40 transform mb-20">
           <Image src={qrCode} alt="QR Code" width={224} height={224} />
 
           {/* Floating Text with Arrow */}
@@ -107,10 +114,64 @@ export default function FooterSection() {
           </div>
         </div>
 
-        <Navbar />
+        <Navbar customStyle="w-[50%]" />
         <h4 className="font-poppins text-[12px] leading-[16px] font-[500px] mt-10">
           Crafted with ❤️ from London
         </h4>
+
+        <div className="absolute top-28 left-0">
+          <Image
+            src={animatedImg2}
+            alt="animatedImg-2"
+            width={120}
+            height={387}
+          />
+        </div>
+
+        <div className="absolute bottom-[-30px] left-0">
+          <Image
+            src={animatedImg3}
+            alt="animatedImg-3"
+            width={220}
+            height={387}
+          />
+        </div>
+
+        <div className="absolute bottom-[-30px] left-60">
+          <Image
+            src={animatedImg8}
+            alt="animatedImg-8"
+            width={220}
+            height={387}
+          />
+        </div>
+
+        <div className="absolute bottom-[-30px] right-60">
+          <Image
+            src={animatedImg9}
+            alt="animatedImg-9"
+            width={200}
+            height={387}
+          />
+        </div>
+
+        <div className="absolute bottom-[-30px] right-0">
+          <Image
+            src={animatedImg10}
+            alt="animatedImg-10"
+            width={240}
+            height={387}
+          />
+        </div>
+
+        <div className="absolute right-0 top-48">
+          <Image
+            src={animatedImg11}
+            alt="animatedImg-11"
+            width={100}
+            height={240}
+          />
+        </div>
       </div>
     </section>
   );
