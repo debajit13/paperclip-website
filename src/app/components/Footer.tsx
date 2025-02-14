@@ -114,7 +114,7 @@ export default function FooterSection() {
           </div>
         </div>
 
-        <Navbar customStyle="w-[40%]" />
+        <Navbar customStyle="w-[464px]" />
         <h4 className="font-poppins text-[12px] leading-[16px] font-[500px] mt-10">
           Crafted with ❤️ from London
         </h4>
