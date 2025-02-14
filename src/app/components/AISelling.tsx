@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AISelling() {
   return (
-    <section className="bg-white mt-[-145px] py-10 px-6 text-center rounded-t-[56px] z-50 w-screen">
+    <section className="bg-white mt-[-145px] py-10 px-6 text-center rounded-t-[56px] z-0 w-screen">
       <div className="my-20">
         <h2 className="text-3xl md:text-[68px] font-bold font-poppins text-gray-800 leading-[72px]">
           Sell <span className="text-red-500 italic">Easy</span> — Shop{" "}

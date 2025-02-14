@@ -18,9 +18,7 @@ import {
 
 export default function Home() {
   return (
-    <div className="relative bg-white min-h-full flex flex-col items-center justify-center text-center p-6 overflow-hidden">
-      <Navbar />
-
+    <div className="relative border-2 bg-white min-h-full flex flex-col items-center justify-center text-center p-6 overflow-hidden">
       <Hero />
       <QRSection />
 

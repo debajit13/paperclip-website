@@ -66,7 +66,7 @@ export default function FooterSection() {
       </div>
 
       {/* Referral Section */}
-      <div className="bg-white mt-[-145px] py-10 text-center rounded-t-[56px] z-50 w-screen">
+      <div className="bg-white mt-[-145px] py-10 text-center rounded-t-[56px] z-0 w-screen">
         <div className="my-20 w-[94%] mx-auto">
           <div className="w-full mx-auto relative md:col-span-2 h-[344px] bg-gradient-to-l from-[#FC9CA8] to-[#FFF2F3] p-6 rounded-[32px] shadow-lg flex flex-col md:flex-row md:justify-between items-center text-left">
             <div className="h-[80%] w-[40%] flex flex-col justify-between ml-6">
@@ -114,7 +114,7 @@ export default function FooterSection() {
           </div>
         </div>
 
-        <Navbar customStyle="w-[50%]" />
+        <Navbar customStyle="w-[40%]" />
         <h4 className="font-poppins text-[12px] leading-[16px] font-[500px] mt-10">
           Crafted with ❤️ from London
         </h4>
