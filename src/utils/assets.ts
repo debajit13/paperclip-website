@@ -32,6 +32,12 @@ import animatedImg11 from "../../public/animatedImg11.png";
 import pcardOne from "../../public/pcardone.png";
 import pcardTwo from "../../public/pcardtwo.png";
 import pcardThree from "../../public/pcardthree.png";
+import easyStore from "../../public/easyStore.png";
+import powerfulManagement from "../../public/powerfulManagement.png";
+import professionalTools from "../../public/professionalTools.png";
+import unlimitedGrowth from "../../public/unlimitedGrowth.png";
+import liveDemo from "../../public/liveDemo.png";
+import tick from "../../public/tick.png";
 
 export {
   paperClipLogo,
@@ -68,4 +74,10 @@ export {
   pcardOne,
   pcardTwo,
   pcardThree,
+  easyStore,
+  powerfulManagement,
+  professionalTools,
+  unlimitedGrowth,
+  liveDemo,
+  tick,
 };

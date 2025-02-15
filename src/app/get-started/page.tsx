@@ -1,8 +1,18 @@
 import React from "react";
 import DashboardCard from "../components/DashboardCard";
 import ProfessionalToolCard from "../components/ProfessionalToolCard";
-import { pcardOne, pcardTwo, pcardThree } from "@/utils/assets";
+import {
+  pcardOne,
+  pcardTwo,
+  pcardThree,
+  easyStore,
+  powerfulManagement,
+  professionalTools,
+  unlimitedGrowth,
+} from "@/utils/assets";
 import ProfessionalToolCardTwo from "../components/ProfessionalToolCardTwo";
+import LiveDemoCard from "../components/LiveDemoCard";
+import SellingEffortlesslyCard from "../components/SellingEffortlessCard";
 
 const GetStarted = () => {
   return (
@@ -59,12 +69,7 @@ const GetStarted = () => {
           image={pcardOne}
           imgWidth={328}
           imgHeight={328}
-          title={
-            <span>
-              Completely Free! <br />
-              No Hidden Gotchas
-            </span>
-          }
+          title={<span>Completely Free! No Hidden Gotchas</span>}
           description={
             "No subscriptions, no seller fees. Keep 100% of your sales revenue, our fees come from buyers, so our success depends on your success."
           }
@@ -72,14 +77,9 @@ const GetStarted = () => {
 
         <ProfessionalToolCard
           image={pcardTwo}
-          imgWidth={300}
+          imgWidth={260}
           imgHeight={328}
-          title={
-            <span>
-              World-Class Shipping, <br />
-              Baked In!
-            </span>
-          }
+          title={<span>World-Class Shipping, Baked In!</span>}
           description={
             "Store pickups, effortless returns, end-to-end tracking, and automated buyer updates—no third-party apps needed."
           }
@@ -89,12 +89,7 @@ const GetStarted = () => {
           image={pcardThree}
           imgWidth={240}
           imgHeight={328}
-          title={
-            <span>
-              AI-Powered Listing & <br />
-              Negotiation
-            </span>
-          }
+          title={<span>AI-Powered Listing & Negotiation</span>}
           description={
             "Our AI turns photos into pro listings, writes descriptions, optimises pricing, and handles buyer queries—you focus on growth."
           }
@@ -115,6 +110,81 @@ const GetStarted = () => {
             "We earn from buyers, so we give you AI tools to create beautiful, targeted listings with massive online reach—the same tools used by leading brands."
           }
         />
+      </div>
+
+      <section className="bg-white my-20 py-10 px-6 text-center rounded-t-[56px] z-0 w-screen">
+        <h2 className="mt-4 text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[72px] tracking-[-0.5px] text-center">
+          Digitalise Your Store in Minutes,
+          <br />
+          Instantly Expand Your Reach
+        </h2>
+        <p className="text-gray-600 font-[400px] text-[24px] leading-[36px] mt-10 font-poppins max-w-7xl mx-auto">
+          Everything You Need to Run Your Store, 100% Free
+        </p>
+
+        <button className="mt-10 bg-gradient-to-l from-[#F71D3B] to-[#E14DE3] text-white py-3 px-6 rounded-[100px] font-[600] font-poppins text-[24px] leading-[36px] w-[30%]">
+          Get started in minutes!
+        </button>
+      </section>
+
+      <div className="my-10 px-10 py-10 grid grid-cols-4 gap-10">
+        <ProfessionalToolCard
+          image={easyStore}
+          imgWidth={140}
+          imgHeight={148}
+          title={<span>Easy Store Setup</span>}
+          description={
+            "Connect your POS, upload inventory, and start selling online in minutes"
+          }
+        />
+
+        <ProfessionalToolCard
+          image={powerfulManagement}
+          imgWidth={140}
+          imgHeight={148}
+          title={<span>Powerful Management</span>}
+          description={
+            "Full retail system with integrated POS, inventory control, and customer tracking"
+          }
+        />
+
+        <ProfessionalToolCard
+          image={professionalTools}
+          imgWidth={140}
+          imgHeight={148}
+          title={<span>Professional Tools</span>}
+          description={
+            "AI-powered listings, smart pricing, and automated customer communications"
+          }
+        />
+
+        <ProfessionalToolCard
+          image={unlimitedGrowth}
+          imgWidth={140}
+          imgHeight={148}
+          title={<span>Unlimited Growth</span>}
+          description={
+            "Expand your reach online while managing everything from one free dashboard"
+          }
+        />
+      </div>
+
+      <section className="bg-white my-20 py-10 px-6 text-center rounded-t-[56px]">
+        <h2 className="mt-4 text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[72px] tracking-[-0.5px] text-center">
+          See it in
+          <span className="text-red-500 italic"> Action!</span>
+        </h2>
+        <p className="text-gray-600 font-[400px] text-[24px] leading-[36px] mt-10 font-poppins max-w-7xl mx-auto">
+          Test drive a live account and explore all features instantly. No
+          signup,
+          <br />
+          no commitment—just dive in
+        </p>
+      </section>
+
+      <div className="my-10 px-6 py-10 grid grid-cols-2 grid-cols-[60%_40%] gap-10">
+        <LiveDemoCard />
+        <SellingEffortlesslyCard />
       </div>
     </div>
   );
