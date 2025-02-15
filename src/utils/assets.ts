@@ -29,6 +29,9 @@ import animatedImg8 from "../../public/animatedImg8.png";
 import animatedImg9 from "../../public/animatedImg9.png";
 import animatedImg10 from "../../public/animatedImg10.png";
 import animatedImg11 from "../../public/animatedImg11.png";
+import pcardOne from "../../public/pcardone.png";
+import pcardTwo from "../../public/pcardtwo.png";
+import pcardThree from "../../public/pcardthree.png";
 
 export {
   paperClipLogo,
@@ -62,4 +65,7 @@ export {
   animatedImg9,
   animatedImg10,
   animatedImg11,
+  pcardOne,
+  pcardTwo,
+  pcardThree,
 };
