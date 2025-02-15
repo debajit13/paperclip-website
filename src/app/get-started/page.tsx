@@ -9,10 +9,16 @@ import {
   powerfulManagement,
   professionalTools,
   unlimitedGrowth,
+  downloadNow,
+  arrow,
+  qrCode,
+  referral,
 } from "@/utils/assets";
 import ProfessionalToolCardTwo from "../components/ProfessionalToolCardTwo";
 import LiveDemoCard from "../components/LiveDemoCard";
 import SellingEffortlesslyCard from "../components/SellingEffortlessCard";
+import Navbar from "../components/Navbar";
+import Image from "next/image";
 
 const GetStarted = () => {
   return (
@@ -96,7 +102,7 @@ const GetStarted = () => {
         />
       </div>
 
-      <div className="my-10 px-10 py-10 grid grid-cols-2 gap-10">
+      <div className="px-10 grid grid-cols-2 gap-10">
         <ProfessionalToolCardTwo
           title={"Instant Online Distribution"}
           description={
@@ -112,7 +118,7 @@ const GetStarted = () => {
         />
       </div>
 
-      <section className="bg-white my-20 py-10 px-6 text-center rounded-t-[56px] z-0 w-screen">
+      <section className="bg-white mt-40 mb-32 pt-10 px-6 text-center rounded-t-[56px] z-0 w-screen">
         <h2 className="mt-4 text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[72px] tracking-[-0.5px] text-center">
           Digitalise Your Store in Minutes,
           <br />
@@ -127,7 +133,7 @@ const GetStarted = () => {
         </button>
       </section>
 
-      <div className="my-10 px-10 py-10 grid grid-cols-4 gap-10">
+      <div className="px-10 grid grid-cols-4 gap-10">
         <ProfessionalToolCard
           image={easyStore}
           imgWidth={140}
@@ -169,7 +175,7 @@ const GetStarted = () => {
         />
       </div>
 
-      <section className="bg-white my-20 py-10 px-6 text-center rounded-t-[56px]">
+      <section className="bg-white mt-40 mb-32 pt-10 px-6 text-center rounded-t-[56px]">
         <h2 className="mt-4 text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[72px] tracking-[-0.5px] text-center">
           See it in
           <span className="text-red-500 italic"> Action!</span>
@@ -182,9 +188,46 @@ const GetStarted = () => {
         </p>
       </section>
 
-      <div className="my-10 px-6 py-10 grid grid-cols-2 grid-cols-[60%_40%] gap-10">
+      <div className="px-10 pb-10 grid grid-cols-2 grid-cols-[60%_40%] gap-10">
         <LiveDemoCard />
         <SellingEffortlesslyCard />
+      </div>
+
+      {/* Footer Section */}
+      <div className="bg-white mt-40 pb-10 text-center rounded-t-[56px] z-0 w-screen">
+        <div className="my-20 w-[94%] mx-auto">
+          <div className="w-full mx-auto relative md:col-span-2 h-[344px] bg-gradient-to-l from-[#FC9CA8] to-[#FFF2F3] p-6 rounded-[32px] shadow-lg flex flex-col md:flex-row md:justify-between items-center text-left">
+            <div className="h-[80%] w-[40%] flex flex-col justify-between ml-6">
+              <div>
+                <h4 className="text-2xl font-[600] text-[40px] leading-[56px]  font-poppins">
+                  Earn <span className="text-red-500">1%</span> of your Friends!
+                </h4>
+                <p className="text-gray-600 font-[500] text-[24px] leading-[36px] mt-4 font-poppins">
+                  We’ll pay you 1% of everything your friends make!
+                </p>
+              </div>
+
+              <button className="mt-4 bg-white text-red-500 py-2 px-6 rounded-[100px] font-[600] font-poppins text-[24px] leading-[36px]">
+                Refer your friends today! →
+              </button>
+            </div>
+            <div className={"mr-6"}>
+              <Image
+                src={referral}
+                alt={`img-referral`}
+                height={170}
+                width={418}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full pb-40 relative">
+        <Navbar customStyle="w-[464px]" />
+        <h4 className="font-poppins text-[12px] leading-[16px] font-[500px] mt-10 text-center">
+          Crafted with ❤️ from London
+        </h4>
       </div>
     </div>
   );
