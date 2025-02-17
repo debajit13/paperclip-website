@@ -11,6 +11,8 @@ export const carouselContent = [
     image: cr1,
     imageWidth: 585,
     imageHeight: 540,
+    imageMobileWidth: 200,
+    imageMobileHeight: 400,
     position: {
       right: 0,
       bottom: 0,
@@ -26,6 +28,8 @@ export const carouselContent = [
     image: pcardOne,
     imageWidth: 500,
     imageHeight: 540,
+    imageMobileWidth: 200,
+    imageMobileHeight: 400,
     position: {
       right: 10,
       top: 14,
@@ -41,6 +45,8 @@ export const carouselContent = [
     image: cr3,
     imageWidth: 252,
     imageHeight: 508,
+    imageMobileWidth: 90,
+    imageMobileHeight: 400,
     position: {
       right: 20,
       bottom: 0,
@@ -56,6 +62,8 @@ export const carouselContent = [
     image: cr4,
     imageWidth: 585,
     imageHeight: 540,
+    imageMobileWidth: 200,
+    imageMobileHeight: 400,
     position: {
       right: 10,
       bottom: 0,
@@ -71,6 +79,8 @@ export const carouselContent = [
     image: cr5,
     imageWidth: 300,
     imageHeight: 680,
+    imageMobileWidth: 90,
+    imageMobileHeight: 400,
     position: {
       right: 20,
       bottom: 0,

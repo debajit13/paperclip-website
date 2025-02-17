@@ -4,7 +4,7 @@ import { paperClipLogo, sparkle } from "@/utils/assets";
 
 const Hero = () => {
   return (
-    <div className="mt-52 relative">
+    <div className="mt-40 md:mt-52 relative">
       <div className="flex flex-col items-center space-y-2">
         <Image
           src={paperClipLogo}
@@ -15,9 +15,8 @@ const Hero = () => {
       </div>
 
       {/* Tagline */}
-      <h2 className="mt-4 text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[72px] tracking-[-0.5px] text-center">
-        The easiest way to sell
-        <br />
+      <h2 className="mt-4 text-[46px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[51px] sm:leading-[72px] tracking-[-0.5px] text-center">
+        The easiest way to sell{" "}
         <span>
           your stuff <span className="text-red-500 italic">in seconds</span>
         </span>

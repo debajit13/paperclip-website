@@ -33,7 +33,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar customStyle="w-[464px] absolute top-10 left-1/2 transform -translate-x-1/2" />
+        <Navbar customStyle="w-[361px] md:w-[464px] absolute top-10 left-1/2 transform -translate-x-1/2" />
         {children}
       </body>
     </html>

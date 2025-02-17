@@ -56,10 +56,7 @@ export default function Carousel() {
           }}
         >
           {carouselContent.map((content, index) => (
-            <div
-              key={content.key}
-              className="min-w-full flex flex-row items-center justify-center text-center"
-            >
+            <div key={content.key} className="min-w-full">
               <CarouselCard
                 title={content.title}
                 subTitle={content.subTitle}
@@ -69,6 +66,8 @@ export default function Carousel() {
                 imageWidth={content.imageWidth}
                 imageHeight={content.imageHeight}
                 position={content.position}
+                imageMobileWidth={content.imageMobileWidth}
+                imageMobileHeight={content.imageMobileHeight}
               />
             </div>
           ))}
@@ -83,7 +82,13 @@ export default function Carousel() {
         } p-3`}
         disabled={currentProgress === 0}
       >
-        <FaChevronLeft size={40} />
+        <div className="hidden md:block">
+          <FaChevronLeft size={40} />
+        </div>
+
+        <div className="block md:hidden">
+          <FaChevronLeft size={20} />
+        </div>
       </button>
 
       <button
@@ -95,7 +100,13 @@ export default function Carousel() {
         } p-3`}
         disabled={currentProgress >= totalProgressClicks - 1}
       >
-        <FaChevronRight size={40} />
+        <div className="hidden md:block">
+          <FaChevronRight size={40} />
+        </div>
+
+        <div className="block md:hidden">
+          <FaChevronRight size={20} />
+        </div>
       </button>
     </div>
   );

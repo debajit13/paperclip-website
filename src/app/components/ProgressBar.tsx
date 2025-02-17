@@ -16,7 +16,7 @@ export default function ProgressBar({
   const totalClicks = steps.length * clicksPerCarouselMove; // 20 total clicks
 
   return (
-    <div className="w-full flex space-x-2 mt-6 p-4 bg-white shadow-md rounded-[16px] border-[1px] border-[#F71D3B33]">
+    <div className="w-full flex space-x-2 md:mt-6 p-4 bg-white shadow-md rounded-[16px] border-[1px] border-[#F71D3B33]">
       {steps.map((item, index) => {
         const minClick = index * clicksPerCarouselMove;
         const maxClick = (index + 1) * clicksPerCarouselMove - 1;
@@ -28,8 +28,8 @@ export default function ProgressBar({
           : 0; // Ensure future steps remain empty until reached
 
         return (
-          <div className="flex-1" key={index}>
-            <p className="text-left font-poppins text-[14px] leading-[16px] mb-2">
+          <div className="flex-1 flex flex-col justify-between" key={index}>
+            <p className="text-left font-poppins text-[12px] md:text-[14px] leading-[16px] mb-2">
               {item}
             </p>
             <div className="w-full h-2 bg-[#94919129] rounded-lg overflow-hidden">

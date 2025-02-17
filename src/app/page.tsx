@@ -18,9 +18,18 @@ import {
 
 export default function Home() {
   return (
-    <div className="relative border-2 bg-white min-h-full flex flex-col items-center justify-center text-center p-6 overflow-hidden">
+    <div className="relative bg-white min-h-full flex flex-col items-center justify-center text-center p-6 overflow-hidden">
       <Hero />
-      <QRSection />
+
+      <div className="hidden md:block">
+        <QRSection />
+      </div>
+
+      <div className="block md:hidden">
+        <button className="mt-10 bg-[#F71D3B] w-[100%] text-white py-2 px-6 rounded-[100px] font-[600] text-[16px] leading-[24px]">
+          Download App
+        </button>
+      </div>
 
       <HeroTwo />
       <AISelling />
@@ -29,7 +38,7 @@ export default function Home() {
       <BuyerFeatures />
       <FooterSection />
 
-      <div className="absolute top-0 left-0">
+      <div className="absolute top-0 left-0 hidden md:block">
         <Image
           src={animatedImg1}
           alt="animatedImg-1"
@@ -38,7 +47,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="absolute top-52 left-0">
+      <div className="absolute top-52 left-0 hidden md:block">
         <Image
           src={animatedImg2}
           alt="animatedImg-2"
@@ -47,7 +56,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="absolute top-28 right-0">
+      <div className="absolute top-28 right-0 hidden md:block">
         <Image
           src={animatedImg6}
           alt="animatedImg-6"
@@ -56,7 +65,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="absolute top-0 right-5">
+      <div className="absolute top-0 right-5 hidden md:block">
         <Image
           src={animatedImg7}
           alt="animatedImg-7"
