@@ -5,47 +5,70 @@ import ProgressBar from "./ProgressBar";
 import { carousalImg } from "@/utils/assets";
 import Image from "next/image";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import CarouselCard from "./CarouselCard";
+import { carouselContent } from "@/constants/carouselContent";
 
-const totalSlides = 26;
-const slidesPerView = 1; // We show only 1 image per view
+const clicksPerProgress = 3; // 3 clicks to fill one progress bar step
+const clicksPerCarouselMove = 4; // 4th click moves the carousel
+const totalSteps = carouselContent.length; // Total progress bar steps
+const totalProgressClicks = totalSteps * clicksPerCarouselMove; // 20 total clicks
+const totalCarouselSlides = totalSteps; // 5 slides in the carousel
 
 export default function Carousel() {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentProgress, setCurrentProgress] = useState(0);
+  const [currentCarouselSlide, setCurrentCarouselSlide] = useState(0);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) =>
-      Math.min(prev + slidesPerView, totalSlides - slidesPerView)
-    );
+    if (currentProgress < totalProgressClicks - 1) {
+      setCurrentProgress((prev) => prev + 1);
+    }
+
+    // Move carousel only on the 4th click of each progress step
+    if ((currentProgress + 1) % clicksPerCarouselMove === 0) {
+      setCurrentCarouselSlide((prev) =>
+        Math.min(prev + 1, totalCarouselSlides - 1)
+      );
+    }
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => Math.max(prev - slidesPerView, 0));
+    if (currentProgress > 0) {
+      setCurrentProgress((prev) => prev - 1);
+    }
+
+    // Move carousel back only when reversing a full step
+    if (currentProgress % clicksPerCarouselMove === 0 && currentProgress > 0) {
+      setCurrentCarouselSlide((prev) => Math.max(prev - 1, 0));
+    }
   };
 
   return (
     <div className="w-[98%] mx-auto relative">
       {/* Progress Bar */}
-      <ProgressBar currentSlide={currentSlide} />
+      <ProgressBar currentSlide={currentProgress} />
 
       {/* Carousel Content */}
-      <div className="relative overflow-hidden w-full mt-10">
+      <div className="relative overflow-hidden w-full mt-10 rounded-[32px]">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{
-            transform: `translateX(-${(currentSlide / slidesPerView) * 100}%)`,
+            transform: `translateX(-${currentCarouselSlide * 100}%)`,
           }}
         >
-          {[...Array(totalSlides)].map((_, index) => (
+          {carouselContent.map((content, index) => (
             <div
-              key={index}
-              className="min-w-full flex items-center justify-center rounded-lg "
+              key={content.key}
+              className="min-w-full flex flex-row items-center justify-center text-center"
             >
-              <Image
-                src={carousalImg}
-                alt={`img-${index + 1}`}
-                height={584}
-                width={1920} // Full width image
-                className="w-full object-cover"
+              <CarouselCard
+                title={content.title}
+                subTitle={content.subTitle}
+                description={content.description}
+                btnTitle={content.btnTitle}
+                image={content.image}
+                imageWidth={content.imageWidth}
+                imageHeight={content.imageHeight}
+                position={content.position}
               />
             </div>
           ))}
@@ -53,26 +76,24 @@ export default function Carousel() {
       </div>
 
       {/* Navigation Buttons */}
-      {/* Left Arrow */}
       <button
         onClick={prevSlide}
         className={`absolute left-0 top-1/2 mt-10 transform -translate-y-1/2 bg-transparent ${
-          currentSlide === 0 ? "text-[#94919129]" : "text-red-500"
+          currentProgress === 0 ? "text-[#94919129]" : "text-red-500"
         } p-3`}
-        disabled={currentSlide === 0}
+        disabled={currentProgress === 0}
       >
         <FaChevronLeft size={40} />
       </button>
 
-      {/* Right Arrow */}
       <button
         onClick={nextSlide}
         className={`absolute right-0 top-1/2 mt-10 transform -translate-y-1/2 bg-transparent ${
-          currentSlide >= totalSlides - slidesPerView
+          currentProgress >= totalProgressClicks - 1
             ? "text-[#94919129]"
             : "text-red-500"
         } p-3`}
-        disabled={currentSlide >= totalSlides - slidesPerView}
+        disabled={currentProgress >= totalProgressClicks - 1}
       >
         <FaChevronRight size={40} />
       </button>

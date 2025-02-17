@@ -38,6 +38,10 @@ import professionalTools from "../../public/professionalTools.png";
 import unlimitedGrowth from "../../public/unlimitedGrowth.png";
 import liveDemo from "../../public/liveDemo.png";
 import tick from "../../public/tick.png";
+import cr1 from "../../public/cr1.png";
+import cr3 from "../../public/cr3.png";
+import cr4 from "../../public/cr4.png";
+import cr5 from "../../public/cr5.png";
 
 export {
   paperClipLogo,
@@ -80,4 +84,8 @@ export {
   unlimitedGrowth,
   liveDemo,
   tick,
+  cr1,
+  cr3,
+  cr4,
+  cr5,
 };
