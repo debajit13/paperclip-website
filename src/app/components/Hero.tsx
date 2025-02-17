@@ -26,7 +26,7 @@ const Hero = () => {
         alt="Paperclip Logo"
         width={87.64}
         height={87.64}
-        className="absolute invisible md:visible right-[-50px] top-[-10px]"
+        className="absolute invisible xl:visible right-[-50px] top-[-10px]"
       />
     </div>
   );

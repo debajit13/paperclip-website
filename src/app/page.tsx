@@ -21,7 +21,7 @@ export default function Home() {
     <div className="relative bg-white min-h-full flex flex-col items-center justify-center text-center p-6 overflow-hidden">
       <Hero />
 
-      <div className="hidden md:block">
+      <div className="hidden xl:block">
         <QRSection />
       </div>
 
@@ -38,7 +38,7 @@ export default function Home() {
       <BuyerFeatures />
       <FooterSection />
 
-      <div className="absolute top-0 left-0 hidden md:block">
+      <div className="absolute top-0 left-0 hidden xl:block">
         <Image
           src={animatedImg1}
           alt="animatedImg-1"
@@ -47,7 +47,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="absolute top-52 left-0 hidden md:block">
+      <div className="absolute top-52 left-0 hidden xl:block">
         <Image
           src={animatedImg2}
           alt="animatedImg-2"
@@ -56,7 +56,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="absolute top-28 right-0 hidden md:block">
+      <div className="absolute top-28 right-0 hidden xl:block">
         <Image
           src={animatedImg6}
           alt="animatedImg-6"
@@ -65,7 +65,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="absolute top-0 right-5 hidden md:block">
+      <div className="absolute top-0 right-5 hidden xl:block">
         <Image
           src={animatedImg7}
           alt="animatedImg-7"
