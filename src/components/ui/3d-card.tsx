@@ -30,8 +30,8 @@ export const CardContainer = ({
     if (!containerRef.current) return;
     const { left, top, width, height } =
       containerRef.current.getBoundingClientRect();
-    const x = (e.clientX - left - width / 2) / 25;
-    const y = (e.clientY - top - height / 2) / 25;
+    const x = (e.clientX - left - width / 2) / 50;
+    const y = (e.clientY - top - height / 2) / 50;
     containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
   };
 
@@ -43,6 +43,7 @@ export const CardContainer = ({
   const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!containerRef.current) return;
     setIsMouseEntered(false);
+    containerRef.current.style.transition = "transform 0.5s ease-out";
     containerRef.current.style.transform = `rotateY(0deg) rotateX(0deg)`;
   };
   return (
@@ -62,7 +63,7 @@ export const CardContainer = ({
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
           className={cn(
-            "flex items-center justify-center relative transition-all duration-200 ease-linear",
+            "flex items-center justify-center relative transition-all duration-500 ease-linear",
             className
           )}
           style={{
