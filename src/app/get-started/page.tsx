@@ -76,7 +76,7 @@ const GetStarted = () => {
         </p>
       </section>
 
-      <div className="my-10 px-10 py-10 grid grid-cols-3 gap-10">
+      <div className="my-10 px-10 py-10 grid grid-cols-3 gap-10 max-w-[1500px] mx-auto">
         <ProfessionalToolCard
           image={pcardOne}
           imgWidth={328}
@@ -108,7 +108,7 @@ const GetStarted = () => {
         />
       </div>
 
-      <div className="px-10 grid grid-cols-2 gap-10">
+      <div className="px-10 grid grid-cols-2 gap-10 max-w-[1500px] mx-auto">
         <ProfessionalToolCardTwo
           title={"Instant Online Distribution"}
           description={
@@ -124,7 +124,7 @@ const GetStarted = () => {
         />
       </div>
 
-      <section className="bg-white mt-40 mb-32 pt-10 px-6 text-center rounded-t-[56px] z-0 w-screen">
+      <section className="bg-white mt-40 mb-32 pt-10 px-6 text-center rounded-t-[56px] z-0 w-screen max-w-[1500px] mx-auto">
         <h2 className="mt-4 text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[72px] tracking-[-0.5px] text-center">
           Digitalise Your Store in Minutes,
           <br />
@@ -148,7 +148,7 @@ const GetStarted = () => {
         />
       </div>
 
-      <section className="bg-white mt-40 mb-32 pt-10 px-6 text-center rounded-t-[56px]">
+      <section className="bg-white mt-40 mb-32 pt-10 px-6 text-center rounded-t-[56px] max-w-[1500px] mx-auto">
         <h2 className="mt-4 text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[72px] tracking-[-0.5px] text-center">
           See it in
           <span className="text-red-500 italic"> Action!</span>
@@ -161,13 +161,13 @@ const GetStarted = () => {
         </p>
       </section>
 
-      <div className="px-10 pb-10 grid grid-cols-2 grid-cols-[60%_40%] gap-10">
+      <div className="px-10 pb-10 grid grid-cols-2 grid-cols-[60%_40%] gap-10 max-w-[1500px] mx-auto">
         <LiveDemoCard />
         <SellingEffortlesslyCard />
       </div>
 
       {/* Infinite moving Carousel */}
-      <div className="hidden mt-40 mb-32">
+      <div className="hidden mt-40 mb-32 max-w-[1500px] mx-auto">
         <section className="bg-white pt-10 px-6 text-center rounded-t-[56px] z-0 w-screen">
           <h2 className="text-[20px] font-poppins font-semibold text-red-500 leading-[28px] text-center">
             Paperclip Pro
@@ -191,7 +191,7 @@ const GetStarted = () => {
 
       {/* Footer Section */}
       <div className="bg-white mt-40 pb-10 text-center rounded-t-[56px] z-0 w-screen">
-        <div className="my-20 w-[94%] mx-auto">
+        <div className="my-20 w-[94%] mx-auto max-w-[1500px] mx-auto">
           <div className="w-full mx-auto relative md:col-span-2 h-[344px] bg-gradient-to-l from-[#FC9CA8] to-[#FFF2F3] p-6 rounded-[32px] shadow-lg flex flex-col md:flex-row md:justify-between items-center text-left">
             <div className="h-[80%] w-[40%] flex flex-col justify-between ml-6">
               <div>
