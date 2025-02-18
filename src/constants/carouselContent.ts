@@ -72,7 +72,7 @@ export const carouselContent = [
     imageTabWidth: 150,
     imageTabHeight: 600,
     positionTab: {
-      right: 16,
+      right: 20,
       bottom: 0,
     },
     position: {
@@ -118,7 +118,7 @@ export const carouselContent = [
     imageTabWidth: 150,
     imageTabHeight: 600,
     positionTab: {
-      right: 16,
+      right: 20,
       bottom: 0,
     },
     position: {

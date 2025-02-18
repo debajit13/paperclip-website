@@ -24,6 +24,7 @@ import {
   carouselContentTwo,
   carouselStepsTwo,
 } from "@/constants/carouselContent";
+import ScrollingCarousel from "../components/ScrollingCarousel";
 
 const GetStarted = () => {
   return (
@@ -163,6 +164,29 @@ const GetStarted = () => {
       <div className="px-10 pb-10 grid grid-cols-2 grid-cols-[60%_40%] gap-10">
         <LiveDemoCard />
         <SellingEffortlesslyCard />
+      </div>
+
+      {/* Infinite moving Carousel */}
+      <div className="hidden mt-40 mb-32">
+        <section className="bg-white pt-10 px-6 text-center rounded-t-[56px] z-0 w-screen">
+          <h2 className="text-[20px] font-poppins font-semibold text-red-500 leading-[28px] text-center">
+            Paperclip Pro
+          </h2>
+          <h2 className="mt-4 text-[40px] font-poppins font-semibold text-gray-800 leading-[58px] text-center">
+            Experience Our Free Retail SaaS
+          </h2>
+          <p className="text-gray-600 font-[400px] text-[24px] leading-[36px] mt-4 font-poppins max-w-7xl mx-auto">
+            Join a growing community of shops using AI-driven tools, built-in
+            shipping, and a massive online marketplace to boost sales—at zero
+            cost to you.
+          </p>
+
+          <button className="mt-12 bg-gradient-to-l from-[#F71D3B] to-[#E14DE3] text-white py-3 px-6 rounded-[100px] font-[600] font-poppins text-[24px] leading-[36px] w-[30%]">
+            Signup now for Free!
+          </button>
+        </section>
+
+        <ScrollingCarousel />
       </div>
 
       {/* Footer Section */}
