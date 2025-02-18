@@ -19,6 +19,11 @@ import LiveDemoCard from "../components/LiveDemoCard";
 import SellingEffortlesslyCard from "../components/SellingEffortlessCard";
 import Navbar from "../components/Navbar";
 import Image from "next/image";
+import Carousel from "../components/Carousel";
+import {
+  carouselContentTwo,
+  carouselStepsTwo,
+} from "@/constants/carouselContent";
 
 const GetStarted = () => {
   return (
@@ -133,45 +138,12 @@ const GetStarted = () => {
         </button>
       </section>
 
-      <div className="px-10 grid grid-cols-4 gap-10">
-        <ProfessionalToolCard
-          image={easyStore}
-          imgWidth={140}
-          imgHeight={148}
-          title={<span>Easy Store Setup</span>}
-          description={
-            "Connect your POS, upload inventory, and start selling online in minutes"
-          }
-        />
-
-        <ProfessionalToolCard
-          image={powerfulManagement}
-          imgWidth={140}
-          imgHeight={148}
-          title={<span>Powerful Management</span>}
-          description={
-            "Full retail system with integrated POS, inventory control, and customer tracking"
-          }
-        />
-
-        <ProfessionalToolCard
-          image={professionalTools}
-          imgWidth={140}
-          imgHeight={148}
-          title={<span>Professional Tools</span>}
-          description={
-            "AI-powered listings, smart pricing, and automated customer communications"
-          }
-        />
-
-        <ProfessionalToolCard
-          image={unlimitedGrowth}
-          imgWidth={140}
-          imgHeight={148}
-          title={<span>Unlimited Growth</span>}
-          description={
-            "Expand your reach online while managing everything from one free dashboard"
-          }
+      <div className="px-10">
+        <Carousel
+          carouselContent={carouselContentTwo}
+          clicksPerCarouselMove={4}
+          carouselSteps={carouselStepsTwo}
+          customHeight="h-[450px] md:h-[350px] xl:h-[450px]"
         />
       </div>
 

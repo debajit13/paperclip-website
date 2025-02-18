@@ -2,21 +2,46 @@
 
 import { useState } from "react";
 import ProgressBar from "./ProgressBar";
-import { carousalImg } from "@/utils/assets";
-import Image from "next/image";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import CarouselCard from "./CarouselCard";
-import { carouselContent } from "@/constants/carouselContent";
 
-const clicksPerProgress = 3; // 3 clicks to fill one progress bar step
-const clicksPerCarouselMove = 4; // 4th click moves the carousel
-const totalSteps = carouselContent.length; // Total progress bar steps
-const totalProgressClicks = totalSteps * clicksPerCarouselMove; // 20 total clicks
-const totalCarouselSlides = totalSteps; // 5 slides in the carousel
+export interface carouselContentProps {
+  key?: number;
+  title: string;
+  subTitle: string;
+  description: string;
+  btnTitle: string;
+  image: any;
+  imageWidth?: number;
+  imageHeight?: number;
+  imageMobileWidth?: number;
+  imageMobileHeight?: number;
+  imageTabHeight?: number | undefined;
+  imageTabWidth?: number | undefined;
+  position?: any;
+  positionTab?: any;
+  customHeight?: string;
+}
 
-export default function Carousel() {
+export interface Props {
+  carouselContent: carouselContentProps[];
+  clicksPerCarouselMove: number;
+  carouselSteps: string[];
+  customHeight?: string;
+}
+
+export default function Carousel({
+  carouselContent,
+  clicksPerCarouselMove,
+  carouselSteps,
+  customHeight = "",
+}: Props) {
   const [currentProgress, setCurrentProgress] = useState(0);
   const [currentCarouselSlide, setCurrentCarouselSlide] = useState(0);
+
+  const totalSteps = carouselContent.length; // Total progress bar steps
+  const totalProgressClicks = totalSteps * clicksPerCarouselMove; // 20 total clicks
+  const totalCarouselSlides = totalSteps; // 5 slides in the carousel
 
   const nextSlide = () => {
     if (currentProgress < totalProgressClicks - 1) {
@@ -45,7 +70,7 @@ export default function Carousel() {
   return (
     <div className="w-[98%] mx-auto relative">
       {/* Progress Bar */}
-      <ProgressBar currentSlide={currentProgress} />
+      <ProgressBar currentSlide={currentProgress} steps={carouselSteps} />
 
       {/* Carousel Content */}
       <div className="relative overflow-hidden w-full mt-10 rounded-[32px]">
@@ -68,6 +93,10 @@ export default function Carousel() {
                 position={content.position}
                 imageMobileWidth={content.imageMobileWidth}
                 imageMobileHeight={content.imageMobileHeight}
+                customHeight={customHeight}
+                imageTabWidth={content.imageTabWidth}
+                imageTabHeight={content.imageTabHeight}
+                positionTab={content.positionTab}
               />
             </div>
           ))}

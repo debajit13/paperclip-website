@@ -15,6 +15,7 @@ import {
   animatedImg6,
   animatedImg7,
 } from "@/utils/assets";
+import { carouselContent, carouselSteps } from "@/constants/carouselContent";
 
 export default function Home() {
   return (
@@ -33,7 +34,11 @@ export default function Home() {
 
       <HeroTwo />
       <AISelling />
-      <Carousel />
+      <Carousel
+        carouselContent={carouselContent}
+        clicksPerCarouselMove={4}
+        carouselSteps={carouselSteps}
+      />
 
       <BuyerFeatures />
       <FooterSection />
