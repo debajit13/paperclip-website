@@ -11,10 +11,10 @@ export default function LiveDemoCard() {
 
       {/* Content Section */}
       <div className="mt-10">
-        <h3 className="font-bold font-poppins text-[28px] leading-[40px] text-gray-900">
+        <h3 className="font-bold font-poppins text-[24px] md:text-[28px] leading-[36px] md:leading-[40px] text-gray-900">
           Check Out Our Live Demo
         </h3>
-        <p className="mt-2 text-gray-500 font-poppins text-[20px] leading-[28px]">
+        <p className="mt-2 text-gray-500 font-poppins text-[16px] md:text-[20px] leading-[24px] md:leading-[28px]">
           Access a complete demo account with sample products and features. No
           signup needed.
         </p>
@@ -22,7 +22,7 @@ export default function LiveDemoCard() {
 
       {/* CTA Button */}
       <div className="mt-14">
-        <button className="w-[40%] flex items-center justify-center bg-white text-red-500 font-bold font-poppins text-[24px] leading-[36px] px-4 py-4 rounded-full shadow-md">
+        <button className="xl:w-[40%] flex items-center justify-center bg-white text-red-500 font-bold font-poppins text-[16px] leading-[16px] md:text-[24px] md:leading-[36px] px-4 py-4 rounded-full shadow-md">
           Retail SaaS Demo →
         </button>
       </div>

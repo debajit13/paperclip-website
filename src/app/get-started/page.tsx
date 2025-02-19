@@ -28,30 +28,30 @@ import ScrollingCarousel from "../components/ScrollingCarousel";
 
 const GetStarted = () => {
   return (
-    <div className="mt-40">
+    <div className="mt-28 xl:mt-40 overflow-hidden mx-auto">
       {/* Top Hero Section */}
       <section className="bg-white py-10 px-6 text-center rounded-t-[56px] z-0 w-screen">
-        <h2 className="mt-4 text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[72px] tracking-[-0.5px] text-center">
+        <h2 className="mt-4 text-[46px] md:text-[58px] xl:text-[68px] font-poppins font-semibold text-gray-800 leading-[51px] md:leading-[72px] tracking-[-0.5px] text-center">
           Digitalise Your Inventory
           <br />
           <span>
             Turbocharge <span className="text-red-500 italic">Your Sales!</span>
           </span>
         </h2>
-        <p className="text-gray-600 font-[400px] text-[24px] leading-[36px] mt-10 font-poppins max-w-7xl mx-auto">
+        <p className="text-gray-600 font-[400px] text-[14px] md:text-[24px] leading-[20px] md:leading-[36px] mt-10 font-poppins max-w-7xl mx-auto">
           Run your brick-and-mortar and online shop in perfect harmony, with
           effortless AI-created listings, professional product showcases and
           tools, integrated shipping, and instant marketplace reach, with no
           subscription and zero seller fees.
         </p>
 
-        <button className="mt-10 bg-gradient-to-l from-[#F71D3B] to-[#E14DE3] text-white py-3 px-6 rounded-[100px] font-[600] font-poppins text-[24px] leading-[36px] w-[30%]">
+        <button className="mt-10 bg-gradient-to-l from-[#F71D3B] to-[#E14DE3] text-white py-3 px-6 rounded-[100px] font-[600] font-poppins text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] xl:w-[30%]">
           Signup now for Free!
         </button>
       </section>
 
       {/* 3D Hover Card */}
-      <div className="relative bg-gradient-to-t from-white via-[#FCE7F3] to-transparent flex items-center justify-center">
+      <div className="hidden xl:block relative bg-gradient-to-t from-white via-[#FCE7F3] to-transparent flex items-center justify-center">
         {/* Floating Background Layer */}
         <div className="absolute inset-0 bg-gradient-to-t from-white via-[#FCE7F3] to-transparent opacity-60 pointer-events-none h-[100%] -top-[20%]"></div>
         <div className="relative w-full">
@@ -60,55 +60,129 @@ const GetStarted = () => {
         </div>
       </div>
 
-      {/* Professsional Tools Details & Cards */}
+      {/* Professsional Tools Details */}
       <section className="bg-white mt-20 py-10 px-6 text-center rounded-t-[56px] z-0 w-screen">
-        <h2 className="mt-4 text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[72px] tracking-[-0.5px] text-center">
+        <h2 className="mt-4 text-[46px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[51px] md:leading-[72px] tracking-[-0.5px] text-center">
           Professional tools that
           <br />
           <span>
             drive your<span className="text-red-500 italic">Sales {":)"}</span>
           </span>
         </h2>
-        <p className="text-gray-600 font-[400px] text-[24px] leading-[36px] mt-10 font-poppins max-w-7xl mx-auto">
+        <p className="text-gray-600 font-[400px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] mt-10 font-poppins max-w-7xl mx-auto">
           Powerful AI tools and instant marketplace access designed to help your
           <br />
           business thrive.
         </p>
       </section>
 
-      <div className="my-10 px-10 py-10 grid grid-cols-3 gap-10 max-w-[1500px] mx-auto">
-        <ProfessionalToolCard
-          image={pcardOne}
-          imgWidth={328}
-          imgHeight={328}
-          title={<span>Completely Free! No Hidden Gotchas</span>}
-          description={
-            "No subscriptions, no seller fees. Keep 100% of your sales revenue, our fees come from buyers, so our success depends on your success."
-          }
-        />
+      {/* Professsional Tools Cards */}
+      {/* Desktop */}
+      <div className="hidden xl:block">
+        <div className="my-10 px-10 py-10 grid grid-cols-3 gap-10 max-w-[1500px] mx-auto">
+          <ProfessionalToolCard
+            image={pcardOne}
+            imgWidth={328}
+            imgHeight={328}
+            title={<span>Completely Free! No Hidden Gotchas</span>}
+            description={
+              "No subscriptions, no seller fees. Keep 100% of your sales revenue, our fees come from buyers, so our success depends on your success."
+            }
+          />
 
-        <ProfessionalToolCard
-          image={pcardTwo}
-          imgWidth={260}
-          imgHeight={328}
-          title={<span>World-Class Shipping, Baked In!</span>}
-          description={
-            "Store pickups, effortless returns, end-to-end tracking, and automated buyer updates—no third-party apps needed."
-          }
-        />
+          <ProfessionalToolCard
+            image={pcardTwo}
+            imgWidth={260}
+            imgHeight={328}
+            title={<span>World-Class Shipping, Baked In!</span>}
+            description={
+              "Store pickups, effortless returns, end-to-end tracking, and automated buyer updates—no third-party apps needed."
+            }
+          />
 
-        <ProfessionalToolCard
-          image={pcardThree}
-          imgWidth={240}
-          imgHeight={328}
-          title={<span>AI-Powered Listing & Negotiation</span>}
-          description={
-            "Our AI turns photos into pro listings, writes descriptions, optimises pricing, and handles buyer queries—you focus on growth."
-          }
-        />
+          <ProfessionalToolCard
+            image={pcardThree}
+            imgWidth={240}
+            imgHeight={328}
+            title={<span>AI-Powered Listing & Negotiation</span>}
+            description={
+              "Our AI turns photos into pro listings, writes descriptions, optimises pricing, and handles buyer queries—you focus on growth."
+            }
+          />
+        </div>
       </div>
 
-      <div className="px-10 grid grid-cols-2 gap-10 max-w-[1500px] mx-auto">
+      {/* Tablet */}
+      <div className="hidden md:block xl:hidden">
+        <div className="my-10 px-10 py-10 grid grid-cols-1 gap-10 max-w-[1500px] mx-auto">
+          <ProfessionalToolCard
+            image={pcardOne}
+            imgWidth={300}
+            imgHeight={328}
+            title={<span>Completely Free! No Hidden Gotchas</span>}
+            description={
+              "No subscriptions, no seller fees. Keep 100% of your sales revenue, our fees come from buyers, so our success depends on your success."
+            }
+          />
+
+          <ProfessionalToolCard
+            image={pcardTwo}
+            imgWidth={230}
+            imgHeight={328}
+            title={<span>World-Class Shipping, Baked In!</span>}
+            description={
+              "Store pickups, effortless returns, end-to-end tracking, and automated buyer updates—no third-party apps needed."
+            }
+          />
+
+          <ProfessionalToolCard
+            image={pcardThree}
+            imgWidth={200}
+            imgHeight={328}
+            title={<span>AI-Powered Listing & Negotiation</span>}
+            description={
+              "Our AI turns photos into pro listings, writes descriptions, optimises pricing, and handles buyer queries—you focus on growth."
+            }
+          />
+        </div>
+      </div>
+
+      {/* Mobile */}
+      <div className="block md:hidden">
+        <div className="my-10 px-10 py-10 grid grid-cols-1 gap-10 max-w-[1500px] mx-auto">
+          <ProfessionalToolCard
+            image={pcardOne}
+            imgWidth={200}
+            imgHeight={244}
+            title={<span>Completely Free! No Hidden Gotchas</span>}
+            description={
+              "No subscriptions, no seller fees. Keep 100% of your sales revenue, our fees come from buyers, so our success depends on your success."
+            }
+          />
+
+          <ProfessionalToolCard
+            image={pcardTwo}
+            imgWidth={200}
+            imgHeight={328}
+            title={<span>World-Class Shipping, Baked In!</span>}
+            description={
+              "Store pickups, effortless returns, end-to-end tracking, and automated buyer updates—no third-party apps needed."
+            }
+          />
+
+          <ProfessionalToolCard
+            image={pcardThree}
+            imgWidth={200}
+            imgHeight={328}
+            title={<span>AI-Powered Listing & Negotiation</span>}
+            description={
+              "Our AI turns photos into pro listings, writes descriptions, optimises pricing, and handles buyer queries—you focus on growth."
+            }
+          />
+        </div>
+      </div>
+
+      <div className="px-10 grid grid-cols-1 xl:grid-cols-2 gap-10 max-w-[1500px] mx-auto">
         <ProfessionalToolCardTwo
           title={"Instant Online Distribution"}
           description={
@@ -124,17 +198,18 @@ const GetStarted = () => {
         />
       </div>
 
-      <section className="bg-white mt-40 mb-32 pt-10 px-6 text-center rounded-t-[56px] z-0 w-screen max-w-[1500px] mx-auto">
-        <h2 className="mt-4 text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[72px] tracking-[-0.5px] text-center">
+      {/* Carousel */}
+      <section className="bg-white mt-28 md:mt-40 mb-10 md:mb-12 xl:mb-32 pt-10 px-6 text-center rounded-t-[56px] z-0 w-screen max-w-[1500px] mx-auto">
+        <h2 className="mt-4 text-[36px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[48px] md:leading-[72px] tracking-[-0.5px] text-center">
           Digitalise Your Store in Minutes,
           <br />
           Instantly Expand Your Reach
         </h2>
-        <p className="text-gray-600 font-[400px] text-[24px] leading-[36px] mt-10 font-poppins max-w-7xl mx-auto">
+        <p className="text-gray-600 font-[400px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] mt-10 font-poppins max-w-7xl mx-auto">
           Everything You Need to Run Your Store, 100% Free
         </p>
 
-        <button className="mt-10 bg-gradient-to-l from-[#F71D3B] to-[#E14DE3] text-white py-3 px-6 rounded-[100px] font-[600] font-poppins text-[24px] leading-[36px] w-[30%]">
+        <button className="mt-10 bg-gradient-to-l from-[#F71D3B] to-[#E14DE3] text-white py-3 px-6 rounded-[100px] font-[600] font-poppins text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] xl:w-[30%]">
           Get started in minutes!
         </button>
       </section>
@@ -148,12 +223,13 @@ const GetStarted = () => {
         />
       </div>
 
-      <section className="bg-white mt-40 mb-32 pt-10 px-6 text-center rounded-t-[56px] max-w-[1500px] mx-auto">
-        <h2 className="mt-4 text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[72px] tracking-[-0.5px] text-center">
+      {/* Set in Action */}
+      <section className="bg-white mt-28 md:mt-40 mb-14 md:mb-16 xl:mb-32 pt-10 px-6 text-center rounded-t-[56px] max-w-[1500px] mx-auto">
+        <h2 className="mt-4 text-[40px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[48px] md:leading-[72px] tracking-[-0.5px] text-center">
           See it in
           <span className="text-red-500 italic"> Action!</span>
         </h2>
-        <p className="text-gray-600 font-[400px] text-[24px] leading-[36px] mt-10 font-poppins max-w-7xl mx-auto">
+        <p className="text-gray-600 font-[400px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] mt-10 font-poppins max-w-7xl mx-auto">
           Test drive a live account and explore all features instantly. No
           signup,
           <br />
@@ -161,9 +237,20 @@ const GetStarted = () => {
         </p>
       </section>
 
-      <div className="px-10 pb-10 grid grid-cols-2 grid-cols-[60%_40%] gap-10 max-w-[1500px] mx-auto">
-        <LiveDemoCard />
-        <SellingEffortlesslyCard />
+      {/* Desktop */}
+      <div className="hidden xl:block">
+        <div className="px-10 pb-10 grid grid-cols-2 grid-cols-[60%_40%] gap-10 max-w-[1500px] mx-auto">
+          <LiveDemoCard />
+          <SellingEffortlesslyCard />
+        </div>
+      </div>
+
+      {/* Mobile/Tablet */}
+      <div className="block xl:hidden">
+        <div className="px-10 pb-10 grid grid-cols-1 gap-10 max-w-[1500px] mx-auto">
+          <LiveDemoCard />
+          <SellingEffortlesslyCard />
+        </div>
       </div>
 
       {/* Infinite moving Carousel */}
@@ -190,24 +277,27 @@ const GetStarted = () => {
       </div>
 
       {/* Footer Section */}
-      <div className="bg-white mt-40 pb-10 text-center rounded-t-[56px] z-0 w-screen">
-        <div className="my-20 w-[94%] mx-auto max-w-[1500px] mx-auto">
-          <div className="w-full mx-auto relative md:col-span-2 h-[344px] bg-gradient-to-l from-[#FC9CA8] to-[#FFF2F3] p-6 rounded-[32px] shadow-lg flex flex-col md:flex-row md:justify-between items-center text-left">
-            <div className="h-[80%] w-[40%] flex flex-col justify-between ml-6">
+      {/* Referral Section */}
+      <div className="bg-white mt-10 py-10 text-center rounded-t-[56px] z-0 w-screen">
+        <div className="my-10 md:my-20 w-[94%] mx-auto max-w-[1500px] mx-auto">
+          <div className="w-[90%] md:w-full mx-auto relative md:col-span-2 md:h-[344px] bg-gradient-to-l from-[#FC9CA8] to-[#FFF2F3] p-6 rounded-[32px] shadow-lg flex flex-col md:flex-row md:justify-between items-center text-left">
+            <div className="h-[80%] md:w-[50%] xl:w-[40%] flex flex-col justify-between md:ml-6">
               <div>
-                <h4 className="text-2xl font-[600] text-[40px] leading-[56px]  font-poppins">
+                <h4 className="text-[32px] font-[600] xl:text-[40px] leading-[40px] xl:leading-[56px] font-poppins">
                   Earn <span className="text-red-500">1%</span> of your Friends!
                 </h4>
-                <p className="text-gray-600 font-[500] text-[24px] leading-[36px] mt-4 font-poppins">
+                <p className="text-gray-600 font-[500] text-[16px] leading-[24px] xl:text-[24px] xl:leading-[36px] mt-4 font-poppins">
                   We’ll pay you 1% of everything your friends make!
                 </p>
               </div>
 
-              <button className="mt-4 bg-white text-red-500 py-2 px-6 rounded-[100px] font-[600] font-poppins text-[24px] leading-[36px]">
+              <button className="mt-4 bg-white text-red-500 py-2 px-6 rounded-[100px] font-[600] font-poppins text-[16px] leading-[16px] xl:text-[24px] xl:leading-[36px]">
                 Refer your friends today! →
               </button>
             </div>
-            <div className={"mr-6"}>
+
+            {/* Desktop */}
+            <div className={"hidden xl:block mt-10 xl:mr-6"}>
               <Image
                 src={referral}
                 alt={`img-referral`}
@@ -215,13 +305,24 @@ const GetStarted = () => {
                 width={418}
               />
             </div>
+
+            {/* Mobile/Tab */}
+            <div className={"block xl:hidden mt-10 md:mt-0"}>
+              <Image
+                src={referral}
+                alt={`img-referral`}
+                height={170}
+                width={350}
+              />
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="w-full pb-40 relative">
-        <Navbar customStyle="w-[464px]" />
-        <h4 className="font-poppins text-[12px] leading-[16px] font-[500px] mt-10 text-center">
+      {/* Footer Section */}
+      <div className="w-full pb-20 xl:pb-40 relative">
+        <Navbar customStyle="w-[361px] md:w-[464px]" />
+        <h4 className="font-poppins text-[12px] text-center leading-[16px] font-[500px] mt-10">
           Crafted with ❤️ from London
         </h4>
       </div>

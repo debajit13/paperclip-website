@@ -39,14 +39,14 @@ export default function ProfessionalToolCard({
 
       {/* Title */}
       <h3
-        className={`text-lg font-bold font-poppins text-[28px] leading-[40px] text-gray-900 text-left mt-10 ${customTitle}`}
+        className={`text-[24px] font-bold font-poppins md:text-[28px] leading-[36px] md:leading-[40px] text-gray-900 text-left mt-10 ${customTitle}`}
       >
         {title}
       </h3>
 
       {/* Description */}
       <p
-        className={`text-gray-500 text-[20px] leading-[28px] text-left mt-2 ${customDescription}`}
+        className={`text-gray-500 text-[16px] md:text-[20px] leading-[24px] md:leading-[28px] text-left mt-2 ${customDescription}`}
       >
         {description}
       </p>
