@@ -16,6 +16,7 @@ import {
   referral,
 } from "@/utils/assets";
 import Navbar from "./Navbar";
+import NavbarMobile from "./NavbarMobile";
 
 export default function FooterSection() {
   return (
@@ -128,7 +129,14 @@ export default function FooterSection() {
           </div>
         </div>
 
-        <Navbar customStyle="w-[361px] md:w-[464px]" />
+        <div className="hidden md:block">
+          <Navbar customStyle="w-[361px] md:w-[464px]" />
+        </div>
+
+        <div className="block md:hidden">
+          <NavbarMobile />
+        </div>
+
         <h4 className="font-poppins text-[12px] leading-[16px] font-[500px] mt-10">
           Crafted with ❤️ from London
         </h4>

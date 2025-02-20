@@ -4,7 +4,7 @@ import { paperClipLogo, sparkle } from "@/utils/assets";
 
 const Hero = () => {
   return (
-    <div className="mt-40 md:mt-52 relative">
+    <div className="mt-20 md:mt-52 relative">
       <div className="flex flex-col items-center space-y-2">
         <Image
           src={paperClipLogo}

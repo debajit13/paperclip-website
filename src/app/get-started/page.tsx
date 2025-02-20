@@ -5,14 +5,10 @@ import {
   pcardOne,
   pcardTwo,
   pcardThree,
-  easyStore,
-  powerfulManagement,
-  professionalTools,
-  unlimitedGrowth,
-  downloadNow,
-  arrow,
-  qrCode,
   referral,
+  cr1,
+  instantLeft,
+  instantRight,
 } from "@/utils/assets";
 import ProfessionalToolCardTwo from "../components/ProfessionalToolCardTwo";
 import LiveDemoCard from "../components/LiveDemoCard";
@@ -25,12 +21,14 @@ import {
   carouselStepsTwo,
 } from "@/constants/carouselContent";
 import ScrollingCarousel from "../components/ScrollingCarousel";
+import LaunchPartnerOffer from "../components/LaunchPartnerOfferCard";
+import NavbarMobile from "../components/NavbarMobile";
 
 const GetStarted = () => {
   return (
-    <div className="mt-28 xl:mt-40 overflow-hidden mx-auto">
+    <div className="mt-16 md:mt-44 xl:mt-40 overflow-hidden mx-auto">
       {/* Top Hero Section */}
-      <section className="bg-white py-10 px-6 text-center rounded-t-[56px] z-0 w-screen">
+      <section className="bg-white py-10 px-10 text-center rounded-t-[56px] z-0 w-screen">
         <h2 className="mt-4 text-[46px] md:text-[58px] xl:text-[68px] font-poppins font-semibold text-gray-800 leading-[51px] md:leading-[72px] tracking-[-0.5px] text-center">
           Digitalise Your Inventory
           <br />
@@ -38,7 +36,7 @@ const GetStarted = () => {
             Turbocharge <span className="text-red-500 italic">Your Sales!</span>
           </span>
         </h2>
-        <p className="text-gray-600 font-[400px] text-[14px] md:text-[24px] leading-[20px] md:leading-[36px] mt-10 font-poppins max-w-7xl mx-auto">
+        <p className="text-gray-600 font-[400px] text-[14px] md:text-[24px] leading-[20px] md:leading-[36px] mt-10 font-poppins max-w-7xl mx-auto px-4">
           Run your brick-and-mortar and online shop in perfect harmony, with
           effortless AI-created listings, professional product showcases and
           tools, integrated shipping, and instant marketplace reach, with no
@@ -60,18 +58,22 @@ const GetStarted = () => {
         </div>
       </div>
 
+      {/* Launch Partner Offer Section Mobile */}
+      <div className="block md:hidden mt-20">
+        <LaunchPartnerOffer />
+      </div>
+
       {/* Professsional Tools Details */}
       <section className="bg-white mt-20 py-10 px-6 text-center rounded-t-[56px] z-0 w-screen">
-        <h2 className="mt-4 text-[46px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[51px] md:leading-[72px] tracking-[-0.5px] text-center">
+        <h2 className="mt-4 px-10 text-[46px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[51px] md:leading-[72px] tracking-[-0.5px] text-center">
           Professional tools that
           <br />
           <span>
             drive your<span className="text-red-500 italic">Sales {":)"}</span>
           </span>
         </h2>
-        <p className="text-gray-600 font-[400px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] mt-10 font-poppins max-w-7xl mx-auto">
+        <p className="text-gray-600 font-[400px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] mt-10 font-poppins px-4 mx-auto">
           Powerful AI tools and instant marketplace access designed to help your
-          <br />
           business thrive.
         </p>
       </section>
@@ -114,7 +116,7 @@ const GetStarted = () => {
 
       {/* Tablet */}
       <div className="hidden md:block xl:hidden">
-        <div className="my-10 px-10 py-10 grid grid-cols-1 gap-10 max-w-[1500px] mx-auto">
+        <div className="px-10 py-10 grid grid-cols-1 gap-10 max-w-[1500px] mx-auto">
           <ProfessionalToolCard
             image={pcardOne}
             imgWidth={300}
@@ -149,7 +151,7 @@ const GetStarted = () => {
 
       {/* Mobile */}
       <div className="block md:hidden">
-        <div className="my-10 px-10 py-10 grid grid-cols-1 gap-10 max-w-[1500px] mx-auto">
+        <div className="px-10 py-10 grid grid-cols-1 gap-10 max-w-[1500px] mx-auto">
           <ProfessionalToolCard
             image={pcardOne}
             imgWidth={200}
@@ -183,18 +185,28 @@ const GetStarted = () => {
       </div>
 
       <div className="px-10 grid grid-cols-1 xl:grid-cols-2 gap-10 max-w-[1500px] mx-auto">
-        <ProfessionalToolCardTwo
+        <ProfessionalToolCard
           title={"Instant Online Distribution"}
           description={
             "Your inventory reaches thousands of buyers instantly, with perfect sync between store and online sales—no juggling, no mistakes."
           }
+          image={cr1}
+          imageLeft={instantLeft}
+          imageRight={instantRight}
+          imgWidth={328}
+          imgHeight={328}
         />
 
-        <ProfessionalToolCardTwo
+        <ProfessionalToolCard
           title={"Aligned Incentives, Bigger Profits"}
           description={
             "We earn from buyers, so we give you AI tools to create beautiful, targeted listings with massive online reach—the same tools used by leading brands."
           }
+          image={cr1}
+          imageLeft={instantLeft}
+          imageRight={instantRight}
+          imgWidth={328}
+          imgHeight={328}
         />
       </div>
 
@@ -279,7 +291,7 @@ const GetStarted = () => {
       {/* Footer Section */}
       {/* Referral Section */}
       <div className="bg-white mt-10 py-10 text-center rounded-t-[56px] z-0 w-screen">
-        <div className="my-10 md:my-20 w-[94%] mx-auto max-w-[1500px] mx-auto">
+        <div className="my-10 md:my-20 w-[94%] md:w-[90%] xl:w-[94%] mx-auto max-w-[1500px] mx-auto">
           <div className="w-[90%] md:w-full mx-auto relative md:col-span-2 md:h-[344px] bg-gradient-to-l from-[#FC9CA8] to-[#FFF2F3] p-6 rounded-[32px] shadow-lg flex flex-col md:flex-row md:justify-between items-center text-left">
             <div className="h-[80%] md:w-[50%] xl:w-[40%] flex flex-col justify-between md:ml-6">
               <div>
@@ -321,7 +333,13 @@ const GetStarted = () => {
 
       {/* Footer Section */}
       <div className="w-full pb-20 xl:pb-40 relative">
-        <Navbar customStyle="w-[361px] md:w-[464px]" />
+        <div className="hidden md:block">
+          <Navbar customStyle="w-[361px] md:w-[464px]" />
+        </div>
+
+        <div className="block md:hidden">
+          <NavbarMobile />
+        </div>
         <h4 className="font-poppins text-[12px] text-center leading-[16px] font-[500px] mt-10">
           Crafted with ❤️ from London
         </h4>

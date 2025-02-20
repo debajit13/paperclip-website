@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import NavbarMobile from "./components/NavbarMobile";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,7 +34,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar customStyle="w-[361px] md:w-[464px] absolute top-10 left-1/2 transform -translate-x-1/2" />
+        <div className="hidden md:block">
+          <Navbar customStyle="w-[361px] md:w-[464px] absolute top-10 left-1/2 transform -translate-x-1/2" />
+        </div>
+
+        <div className="block md:hidden">
+          <NavbarMobile />
+        </div>
+
         {children}
       </body>
     </html>

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { pcardOne } from "@/utils/assets";
+import { instantLeft, instantRight, pcardOne } from "@/utils/assets";
 
 export default function ProfessionalToolCard({
   customStyle,
@@ -8,6 +8,8 @@ export default function ProfessionalToolCard({
   customTitle,
   customDescription,
   image,
+  imageLeft,
+  imageRight,
   title,
   description,
 }: {
@@ -17,6 +19,8 @@ export default function ProfessionalToolCard({
   customTitle?: string;
   customDescription?: string;
   image: any;
+  imageLeft?: any;
+  imageRight?: any;
   title: string | React.JSX.Element;
   description: string;
 }) {
@@ -36,6 +40,42 @@ export default function ProfessionalToolCard({
           height={imgHeight}
         />
       </div>
+
+      {/* Desktop */}
+      {imageLeft && (
+        <div className="absolute top-32 left-10 hidden md:block">
+          <Image src={instantLeft} alt="left image" width={130} height={150} />
+        </div>
+      )}
+
+      {imageRight && (
+        <div className="absolute top-32 right-10 hidden md:block">
+          <Image
+            src={instantRight}
+            alt="right image"
+            width={160}
+            height={150}
+          />
+        </div>
+      )}
+
+      {/* Mobile */}
+      {imageLeft && (
+        <div className="absolute top-32 left-0 block md:hidden">
+          <Image src={instantLeft} alt="left image" width={90} height={150} />
+        </div>
+      )}
+
+      {imageRight && (
+        <div className="absolute top-10 right-0  block md:hidden">
+          <Image
+            src={instantRight}
+            alt="right image"
+            width={104}
+            height={150}
+          />
+        </div>
+      )}
 
       {/* Title */}
       <h3

@@ -46,6 +46,12 @@ import cr6 from "../../public/cr6.svg";
 import cr7 from "../../public/cr7.svg";
 import cr8 from "../../public/cr8.svg";
 import cr9 from "../../public/cr9.svg";
+import dashboard from "../../public/dashboard.svg";
+import dashboardTwo from "../../public/dashboardTwo.svg";
+import mobLeft from "../../public/mobLeft.svg";
+import mobRight from "../../public/MobRight.svg";
+import instantLeft from "../../public/instantLeft.svg";
+import instantRight from "../../public/instantRight.svg";
 
 export {
   paperClipLogo,
@@ -96,4 +102,10 @@ export {
   cr7,
   cr8,
   cr9,
+  dashboard,
+  dashboardTwo,
+  mobLeft,
+  mobRight,
+  instantLeft,
+  instantRight,
 };
