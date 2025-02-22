@@ -19,7 +19,7 @@ import { carouselContent, carouselSteps } from "@/constants/carouselContent";
 
 export default function Home() {
   return (
-    <div className="relative bg-white min-h-full flex flex-col items-center justify-center text-center p-6 overflow-hidden">
+    <div className="relative bg-white min-h-full flex flex-col items-center justify-center text-center p-6 overflow-hidden bg-[url('/bg-dots.svg')] bg-center">
       <Hero />
 
       <div className="hidden xl:block">
@@ -56,7 +56,7 @@ export default function Home() {
         <Image
           src={animatedImg2}
           alt="animatedImg-2"
-          width={120}
+          width={100}
           height={387}
         />
       </div>
@@ -65,7 +65,7 @@ export default function Home() {
         <Image
           src={animatedImg6}
           alt="animatedImg-6"
-          width={120}
+          width={100}
           height={387}
         />
       </div>

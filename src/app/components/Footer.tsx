@@ -29,7 +29,7 @@ export default function FooterSection() {
         <h2 className="text-2xl font-[600] text-[32px] leading-[40px] md:text-[40px] md:leading-[56px] mt-6 font-poppins">
           See It on You—Instantly!
         </h2>
-        <p className="text-gray-600 font-[500] text-[16px] leading-[24px] md:text-[24px] lmd:eading-[36px] mt-4 font-poppins">
+        <p className="text-[#949191] font-[500] text-[16px] leading-[24px] md:text-[24px] lmd:eading-[36px] mt-4 font-poppins">
           Skip the guesswork. Our AI Mirror shows how those heels, jeans, or
           jackets look on you, minus the fitting-room queue.
         </p>

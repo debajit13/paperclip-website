@@ -36,7 +36,7 @@ const GetStarted = () => {
             Turbocharge <span className="text-red-500 italic">Your Sales!</span>
           </span>
         </h2>
-        <p className="text-gray-600 font-[400px] text-[14px] md:text-[24px] leading-[20px] md:leading-[36px] mt-10 font-poppins max-w-7xl mx-auto px-4">
+        <p className="text-[#949191] font-[400px] text-[14px] md:text-[24px] leading-[20px] md:leading-[36px] mt-10 font-poppins max-w-7xl mx-auto px-4">
           Run your brick-and-mortar and online shop in perfect harmony, with
           effortless AI-created listings, professional product showcases and
           tools, integrated shipping, and instant marketplace reach, with no
@@ -59,7 +59,7 @@ const GetStarted = () => {
       </div>
 
       {/* Launch Partner Offer Section Mobile */}
-      <div className="block md:hidden mt-20">
+      <div className="block mt-20 grid grid-cols-1 gap-10 mx-auto p-10 max-w-[1500px]">
         <LaunchPartnerOffer />
       </div>
 
@@ -72,7 +72,7 @@ const GetStarted = () => {
             drive your<span className="text-red-500 italic">Sales {":)"}</span>
           </span>
         </h2>
-        <p className="text-gray-600 font-[400px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] mt-10 font-poppins px-4 mx-auto">
+        <p className="text-[#949191] font-[400px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] mt-10 font-poppins px-4 mx-auto">
           Powerful AI tools and instant marketplace access designed to help your
           business thrive.
         </p>
@@ -217,7 +217,7 @@ const GetStarted = () => {
           <br />
           Instantly Expand Your Reach
         </h2>
-        <p className="text-gray-600 font-[400px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] mt-10 font-poppins max-w-7xl mx-auto">
+        <p className="text-[#949191] font-[400px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] mt-10 font-poppins max-w-7xl mx-auto">
           Everything You Need to Run Your Store, 100% Free
         </p>
 
@@ -241,7 +241,7 @@ const GetStarted = () => {
           See it in
           <span className="text-red-500 italic"> Action!</span>
         </h2>
-        <p className="text-gray-600 font-[400px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] mt-10 font-poppins max-w-7xl mx-auto">
+        <p className="text-[#949191] font-[400px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] mt-10 font-poppins max-w-7xl mx-auto">
           Test drive a live account and explore all features instantly. No
           signup,
           <br />
