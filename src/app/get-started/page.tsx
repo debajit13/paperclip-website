@@ -81,7 +81,7 @@ const GetStarted = () => {
       {/* Professsional Tools Cards */}
       {/* Desktop */}
       <div className="hidden xl:block">
-        <div className="my-10 px-10 py-10 grid grid-cols-3 gap-10 max-w-[1500px] mx-auto">
+        <div className="my-10 px-10 pt-10 grid grid-cols-3 gap-10 max-w-[1500px] mx-auto">
           <ProfessionalToolCard
             image={pcardOne}
             imgWidth={328}
@@ -109,6 +109,15 @@ const GetStarted = () => {
             title={<span>AI-Powered Listing & Negotiation</span>}
             description={
               "Our AI turns photos into pro listings, writes descriptions, optimises pricing, and handles buyer queries—you focus on growth."
+            }
+          />
+        </div>
+
+        <div className="px-10 pb-10 grid grid-cols-1 gap-10 max-w-[1500px] mx-auto hidden md:block">
+          <ProfessionalToolCard
+            title={<span>POS</span>}
+            description={
+              "Your inventory reaches thousands of buyers instantly, with perfect sync between store and online sales—no juggling, no mistakes"
             }
           />
         </div>
@@ -144,6 +153,16 @@ const GetStarted = () => {
             title={<span>AI-Powered Listing & Negotiation</span>}
             description={
               "Our AI turns photos into pro listings, writes descriptions, optimises pricing, and handles buyer queries—you focus on growth."
+            }
+          />
+
+          <ProfessionalToolCard
+            image={pcardThree}
+            imgWidth={200}
+            imgHeight={328}
+            title={<span>POS</span>}
+            description={
+              "Your inventory reaches thousands of buyers instantly, with perfect sync between store and online sales—no juggling, no mistakes"
             }
           />
         </div>
@@ -182,6 +201,18 @@ const GetStarted = () => {
             }
           />
         </div>
+      </div>
+
+      <div className="px-10 pb-10 grid grid-cols-1 gap-10 max-w-[1500px] mx-auto block md:hidden">
+        <ProfessionalToolCard
+          image={pcardThree}
+          imgWidth={200}
+          imgHeight={328}
+          title={<span>POS</span>}
+          description={
+            "Your inventory reaches thousands of buyers instantly, with perfect sync between store and online sales—no juggling, no mistakes"
+          }
+        />
       </div>
 
       <div className="px-10 grid grid-cols-1 xl:grid-cols-2 gap-10 max-w-[1500px] mx-auto">

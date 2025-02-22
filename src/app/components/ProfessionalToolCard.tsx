@@ -7,7 +7,7 @@ export default function ProfessionalToolCard({
   imgHeight = 100,
   customTitle,
   customDescription,
-  image,
+  image = null,
   imageLeft,
   imageRight,
   title,
@@ -18,7 +18,7 @@ export default function ProfessionalToolCard({
   imgHeight?: number;
   customTitle?: string;
   customDescription?: string;
-  image: any;
+  image?: any;
   imageLeft?: any;
   imageRight?: any;
   title: string | React.JSX.Element;
@@ -32,14 +32,16 @@ export default function ProfessionalToolCard({
       <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#FFD1D6] to-transparent rounded-t-2xl"></div>
 
       {/* Image */}
-      <div className="flex justify-center mt-6">
-        <Image
-          src={image}
-          alt="Broken Pound"
-          width={imgWidth}
-          height={imgHeight}
-        />
-      </div>
+      {image && (
+        <div className="flex justify-center mt-6">
+          <Image
+            src={image}
+            alt="Broken Pound"
+            width={imgWidth}
+            height={imgHeight}
+          />
+        </div>
+      )}
 
       {/* Desktop */}
       {imageLeft && (
@@ -79,7 +81,9 @@ export default function ProfessionalToolCard({
 
       {/* Title */}
       <h3
-        className={`text-[24px] font-bold font-poppins md:text-[28px] leading-[36px] md:leading-[40px] text-gray-900 text-left mt-10 ${customTitle}`}
+        className={`text-[24px] font-bold font-poppins md:text-[28px] leading-[36px] md:leading-[40px] text-gray-900 text-left ${
+          image ? "mt-10" : "mt-44"
+        } ${customTitle}`}
       >
         {title}
       </h3>
