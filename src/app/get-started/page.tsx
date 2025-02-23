@@ -23,12 +23,13 @@ import {
 import ScrollingCarousel from "../components/ScrollingCarousel";
 import LaunchPartnerOffer from "../components/LaunchPartnerOfferCard";
 import NavbarMobile from "../components/NavbarMobile";
+import { InfiniteMovingCardsDemo } from "../components/InfiniteMovingCards";
 
 const GetStarted = () => {
   return (
     <div className="mt-16 md:mt-44 xl:mt-40 overflow-hidden mx-auto">
       {/* Top Hero Section */}
-      <section className="bg-white py-10 px-10 text-center rounded-t-[56px] z-0 w-screen">
+      <section className="bg-white mb-10 px-10 text-center rounded-t-[56px] z-0 w-screen">
         <h2 className="mt-4 text-[46px] md:text-[58px] xl:text-[68px] font-poppins font-semibold text-gray-800 leading-[51px] md:leading-[72px] tracking-[-0.5px] text-center">
           Digitalise Your Inventory
           <br />
@@ -81,7 +82,7 @@ const GetStarted = () => {
       {/* Professsional Tools Cards */}
       {/* Desktop */}
       <div className="hidden xl:block">
-        <div className="my-10 px-10 pt-10 grid grid-cols-3 gap-10 max-w-[1500px] mx-auto">
+        <div className="px-10 py-10 grid grid-cols-3 gap-10 max-w-[1500px] mx-auto">
           <ProfessionalToolCard
             image={pcardOne}
             imgWidth={328}
@@ -242,17 +243,17 @@ const GetStarted = () => {
       </div>
 
       {/* Carousel */}
-      <section className="bg-white mt-28 md:mt-40 mb-10 md:mb-12 xl:mb-32 pt-10 px-6 text-center rounded-t-[56px] z-0 w-screen max-w-[1500px] mx-auto">
+      <section className="bg-white mt-28 mb-10 md:mb-12 xl:mb-24 pt-10 px-6 text-center rounded-t-[56px] z-0 w-screen max-w-[1500px] mx-auto">
         <h2 className="mt-4 text-[36px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[48px] md:leading-[72px] tracking-[-0.5px] text-center">
           Digitalise Your Store in Minutes,
           <br />
           Instantly Expand Your Reach
         </h2>
-        <p className="text-[#949191] font-[400px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] mt-10 font-poppins max-w-7xl mx-auto">
+        <p className="text-[#949191] font-[400px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] mt-8 font-poppins max-w-7xl mx-auto">
           Everything You Need to Run Your Store, 100% Free
         </p>
 
-        <button className="mt-10 bg-gradient-to-l from-[#F71D3B] to-[#E14DE3] text-white py-3 px-6 rounded-[100px] font-[600] font-poppins text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] xl:w-[30%]">
+        <button className="mt-12 bg-gradient-to-l from-[#F71D3B] to-[#E14DE3] text-white py-3 px-6 rounded-[100px] font-[600] font-poppins text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] xl:w-[30%]">
           Get started in minutes!
         </button>
       </section>
@@ -267,12 +268,12 @@ const GetStarted = () => {
       </div>
 
       {/* Set in Action */}
-      <section className="bg-white mt-28 md:mt-40 mb-14 md:mb-16 xl:mb-32 pt-10 px-6 text-center rounded-t-[56px] max-w-[1500px] mx-auto">
+      <section className="bg-white mt-28 md:mt-30 mb-14 md:mb-16 xl:mb-24 pt-10 px-6 text-center rounded-t-[56px] max-w-[1500px] mx-auto">
         <h2 className="mt-4 text-[40px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[48px] md:leading-[72px] tracking-[-0.5px] text-center">
           See it in
           <span className="text-red-500 italic"> Action!</span>
         </h2>
-        <p className="text-[#949191] font-[400px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] mt-10 font-poppins max-w-7xl mx-auto">
+        <p className="text-[#949191] font-[400px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] mt-8 font-poppins max-w-7xl mx-auto">
           Test drive a live account and explore all features instantly. No
           signup,
           <br />
@@ -297,8 +298,8 @@ const GetStarted = () => {
       </div>
 
       {/* Infinite moving Carousel */}
-      <div className="hidden mt-40 mb-32 max-w-[1500px] mx-auto">
-        <section className="bg-white pt-10 px-6 text-center rounded-t-[56px] z-0 w-screen">
+      <div className="mt-20 max-w-[1500px] mx-auto hidden xl:block">
+        <section className="bg-white mx-auto pt-10 pb-8 px-6 text-center rounded-t-[56px] z-0 w-full">
           <h2 className="text-[20px] font-poppins font-semibold text-red-500 leading-[28px] text-center">
             Paperclip Pro
           </h2>
@@ -316,12 +317,12 @@ const GetStarted = () => {
           </button>
         </section>
 
-        <ScrollingCarousel />
+        <InfiniteMovingCardsDemo />
       </div>
 
       {/* Footer Section */}
       {/* Referral Section */}
-      <div className="bg-white mt-10 py-10 text-center rounded-t-[56px] z-0 w-screen">
+      <div className="bg-white py-10 text-center rounded-t-[56px] z-0 w-screen">
         <div className="my-10 md:my-20 w-[94%] md:w-[90%] xl:w-[94%] mx-auto max-w-[1500px] mx-auto">
           <div className="w-[90%] md:w-full mx-auto relative md:col-span-2 md:h-[344px] bg-gradient-to-l from-[#FC9CA8] to-[#FFF2F3] p-6 rounded-[32px] shadow-lg flex flex-col md:flex-row md:justify-between items-center text-left">
             <div className="h-[80%] md:w-[50%] xl:w-[40%] flex flex-col justify-between md:ml-6">
