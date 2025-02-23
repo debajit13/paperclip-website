@@ -68,7 +68,7 @@ export default function FooterSection() {
 
       {/* Referral Section */}
       <div className="bg-white mt-[-50px] md:mt-[-145px] py-10 text-center rounded-t-[56px] z-0 w-screen">
-        <div className="my-10 md:my-20 w-[94%] mx-auto max-w-[1500px] mx-auto">
+        <div className="my-10 md:my-20 w-[94%] mx-auto max-w-[1280px] mx-auto">
           <div className="w-[90%] md:w-full mx-auto relative md:col-span-2 md:h-[344px] bg-gradient-to-l from-[#FC9CA8] to-[#FFF2F3] p-6 rounded-[32px] shadow-lg flex flex-col md:flex-row md:justify-between items-center text-left">
             <div className="h-[80%] md:w-[50%] xl:w-[40%] flex flex-col justify-between md:ml-6">
               <div>

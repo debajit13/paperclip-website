@@ -3,7 +3,7 @@ import HomeCardsGrid from "./HomeCardsGrid";
 
 export default function BuyerFeatures() {
   return (
-    <section className="mt-20 md:mt-20 py-10 text-center w-[98%] max-w-[1500px] mx-auto">
+    <section className="mt-20 md:mt-20 py-10 text-center w-[98%] max-w-[1280px] mx-auto">
       {/* Hero Section */}
       <h2 className="text-[40px] md:text-[68px] font-bold font-poppins text-gray-800 leading-[48px] md:leading-[72px] w-full">
         Shop <span className="text-red-500 italic">Smarter</span>, Buy{" "}

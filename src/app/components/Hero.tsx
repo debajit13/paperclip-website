@@ -15,7 +15,7 @@ const Hero = () => {
       </div>
 
       {/* Tagline */}
-      <h2 className="mt-4 text-[46px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[51px] sm:leading-[72px] tracking-[-0.5px] text-center max-w-[1500px] mx-auto">
+      <h2 className="mt-4 text-[46px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[51px] sm:leading-[72px] tracking-[-0.5px] text-center max-w-[1280px] mx-auto">
         The easiest way to sell{" "}
         <span>
           your stuff <span className="text-red-500 italic">in seconds</span>

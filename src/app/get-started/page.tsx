@@ -60,7 +60,7 @@ const GetStarted = () => {
       </div>
 
       {/* Launch Partner Offer Section Mobile */}
-      <div className="block mt-20 grid grid-cols-1 gap-10 mx-auto p-10 max-w-[1500px]">
+      <div className="block mt-20 grid grid-cols-1 gap-10 mx-auto px-10 xl:px-0 max-w-[1280px]">
         <LaunchPartnerOffer />
       </div>
 
@@ -82,7 +82,7 @@ const GetStarted = () => {
       {/* Professsional Tools Cards */}
       {/* Desktop */}
       <div className="hidden xl:block">
-        <div className="px-10 py-10 grid grid-cols-3 gap-10 max-w-[1500px] mx-auto">
+        <div className=" py-10 grid grid-cols-3 gap-10 max-w-[1280px] mx-auto">
           <ProfessionalToolCard
             image={pcardOne}
             imgWidth={328}
@@ -114,7 +114,7 @@ const GetStarted = () => {
           />
         </div>
 
-        <div className="px-10 pb-10 grid grid-cols-1 gap-10 max-w-[1500px] mx-auto hidden md:block">
+        <div className="pb-10 grid grid-cols-1 gap-10 max-w-[1280px] mx-auto hidden md:block">
           <ProfessionalToolCard
             title={<span>POS</span>}
             description={
@@ -126,7 +126,7 @@ const GetStarted = () => {
 
       {/* Tablet */}
       <div className="hidden md:block xl:hidden">
-        <div className="px-10 py-10 grid grid-cols-1 gap-10 max-w-[1500px] mx-auto">
+        <div className="px-10 py-10 grid grid-cols-1 gap-10 max-w-[1280px] mx-auto">
           <ProfessionalToolCard
             image={pcardOne}
             imgWidth={300}
@@ -171,7 +171,7 @@ const GetStarted = () => {
 
       {/* Mobile */}
       <div className="block md:hidden">
-        <div className="px-10 py-10 grid grid-cols-1 gap-10 max-w-[1500px] mx-auto">
+        <div className="px-10 py-10 grid grid-cols-1 gap-10 max-w-[1280px] mx-auto">
           <ProfessionalToolCard
             image={pcardOne}
             imgWidth={200}
@@ -204,7 +204,7 @@ const GetStarted = () => {
         </div>
       </div>
 
-      <div className="px-10 pb-10 grid grid-cols-1 gap-10 max-w-[1500px] mx-auto block md:hidden">
+      <div className="px-10 pb-10 grid grid-cols-1 gap-10 max-w-[1280px] mx-auto block md:hidden">
         <ProfessionalToolCard
           image={pcardThree}
           imgWidth={200}
@@ -216,7 +216,7 @@ const GetStarted = () => {
         />
       </div>
 
-      <div className="px-10 grid grid-cols-1 xl:grid-cols-2 gap-10 max-w-[1500px] mx-auto">
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 max-w-[1280px] mx-auto px-10 xl:px-0">
         <ProfessionalToolCard
           title={"Instant Online Distribution"}
           description={
@@ -243,7 +243,7 @@ const GetStarted = () => {
       </div>
 
       {/* Carousel */}
-      <section className="bg-white mt-28 mb-10 md:mb-12 xl:mb-24 pt-10 px-6 text-center rounded-t-[56px] z-0 w-screen max-w-[1500px] mx-auto">
+      <section className="bg-white mt-28 mb-10 md:mb-12 xl:mb-24 pt-10 px-6 text-center rounded-t-[56px] z-0 w-screen max-w-[1280px] mx-auto">
         <h2 className="mt-4 text-[36px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[48px] md:leading-[72px] tracking-[-0.5px] text-center">
           Digitalise Your Store in Minutes,
           <br />
@@ -268,7 +268,7 @@ const GetStarted = () => {
       </div>
 
       {/* Set in Action */}
-      <section className="bg-white mt-28 md:mt-30 mb-14 md:mb-16 xl:mb-24 pt-10 px-6 text-center rounded-t-[56px] max-w-[1500px] mx-auto">
+      <section className="bg-white mt-28 md:mt-30 mb-14 md:mb-16 xl:mb-24 pt-10 px-6 text-center rounded-t-[56px] max-w-[1280px] mx-auto">
         <h2 className="mt-4 text-[40px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[48px] md:leading-[72px] tracking-[-0.5px] text-center">
           See it in
           <span className="text-red-500 italic"> Action!</span>
@@ -283,7 +283,7 @@ const GetStarted = () => {
 
       {/* Desktop */}
       <div className="hidden xl:block">
-        <div className="px-10 pb-10 grid grid-cols-2 grid-cols-[60%_40%] gap-10 max-w-[1500px] mx-auto">
+        <div className="px-10 xl:px-0 pb-10 grid grid-cols-2 grid-cols-[60%_40%] gap-10 max-w-[1280px] mx-auto">
           <LiveDemoCard />
           <SellingEffortlesslyCard />
         </div>
@@ -291,14 +291,14 @@ const GetStarted = () => {
 
       {/* Mobile/Tablet */}
       <div className="block xl:hidden">
-        <div className="px-10 pb-10 grid grid-cols-1 gap-10 max-w-[1500px] mx-auto">
+        <div className="px-10 pb-10 grid grid-cols-1 gap-10 max-w-[1280px] mx-auto">
           <LiveDemoCard />
           <SellingEffortlesslyCard />
         </div>
       </div>
 
       {/* Infinite moving Carousel */}
-      <div className="mt-20 max-w-[1500px] mx-auto hidden xl:block">
+      <div className="mt-20 max-w-[1280px] mx-auto hidden xl:block">
         <section className="bg-white mx-auto pt-10 pb-8 px-6 text-center rounded-t-[56px] z-0 w-full">
           <h2 className="text-[20px] font-poppins font-semibold text-red-500 leading-[28px] text-center">
             Paperclip Pro
@@ -323,7 +323,7 @@ const GetStarted = () => {
       {/* Footer Section */}
       {/* Referral Section */}
       <div className="bg-white py-10 text-center rounded-t-[56px] z-0 w-screen">
-        <div className="my-10 md:my-20 w-[94%] md:w-[90%] xl:w-[94%] mx-auto max-w-[1500px] mx-auto">
+        <div className="my-10 md:my-20 w-[94%] md:w-[90%] xl:w-[94%] mx-auto max-w-[1280px] mx-auto">
           <div className="w-[90%] md:w-full mx-auto relative md:col-span-2 md:h-[344px] bg-gradient-to-l from-[#FC9CA8] to-[#FFF2F3] p-6 rounded-[32px] shadow-lg flex flex-col md:flex-row md:justify-between items-center text-left">
             <div className="h-[80%] md:w-[50%] xl:w-[40%] flex flex-col justify-between md:ml-6">
               <div>
