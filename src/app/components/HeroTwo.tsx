@@ -13,7 +13,7 @@ export default function HeroTwo() {
             listings in seconds, no typing needed
           </span>
         </h1>
-        <div className="relative mt-6 md:mt-32 relative ml-6">
+        <div className="relative mt-10 md:mt-32 relative ml-6">
           <Image
             src={mobile}
             alt="AI-powered phone"

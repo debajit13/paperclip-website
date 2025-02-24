@@ -53,6 +53,9 @@ import mobRight from "../../public/MobRight.svg";
 import instantLeft from "../../public/instantLeft.svg";
 import instantRight from "../../public/instantRight.svg";
 import mvCarousel1 from "../../public/mvCarousel1.png";
+import frame1 from "../../public/Frame1.png";
+import frame2 from "../../public/Frame2.png";
+import frame3 from "../../public/Frame3.png";
 
 export {
   paperClipLogo,
@@ -110,4 +113,7 @@ export {
   instantLeft,
   instantRight,
   mvCarousel1,
+  frame1,
+  frame2,
+  frame3,
 };

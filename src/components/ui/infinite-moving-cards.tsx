@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { mvCarousel1 } from "@/utils/assets";
+import { mvCarousel1, frame1, frame2, frame3 } from "@/utils/assets";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
@@ -25,29 +25,36 @@ export const InfiniteMovingCards = ({
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
 
-  const HeroSection = () => {
+  const FrameOne = () => {
     return (
-      <Image
-        src={mvCarousel1}
-        alt={"Carousel Image"}
-        objectFit="cover"
-        width={960}
-      />
+      <Image src={frame1} alt={"Frame Image 1"} objectFit="cover" width={960} />
+    );
+  };
+
+  const FrameTwo = () => {
+    return (
+      <Image src={frame2} alt={"Frame Image 2"} objectFit="cover" width={960} />
+    );
+  };
+
+  const FrameThree = () => {
+    return (
+      <Image src={frame3} alt={"Frame Image 3"} objectFit="cover" width={960} />
     );
   };
 
   const components = [
     {
       key: 1,
-      Component: HeroSection,
+      Component: FrameOne,
     },
     {
       key: 2,
-      Component: HeroSection,
+      Component: FrameTwo,
     },
     {
       key: 3,
-      Component: HeroSection,
+      Component: FrameThree,
     },
   ];
 

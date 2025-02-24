@@ -29,7 +29,7 @@ const GetStarted = () => {
   return (
     <div className="mt-16 md:mt-44 xl:mt-40 overflow-hidden mx-auto">
       {/* Top Hero Section */}
-      <section className="bg-white mb-10 px-10 text-center rounded-t-[56px] z-0 w-screen">
+      <section className="bg-white mb-28 md:mb-10 px-[16px] text-center rounded-t-[56px] z-0 w-screen">
         <h2 className="mt-4 text-[46px] md:text-[58px] xl:text-[68px] font-poppins font-semibold text-gray-800 leading-[51px] md:leading-[72px] tracking-[-0.5px] text-center">
           Digitalise Your Inventory
           <br />
@@ -40,7 +40,7 @@ const GetStarted = () => {
             </span>
           </span>
         </h2>
-        <p className="text-[#949191] font-[400px] text-[14px] md:text-[24px] leading-[20px] md:leading-[36px] mt-10 font-poppins max-w-7xl mx-auto px-4">
+        <p className="text-[#949191] font-[400px] text-[16px] md:text-[24px] leading-[20px] md:leading-[36px] mt-4 md:mt-10 font-poppins max-w-7xl mx-auto px-4">
           Run your brick-and-mortar and online shop in perfect harmony, with
           effortless AI-created listings, professional product showcases and
           tools, integrated shipping, and instant marketplace reach, with no
@@ -62,15 +62,15 @@ const GetStarted = () => {
         </div>
       </div>
 
-      {/* Launch Partner Offer Section Mobile */}
-      <div className="block mt-20 grid grid-cols-1 gap-10 mx-auto px-10 xl:px-0 max-w-[1280px]">
+      {/* Launch Partner Offer Section */}
+      <div className="block mt-20 grid grid-cols-1 gap-10 mx-auto px-[24px] md:px-10 xl:px-0 max-w-[1280px]">
         <LaunchPartnerOffer />
       </div>
 
       {/* Professsional Tools Details */}
-      <section className="bg-white mt-20 py-10 px-6 text-center rounded-t-[56px] z-0 w-screen">
-        <h2 className="mt-4 px-10 text-[46px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[51px] md:leading-[72px] tracking-[-0.5px] text-center">
-          Professional tools that
+      <section className="bg-white mt-20 py-10 px-[24px] md:px-6 text-center rounded-t-[56px] z-0 w-screen">
+        <h2 className="md:mt-4 text-[46px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[51px] md:leading-[72px] tracking-[-0.5px] text-center">
+          Professional Tools that
           <br />
           <span>
             drive your{" "}
@@ -79,7 +79,7 @@ const GetStarted = () => {
             </span>
           </span>
         </h2>
-        <p className="text-[#949191] font-[400px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] mt-10 font-poppins px-4 mx-auto">
+        <p className="text-[#949191] font-[400px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] mt-4 md:mt-10 font-poppins mx-auto">
           Powerful AI tools and instant marketplace access designed to help your
           business thrive.
         </p>
@@ -177,7 +177,7 @@ const GetStarted = () => {
 
       {/* Mobile */}
       <div className="block md:hidden">
-        <div className="px-10 py-10 grid grid-cols-1 gap-10 max-w-[1280px] mx-auto">
+        <div className="px-[24px] pb-10 grid grid-cols-1 gap-10 max-w-[1280px] mx-auto">
           <ProfessionalToolCard
             image={pcardOne}
             imgWidth={200}
@@ -210,7 +210,7 @@ const GetStarted = () => {
         </div>
       </div>
 
-      <div className="px-10 pb-10 grid grid-cols-1 gap-10 max-w-[1280px] mx-auto block md:hidden">
+      <div className="px-[24px] xl:px-10 pb-10 grid grid-cols-1 gap-10 max-w-[1280px] mx-auto block md:hidden">
         <ProfessionalToolCard
           image={pcardThree}
           imgWidth={200}
@@ -222,7 +222,7 @@ const GetStarted = () => {
         />
       </div>
 
-      <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 max-w-[1280px] mx-auto px-10 xl:px-0">
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 max-w-[1280px] mx-auto px-[24px] md:px-10 xl:px-0">
         <ProfessionalToolCard
           title={"Instant Online Distribution"}
           description={
@@ -249,22 +249,22 @@ const GetStarted = () => {
       </div>
 
       {/* Carousel */}
-      <section className="bg-white mt-28 mb-10 md:mb-12 xl:mb-24 pt-10 px-6 text-center rounded-t-[56px] z-0 w-screen max-w-[1280px] mx-auto">
-        <h2 className="mt-4 text-[36px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[48px] md:leading-[72px] tracking-[-0.5px] text-center">
+      <section className="bg-white mt-20 md:mt-28 mb-16 md:mb-12 xl:mb-24 pt-10 px-[24px] md:px-6 text-center rounded-t-[56px] z-0 w-screen max-w-[1280px] mx-auto">
+        <h2 className="md:mt-4 text-[36px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[48px] md:leading-[72px] tracking-[-0.5px] text-center">
           Digitalise Your Store in Minutes,
           <br />
           Instantly Expand Your Reach
         </h2>
-        <p className="text-[#949191] font-[400px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] mt-8 font-poppins max-w-7xl mx-auto">
+        <p className="text-[#949191] font-[400px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] mt-4 md:mt-8 font-poppins max-w-7xl mx-auto">
           Everything You Need to Run Your Store, 100% Free
         </p>
 
-        <button className="mt-12 bg-gradient-to-l from-[#F71D3B] to-[#E14DE3] text-white py-3 px-6 rounded-[100px] font-[600] font-poppins text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] xl:w-[30%]">
+        <button className="mt-8 md:mt-12 bg-gradient-to-l from-[#F71D3B] to-[#E14DE3] text-white py-3 px-6 rounded-[100px] font-[600] font-poppins text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] xl:w-[30%]">
           Get started in minutes!
         </button>
       </section>
 
-      <div className="px-10">
+      <div className="px-[24px] md:px-10">
         <Carousel
           carouselContent={carouselContentTwo}
           clicksPerCarouselMove={4}
@@ -274,12 +274,12 @@ const GetStarted = () => {
       </div>
 
       {/* Set in Action */}
-      <section className="bg-white mt-28 md:mt-30 mb-14 md:mb-16 xl:mb-24 pt-10 px-6 text-center rounded-t-[56px] max-w-[1280px] mx-auto">
-        <h2 className="mt-4 text-[40px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[48px] md:leading-[72px] tracking-[-0.5px] text-center">
+      <section className="bg-white mt-20 md:mt-28 mb-14 md:mb-16 xl:mb-24 pt-10 px-[24px] md:px-6 text-center rounded-t-[56px] max-w-[1280px] mx-auto">
+        <h2 className="md:mt-4 text-[40px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[48px] md:leading-[72px] tracking-[-0.5px] text-center">
           See it in
           <span className="text-red-500 italic font-playfair"> Action!</span>
         </h2>
-        <p className="text-[#949191] font-[400px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] mt-8 font-poppins max-w-7xl mx-auto">
+        <p className="text-[#949191] font-[400px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] mt-4 md:mt-8 font-poppins max-w-7xl mx-auto">
           Test drive a live account and explore all features instantly. No
           signup,
           <br />
@@ -297,7 +297,7 @@ const GetStarted = () => {
 
       {/* Mobile/Tablet */}
       <div className="block xl:hidden">
-        <div className="px-10 pb-10 grid grid-cols-1 gap-10 max-w-[1280px] mx-auto">
+        <div className="px-[24px] md:px-10 pb-10 grid grid-cols-1 gap-10 max-w-[1280px] mx-auto">
           <LiveDemoCard />
           <SellingEffortlesslyCard />
         </div>
@@ -330,7 +330,7 @@ const GetStarted = () => {
       {/* Referral Section */}
       <div className="bg-white py-10 text-center rounded-t-[56px] z-0 w-screen">
         <div className="my-10 md:my-20 w-[94%] md:w-[90%] xl:w-[94%] mx-auto max-w-[1280px] mx-auto">
-          <div className="w-[90%] md:w-full mx-auto relative md:col-span-2 md:h-[344px] bg-gradient-to-l from-[#FC9CA8] to-[#FFF2F3] p-6 rounded-[32px] shadow-lg flex flex-col md:flex-row md:justify-between items-center text-left">
+          <div className="w-[92%] md:w-[90%] md:w-full mx-auto relative md:col-span-2 md:h-[344px] bg-gradient-to-l from-[#FC9CA8] to-[#FFF2F3] p-6 rounded-[32px] shadow-lg flex flex-col md:flex-row md:justify-between items-center text-left">
             <div className="h-[80%] md:w-[50%] xl:w-[40%] flex flex-col justify-between md:ml-6">
               <div>
                 <h4 className="text-[32px] font-[600] xl:text-[40px] leading-[40px] xl:leading-[56px] font-poppins">
