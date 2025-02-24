@@ -25,7 +25,6 @@ export default function Navbar({ customStyle }: { customStyle?: string }) {
       <div className="flex items-center space-x-1 mx-2 md:mx-6 font-poppins font-bold text-[14px] leading-[16px] text-gray-700">
         <span className="px-2">Seller</span>
         <span className="px-2">Buyer</span>
-        <span className="px-2">FAQ</span>
       </div>
 
       {/* Pro Badge */}
