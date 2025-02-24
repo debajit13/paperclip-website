@@ -43,12 +43,37 @@ export default function FooterSection() {
         <Image
           src={mobile}
           alt="AI Mirror"
-          width={663}
+          width={800}
           height={829}
-          className="mx-auto pl-6"
+          className="mx-auto pl-12"
         />
-        {/* Reflections */}
-        <div className="hidden xl:block absolute top-0 left-60 opacity-60">
+        {/* Center Video (Inside Phone) */}
+        <video
+          src="/videos/video1.mov"
+          autoPlay
+          loop
+          muted
+          className="absolute top-[4.5%] left-1/2 transform -translate-x-1/2 w-[19%] rounded-[32px]"
+        />
+
+        {/* Left Video (Left Placeholder) */}
+        <video
+          src="/videos/video2.mov"
+          autoPlay
+          loop
+          muted
+          className="absolute top-[15%] left-[14%] w-[15%] h-auto opacity-70 rounded-xl -skew-y-12"
+        />
+
+        {/* Right Video (Right Placeholder) */}
+        <video
+          src="/videos/video3.mov"
+          autoPlay
+          loop
+          muted
+          className="absolute top-[15%] right-[14%] w-[15%] h-auto opacity-70 rounded-xl skew-y-12"
+        />
+        {/* <div className="hidden xl:block absolute top-0 left-60 opacity-60">
           <Image
             src={frameLeft}
             alt="Reflection Left"
@@ -63,7 +88,7 @@ export default function FooterSection() {
             width={237}
             height={516}
           />
-        </div>
+        </div> */}
       </div>
 
       {/* Referral Section */}
