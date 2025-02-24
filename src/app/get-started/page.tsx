@@ -34,7 +34,10 @@ const GetStarted = () => {
           Digitalise Your Inventory
           <br />
           <span>
-            Turbocharge <span className="text-red-500 italic">Your Sales!</span>
+            Turbocharge{" "}
+            <span className="text-red-500 italic font-playfair">
+              Your Sales!
+            </span>
           </span>
         </h2>
         <p className="text-[#949191] font-[400px] text-[14px] md:text-[24px] leading-[20px] md:leading-[36px] mt-10 font-poppins max-w-7xl mx-auto px-4">
@@ -70,7 +73,10 @@ const GetStarted = () => {
           Professional tools that
           <br />
           <span>
-            drive your<span className="text-red-500 italic">Sales {":)"}</span>
+            drive your{" "}
+            <span className="text-red-500 italic font-playfair">
+              Sales {":)"}
+            </span>
           </span>
         </h2>
         <p className="text-[#949191] font-[400px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] mt-10 font-poppins px-4 mx-auto">
@@ -271,7 +277,7 @@ const GetStarted = () => {
       <section className="bg-white mt-28 md:mt-30 mb-14 md:mb-16 xl:mb-24 pt-10 px-6 text-center rounded-t-[56px] max-w-[1280px] mx-auto">
         <h2 className="mt-4 text-[40px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[48px] md:leading-[72px] tracking-[-0.5px] text-center">
           See it in
-          <span className="text-red-500 italic"> Action!</span>
+          <span className="text-red-500 italic font-playfair"> Action!</span>
         </h2>
         <p className="text-[#949191] font-[400px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] mt-8 font-poppins max-w-7xl mx-auto">
           Test drive a live account and explore all features instantly. No
