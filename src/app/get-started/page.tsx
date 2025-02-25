@@ -9,6 +9,7 @@ import {
   cr1,
   instantLeft,
   instantRight,
+  navShadow,
 } from "@/utils/assets";
 import ProfessionalToolCardTwo from "../components/ProfessionalToolCardTwo";
 import LiveDemoCard from "../components/LiveDemoCard";
@@ -27,9 +28,9 @@ import { InfiniteMovingCardsDemo } from "../components/InfiniteMovingCards";
 
 const GetStarted = () => {
   return (
-    <div className="mt-16 md:mt-44 xl:mt-40 overflow-hidden mx-auto">
+    <div className="mt-16 md:mt-44 xl:mt-0 overflow-hidden mx-auto">
       {/* Top Hero Section */}
-      <section className="bg-white mb-28 md:mb-10 px-[16px] text-center rounded-t-[56px] z-0 w-screen">
+      <section className="relative bg-white mb-28 md:mb-10 px-[16px] text-center z-0 w-screen xl:h-screen xl:flex xl:flex-col xl:justify-center xl:items-center bg-[url('/bg-dots.svg')] bg-top bg-cover">
         <h2 className="mt-4 text-[46px] md:text-[58px] xl:text-[68px] font-poppins font-semibold text-gray-800 leading-[51px] md:leading-[72px] tracking-[-0.5px] text-center">
           Digitalise Your Inventory
           <br />
@@ -50,6 +51,16 @@ const GetStarted = () => {
         <button className="mt-10 bg-gradient-to-l from-[#F71D3B] to-[#E14DE3] text-white py-3 px-6 rounded-[100px] font-[600] font-poppins text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] xl:w-[30%]">
           Signup now for Free!
         </button>
+
+        {/* Navbar Bg Shadow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 hidden xl:block">
+          <Image
+            src={navShadow}
+            alt="animatedImg-1"
+            width={1280}
+            height={143}
+          />
+        </div>
       </section>
 
       {/* 3D Hover Card */}

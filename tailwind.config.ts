@@ -60,6 +60,9 @@ export default {
         poppins: ["Poppins", "sans-serif"],
         playfair: ["'Playfair Display'", "serif"],
       },
+      boxShadow: {
+        soft: "0px 4px 12.6px 0px rgba(0, 0, 0, 0.07)", // Custom shadow
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

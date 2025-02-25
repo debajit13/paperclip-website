@@ -56,6 +56,7 @@ import mvCarousel1 from "../../public/mvCarousel1.png";
 import frame1 from "../../public/Frame1.png";
 import frame2 from "../../public/Frame2.png";
 import frame3 from "../../public/Frame3.png";
+import navShadow from "../../public/shadow.svg";
 
 export {
   paperClipLogo,
@@ -116,4 +117,5 @@ export {
   frame1,
   frame2,
   frame3,
+  navShadow,
 };

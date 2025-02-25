@@ -1,35 +1,173 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
-import { paperClipLogo, sparkle } from "@/utils/assets";
+import {
+  animatedImg1,
+  animatedImg2,
+  animatedImg3,
+  animatedImg4,
+  animatedImg5,
+  animatedImg6,
+  animatedImg7,
+  paperClipLogo,
+  sparkle,
+  navShadow,
+} from "@/utils/assets";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Hero = () => {
+  const [hideImages, setHideImages] = useState(false);
+  const initialOpacity = 1;
+  const initialScale = 1;
+  const exitOpacity = 0.5;
+  const exitScale = 0.5;
+  const transitionDuration = 0.3;
+
   return (
-    <div className="mt-16 md:mt-52 relative">
-      <div className="flex flex-col items-center space-y-2">
+    <div
+      className="pt-16 md:pt-52 xl:pt-0 relative xl:h-screen xl:w-screen xl:flex xl:flex-row xl:justify-center xl:items-center bg-[url('/bg-dots.svg')] bg-top bg-cover"
+      onClick={() => setHideImages(true)}
+    >
+      <div className="relative">
+        <div className="flex flex-col items-center">
+          <Image
+            src={paperClipLogo}
+            alt="Paperclip Logo"
+            width={188.06}
+            height={36.06}
+          />
+        </div>
+
+        {/* Tagline */}
+        <h2 className="mt-4 text-[46px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[51px] sm:leading-[72px] tracking-[-0.5px] text-center max-w-[1280px] mx-auto">
+          The easiest way to sell
+          <br />
+          <span>
+            your stuff{" "}
+            <span className="text-red-500 italic font-playfair">
+              in seconds
+            </span>
+          </span>
+        </h2>
         <Image
-          src={paperClipLogo}
+          src={sparkle}
           alt="Paperclip Logo"
-          width={188.06}
-          height={36.06}
+          width={87.64}
+          height={87.64}
+          className="absolute invisible xl:visible right-[-50px] top-0"
         />
       </div>
 
-      {/* Tagline */}
-      <h2 className="mt-4 text-[46px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[51px] sm:leading-[72px] tracking-[-0.5px] text-center max-w-[1280px] mx-auto">
-        The easiest way to sell
-        <br />
-        <span>
-          your stuff{" "}
-          <span className="text-red-500 italic font-playfair">in seconds</span>
-        </span>
-      </h2>
-      <Image
-        src={sparkle}
-        alt="Paperclip Logo"
-        width={87.64}
-        height={87.64}
-        className="absolute invisible xl:visible right-[-50px] top-[-10px]"
-      />
+      {/* Navbar Bg Shadow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 hidden xl:block">
+        <Image src={navShadow} alt="animatedImg-1" width={1280} height={143} />
+      </div>
+
+      {/* Side Animated Assets */}
+      <AnimatePresence>
+        {!hideImages && (
+          <>
+            <motion.div
+              className="absolute top-0 left-0 hidden xl:block"
+              initial={{ opacity: initialOpacity, scale: initialScale }}
+              exit={{ opacity: exitOpacity, scale: exitScale }}
+              transition={{ duration: transitionDuration }}
+            >
+              <Image
+                src={animatedImg1}
+                alt="animatedImg-1"
+                width={180}
+                height={250}
+              />
+            </motion.div>
+
+            <motion.div
+              className="absolute my-auto left-0 hidden xl:block"
+              initial={{ opacity: initialOpacity, scale: initialScale }}
+              exit={{ opacity: exitOpacity, scale: exitScale }}
+              transition={{ duration: transitionDuration }}
+            >
+              <Image
+                src={animatedImg2}
+                alt="animatedImg-2"
+                width={130}
+                height={387}
+              />
+            </motion.div>
+
+            <motion.div
+              className="absolute bottom-0 left-0 hidden xl:block"
+              initial={{ opacity: initialOpacity, scale: initialScale }}
+              exit={{ opacity: exitOpacity, scale: exitScale }}
+              transition={{ duration: transitionDuration }}
+            >
+              <Image
+                src={animatedImg3}
+                alt="animatedImg-3"
+                width={220}
+                height={94}
+              />
+            </motion.div>
+
+            <motion.div
+              className="absolute bottom-0 right-20 hidden xl:block"
+              initial={{ opacity: initialOpacity, scale: initialScale }}
+              exit={{ opacity: exitOpacity, scale: exitScale }}
+              transition={{ duration: transitionDuration }}
+            >
+              <Image
+                src={animatedImg4}
+                alt="animatedImg-4"
+                width={200}
+                height={240}
+              />
+            </motion.div>
+
+            <motion.div
+              className="absolute bottom-0 right-0 hidden xl:block"
+              initial={{ opacity: initialOpacity, scale: initialScale }}
+              exit={{ opacity: exitOpacity, scale: exitScale }}
+              transition={{ duration: transitionDuration }}
+            >
+              <Image
+                src={animatedImg5}
+                alt="animatedImg-5"
+                width={100}
+                height={240}
+              />
+            </motion.div>
+
+            <motion.div
+              className="absolute my-auto right-0 hidden xl:block"
+              initial={{ opacity: initialOpacity, scale: initialScale }}
+              exit={{ opacity: exitOpacity, scale: exitScale }}
+              transition={{ duration: transitionDuration }}
+            >
+              <Image
+                src={animatedImg6}
+                alt="animatedImg-6"
+                width={100}
+                height={387}
+              />
+            </motion.div>
+
+            <motion.div
+              className="absolute top-0 right-0 hidden xl:block"
+              initial={{ opacity: initialOpacity, scale: initialScale }}
+              exit={{ opacity: exitOpacity, scale: exitScale }}
+              transition={{ duration: transitionDuration }}
+            >
+              <Image
+                src={animatedImg7}
+                alt="animatedImg-7"
+                width={200}
+                height={250}
+              />
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

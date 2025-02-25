@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Navbar({ customStyle }: { customStyle?: string }) {
   return (
     <nav
-      className={`flex items-center justify-between px-3 py-2 shadow-md bg-white rounded-[100px] z-50 mx-auto ${
+      className={`flex items-center justify-between px-3 py-2 shadow-soft bg-white rounded-[100px] z-50 mx-auto ${
         customStyle ?? ""
       }`}
     >
