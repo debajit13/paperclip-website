@@ -57,6 +57,7 @@ import frame1 from "../../public/Frame1.png";
 import frame2 from "../../public/Frame2.png";
 import frame3 from "../../public/Frame3.png";
 import navShadow from "../../public/shadow.svg";
+import applepay from "../../public/applepay.svg";
 
 export {
   paperClipLogo,
@@ -118,4 +119,5 @@ export {
   frame2,
   frame3,
   navShadow,
+  applepay,
 };

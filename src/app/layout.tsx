@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import NavbarMobile from "./components/NavbarMobile";
+import PaperclipCursor from "./components/PaperclipCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <PaperclipCursor />
         <div className="hidden md:block">
           <Navbar customStyle="w-[361px] md:w-[464px] absolute top-10 left-1/2 transform -translate-x-1/2" />
         </div>

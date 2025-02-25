@@ -13,6 +13,7 @@ import {
   paperClipLogo,
   sparkle,
   navShadow,
+  applepay,
 } from "@/utils/assets";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -117,14 +118,14 @@ const Hero = () => {
             </motion.div>
 
             <motion.div
-              className="absolute bottom-0 right-20 hidden xl:block"
+              className="absolute bottom-[-20px] right-20 hidden xl:block"
               initial={{ opacity: initialOpacity, scale: initialScale }}
               animate={{ opacity: opacity, scale: scale }}
               exit={{ opacity: exitOpacity, scale: exitScale }}
               transition={{ duration: transitionDuration, ease: easeValue }}
             >
               <Image
-                src={animatedImg4}
+                src={applepay}
                 alt="animatedImg-4"
                 width={200}
                 height={240}
