@@ -35,7 +35,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <PaperclipCursor />
+        {/* <PaperclipCursor /> */}
         <div className="hidden md:block">
           <Navbar customStyle="w-[361px] md:w-[464px] absolute top-10 left-1/2 transform -translate-x-1/2" />
         </div>
