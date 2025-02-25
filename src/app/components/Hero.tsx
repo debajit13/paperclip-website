@@ -18,11 +18,14 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const Hero = () => {
   const [hideImages, setHideImages] = useState(false);
-  const initialOpacity = 1;
-  const initialScale = 1;
-  const exitOpacity = 0.5;
+  const initialOpacity = 0;
+  const initialScale = 0.5;
+  const exitOpacity = 0;
   const exitScale = 0.5;
+  const opacity = 1;
+  const scale = 1;
   const transitionDuration = 0.3;
+  const easeValue = "easeInOut";
 
   return (
     <div
@@ -71,8 +74,9 @@ const Hero = () => {
             <motion.div
               className="absolute top-0 left-0 hidden xl:block"
               initial={{ opacity: initialOpacity, scale: initialScale }}
+              animate={{ opacity: opacity, scale: scale }}
               exit={{ opacity: exitOpacity, scale: exitScale }}
-              transition={{ duration: transitionDuration }}
+              transition={{ duration: transitionDuration, ease: easeValue }}
             >
               <Image
                 src={animatedImg1}
@@ -85,8 +89,9 @@ const Hero = () => {
             <motion.div
               className="absolute my-auto left-0 hidden xl:block"
               initial={{ opacity: initialOpacity, scale: initialScale }}
+              animate={{ opacity: opacity, scale: scale }}
               exit={{ opacity: exitOpacity, scale: exitScale }}
-              transition={{ duration: transitionDuration }}
+              transition={{ duration: transitionDuration, ease: easeValue }}
             >
               <Image
                 src={animatedImg2}
@@ -99,8 +104,9 @@ const Hero = () => {
             <motion.div
               className="absolute bottom-0 left-0 hidden xl:block"
               initial={{ opacity: initialOpacity, scale: initialScale }}
+              animate={{ opacity: opacity, scale: scale }}
               exit={{ opacity: exitOpacity, scale: exitScale }}
-              transition={{ duration: transitionDuration }}
+              transition={{ duration: transitionDuration, ease: easeValue }}
             >
               <Image
                 src={animatedImg3}
@@ -113,8 +119,9 @@ const Hero = () => {
             <motion.div
               className="absolute bottom-0 right-20 hidden xl:block"
               initial={{ opacity: initialOpacity, scale: initialScale }}
+              animate={{ opacity: opacity, scale: scale }}
               exit={{ opacity: exitOpacity, scale: exitScale }}
-              transition={{ duration: transitionDuration }}
+              transition={{ duration: transitionDuration, ease: easeValue }}
             >
               <Image
                 src={animatedImg4}
@@ -127,8 +134,9 @@ const Hero = () => {
             <motion.div
               className="absolute bottom-0 right-0 hidden xl:block"
               initial={{ opacity: initialOpacity, scale: initialScale }}
+              animate={{ opacity: opacity, scale: scale }}
               exit={{ opacity: exitOpacity, scale: exitScale }}
-              transition={{ duration: transitionDuration }}
+              transition={{ duration: transitionDuration, ease: easeValue }}
             >
               <Image
                 src={animatedImg5}
@@ -141,8 +149,9 @@ const Hero = () => {
             <motion.div
               className="absolute my-auto right-0 hidden xl:block"
               initial={{ opacity: initialOpacity, scale: initialScale }}
+              animate={{ opacity: opacity, scale: scale }}
               exit={{ opacity: exitOpacity, scale: exitScale }}
-              transition={{ duration: transitionDuration }}
+              transition={{ duration: transitionDuration, ease: easeValue }}
             >
               <Image
                 src={animatedImg6}
@@ -155,8 +164,9 @@ const Hero = () => {
             <motion.div
               className="absolute top-0 right-0 hidden xl:block"
               initial={{ opacity: initialOpacity, scale: initialScale }}
+              animate={{ opacity: opacity, scale: scale }}
               exit={{ opacity: exitOpacity, scale: exitScale }}
-              transition={{ duration: transitionDuration }}
+              transition={{ duration: transitionDuration, ease: easeValue }}
             >
               <Image
                 src={animatedImg7}
