@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import {
   animatedImg1,
@@ -25,13 +25,46 @@ const Hero = () => {
   const exitScale = 0.5;
   const opacity = 1;
   const scale = 1;
-  const transitionDuration = 0.3;
+  const transitionDuration = 0.5;
   const easeValue = "easeInOut";
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setHideImages(true);
+    };
+
+    const handleIntersection = (entries: IntersectionObserverEntry[]): void => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setHideImages(false);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, {
+      root: null,
+      threshold: 1.0,
+    });
+
+    const heroSection = document.getElementById("hero-section");
+    if (heroSection) {
+      observer.observe(heroSection);
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (heroSection) {
+        observer.unobserve(heroSection);
+      }
+    };
+  }, []);
 
   return (
     <div
+      id="hero-section"
       className="pt-16 md:pt-52 xl:pt-0 relative xl:h-screen xl:w-screen xl:flex xl:flex-row xl:justify-center xl:items-center bg-[url('/bg-dots.svg')] bg-top bg-cover"
-      onClick={() => setHideImages(true)}
     >
       <div className="relative">
         <div className="flex flex-col items-center">
