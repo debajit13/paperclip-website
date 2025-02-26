@@ -22,7 +22,7 @@ export default function LiveDemoCard() {
 
       {/* CTA Button */}
       <div className="mt-14">
-        <button className="xl:w-[50%] flex items-center justify-center bg-white text-red-500 font-bold font-poppins text-[16px] leading-[16px] md:text-[24px] md:leading-[36px] px-4 py-4 rounded-full shadow-md">
+        <button className="xl:w-[50%] w-[100%] xl:max-w-[320px] flex items-center justify-center bg-white text-red-500 font-bold font-poppins text-[16px] leading-[16px] md:text-[24px] md:leading-[36px] px-4 py-4 rounded-full shadow-md">
           Retail SaaS Demo →
         </button>
       </div>

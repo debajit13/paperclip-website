@@ -18,6 +18,7 @@ export default function CarouselCard({
   imageTabWidth,
   positionTab,
   customHeight,
+  btnMaxWidth,
 }: carouselContentProps) {
   return (
     <div
@@ -46,14 +47,16 @@ export default function CarouselCard({
           )}
 
           {btnTitle && (
-            <button className="block md:hidden w-[100%] my-4 bg-white text-red-500 py-2 px-6 rounded-[100px] font-[600] text-[14px] md:text-[24px] leading-[16px] md:leading-[36px]">
+            <button className="block md:hidden w-[100%] my-4 bg-white text-red-500 py-[12px] xl:py-2 px-6 rounded-[100px] font-[600] text-[14px] md:text-[24px] leading-[16px] md:leading-[36px]">
               {btnTitle}
             </button>
           )}
         </div>
 
         {btnTitle && (
-          <button className="hidden md:block md:mt-4 bg-white text-red-500 py-2 px-6 rounded-[100px] font-[600] text-[16px] xl:text-[24px] leading-[16px] xl:leading-[36px]">
+          <button
+            className={`${btnMaxWidth} hidden md:block md:mt-4 bg-white text-red-500 py-2 px-[36px] rounded-[100px] font-[600] text-[16px] xl:text-[24px] leading-[16px] xl:leading-[36px]`}
+          >
             {btnTitle}
           </button>
         )}

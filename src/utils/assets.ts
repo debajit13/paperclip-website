@@ -58,6 +58,9 @@ import frame2 from "../../public/Frame2.png";
 import frame3 from "../../public/Frame3.png";
 import navShadow from "../../public/shadow.svg";
 import applepay from "../../public/applepay.svg";
+import arrowFour from "../../public/arrowFour.png";
+import available from "../../public/available.png";
+import downloadNow2 from "../../public/downloadNow2.png";
 
 export {
   paperClipLogo,
@@ -120,4 +123,7 @@ export {
   frame3,
   navShadow,
   applepay,
+  arrowFour,
+  available,
+  downloadNow2,
 };

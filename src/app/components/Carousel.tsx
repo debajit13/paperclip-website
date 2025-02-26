@@ -21,6 +21,7 @@ export interface carouselContentProps {
   position?: any;
   positionTab?: any;
   customHeight?: string;
+  btnMaxWidth?: string;
 }
 
 export interface Props {
@@ -97,6 +98,7 @@ export default function Carousel({
                 imageTabWidth={content.imageTabWidth}
                 imageTabHeight={content.imageTabHeight}
                 positionTab={content.positionTab}
+                btnMaxWidth={content.btnMaxWidth}
               />
             </div>
           ))}

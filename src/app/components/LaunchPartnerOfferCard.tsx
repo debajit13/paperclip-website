@@ -23,7 +23,7 @@ export default function LaunchPartnerOffer() {
           digitalize your inventory seamlessly.
         </h2>
         <div className="mt-10 mb-10 relative z-50 flex flex-row justify-center">
-          <button className="text-red-500 w-[330px] bg-white font-poppins font-semibold text-[16px] rounded-full px-3 py-3 shadow-lg">
+          <button className="text-red-500 max-w-[330px] bg-white font-poppins font-bold text-[16px] rounded-full px-[36px] py-[16px] shadow-lg">
             Become a Partner! →
           </button>
         </div>

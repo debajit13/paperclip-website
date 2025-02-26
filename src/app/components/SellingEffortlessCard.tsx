@@ -21,7 +21,7 @@ export default function SellingEffortlesslyCard() {
 
         {/* CTA Button */}
         <div className="mt-10">
-          <button className="xl:w-[60%] flex items-center justify-center bg-white text-red-500 font-bold font-poppins text-[16px] md:text-[24px] leading-[16px] md:leading-[36px] px-4 py-4 rounded-full shadow-md">
+          <button className="xl:w-[60%] w-[100%] xl:max-w-[260px] flex items-center justify-center bg-white text-red-500 font-bold font-poppins text-[16px] md:text-[24px] leading-[16px] md:leading-[36px] px-4 py-4 rounded-full shadow-md">
             Sign Up Now →
           </button>
         </div>

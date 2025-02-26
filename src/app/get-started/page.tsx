@@ -48,7 +48,7 @@ const GetStarted = () => {
           subscription and zero seller fees.
         </p>
 
-        <button className="mt-10 bg-gradient-to-l from-[#F71D3B] to-[#E14DE3] text-white py-3 px-6 rounded-[100px] font-[600] font-poppins text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] xl:w-[30%]">
+        <button className="max-w-[320px] mt-10 bg-gradient-to-l from-[#F71D3B] to-[#E14DE3] text-white py-3 px-6 rounded-[100px] font-[600] font-poppins text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] xl:w-[30%]">
           Signup now for Free!
         </button>
 
@@ -74,12 +74,12 @@ const GetStarted = () => {
       </div>
 
       {/* Launch Partner Offer Section */}
-      <div className="block mt-20 grid grid-cols-1 gap-10 mx-auto px-[24px] md:px-10 xl:px-0 max-w-[1280px]">
+      <div className="block mt-[72px] xl:my-[176px] grid grid-cols-1 gap-10 mx-auto px-[24px] md:px-10 xl:px-0 max-w-[1280px]">
         <LaunchPartnerOffer />
       </div>
 
       {/* Professsional Tools Details */}
-      <section className="bg-white mt-20 py-10 px-[24px] md:px-6 text-center rounded-t-[56px] z-0 w-screen">
+      <section className="bg-white pt-[192px] pb-[72px] md:py-[120px] px-[24px] md:px-6 text-center rounded-t-[56px] z-0 w-screen">
         <h2 className="md:mt-4 text-[46px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[51px] md:leading-[72px] tracking-[-0.5px] text-center">
           Professional Tools that
           <br />
@@ -90,7 +90,7 @@ const GetStarted = () => {
             </span>
           </span>
         </h2>
-        <p className="text-[#949191] font-[400px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] mt-4 md:mt-10 font-poppins mx-auto">
+        <p className="text-[#949191] font-[400px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] mt-4 xl:mt-[24px] md:mt-10 font-poppins mx-auto">
           Powerful AI tools and instant marketplace access designed to help your
           business thrive.
         </p>
@@ -99,7 +99,7 @@ const GetStarted = () => {
       {/* Professsional Tools Cards */}
       {/* Desktop */}
       <div className="hidden xl:block">
-        <div className=" py-10 grid grid-cols-3 gap-10 max-w-[1280px] mx-auto">
+        <div className="pb-10 grid grid-cols-3 gap-10 max-w-[1280px] mx-auto">
           <ProfessionalToolCard
             image={pcardOne}
             imgWidth={328}
@@ -260,8 +260,8 @@ const GetStarted = () => {
       </div>
 
       {/* Carousel */}
-      <section className="bg-white mt-20 md:mt-28 mb-16 md:mb-12 xl:mb-24 pt-10 px-[24px] md:px-6 text-center rounded-t-[56px] z-0 w-screen max-w-[1280px] mx-auto">
-        <h2 className="md:mt-4 text-[36px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[48px] md:leading-[72px] tracking-[-0.5px] text-center">
+      <section className="bg-white mt-[192px] md:mt-28 xl:mt-[296px] mb-[56px] md:mb-12 xl:mb-[120px] px-[24px] md:px-6 text-center rounded-t-[56px] z-0 w-screen max-w-[1280px] mx-auto">
+        <h2 className="text-[36px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[48px] md:leading-[72px] tracking-[-0.5px] text-center">
           Digitalise Your Store in Minutes,
           <br />
           Instantly Expand Your Reach
@@ -270,7 +270,7 @@ const GetStarted = () => {
           Everything You Need to Run Your Store, 100% Free
         </p>
 
-        <button className="mt-8 md:mt-12 bg-gradient-to-l from-[#F71D3B] to-[#E14DE3] text-white py-3 px-6 rounded-[100px] font-[600] font-poppins text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] xl:w-[30%]">
+        <button className="max-w-[353px] mt-8 md:mt-12 bg-gradient-to-l from-[#F71D3B] to-[#E14DE3] text-white py-3 px-6 rounded-[100px] font-[600] font-poppins text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] xl:w-[30%]">
           Get started in minutes!
         </button>
       </section>
@@ -285,8 +285,8 @@ const GetStarted = () => {
       </div>
 
       {/* Set in Action */}
-      <section className="bg-white mt-20 md:mt-28 mb-14 md:mb-16 xl:mb-24 pt-10 px-[24px] md:px-6 text-center rounded-t-[56px] max-w-[1280px] mx-auto">
-        <h2 className="md:mt-4 text-[40px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[48px] md:leading-[72px] tracking-[-0.5px] text-center">
+      <section className="bg-white mt-[192px] md:mt-28 xl:mt-[252px] mb-14 md:mb-16 xl:mb-[120px] px-[24px] md:px-6 text-center rounded-t-[56px] max-w-[1280px] mx-auto">
+        <h2 className="text-[40px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[48px] md:leading-[72px] tracking-[-0.5px] text-center">
           See it in
           <span className="text-red-500 italic font-playfair"> Action!</span>
         </h2>
@@ -315,7 +315,7 @@ const GetStarted = () => {
       </div>
 
       {/* Infinite moving Carousel */}
-      <div className="mt-20 max-w-[1280px] mx-auto hidden xl:block">
+      <div className="mt-20 xl:mt-[296px] max-w-[1280px] mx-auto hidden xl:block">
         <section className="bg-white mx-auto pt-10 pb-8 px-6 text-center rounded-t-[56px] z-0 w-full">
           <h2 className="text-[20px] font-poppins font-semibold text-red-500 leading-[28px] text-center">
             Paperclip Pro
@@ -329,7 +329,7 @@ const GetStarted = () => {
             cost to you.
           </p>
 
-          <button className="mt-12 bg-gradient-to-l from-[#F71D3B] to-[#E14DE3] text-white py-3 px-6 rounded-[100px] font-[600] font-poppins text-[24px] leading-[36px] w-[30%]">
+          <button className="max-w-[320px] mt-12 bg-gradient-to-l from-[#F71D3B] to-[#E14DE3] text-white py-3 px-6 rounded-[100px] font-[600] font-poppins text-[24px] leading-[36px] w-[30%]">
             Signup now for Free!
           </button>
         </section>
@@ -339,8 +339,8 @@ const GetStarted = () => {
 
       {/* Footer Section */}
       {/* Referral Section */}
-      <div className="bg-white py-10 text-center rounded-t-[56px] z-0 w-screen">
-        <div className="my-10 md:my-20 w-[94%] md:w-[90%] xl:w-[94%] mx-auto max-w-[1280px] mx-auto">
+      <div className="bg-white py-[72px] xl:py-10 text-center rounded-t-[56px] z-0 w-screen">
+        <div className="my-10 md:my-20 xl:my-[132px] w-[94%] md:w-[90%] xl:w-[94%] mx-auto max-w-[1280px] mx-auto">
           <div className="w-[92%] md:w-[90%] md:w-full mx-auto relative md:col-span-2 md:h-[344px] bg-gradient-to-l from-[#FC9CA8] to-[#FFF2F3] p-6 rounded-[32px] shadow-lg flex flex-col md:flex-row md:justify-between items-center text-left">
             <div className="h-[80%] md:w-[50%] xl:w-[40%] flex flex-col justify-between md:ml-6">
               <div>
@@ -352,7 +352,7 @@ const GetStarted = () => {
                 </p>
               </div>
 
-              <button className="mt-4 bg-white text-red-500 py-2 px-6 rounded-[100px] font-[600] font-poppins text-[16px] leading-[16px] xl:text-[24px] xl:leading-[36px]">
+              <button className="mt-4 max-w-[405px] bg-white text-red-500 py-2 px-6 rounded-[100px] font-[600] font-poppins text-[16px] leading-[16px] xl:text-[24px] xl:leading-[36px]">
                 Refer your friends today! →
               </button>
             </div>

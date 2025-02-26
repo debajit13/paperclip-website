@@ -20,9 +20,9 @@ import NavbarMobile from "./NavbarMobile";
 
 export default function FooterSection() {
   return (
-    <section className="bg-white min-h-screen text-center flex flex-col items-center mt-10">
+    <section className="bg-white min-h-screen text-center flex flex-col items-center mt-[188px] xl:mt-[156px]">
       {/* AI Try-On Section */}
-      <div className="px-[16px] md:max-w-5xl text-center md:mt-16">
+      <div className="px-[16px] md:max-w-5xl text-center md:mt-16 xl:mt-[128px]">
         <h3 className="text-red-500 font-[600] text-[16px] md:text-[20px] leading-[24px] md:leading-[28px] tracking-[2px] font-poppins">
           AI Try-On
         </h3>
@@ -33,7 +33,7 @@ export default function FooterSection() {
           Skip the guesswork. Our AI Mirror shows how those heels, jeans, or
           jackets look on you, minus the fitting-room queue.
         </p>
-        <button className="mt-8 md:mt-16 bg-red-500 text-white py-2 px-8 rounded-[100px] font-[600] text-[16px] leading-[16px] md:text-[24px] md:leading-[36px] font-poppins">
+        <button className="w-[100%] xl:max-w-[350px] mt-8 md:mt-16 bg-red-500 text-white py-[12px] px-[36px] rounded-[100px] font-[600] text-[16px] leading-[16px] md:text-[24px] md:leading-[36px] font-poppins">
           Try It On—Right Now →
         </button>
       </div>
@@ -68,7 +68,7 @@ export default function FooterSection() {
 
       {/* Referral Section */}
       <div className="bg-white mt-[-50px] md:mt-[-145px] py-10 text-center rounded-t-[56px] z-0 w-screen">
-        <div className="my-10 md:my-20 w-[94%] mx-auto max-w-[1280px] mx-auto">
+        <div className="my-[72px] md:my-20 xl:my-[200px] w-[94%] mx-auto max-w-[1280px] mx-auto">
           <div className="w-[90%] md:w-full mx-auto relative md:col-span-2 md:h-[344px] bg-gradient-to-l from-[#FC9CA8] to-[#FFF2F3] p-6 rounded-[32px] shadow-lg flex flex-col md:flex-row md:justify-between items-center text-left">
             <div className="h-[80%] md:w-[50%] xl:w-[40%] flex flex-col justify-between md:ml-6">
               <div>
@@ -80,7 +80,7 @@ export default function FooterSection() {
                 </p>
               </div>
 
-              <button className="mt-4 bg-white text-red-500 py-2 px-6 rounded-[100px] font-[600] font-poppins text-[16px] leading-[16px] xl:text-[24px] xl:leading-[36px]">
+              <button className="max-w-[405px] mt-4 bg-white text-red-500 py-[12px] xl:py-2 px-6 rounded-[100px] font-[600] font-poppins text-[16px] leading-[16px] xl:text-[24px] xl:leading-[36px]">
                 Refer your friends today! →
               </button>
             </div>

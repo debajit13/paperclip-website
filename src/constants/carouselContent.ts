@@ -33,6 +33,7 @@ export const carouselContent = [
       right: 0,
       bottom: 0,
     },
+    btnMaxWidth: "max-w-[318px]",
   },
   {
     key: 2,
@@ -56,6 +57,7 @@ export const carouselContent = [
       right: 10,
       top: 14,
     },
+    btnMaxWidth: "max-w-[380px]",
   },
   {
     key: 3,
@@ -79,6 +81,7 @@ export const carouselContent = [
       right: 20,
       bottom: 0,
     },
+    btnMaxWidth: "max-w-[318px]",
   },
   {
     key: 4,
@@ -102,6 +105,7 @@ export const carouselContent = [
       right: 10,
       bottom: 0,
     },
+    btnMaxWidth: "max-w-[318px]",
   },
   {
     key: 5,
@@ -125,6 +129,7 @@ export const carouselContent = [
       right: 20,
       bottom: 0,
     },
+    btnMaxWidth: "max-w-[390px]",
   },
 ];
 
@@ -159,6 +164,7 @@ export const carouselContentTwo = [
       right: 20,
       bottom: 0,
     },
+    btnMaxWidth: "max-w-[318px]",
   },
   {
     key: 2,
@@ -182,6 +188,7 @@ export const carouselContentTwo = [
       right: 0,
       bottom: 0,
     },
+    btnMaxWidth: "max-w-[318px]",
   },
   {
     key: 3,
@@ -205,6 +212,7 @@ export const carouselContentTwo = [
       right: 0,
       bottom: 0,
     },
+    btnMaxWidth: "max-w-[318px]",
   },
   {
     key: 4,
@@ -228,6 +236,7 @@ export const carouselContentTwo = [
       right: 0,
       bottom: 0,
     },
+    btnMaxWidth: "max-w-[330px]",
   },
 ];
 

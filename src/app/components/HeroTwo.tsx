@@ -1,25 +1,64 @@
 "use client";
 
 import Image from "next/image";
-import { arrowTwo, downloadNow, mobile, qrCode } from "@/utils/assets";
-import { motion } from "framer-motion";
+import {
+  arrowFour,
+  arrowTwo,
+  available,
+  downloadNow,
+  downloadNow2,
+  mobile,
+  qrCode,
+} from "@/utils/assets";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 
 export default function HeroTwo() {
   const ref = useRef(null);
+  const letterRef = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { scrollYProgress } = useScroll({
+    target: letterRef,
+    offset: ["start end", "end start"], // Triggers animation as it scrolls in and stops at the top
+  });
+
+  // Function to animate each letter individually based on scroll
+  const renderAnimatedText = (text: string, delayOffset = 0) => {
+    return text.split("").map((char, index) => {
+      // Create a dynamic opacity and y transform effect per letter
+      const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
+      const y = useTransform(scrollYProgress, [0, 0.5], [20, 0]);
+      const delay = index * 0.05 + delayOffset; // Delays each letter animation slightly
+
+      return (
+        <motion.span
+          key={index}
+          style={{ opacity, y }}
+          transition={{ duration: 0.3, delay }}
+          className="inline-block"
+        >
+          {char === " " ? "\u00A0" : char} {/* Preserves spaces */}
+        </motion.span>
+      );
+    });
+  };
 
   return (
     <section className="text-center relative bg-gradient-to-b from-white via-[#FFF2F3] to-[#FFD1D6] mt-8 md:mt-20 w-screen">
       <div className="flex flex-col items-center pt-10">
-        <h1 className="text-2xl md:text-4xl font-semibold text-center font-poppins text-gray-900 leading-[48px] max-w-xl hidden md:block">
-          Point, shoot, and watch our AI create beautiful
-          <span className="text-gray-400">
-            {" "}
-            listings in seconds, no typing needed
-          </span>
-        </h1>
+        {/* Animated Heading */}
+        {/* Animated Heading with Progressive Scroll Reveal */}
+        <motion.h1
+          ref={letterRef}
+          className="text-2xl md:text-4xl font-semibold text-center font-poppins text-gray-900 leading-[48px] max-w-xl hidden md:block"
+        >
+          {renderAnimatedText(
+            "Point, shoot, and watch our AI create beautiful listings in seconds, no typing needed",
+            0.5
+          )}
+        </motion.h1>
+
         <div className="relative mt-10 md:mt-32 relative ml-6">
           <motion.div
             ref={ref}
@@ -49,14 +88,22 @@ export default function HeroTwo() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
-            className="absolute left-[-30%] top-0 -translate-y-1/2 hidden xl:block"
+            className="absolute left-[-40%] top-0 -translate-y-1/2 hidden xl:block"
           >
             <Image
-              src={downloadNow}
+              src={downloadNow2}
               alt="download now"
-              width={160}
+              width={250}
               height={94}
             />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
+            className="absolute left-[-38%] top-16 -translate-y-1/2 hidden xl:block"
+          >
+            <Image src={available} alt="available" width={160} height={94} />
           </motion.div>
 
           {/* Arrow Two (Appears after Download Now animation) */}
@@ -64,9 +111,9 @@ export default function HeroTwo() {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
-            className="absolute top-8 left-0 hidden xl:block"
+            className="absolute top-10 left-[-5%] hidden xl:block"
           >
-            <Image src={arrowTwo} alt="arrow" width={120} height={120} />
+            <Image src={arrowFour} alt="arrow" width={120} height={120} />
           </motion.div>
 
           {/* QR Code (Appears after Arrow Two animation) */}
@@ -74,9 +121,15 @@ export default function HeroTwo() {
             initial={{ opacity: 0, rotate: 10, scale: 0.5 }}
             animate={isInView ? { opacity: 1, rotate: 0, scale: 1 } : {}}
             transition={{ duration: 0.6, ease: "easeOut", delay: 1.1 }}
-            className="absolute top-0 right-[-20%] rotate-12 hidden xl:block"
+            className="absolute top-0 right-[-20%] hidden xl:block"
           >
-            <Image src={qrCode} alt="qr code" width={160} height={120} />
+            <Image
+              src={qrCode}
+              alt="qr code"
+              width={200}
+              height={120}
+              className="rotate-12"
+            />
           </motion.div>
         </div>
       </div>
