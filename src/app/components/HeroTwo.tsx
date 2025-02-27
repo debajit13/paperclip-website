@@ -13,6 +13,7 @@ import {
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+import VideoPlayer from "./video/Video1";
 
 export default function HeroTwo() {
   const ref = useRef(null);
@@ -48,7 +49,6 @@ export default function HeroTwo() {
     <section className="text-center relative bg-gradient-to-b from-white via-[#FFF2F3] to-[#FFD1D6] mt-8 md:mt-20 w-screen">
       <div className="flex flex-col items-center pt-10">
         {/* Animated Heading */}
-        {/* Animated Heading with Progressive Scroll Reveal */}
         <motion.h1
           ref={letterRef}
           className="text-2xl md:text-4xl font-semibold text-center font-poppins text-gray-900 leading-[48px] max-w-xl hidden md:block"
@@ -66,22 +66,14 @@ export default function HeroTwo() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <Image
-              src={mobile}
-              alt="AI-powered phone"
+            <VideoPlayer
               width={663}
               height={829}
-              className="hidden md:block mx-auto"
+              customStyle="hidden md:block"
             />
           </motion.div>
 
-          <Image
-            src={mobile}
-            alt="AI-powered phone"
-            width={500}
-            height={374}
-            className="block md:hidden mx-auto"
-          />
+          <VideoPlayer width={500} height={500} customStyle="block md:hidden" />
 
           {/* Download Now (Appears after mobile animation) */}
           <motion.div

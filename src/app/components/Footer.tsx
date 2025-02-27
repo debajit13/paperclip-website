@@ -20,9 +20,9 @@ import NavbarMobile from "./NavbarMobile";
 
 export default function FooterSection() {
   return (
-    <section className="bg-white min-h-screen text-center flex flex-col items-center mt-[188px] xl:mt-[156px]">
+    <section className="bg-white min-h-screen text-center flex flex-col items-center mt-[188px] md:mt-16 xl:mt-[462px]">
       {/* AI Try-On Section */}
-      <div className="px-[16px] md:max-w-5xl text-center md:mt-16 xl:mt-[128px]">
+      <div className="px-[16px] md:max-w-5xl text-center">
         <h3 className="text-red-500 font-[600] text-[16px] md:text-[20px] leading-[24px] md:leading-[28px] tracking-[2px] font-poppins">
           AI Try-On
         </h3>
@@ -39,30 +39,53 @@ export default function FooterSection() {
       </div>
 
       {/* Hero Image Section */}
-      <div className="relative mt-28 md:mt-60 w-full bg-gradient-to-b from-white via-[#FFF2F3] to-[#FFD1D6]">
-        <Image
-          src={mobile}
-          alt="AI Mirror"
-          width={663}
-          height={829}
-          className="mx-auto pl-6"
-        />
-        {/* Reflections */}
-        <div className="hidden xl:block absolute top-0 left-60 opacity-60">
+      <div className="mt-28 md:mt-[172px] pb-[170px] md:pb-0 w-full bg-gradient-to-b from-white via-[#FFF2F3] to-[#FFD1D6] flex flex-row justify-center">
+        <div className="relative w-[100%] max-w-[1280px]">
           <Image
-            src={frameLeft}
-            alt="Reflection Left"
-            width={237}
-            height={516}
+            src={mobile}
+            alt="AI Mirror"
+            width={663}
+            height={829}
+            className="mx-auto pl-6 hidden md:block"
           />
-        </div>
-        <div className="hidden xl:block absolute top-0 right-60 opacity-60">
-          <Image
-            src={frameRight}
-            alt="Reflection Right"
-            width={237}
-            height={516}
+
+          {/* Center Video Desktop */}
+          <video
+            src="/videos/video3.mov"
+            autoPlay
+            loop
+            muted
+            className="z-50 mx-auto w-[280px] h-[600px] object-cover border-[6px] border-black rounded-[60px] hidden md:block absolute top-5 left-1/2 -translate-x-1/2"
           />
+
+          {/* Center Video Mobile/Tab */}
+          <video
+            src="/videos/video3.mov"
+            autoPlay
+            loop
+            muted
+            className="mx-auto w-[280px] h-[550px] object-cover border-[6px] border-black rounded-[55px] block md:hidden"
+          />
+
+          {/* Left Video (Left Placeholder) */}
+          <video
+            src="/videos/video2.mov"
+            autoPlay
+            loop
+            muted
+            className="absolute top-10 left-5 w-[260px] h-[550px] border-4 object-cover opacity-70 rounded-[60px] -skew-y-[5deg] hidden xl:block"
+          />
+
+          {/* Right Video (Right Placeholder) */}
+          <video
+            src="/videos/video1.mov"
+            autoPlay
+            loop
+            muted
+            className="absolute top-10 right-5 w-[260px] h-[550px] border-4 object-cover opacity-70 rounded-[60px] skew-y-[5deg] hidden xl:block"
+          />
+
+          <div className="absolute top-3 xl:top-8 left-1/2 -translate-x-1/2 w-[60px] h-[20px] bg-black rounded-xl z-50"></div>
         </div>
       </div>
 

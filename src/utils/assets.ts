@@ -61,6 +61,7 @@ import applepay from "../../public/applepay.svg";
 import arrowFour from "../../public/arrowFour.png";
 import available from "../../public/available.png";
 import downloadNow2 from "../../public/downloadNow2.png";
+import heroIphone from "../../public/hero-iphone.png";
 
 export {
   paperClipLogo,
@@ -126,4 +127,5 @@ export {
   arrowFour,
   available,
   downloadNow2,
+  heroIphone,
 };

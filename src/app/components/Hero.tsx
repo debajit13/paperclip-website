@@ -14,6 +14,7 @@ import {
   sparkle,
   navShadow,
   applepay,
+  heroIphone,
 } from "@/utils/assets";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -163,6 +164,15 @@ const Hero = () => {
                 width={200}
                 height={240}
               />
+            </motion.div>
+            <motion.div
+              className="absolute bottom-0 mx-auto hidden xl:block"
+              initial={{ opacity: initialOpacity, scale: initialScale }}
+              animate={{ opacity: opacity, scale: scale }}
+              exit={{ opacity: exitOpacity, scale: exitScale }}
+              transition={{ duration: 0.2, ease: easeValue }}
+            >
+              <Image src={heroIphone} alt="iPhone" width={663} height={829} />
             </motion.div>
 
             <motion.div
