@@ -64,9 +64,9 @@ const GetStarted = () => {
       </section>
 
       {/* 3D Hover Card */}
-      <div className="hidden xl:block relative bg-gradient-to-t from-white via-[#FCE7F3] to-transparent flex items-center justify-center">
+      <div className="hidden xl:block relative flex items-center justify-center">
         {/* Floating Background Layer */}
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-[#FCE7F3] to-transparent opacity-60 pointer-events-none h-[100%] -top-[20%]"></div>
+        <div className="absolute inset-0 bg-[url('/backshadow.png')] bg-top bg-cover pointer-events-none h-[100%] -top-[40%]"></div>
         <div className="relative w-full">
           <div className="w-full mx-auto max-w-5xl h-64 absolute top-14 left-1/2 transform -translate-x-1/2 bg-[#F7F5F3] rounded-[24px] border border-white/40 shadow-[0px_10px_50px_rgba(0,0,0,0.24)] backdrop-blur-xl"></div>
           <DashboardCard />

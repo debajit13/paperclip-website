@@ -11,20 +11,20 @@ import mobileTwo from "../../public/mobileTwo.svg";
 import mobileTwoOverlap from "../../public/mobileTwoOverlap.svg";
 import arrowTwo from "../../public/arrowTwo.svg";
 import sparkleTwo from "../../public/sparkleTwo.svg";
-import mobileThree from "../../public/mobileThree.svg";
+import mobileThree from "../../public/mobileThree.png";
 import cart from "../../public/cart.svg";
 import arrowThree from "../../public/arrowThree.svg";
 import wow from "../../public/wow.svg";
 import frameLeft from "../../public/frameLeft.svg";
 import frameRight from "../../public/frameRight.svg";
 import referral from "../../public/referral.svg";
-import animatedImg1 from "../../public/animatedImg1.svg";
-import animatedImg2 from "../../public/animatedImg2.svg";
-import animatedImg3 from "../../public/animatedImg3.svg";
+import animatedImg1 from "../../public/a1.png";
+import animatedImg2 from "../../public/a2.png";
+import animatedImg3 from "../../public/a3.png";
 import animatedImg4 from "../../public/animatedImg4.svg";
-import animatedImg5 from "../../public/animatedImg5.svg";
-import animatedImg6 from "../../public/animatedImg6.svg";
-import animatedImg7 from "../../public/animatedImg7.svg";
+import animatedImg5 from "../../public/a5.png";
+import animatedImg6 from "../../public/a6.png";
+import animatedImg7 from "../../public/a7.png";
 import animatedImg8 from "../../public/animatedImg8.svg";
 import animatedImg9 from "../../public/animatedImg9.svg";
 import animatedImg10 from "../../public/animatedImg10.svg";
@@ -62,6 +62,7 @@ import arrowFour from "../../public/arrowFour.png";
 import available from "../../public/available.png";
 import downloadNow2 from "../../public/downloadNow2.png";
 import heroIphone from "../../public/hero-iphone.png";
+import backShadow from "../../public/backshadow.png";
 
 export {
   paperClipLogo,
@@ -128,4 +129,5 @@ export {
   available,
   downloadNow2,
   heroIphone,
+  backShadow,
 };

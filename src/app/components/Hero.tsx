@@ -116,7 +116,7 @@ const Hero = () => {
               <Image
                 src={animatedImg1}
                 alt="animatedImg-1"
-                width={180}
+                width={233}
                 height={250}
               />
             </motion.div>
@@ -131,7 +131,7 @@ const Hero = () => {
               <Image
                 src={animatedImg2}
                 alt="animatedImg-2"
-                width={130}
+                width={180}
                 height={387}
               />
             </motion.div>
@@ -146,13 +146,13 @@ const Hero = () => {
               <Image
                 src={animatedImg3}
                 alt="animatedImg-3"
-                width={220}
+                width={300}
                 height={94}
               />
             </motion.div>
 
             <motion.div
-              className="absolute bottom-[-20px] right-20 hidden xl:block"
+              className="absolute bottom-[-20px] right-20 hidden xl:block z-50"
               initial={{ opacity: initialOpacity, scale: initialScale }}
               animate={{ opacity: opacity, scale: scale }}
               exit={{ opacity: exitOpacity, scale: exitScale }}
@@ -176,7 +176,7 @@ const Hero = () => {
             </motion.div>
 
             <motion.div
-              className="absolute bottom-0 right-0 hidden xl:block"
+              className="absolute bottom-0 right-0 hidden xl:block z-0"
               initial={{ opacity: initialOpacity, scale: initialScale }}
               animate={{ opacity: opacity, scale: scale }}
               exit={{ opacity: exitOpacity, scale: exitScale }}
@@ -185,7 +185,7 @@ const Hero = () => {
               <Image
                 src={animatedImg5}
                 alt="animatedImg-5"
-                width={100}
+                width={130}
                 height={240}
               />
             </motion.div>
@@ -200,7 +200,7 @@ const Hero = () => {
               <Image
                 src={animatedImg6}
                 alt="animatedImg-6"
-                width={100}
+                width={150}
                 height={387}
               />
             </motion.div>
@@ -215,7 +215,7 @@ const Hero = () => {
               <Image
                 src={animatedImg7}
                 alt="animatedImg-7"
-                width={200}
+                width={247}
                 height={250}
               />
             </motion.div>
