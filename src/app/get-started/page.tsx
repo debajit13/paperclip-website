@@ -278,7 +278,6 @@ const GetStarted = () => {
       <div className="px-[24px] md:px-10">
         <Carousel
           carouselContent={carouselContentTwo}
-          clicksPerCarouselMove={4}
           carouselSteps={carouselStepsTwo}
           customHeight="h-[450px] md:h-[350px] xl:h-[450px]"
         />
