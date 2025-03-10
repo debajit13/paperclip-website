@@ -26,52 +26,58 @@ export interface carouselContentProps {
 
 export interface Props {
   carouselContent: carouselContentProps[];
-  clicksPerCarouselMove: number;
   carouselSteps: string[];
   customHeight?: string;
 }
 
 export default function Carousel({
   carouselContent,
-  clicksPerCarouselMove,
   carouselSteps,
   customHeight = "",
 }: Props) {
+  // Start at progress 0 (first progress bar unfilled)
   const [currentProgress, setCurrentProgress] = useState(0);
   const [currentCarouselSlide, setCurrentCarouselSlide] = useState(0);
 
-  const totalSteps = carouselContent.length; // Total progress bar steps
-  const totalProgressClicks = totalSteps * clicksPerCarouselMove; // 20 total clicks
-  const totalCarouselSlides = totalSteps; // 5 slides in the carousel
+  const totalSteps = carouselContent.length;
+  // We need totalSteps + 1 progress steps because first slide needs a click to fill its progress
+  const totalProgressClicks = totalSteps;
 
   const nextSlide = () => {
-    if (currentProgress < totalProgressClicks - 1) {
-      setCurrentProgress((prev) => prev + 1);
-    }
+    if (currentProgress < totalProgressClicks) {
+      const newProgress = currentProgress + 1;
+      setCurrentProgress(newProgress);
 
-    // Move carousel only on the 4th click of each progress step
-    if ((currentProgress + 1) % clicksPerCarouselMove === 0) {
-      setCurrentCarouselSlide((prev) =>
-        Math.min(prev + 1, totalCarouselSlides - 1)
-      );
+      // Special case for first slide: only move to next slide after filling progress
+      if (currentProgress === 0) {
+        // Don't advance the slide yet, just fill the progress bar
+      } else {
+        // For all other slides, advance immediately
+        setCurrentCarouselSlide((prev) => Math.min(prev + 1, totalSteps - 1));
+      }
     }
   };
 
   const prevSlide = () => {
     if (currentProgress > 0) {
-      setCurrentProgress((prev) => prev - 1);
-    }
+      const newProgress = currentProgress - 1;
+      setCurrentProgress(newProgress);
 
-    // Move carousel back only when reversing a full step
-    if (currentProgress % clicksPerCarouselMove === 0 && currentProgress > 0) {
-      setCurrentCarouselSlide((prev) => Math.max(prev - 1, 0));
+      // Only move carousel when we're going back from progress 1 or higher
+      if (currentProgress > 1) {
+        setCurrentCarouselSlide((prev) => Math.max(prev - 1, 0));
+      }
     }
   };
 
   return (
-    <div className="w-full mx-auto relative max-w-[1280px] mx-auto">
+    <div className="w-full mx-auto relative max-w-[1280px]">
       {/* Progress Bar */}
-      <ProgressBar currentSlide={currentProgress} steps={carouselSteps} />
+      <ProgressBar
+        currentProgress={currentProgress}
+        steps={carouselSteps}
+        currentSlide={currentCarouselSlide}
+      />
 
       {/* Carousel Content */}
       <div className="relative overflow-hidden w-full mt-10 rounded-[32px]">
@@ -82,7 +88,7 @@ export default function Carousel({
           }}
         >
           {carouselContent.map((content, index) => (
-            <div key={content.key} className="min-w-full">
+            <div key={content.key || index} className="min-w-full">
               <CarouselCard
                 title={content.title}
                 subTitle={content.subTitle}
@@ -125,11 +131,11 @@ export default function Carousel({
       <button
         onClick={nextSlide}
         className={`absolute right-0 top-1/2 mt-10 transform -translate-y-1/2 bg-transparent ${
-          currentProgress >= totalProgressClicks - 1
+          currentProgress >= totalProgressClicks
             ? "text-[#94919129]"
             : "text-red-500"
         } p-3`}
-        disabled={currentProgress >= totalProgressClicks - 1}
+        disabled={currentProgress >= totalProgressClicks}
       >
         <div className="hidden md:block">
           <FaChevronRight size={40} />

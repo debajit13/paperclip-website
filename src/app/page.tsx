@@ -21,7 +21,6 @@ export default function Home() {
       <AISelling />
       <Carousel
         carouselContent={carouselContent}
-        clicksPerCarouselMove={4}
         carouselSteps={carouselSteps}
       />
 

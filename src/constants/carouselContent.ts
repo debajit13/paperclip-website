@@ -41,7 +41,7 @@ export const carouselContent = [
     subTitle: "All Profit, No Sneaky Deductions!",
     description:
       "Because you should keep every penny for that next must-have find—or that big night out.",
-    btnTitle: "Start Earning—Fee-Free →",
+    btnTitle: "Start Earning, Fee-Free →",
     image: pcardOne,
     imageWidth: 500,
     imageHeight: 540,

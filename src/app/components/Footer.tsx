@@ -39,19 +39,19 @@ export default function FooterSection() {
       </div>
 
       {/* Hero Image Section */}
-      <div className="mt-28 md:mt-[172px] pb-[170px] md:pb-0 w-full bg-gradient-to-b from-white via-[#FFF2F3] to-[#FFD1D6] flex flex-row justify-center">
+      <div className="mt-28 md:mt-[172px] pb-[170px] md:pb-[800px] w-full bg-gradient-to-b from-white via-[#FFF2F3] to-[#FFD1D6] flex flex-row justify-center">
         <div className="relative w-[100%] max-w-[1280px]">
-          <Image
+          {/* <Image
             src={mobile}
             alt="AI Mirror"
             width={663}
             height={829}
             className="mx-auto pl-6 hidden md:block"
-          />
+          /> */}
 
           {/* Center Video Desktop */}
           <video
-            src="/videos/video3.mov"
+            src="/videos/video2.mov"
             autoPlay
             loop
             muted
@@ -60,7 +60,7 @@ export default function FooterSection() {
 
           {/* Center Video Mobile/Tab */}
           <video
-            src="/videos/video3.mov"
+            src="/videos/video2.mov"
             autoPlay
             loop
             muted
@@ -69,7 +69,7 @@ export default function FooterSection() {
 
           {/* Left Video (Left Placeholder) */}
           <video
-            src="/videos/video2.mov"
+            src="/videos/video3.mov"
             autoPlay
             loop
             muted
@@ -90,8 +90,8 @@ export default function FooterSection() {
       </div>
 
       {/* Referral Section */}
-      <div className="bg-white mt-[-50px] md:mt-[-145px] py-10 text-center rounded-t-[56px] z-0 w-screen">
-        <div className="my-[72px] md:my-20 xl:my-[200px] w-[94%] mx-auto max-w-[1280px] mx-auto">
+      <div className="bg-white mt-[-50px] md:mt-[-50px] text-center rounded-t-[56px] z-0 w-screen">
+        <div className="my-[72px] md:my-20 xl:my-[200px] w-[94%] mx-auto max-w-[1280px] mx-auto rounded-t-[56px]">
           <div className="w-[90%] md:w-full mx-auto relative md:col-span-2 md:h-[344px] bg-gradient-to-l from-[#FC9CA8] to-[#FFF2F3] p-6 rounded-[32px] shadow-lg flex flex-col md:flex-row md:justify-between items-center text-left">
             <div className="h-[80%] md:w-[50%] xl:w-[40%] flex flex-col justify-between md:ml-6">
               <div>

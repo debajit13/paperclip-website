@@ -143,8 +143,8 @@ const HomeCardsGrid = () => {
                 Purchase, Track, Relax.
               </h4>
               <p className="text-gray-600 font-[500] leading-[16px] xl:text-[24px] leading-[24px] xl:leading-[36px] mt-4 font-poppins">
-                No more nerve-racking waiting games or shady updates—your new
-                treasure is on its way, complete with real-time tracking
+                Don’t stress about fakes or duds—our AI safety net ensures you
+                always get what you paid for, or your money back.
               </p>
             </div>
 
@@ -156,19 +156,19 @@ const HomeCardsGrid = () => {
           <div className="bg-gradient-to-t from-[#FC9CA8] to-[#FFF2F3] pt-6 px-6 md:pt-10 xl:pt-14 md:px-14 md:pb-10 xl:pb-14 rounded-[32px] shadow-lg flex flex-col flex-start text-left">
             <div>
               <h3 className="text-red-500 font-[600] text-[16px] xl:text-[20px] leading-[24px] xl:leading-[28px] tracking-[2px] font-poppins">
-                Fast, Transparent Shipping
+                Buyer Premium & Security
               </h3>
               <h4 className="font-[600] text-[32px] xl:text-[40px] leading-[40px] xl:leading-[56px] mt-10 text-wrap font-poppins">
-                Purchase, Track, Relax.
+                Spend with Ease!
               </h4>
               <p className="text-gray-600 font-[500] leading-[16px] xl:text-[24px] leading-[24px] xl:leading-[36px] mt-4 font-poppins">
-                No more nerve-racking waiting games or shady updates—your new
-                treasure is on its way, complete with real-time tracking
+                Don’t stress about fakes or duds—our AI safety net ensures you
+                always get what you paid for, or your money back.
               </p>
             </div>
 
             <button className="max-w-[100%] xl:max-w-[275px] my-10 xl:mt-20 bg-white text-red-500 py-[12px] xl:py-2 px-6 rounded-[100px] font-[600] font-poppins text-[16px] xl:text-[24px] leading-[16px] xl:leading-[36px] md:w-[80%] xl:w-[50%]">
-              Get It Shipped →
+              Shop Securely →
             </button>
           </div>
         </div>
