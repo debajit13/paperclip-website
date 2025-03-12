@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { useState, useEffect, useRef } from "react";
-import ProgressBar from "./ProgressBar";
-import CarouselCard from "./CarouselCard";
+import { useState, useEffect, useRef } from 'react';
+import ProgressBar from './ProgressBar';
+import CarouselCard from './CarouselCard';
 
 export interface carouselContentProps {
   key?: number;
@@ -33,7 +33,7 @@ export interface Props {
 export default function Carousel({
   carouselContent,
   carouselSteps,
-  customHeight = "",
+  customHeight = '',
   scrollsPerSlide = 4, // Default to 4 scrolls per slide change
 }: Props) {
   const [currentProgress, setCurrentProgress] = useState(0);
@@ -74,18 +74,18 @@ export default function Carousel({
   };
 
   // Function to release scroll lock and move to next/prev section
-  const releaseScrollLock = (direction: "next" | "prev") => {
+  const releaseScrollLock = (direction: 'next' | 'prev') => {
     setIsScrollLocked(false);
-    document.body.style.overflow = "";
+    document.body.style.overflow = '';
 
     if (carouselRef.current) {
       const targetSection =
-        direction === "next"
+        direction === 'next'
           ? carouselRef.current.nextElementSibling
           : carouselRef.current.previousElementSibling;
 
       if (targetSection instanceof HTMLElement) {
-        targetSection.scrollIntoView({ behavior: "smooth" });
+        targetSection.scrollIntoView({ behavior: 'smooth' });
       }
     }
   };
@@ -101,7 +101,7 @@ export default function Carousel({
         // Only set once to avoid infinite loop
         if (!isScrollLocked) {
           setIsScrollLocked(true);
-          document.body.style.overflow = "hidden";
+          document.body.style.overflow = 'hidden';
         }
       } else {
         // Reset flags when element is no longer in view
@@ -110,14 +110,14 @@ export default function Carousel({
 
         if (isScrollLocked) {
           setIsScrollLocked(false);
-          document.body.style.overflow = "";
+          document.body.style.overflow = '';
         }
       }
     };
 
     const options = {
       root: null,
-      rootMargin: "100px",
+      rootMargin: '100px',
       threshold: 1, // Trigger when 50% visible
     };
 
@@ -160,9 +160,9 @@ export default function Carousel({
       // Update last scroll time
       lastScrollTime.current = now;
 
-      const direction = e.deltaY > 0 ? "down" : "up";
+      const direction = e.deltaY > 0 ? 'down' : 'up';
 
-      if (direction === "down") {
+      if (direction === 'down') {
         // Scrolling down
         if (currentProgress < totalScrolls - 1) {
           // Simply increment the progress - slide and count are derived from this
@@ -171,9 +171,9 @@ export default function Carousel({
           // Mark as reached end
           hasReachedEnd.current = true;
           // Release scroll lock when reached the end
-          releaseScrollLock("next");
+          releaseScrollLock('next');
         }
-      } else if (direction === "up") {
+      } else if (direction === 'up') {
         // Scrolling up
         if (currentProgress > 0) {
           // Simply decrement the progress - slide and count are derived from this
@@ -182,17 +182,15 @@ export default function Carousel({
           // Mark as reached start
           hasReachedStart.current = true;
           // Release scroll lock when reached the beginning
-          releaseScrollLock("prev");
+          releaseScrollLock('prev');
         }
       }
     };
 
-    window.addEventListener("wheel", handleWheelEvent, { passive: false });
+    window.addEventListener('wheel', handleWheelEvent, { passive: false });
 
     return () => {
-      window.removeEventListener("wheel", handleWheelEvent, {
-        passive: false,
-      });
+      window.removeEventListener('wheel', handleWheelEvent);
     };
   }, [isScrollLocked, currentProgress, totalScrolls]);
 
@@ -201,35 +199,35 @@ export default function Carousel({
     if (!isScrollLocked) return;
 
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "ArrowDown" || e.key === "ArrowRight") {
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
         // Simulate a single scroll down
         if (currentProgress < totalScrolls - 1) {
           setCurrentProgress((prev) => prev + 1);
         } else if (currentProgress === totalScrolls - 1) {
           // Release lock at end
-          releaseScrollLock("next");
+          releaseScrollLock('next');
         }
-      } else if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
+      } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
         // Simulate a single scroll up
         if (currentProgress > 0) {
           setCurrentProgress((prev) => prev - 1);
         } else if (currentProgress === 0) {
           // Release lock at beginning
-          releaseScrollLock("prev");
+          releaseScrollLock('prev');
         }
       }
     };
 
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isScrollLocked, currentProgress, totalScrolls]);
 
   // Handle release of scroll lock when reaching boundaries
   useEffect(() => {
     if (hasReachedEnd.current && isScrollLocked) {
-      releaseScrollLock("next");
+      releaseScrollLock('next');
     } else if (hasReachedStart.current && isScrollLocked) {
-      releaseScrollLock("prev");
+      releaseScrollLock('prev');
     }
   }, [isScrollLocked]);
 
@@ -240,20 +238,20 @@ export default function Carousel({
   );
 
   return (
-    <div className="w-full mx-auto relative max-w-[1280px]" ref={carouselRef}>
+    <div className='w-full mx-auto relative max-w-[1280px]' ref={carouselRef}>
       {/* Progress Bar */}
       <ProgressBar currentSlide={currentProgress} steps={carouselSteps} />
 
       {/* Carousel Content */}
-      <div className="relative overflow-hidden w-full mt-10 rounded-[32px]">
+      <div className='relative overflow-hidden w-full mt-10 rounded-[32px]'>
         <div
-          className="flex transition-transform duration-500 ease-in-out"
+          className='flex transition-transform duration-500 ease-in-out'
           style={{
             transform: `translateX(-${currentCarouselSlide * 100}%)`,
           }}
         >
           {carouselContent.map((content, index) => (
-            <div key={content.key || index} className="min-w-full">
+            <div key={content.key || index} className='min-w-full'>
               <CarouselCard
                 title={content.title}
                 subTitle={content.subTitle}
