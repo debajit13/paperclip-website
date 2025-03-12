@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import {
   animatedImg10,
@@ -19,8 +21,92 @@ import {
 } from "@/utils/assets";
 import Navbar from "./Navbar";
 import NavbarMobile from "./NavbarMobile";
+import { useEffect, useRef, useState } from "react";
 
 export default function FooterSection() {
+  const [centerVideoPlayed, setCenterVideoPlayed] = useState(false);
+  const [isInViewport, setIsInViewport] = useState(false);
+  const containerRef = useRef(null);
+  const centerVideoRef = useRef(null);
+  const [allVideosPlayed, setAllVideosPlayed] = useState(false);
+  const [videoSet, setVideoSet] = useState(1);
+  const leftVideoRef = useRef(null);
+  const rightVideoRef = useRef(null);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  // IntersectionObserver to detect when component is in viewport
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        setIsInViewport(entry.isIntersecting);
+      },
+      { threshold: 0.3 } // Trigger when 30% of the element is in viewport
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+    };
+  }, []);
+
+  // Handle video playing when in viewport
+  useEffect(() => {
+    if (isInViewport) {
+      // Start playing the center video when in viewport
+      if (centerVideoRef.current) {
+        centerVideoRef.current?.play();
+      }
+    } else {
+      // Pause videos when not in viewport
+      if (centerVideoRef.current) {
+        centerVideoRef.current?.pause();
+      }
+    }
+  }, [isInViewport]);
+
+  // Track when all videos have played once
+  useEffect(() => {
+    if (centerVideoPlayed && allVideosPlayed && !isTransitioning) {
+      // Set transitioning state to prevent multiple transitions and fade out videos
+      setIsTransitioning(true);
+
+      // Wait for fade out to complete, then change video sources
+      setTimeout(() => {
+        // When all videos have played once, rotate the video sources
+        setVideoSet((prevSet) => (prevSet === 1 ? 2 : prevSet === 2 ? 3 : 1));
+
+        // Wait a bit for the new videos to load their first frame, then fade back in
+        setTimeout(() => {
+          setAllVideosPlayed(false);
+          setIsTransitioning(false);
+        }, 300); // Time to load new videos before fading back in
+      }, 300); // Time for fade out to complete
+    }
+  }, [centerVideoPlayed, allVideosPlayed, isTransitioning]);
+
+  // Handle ended event for center video
+  const handleCenterVideoEnded = () => {
+    setCenterVideoPlayed(true);
+    // Restart video to loop after counting it as played once
+    if (centerVideoRef.current) {
+      centerVideoRef.current?.play();
+    }
+  };
+
+  // Handle ended events for side videos
+  const handleSideVideosEnded = () => {
+    // Check if both side videos have ended at least once
+    if (centerVideoPlayed && leftVideoRef.current && rightVideoRef.current) {
+      setAllVideosPlayed(true);
+    }
+  };
+
   return (
     <section className="bg-white min-h-screen text-center flex flex-col items-center mt-[188px] md:mt-16 xl:mt-[462px]">
       {/* AI Try-On Section */}
@@ -41,24 +127,33 @@ export default function FooterSection() {
       </div>
 
       {/* Hero Image Section */}
-      <div className="mt-28 md:mt-[172px] pb-[170px] md:pb-[800px] w-full bg-gradient-to-b from-white via-[#FFF2F3] to-[#FFD1D6] flex flex-row justify-center">
+      <div
+        ref={containerRef}
+        className="mt-28 md:mt-[172px] pb-[170px] md:pb-[800px] w-full bg-gradient-to-b from-white via-[#FFF2F3] to-[#FFD1D6] flex flex-row justify-center"
+      >
         <div className="relative w-[100%] max-w-[1280px]">
-          {/* <Image
-            src={mobile}
-            alt="AI Mirror"
-            width={663}
-            height={829}
-            className="mx-auto pl-6 hidden md:block"
-          /> */}
-
           {/* Center Video Desktop */}
-          <video
-            src="/videos/video2.mov"
-            autoPlay
-            loop
-            muted
-            className="z-50 mx-auto w-[280px] h-[600px] object-cover border-[6px] border-black rounded-[60px] hidden md:block absolute top-5 left-1/2 -translate-x-1/2"
-          />
+          <div className="z-50 mx-auto w-[280px] h-[600px] border-[6px] border-black rounded-[60px] hidden md:block absolute top-5 left-1/2 -translate-x-1/2 overflow-hidden">
+            <video
+              ref={centerVideoRef}
+              key={`center-${videoSet}`}
+              src={
+                videoSet === 1
+                  ? "/videos/video2.mov"
+                  : videoSet === 2
+                  ? "/videos/video1.mov"
+                  : "/videos/video3.mov"
+              }
+              muted
+              playsInline
+              autoPlay
+              preload="auto"
+              onEnded={handleCenterVideoEnded}
+              className={`w-full h-full object-cover transition-opacity duration-500 ${
+                isTransitioning ? "opacity-10" : "opacity-100"
+              }`}
+            />
+          </div>
 
           {/* Center Video Mobile/Tab */}
           <video
@@ -69,25 +164,69 @@ export default function FooterSection() {
             className="mx-auto w-[280px] h-[550px] object-cover border-[6px] border-black rounded-[55px] block md:hidden"
           />
 
-          {/* Left Video (Left Placeholder) */}
-          <video
-            src="/videos/video3.mov"
-            autoPlay
-            loop
-            muted
-            className="absolute top-10 left-5 w-[260px] h-[550px] border-4 object-cover opacity-70 rounded-[60px] -skew-y-[5deg] hidden xl:block"
-          />
+          {/* Left Video (Left Placeholder) with transition */}
+          <div
+            className={`absolute top-10 left-5 transform transition-all duration-1000 ease-in-out ${
+              centerVideoPlayed
+                ? "opacity-70 translate-x-0"
+                : "opacity-0 -translate-x-24"
+            } hidden xl:block overflow-hidden`}
+          >
+            <div className="w-[260px] h-[550px] border-4 rounded-[60px] -skew-y-[2deg] overflow-hidden">
+              <video
+                ref={leftVideoRef}
+                key={`left-${videoSet}`}
+                src={
+                  videoSet === 1
+                    ? "/videos/video3.mov"
+                    : videoSet === 2
+                    ? "/videos/video2.mov"
+                    : "/videos/video1.mov"
+                }
+                autoPlay
+                muted
+                playsInline
+                preload="auto"
+                onEnded={handleSideVideosEnded}
+                className={`w-full h-full object-cover transition-opacity duration-500 ${
+                  isTransitioning ? "opacity-10" : "opacity-100"
+                }`}
+              />
+            </div>
+          </div>
 
-          {/* Right Video (Right Placeholder) */}
-          <video
-            src="/videos/video1.mov"
-            autoPlay
-            loop
-            muted
-            className="absolute top-10 right-5 w-[260px] h-[550px] border-4 object-cover opacity-70 rounded-[60px] skew-y-[5deg] hidden xl:block"
-          />
+          {/* Right Video (Right Placeholder) with transition */}
+          <div
+            className={`absolute top-10 right-5 transform transition-all duration-1000 ease-in-out ${
+              centerVideoPlayed
+                ? "opacity-70 translate-x-0"
+                : "opacity-0 translate-x-24"
+            } hidden xl:block overflow-hidden`}
+          >
+            <div className="w-[260px] h-[550px] border-4 rounded-[60px] skew-y-[2deg] overflow-hidden">
+              <video
+                ref={rightVideoRef}
+                key={`right-${videoSet}`}
+                src={
+                  videoSet === 1
+                    ? "/videos/video1.mov"
+                    : videoSet === 2
+                    ? "/videos/video3.mov"
+                    : "/videos/video2.mov"
+                }
+                autoPlay
+                muted
+                playsInline
+                preload="auto"
+                onEnded={handleSideVideosEnded}
+                className={`w-full h-full object-cover transition-opacity duration-500 ${
+                  isTransitioning ? "opacity-10" : "opacity-100"
+                }`}
+              />
+            </div>
+          </div>
 
-          <div className="absolute top-3 xl:top-8 left-1/2 -translate-x-1/2 w-[60px] h-[20px] bg-black rounded-xl z-50"></div>
+          <div className="absolute top-3 md:top-8 left-1/2 -translate-x-1/2 w-[60px] h-[20px] bg-black rounded-xl z-50"></div>
         </div>
       </div>
 
