@@ -17,7 +17,7 @@ export default function Home() {
         </button>
       </div>
 
-      <HeroTwo />
+      {/* <HeroTwo /> */}
       <AISelling />
       <Carousel
         carouselContent={carouselContent}
