@@ -169,7 +169,7 @@ export default function FooterSection() {
             className={`absolute top-10 left-5 transform transition-all duration-1000 ease-in-out ${
               centerVideoPlayed
                 ? "opacity-70 translate-x-0"
-                : "opacity-0 -translate-x-24"
+                : "opacity-0 translate-x-[50%]"
             } hidden xl:block overflow-hidden`}
           >
             <div className="w-[260px] h-[550px] border-4 rounded-[60px] -skew-y-[2deg] overflow-hidden">
@@ -200,7 +200,7 @@ export default function FooterSection() {
             className={`absolute top-10 right-5 transform transition-all duration-1000 ease-in-out ${
               centerVideoPlayed
                 ? "opacity-70 translate-x-0"
-                : "opacity-0 translate-x-24"
+                : "opacity-0 -translate-x-[50%]"
             } hidden xl:block overflow-hidden`}
           >
             <div className="w-[260px] h-[550px] border-4 rounded-[60px] skew-y-[2deg] overflow-hidden">
