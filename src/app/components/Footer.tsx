@@ -8,7 +8,9 @@ import {
   animatedImg8,
   animatedImg9,
   arrow,
+  arrowFour,
   downloadNow,
+  downloadNow2,
   frameLeft,
   frameRight,
   mobile,
@@ -90,7 +92,7 @@ export default function FooterSection() {
       </div>
 
       {/* Referral Section */}
-      <div className="bg-white mt-[-50px] md:mt-[-50px] text-center rounded-t-[56px] z-0 w-screen">
+      <div className="bg-white mt-[-50px] md:mt-[-50px] xl:mb-20 text-center rounded-t-[56px] z-0 w-screen">
         <div className="my-[72px] md:my-20 xl:my-[200px] w-[94%] mx-auto max-w-[1280px] mx-auto rounded-t-[56px]">
           <div className="w-[90%] md:w-full mx-auto relative md:col-span-2 md:h-[344px] bg-gradient-to-l from-[#FC9CA8] to-[#FFF2F3] p-6 rounded-[32px] shadow-lg flex flex-col md:flex-row md:justify-between items-center text-left">
             <div className="h-[80%] md:w-[50%] xl:w-[40%] flex flex-col justify-between md:ml-6">
@@ -132,23 +134,29 @@ export default function FooterSection() {
       </div>
 
       {/* Footer Section */}
-      <div className="w-full pb-20 xl:pb-40 relative">
-        <div className="hidden xl:block">
-          <div className="relative flex flex-row items-center justify-center ml-40 transform mb-20">
-            <Image src={qrCode} alt="QR Code" width={224} height={224} />
-
+      <div className="w-full pb-20 xl:pb-40 relative xl:bg-[url('/bg-dots-2.svg')] xl:bg-bottom xl:bg-cover">
+        <div className="hidden xl:block xl:mt-[-100px]">
+          <div className="relative flex flex-row items-center justify-center transform mb-20 max-w-[1280px] mx-auto">
             {/* Floating Text with Arrow */}
-            <div className="flex flex-row items-center transform rotate-6 -mt-14 ml-4">
-              <Image src={arrow} alt="arrow" width={120} height={120} />
+            <div className="absolute left-32 top-0 flex flex-row items-center transform rotate-6 -mt-14 ml-4">
               <div className="text-gray-900 text-xs font-bold">
                 <Image
-                  src={downloadNow}
+                  src={downloadNow2}
                   alt="download now"
-                  width={120}
-                  height={120}
+                  width={257}
+                  height={32}
                 />
               </div>
+              <Image
+                src={arrowFour}
+                alt="arrow"
+                width={100}
+                height={100}
+                className="absolute top-10 left-52"
+              />
             </div>
+
+            <Image src={qrCode} alt="QR Code" width={224} height={224} />
           </div>
         </div>
 
