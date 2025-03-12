@@ -139,28 +139,58 @@ const Hero = () => {
     };
   }, []);
 
-  // Calculate video position based on scroll
+  // Calculate video position based on scroll with smoother transition
   const calculateVideoStyles = () => {
     const heroHeight =
       (heroRef.current as any)?.clientHeight || window.innerHeight;
-    const scrollThreshold = heroHeight * 0.7; // When to start transitioning
 
-    // Default position (center position, no animation)
-    if (scrollPosition < scrollThreshold) {
+    // Earlier transition start
+    const scrollStartThreshold = heroHeight * 0.5;
+    // Full transition completion
+    const scrollEndThreshold = heroHeight * 0.9;
+
+    // Before transition starts
+    if (scrollPosition < scrollStartThreshold) {
       return {
         position: "fixed",
         top: "calc(100vh - 205px)",
         left: "50%",
         transform: "translateX(-50%)",
+        transitionProgress: 0,
       };
     }
 
-    // When scrolled enough, position it below the hero section
+    // During transition
+    if (scrollPosition < scrollEndThreshold) {
+      // Calculate transition progress between 0 and 1
+      const transitionProgress =
+        (scrollPosition - scrollStartThreshold) /
+        (scrollEndThreshold - scrollStartThreshold);
+
+      // Starting position (fixed at bottom of viewport)
+      const startTop = window.innerHeight - 190;
+      // Ending position (absolute below hero)
+      const endTop = heroHeight - 120;
+
+      // Calculate intermediate position
+      const currentTop = startTop + transitionProgress * (endTop - startTop);
+
+      return {
+        position: transitionProgress > 0.95 ? "absolute" : "fixed",
+        top: transitionProgress > 0.95 ? endTop : currentTop,
+        left: "50%",
+        transform: "translateX(-50%)",
+        transitionProgress,
+      };
+    }
+
+    // After transition completes
     return {
       position: "absolute",
-      top: heroHeight - 150,
+      top: heroHeight - 120,
       left: "50%",
       transform: "translateX(-50%)",
+      transitionProgress: 1,
     };
   };
 
@@ -326,76 +356,98 @@ const Hero = () => {
         </AnimatePresence>
       </div>
 
-      {/* Text that reveals on scroll */}
-      <div
-        className="fixed w-full text-center px-4 z-0 pointer-events-none flex flex-row justify-center"
-        style={{
-          opacity: textOpacity,
-          transition: "opacity 0.3s ease-out",
-          top: "30vh",
-        }}
-      >
-        {/* Animated Heading */}
-        <motion.h1
-          ref={letterRef}
-          className="text-2xl text-center md:text-4xl font-semibold text-center font-poppins !leading-[48px] max-w-xl hidden md:block"
-        >
-          {renderAnimatedText(
-            "Point, shoot, and watch our AI create beautiful listings in seconds, no typing needed",
-            0.5
-          )}
-        </motion.h1>
-      </div>
-
-      {/* Video with scroll position only, no initial animation */}
+      {/* Video container with text inside */}
       <div
         ref={videoRef}
-        className="z-40 hidden xl:block transition-all duration-300"
+        className="z-40 hidden xl:block"
         style={{
           position: videoStyles.position as any,
-          top: videoStyles.top,
+          top:
+            typeof videoStyles.top === "string"
+              ? videoStyles.top
+              : `${videoStyles.top}px`,
           left: videoStyles.left,
           transform: videoStyles.transform,
           width: `${VIDEO_WIDTH}px`,
-          height: `${VIDEO_HEIGHT}px`,
           zIndex: 0,
-          transition: "all 0.5s ease-out",
+          transition: "all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1.0)",
         }}
       >
-        <video
-          src="/videos/output_transparent.webm"
-          autoPlay
-          loop
-          muted
-          className="w-full h-full object-cover"
+        {/* Text above the video - part of the video container */}
+        <div
+          className="absolute w-full text-center px-4 pointer-events-none"
           style={{
-            borderRadius: `${BORDER_RADIUS}px`,
+            opacity: textOpacity,
+            transition: "opacity 0.3s ease-out",
+            top: "-200px", // Position above the video
+            left: "0",
+            width: "800px", // Wider than the video
+            marginLeft: "-75px", // Offset to center
           }}
-        />
-        <div className="absolute left-[-40%] top-[30%] -translate-y-1/2 hidden xl:block">
-          <Image
-            src={downloadNow2}
-            alt="download now"
-            width={250}
-            height={94}
+        >
+          <motion.h1
+            ref={letterRef}
+            className="text-2xl text-center md:text-4xl font-semibold text-center font-poppins !leading-[48px]"
+          >
+            {renderAnimatedText(
+              "Point, shoot, and watch our AI create beautiful listings in seconds, no typing needed",
+              0.5
+            )}
+          </motion.h1>
+        </div>
+
+        {/* Video element */}
+        <div style={{ height: `${VIDEO_HEIGHT}px` }}>
+          <video
+            src="/videos/output_transparent.webm"
+            autoPlay
+            loop
+            muted
+            className="w-full h-full object-cover"
+            style={{
+              borderRadius: `${BORDER_RADIUS}px`,
+            }}
           />
-        </div>
-        <div className="absolute left-[-40%] top-[35%] -translate-y-1/2 hidden xl:block">
-          <Image src={available} alt="available" width={160} height={94} />
-        </div>
-        <div className="absolute left-[-20%] top-[40%] -translate-y-1/2 hidden xl:block">
-          <Image src={arrowFour} alt="arrow" width={100} height={120} />
-        </div>
-        <div className="absolute right-[-25%] top-[35%] -translate-y-1/2 hidden xl:block">
-          <Image
-            src={qrCode}
-            alt="qr code"
-            width={200}
-            height={120}
-            className="rotate-12"
-          />
+          <div className="absolute left-[-40%] top-[30%] -translate-y-1/2 hidden xl:block">
+            <Image
+              src={downloadNow2}
+              alt="download now"
+              width={250}
+              height={94}
+            />
+          </div>
+          <div className="absolute left-[-40%] top-[35%] -translate-y-1/2 hidden xl:block">
+            <Image src={available} alt="available" width={160} height={94} />
+          </div>
+          <div className="absolute left-[-20%] top-[40%] -translate-y-1/2 hidden xl:block">
+            <Image src={arrowFour} alt="arrow" width={100} height={120} />
+          </div>
+          <div className="absolute right-[-25%] top-[35%] -translate-y-1/2 hidden xl:block">
+            <Image
+              src={qrCode}
+              alt="qr code"
+              width={200}
+              height={120}
+              className="rotate-12"
+            />
+          </div>
         </div>
       </div>
+
+      {/* Background gradient that follows the video's position */}
+      {videoStyles.transitionProgress > 0.3 && (
+        <div
+          className="fixed left-0 w-full bg-gradient-to-b from-white via-[#FFF2F3] to-[#FFD1D6] z-10"
+          style={{
+            top: `${
+              (heroRef.current as any)?.clientHeight || window.innerHeight
+            }px`,
+            height: window.innerHeight,
+            opacity: Math.min(videoStyles.transitionProgress * 2, 1),
+            transition: "opacity 0.3s ease-out",
+          }}
+        />
+      )}
 
       {/* Content that should appear after the video */}
       <div className="w-full" style={{ height: `${VIDEO_HEIGHT}px` }}></div>
