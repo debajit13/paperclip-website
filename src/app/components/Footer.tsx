@@ -41,7 +41,7 @@ export default function FooterSection() {
         const [entry] = entries;
         setIsInViewport(entry.isIntersecting);
       },
-      { threshold: 0.3 } // Trigger when 30% of the element is in viewport
+      { threshold: 0.5 } // Trigger when 50% of the element is in viewport
     );
 
     if (containerRef.current) {
@@ -60,12 +60,12 @@ export default function FooterSection() {
     if (isInViewport) {
       // Start playing the center video when in viewport
       if (centerVideoRef.current) {
-        centerVideoRef.current?.play();
+        (centerVideoRef.current as HTMLVideoElement)?.play();
       }
     } else {
       // Pause videos when not in viewport
       if (centerVideoRef.current) {
-        centerVideoRef.current?.pause();
+        (centerVideoRef.current as HTMLVideoElement)?.pause();
       }
     }
   }, [isInViewport]);
@@ -95,7 +95,7 @@ export default function FooterSection() {
     setCenterVideoPlayed(true);
     // Restart video to loop after counting it as played once
     if (centerVideoRef.current) {
-      centerVideoRef.current?.play();
+      (centerVideoRef.current as HTMLVideoElement)?.play();
     }
   };
 
