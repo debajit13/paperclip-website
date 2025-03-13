@@ -10,6 +10,7 @@ import {
   instantLeft,
   instantRight,
   navShadow,
+  sparkle,
 } from "@/utils/assets";
 import ProfessionalToolCardTwo from "../components/ProfessionalToolCardTwo";
 import LiveDemoCard from "../components/LiveDemoCard";
@@ -31,16 +32,27 @@ const GetStarted = () => {
     <div className="mt-16 md:mt-44 xl:mt-0 overflow-hidden mx-auto">
       {/* Top Hero Section */}
       <section className="relative bg-white mb-28 md:mb-10 px-[16px] text-center z-0 w-screen xl:h-screen xl:flex xl:flex-col xl:justify-center xl:items-center bg-[url('/bg-dots.svg')] bg-top bg-cover">
-        <h2 className="mt-4 text-[46px] md:text-[58px] xl:text-[68px] font-poppins font-semibold text-gray-800 leading-[51px] md:leading-[72px] tracking-[-0.5px] text-center">
-          Digitalise Your Inventory
-          <br />
-          <span>
-            Turbocharge{" "}
-            <span className="text-red-500 italic font-playfair">
-              Your Sales!
+        <div className="relative">
+          <h2 className="mt-4 text-[46px] md:text-[58px] xl:text-[68px] font-poppins font-semibold text-gray-800 leading-[51px] md:leading-[72px] tracking-[-0.5px] text-center">
+            Digitalise Your Inventory
+            <br />
+            <span>
+              Turbocharge{" "}
+              <span className="text-red-500 italic font-playfair">
+                Your Sales!
+              </span>
             </span>
-          </span>
-        </h2>
+          </h2>
+
+          <Image
+            src={sparkle}
+            alt="Paperclip Logo"
+            width={87.64}
+            height={87.64}
+            className="absolute invisible xl:visible top-10 right-[-80px] transform rotate-[30deg]"
+          />
+        </div>
+
         <p className="text-[#949191] font-[400px] text-[16px] md:text-[24px] leading-[20px] md:leading-[36px] mt-4 md:mt-10 font-poppins max-w-7xl mx-auto px-4">
           Run your brick-and-mortar and online shop in perfect harmony, with
           effortless AI-created listings, professional product showcases and

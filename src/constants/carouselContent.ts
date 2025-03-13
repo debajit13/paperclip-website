@@ -8,11 +8,14 @@ import {
   cr7,
   cr8,
   cr9,
+  c115,
+  cr10,
 } from "@/utils/assets";
 
 export const carouselContent = [
   {
     key: 1,
+    value: "AI",
     title: "AI Listing",
     subTitle: "Snap It & Sell It—That’s Literally It",
     description:
@@ -34,9 +37,14 @@ export const carouselContent = [
       bottom: 0,
     },
     btnMaxWidth: "max-w-[318px]",
+    c1: true,
+    c2: true,
+    c3: true,
+    c4: true,
   },
   {
     key: 2,
+    value: "ZERO",
     title: "Zero Seller Fees",
     subTitle: "All Profit, No Sneaky Deductions!",
     description:
@@ -58,9 +66,13 @@ export const carouselContent = [
       top: 14,
     },
     btnMaxWidth: "max-w-[380px]",
+    c5: true,
+    c6: true,
+    c7: true,
   },
   {
     key: 3,
+    value: "SELLER",
     title: "AI Seller Tools",
     subTitle: "Your Secret Listing Weapon.",
     description:
@@ -78,13 +90,18 @@ export const carouselContent = [
       bottom: 0,
     },
     position: {
-      right: 20,
+      right: 32,
       bottom: 0,
     },
     btnMaxWidth: "max-w-[318px]",
+    c8: true,
+    c9: true,
+    c10: true,
+    c21: true,
   },
   {
     key: 4,
+    value: "EFFORT",
     title: "Effortless Shipping",
     subTitle: "Pack, Post, Done.",
     description:
@@ -103,12 +120,17 @@ export const carouselContent = [
     },
     position: {
       right: 10,
-      bottom: 0,
+      bottom: 10,
     },
     btnMaxWidth: "max-w-[318px]",
+    c22: true,
+    c23: true,
+    c24: true,
+    c25: true,
   },
   {
     key: 5,
+    value: "AUTO",
     title: "AI Automated Negotiation",
     subTitle: "Let Our Bots Haggle—You Just Collect the Cash.",
     description:
@@ -126,10 +148,13 @@ export const carouselContent = [
       bottom: 0,
     },
     position: {
-      right: 20,
+      right: 32,
       bottom: 0,
     },
     btnMaxWidth: "max-w-[390px]",
+    c26: true,
+    c27: true,
+    c28: true,
   },
 ];
 
@@ -144,14 +169,15 @@ export const carouselSteps = [
 export const carouselContentTwo = [
   {
     key: 1,
+    value: "EASY",
     title: "",
     subTitle: "Easy Store Setup",
     description:
       "Connect your POS, upload inventory, and start selling online in minutes",
     btnTitle: "Create your store! →",
-    image: cr6,
-    imageWidth: 600,
-    imageHeight: 500,
+    image: cr10,
+    imageWidth: 483,
+    imageHeight: 348,
     imageMobileWidth: 200,
     imageMobileHeight: 400,
     imageTabWidth: 200,
@@ -165,9 +191,13 @@ export const carouselContentTwo = [
       bottom: 0,
     },
     btnMaxWidth: "max-w-[318px]",
+    c29: true,
+    c30: true,
+    c31: true,
   },
   {
     key: 2,
+    value: "POWER",
     title: "",
     subTitle: "Powerful Management",
     description:
@@ -192,12 +222,13 @@ export const carouselContentTwo = [
   },
   {
     key: 3,
+    value: "PRO",
     title: "",
     subTitle: "Professional Tools",
     description:
       "AI-powered listings, smart pricing, and automated customer communications",
     btnTitle: "Try for FREE! →",
-    image: cr7,
+    image: c115,
     imageWidth: 580,
     imageHeight: 500,
     imageMobileWidth: 200,
@@ -213,9 +244,14 @@ export const carouselContentTwo = [
       bottom: 0,
     },
     btnMaxWidth: "max-w-[318px]",
+    c32: true,
+    c33: true,
+    c34: true,
+    c35: true,
   },
   {
     key: 4,
+    value: "UNLIMITED",
     title: "",
     subTitle: "Unlimited Growth",
     description:

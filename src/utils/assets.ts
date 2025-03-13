@@ -66,6 +66,32 @@ import backShadow from "../../public/backshadow.png";
 import shield from "../../public/sheild.svg";
 import truck from "../../public/truck.svg";
 import bgDotsTwo from "../../public/bg-dots-2.svg";
+import c11 from "../../public/c11.svg";
+import c12 from "../../public/c12.svg";
+import c13 from "../../public/c13.svg";
+import c14 from "../../public/c14.svg";
+import c15 from "../../public/c15.svg";
+import c16 from "../../public/c16.svg";
+import c17 from "../../public/c17.svg";
+import c18 from "../../public/c18.svg";
+import cloudOne from "../../public/cloudOne.svg";
+import cloudTwo from "../../public/cloudTwo.svg";
+import literallyZero from "../../public/literallyZero.svg";
+import sparkleThree from "../../public/sparkleThree.svg";
+import rocketBag from "../../public/rocketBag.svg";
+import sparkleFour from "../../public/sparkleFour.svg";
+import arrowFive from "../../public/arrowFive.svg";
+import arrowSix from "../../public/arrowSix.svg";
+import c111 from "../../public/c111.svg";
+import c112 from "../../public/c112.svg";
+import c113 from "../../public/c113.svg";
+import c114 from "../../public/c114.svg";
+import c115 from "../../public/c115.svg";
+import c116 from "../../public/c116.svg";
+import cr10 from "../../public/cr10.svg";
+import b1 from "../../public/b1.svg";
+import b2 from "../../public/b2.svg";
+import b3 from "../../public/b3.svg";
 
 export {
   paperClipLogo,
@@ -136,4 +162,30 @@ export {
   truck,
   shield,
   bgDotsTwo,
+  c11,
+  c12,
+  c13,
+  c14,
+  c15,
+  c16,
+  c17,
+  c18,
+  cloudOne,
+  cloudTwo,
+  literallyZero,
+  rocketBag,
+  sparkleThree,
+  sparkleFour,
+  arrowFive,
+  arrowSix,
+  c111,
+  c112,
+  c113,
+  c114,
+  c115,
+  c116,
+  cr10,
+  b1,
+  b2,
+  b3,
 };

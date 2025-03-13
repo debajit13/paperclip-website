@@ -7,6 +7,9 @@ import {
   sparkleTwo,
   truck,
   shield,
+  b1,
+  b2,
+  b3,
 } from "@/utils/assets";
 import { mobileThree, cart, arrowThree, wow } from "@/utils/assets";
 
@@ -29,7 +32,7 @@ const HomeCardsGrid = () => {
             </p>
           </div>
 
-          <button className="max-w-[100%] xl:max-w-[425px] mt-4 bg-white text-red-500 py-[12px] xl:py-2 px-5 xl:px-6 rounded-[100px] font-[600] text-[16px] xl:text-[24px] leading-[16px] xl:leading-[36px]">
+          <button className="relative z-10 max-w-[100%] xl:max-w-[425px] mt-4 bg-white text-red-500 py-[12px] xl:py-2 px-5 xl:px-6 rounded-[100px] font-[600] text-[16px] xl:text-[24px] leading-[16px] xl:leading-[36px]">
             Browse Personalized Finds →
           </button>
         </div>
@@ -70,6 +73,15 @@ const HomeCardsGrid = () => {
         </div>
         <div className="hidden xl:block absolute top-[40%] left-[50%]">
           <Image src={arrowTwo} alt="arrow" width={117.04} height={117.04} />
+        </div>
+        <div className="hidden xl:block absolute bottom-0 left-1/2 transform -translate-x-1/2">
+          <Image src={b1} alt="b1" width={165} height={237} />
+        </div>
+        <div className="hidden xl:block absolute bottom-0 left-24 z-0">
+          <Image src={b2} alt="b2" width={201} height={261} />
+        </div>
+        <div className="hidden xl:block absolute bottom-20 left-64 z-0">
+          <Image src={b3} alt="b3" width={107} height={154} />
         </div>
       </div>
 

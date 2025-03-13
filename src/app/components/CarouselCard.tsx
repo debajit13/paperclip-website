@@ -2,6 +2,34 @@
 
 import Image from "next/image";
 import { carouselContentProps } from "./Carousel";
+import {
+  arrow,
+  arrowFive,
+  arrowFour,
+  arrowSix,
+  arrowThree,
+  arrowTwo,
+  c11,
+  c111,
+  c112,
+  c113,
+  c114,
+  c116,
+  c12,
+  c13,
+  c14,
+  c15,
+  c16,
+  c17,
+  c18,
+  cloudOne,
+  cloudTwo,
+  literallyZero,
+  sparkle,
+  sparkleFour,
+  sparkleThree,
+  sparkleTwo,
+} from "@/utils/assets";
 
 export default function CarouselCard({
   title,
@@ -19,6 +47,32 @@ export default function CarouselCard({
   positionTab,
   customHeight,
   btnMaxWidth,
+  value,
+  c1,
+  c2,
+  c3,
+  c4,
+  c5,
+  c6,
+  c7,
+  c8,
+  c9,
+  c10,
+  c21,
+  c22,
+  c23,
+  c24,
+  c25,
+  c26,
+  c27,
+  c28,
+  c29,
+  c30,
+  c31,
+  c32,
+  c33,
+  c34,
+  c35,
 }: carouselContentProps) {
   return (
     <div
@@ -64,18 +118,203 @@ export default function CarouselCard({
 
       {/* Desktop */}
       <div
-        className={`hidden xl:block absolute right-0 bottom-0 ${
+        className={`hidden xl:block absolute ${
           position && `bottom-${position.bottom}`
         } ${position && `right-${position.right}`} ${
           position && `top-${position.top}`
         }`}
       >
-        <Image
-          src={image}
-          alt="mobileimage"
-          width={imageWidth}
-          height={imageHeight}
-        />
+        <div className="relative z-10">
+          <Image
+            src={image}
+            alt="mobileimage"
+            width={imageWidth}
+            height={imageHeight}
+          />
+        </div>
+
+        {c1 && (
+          <div className={`hidden xl:block absolute bottom-10 z-0`}>
+            <Image src={c11} alt="mobileimage" width={234} height={134} />
+          </div>
+        )}
+
+        {c2 && (
+          <div className={`hidden xl:block absolute top-20 z-0`}>
+            <Image src={c12} alt="mobileimage" width={234} height={134} />
+          </div>
+        )}
+
+        {c3 && (
+          <div className={`hidden xl:block absolute top-20 right-5 z-0`}>
+            <Image
+              src={c13}
+              alt="mobileimage"
+              width={234}
+              height={134}
+              className="z-0"
+            />
+          </div>
+        )}
+
+        {c4 && (
+          <div
+            className={`hidden xl:block absolute top-[-20px] right-20 z-0 transform -rotate-[17.75deg]`}
+          >
+            <Image src={sparkleTwo} alt="mobileimage" width={70} height={17} />
+          </div>
+        )}
+
+        {c5 && (
+          <div
+            className={`hidden xl:block absolute top-14 left-[-150px] z-0 -rotate-[60deg]`}
+          >
+            <Image src={arrowFour} alt="mobileimage" width={75} height={75} />
+          </div>
+        )}
+
+        {c6 && (
+          <div className={`hidden xl:block absolute top-2 left-[-100px]`}>
+            <Image
+              src={literallyZero}
+              alt="mobileimage"
+              width={153}
+              height={32}
+            />
+          </div>
+        )}
+
+        {c7 && (
+          <div className={`hidden xl:block absolute top-5 right-[-40px]`}>
+            <Image
+              src={sparkleFour}
+              alt="mobileimage"
+              width={146}
+              height={32}
+            />
+          </div>
+        )}
+
+        {c8 && (
+          <div
+            className={`hidden xl:block absolute bottom-10 left-[-200px] z-50`}
+          >
+            <Image src={c14} alt="mobileimage" width={263} height={249} />
+          </div>
+        )}
+
+        {c9 && (
+          <div className={`hidden xl:block absolute top-0 left-[-150px] z-0`}>
+            <Image src={c15} alt="mobileimage" width={169} height={133} />
+          </div>
+        )}
+
+        {c10 && (
+          <div className={`hidden xl:block absolute top-20 right-[-150px] z-0`}>
+            <Image src={c16} alt="mobileimage" width={234} height={259} />
+          </div>
+        )}
+
+        {c21 && (
+          <div
+            className={`hidden xl:block absolute top-[-20px] right-[-90px] z-0 transform -rotate-[17.75deg]`}
+          >
+            <Image src={sparkleTwo} alt="mobileimage" width={65} height={64} />
+          </div>
+        )}
+
+        {c22 && (
+          <div
+            className={`hidden xl:block absolute top-[-40px] left-[-20px] z-0 `}
+          >
+            <Image src={c17} alt="mobileimage" width={332} height={88} />
+          </div>
+        )}
+
+        {c23 && (
+          <div
+            className={`hidden xl:block absolute bottom-[-40px] right-0 z-0 `}
+          >
+            <Image src={c18} alt="mobileimage" width={259} height={168} />
+          </div>
+        )}
+
+        {c24 && (
+          <div
+            className={`hidden xl:block absolute bottom-40 left-[-40px] z-0`}
+          >
+            <Image src={arrowFive} alt="mobileimage" width={126} height={125} />
+          </div>
+        )}
+
+        {c25 && (
+          <div className={`hidden xl:block absolute top-[-20px] right-10 z-0`}>
+            <Image
+              src={sparkleThree}
+              alt="mobileimage"
+              width={71}
+              height={73}
+            />
+          </div>
+        )}
+
+        {c26 && (
+          <div
+            className={`hidden xl:block absolute bottom-10 left-[-200px] z-0`}
+          >
+            <Image src={cloudOne} alt="mobileimage" width={191} height={192} />
+          </div>
+        )}
+
+        {c27 && (
+          <div
+            className={`hidden xl:block absolute top-[-40px] right-[-150px] z-0`}
+          >
+            <Image src={cloudTwo} alt="mobileimage" width={159} height={160} />
+          </div>
+        )}
+
+        {c28 && (
+          <div className={`hidden xl:block absolute top-5 left-[-250px] z-0`}>
+            <Image src={arrowSix} alt="mobileimage" width={138} height={138} />
+          </div>
+        )}
+
+        {c29 && (
+          <div
+            className={`hidden xl:block absolute bottom-4 left-[-150px] z-50`}
+          >
+            <Image src={c111} alt="mobileimage" width={320} height={236} />
+          </div>
+        )}
+
+        {c30 && (
+          <div
+            className={`hidden xl:block absolute top-[-100px] right-[-80px] z-50`}
+          >
+            <Image src={c112} alt="mobileimage" width={320} height={350} />
+          </div>
+        )}
+
+        {c32 && (
+          <div
+            className={`hidden xl:block absolute bottom-0 left-[-100px] z-50`}
+          >
+            <Image src={c113} alt="mobileimage" width={385} height={350} />
+          </div>
+        )}
+
+        {c33 && (
+          <div className={`hidden xl:block absolute top-[-20px] z-50`}>
+            <Image src={c114} alt="mobileimage" width={406} height={108} />
+          </div>
+        )}
+
+        {c34 && (
+          <div className={`hidden xl:block absolute top-20 right-0 z-50`}>
+            <Image src={c116} alt="mobileimage" width={294} height={240} />
+          </div>
+        )}
       </div>
 
       {/* Ipad */}
