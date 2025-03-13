@@ -11,6 +11,8 @@ import {
   instantRight,
   navShadow,
   sparkle,
+  cloudThree,
+  cloudFour,
 } from "@/utils/assets";
 import ProfessionalToolCardTwo from "../components/ProfessionalToolCardTwo";
 import LiveDemoCard from "../components/LiveDemoCard";
@@ -136,6 +138,14 @@ const GetStarted = () => {
             image={pcardThree}
             imgWidth={240}
             imgHeight={328}
+            imageLeft={cloudThree}
+            imageLeftHeight={82}
+            imageLeftWidth={70}
+            imageRightHeight={98}
+            imageRightWidth={75}
+            customLeftCardStyle="left-0 top-32"
+            customRightCardStyle="right-0 top-5"
+            imageRight={cloudFour}
             title={<span>AI-Powered Listing & Negotiation</span>}
             description={
               "Our AI turns photos into pro listings, writes descriptions, optimises pricing, and handles buyer queries—you focus on growth."
@@ -180,6 +190,14 @@ const GetStarted = () => {
             image={pcardThree}
             imgWidth={200}
             imgHeight={328}
+            imageLeft={cloudThree}
+            imageLeftHeight={82}
+            imageLeftWidth={70}
+            imageRightHeight={98}
+            imageRightWidth={75}
+            customLeftCardStyle="left-0 top-32"
+            customRightCardStyle="right-0 top-5"
+            imageRight={cloudFour}
             title={<span>AI-Powered Listing & Negotiation</span>}
             description={
               "Our AI turns photos into pro listings, writes descriptions, optimises pricing, and handles buyer queries—you focus on growth."
@@ -190,6 +208,14 @@ const GetStarted = () => {
             image={pcardThree}
             imgWidth={200}
             imgHeight={328}
+            imageLeft={cloudThree}
+            imageLeftHeight={82}
+            imageLeftWidth={70}
+            imageRightHeight={98}
+            imageRightWidth={75}
+            customLeftCardStyle="left-0 top-32"
+            customRightCardStyle="right-0 top-5"
+            imageRight={cloudFour}
             title={<span>POS</span>}
             description={
               "Your inventory reaches thousands of buyers instantly, with perfect sync between store and online sales—no juggling, no mistakes"
@@ -225,6 +251,14 @@ const GetStarted = () => {
             image={pcardThree}
             imgWidth={200}
             imgHeight={328}
+            imageLeft={cloudThree}
+            imageLeftHeightMobile={82}
+            imageLeftWidthMobile={50}
+            imageRightHeightMobile={98}
+            imageRightWidthMobile={55}
+            customLeftCardStyle="left-0 top-32"
+            customRightCardStyle="right-0 top-5"
+            imageRight={cloudFour}
             title={<span>AI-Powered Listing & Negotiation</span>}
             description={
               "Our AI turns photos into pro listings, writes descriptions, optimises pricing, and handles buyer queries—you focus on growth."
@@ -238,6 +272,14 @@ const GetStarted = () => {
           image={pcardThree}
           imgWidth={200}
           imgHeight={328}
+          imageLeft={cloudThree}
+          imageLeftHeightMobile={82}
+          imageLeftWidthMobile={50}
+          imageRightHeightMobile={98}
+          imageRightWidthMobile={55}
+          customLeftCardStyle="left-0 top-32"
+          customRightCardStyle="right-0 top-5"
+          imageRight={cloudFour}
           title={<span>POS</span>}
           description={
             "Your inventory reaches thousands of buyers instantly, with perfect sync between store and online sales—no juggling, no mistakes"

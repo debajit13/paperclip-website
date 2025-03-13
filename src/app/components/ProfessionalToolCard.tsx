@@ -9,9 +9,19 @@ export default function ProfessionalToolCard({
   customDescription,
   image = null,
   imageLeft,
+  imageLeftHeight,
+  imageLeftWidth,
   imageRight,
+  imageRightHeight,
+  imageRightWidth,
   title,
   description,
+  customLeftCardStyle,
+  customRightCardStyle,
+  imageLeftHeightMobile,
+  imageRightHeightMobile,
+  imageLeftWidthMobile,
+  imageRightWidthMobile,
 }: {
   customStyle?: string;
   imgWidth?: number;
@@ -20,9 +30,19 @@ export default function ProfessionalToolCard({
   customDescription?: string;
   image?: any;
   imageLeft?: any;
+  imageLeftHeight?: any;
+  imageLeftWidth?: any;
+  imageLeftHeightMobile?: any;
+  imageLeftWidthMobile?: any;
   imageRight?: any;
+  imageRightHeight?: any;
+  imageRightWidth?: any;
+  imageRightHeightMobile?: any;
+  imageRightWidthMobile?: any;
   title: string | React.JSX.Element;
   description: string;
+  customLeftCardStyle?: string;
+  customRightCardStyle?: string;
 }) {
   return (
     <div
@@ -33,7 +53,7 @@ export default function ProfessionalToolCard({
 
       {/* Image */}
       {image && (
-        <div className="flex justify-center mt-6">
+        <div className="flex justify-center mt-6 relative z-50">
           <Image
             src={image}
             alt="Broken Pound"
@@ -45,18 +65,31 @@ export default function ProfessionalToolCard({
 
       {/* Desktop */}
       {imageLeft && (
-        <div className="absolute top-32 left-10 hidden md:block">
-          <Image src={instantLeft} alt="left image" width={130} height={150} />
+        <div
+          className={`absolute ${
+            customLeftCardStyle ?? "top-32 left-10"
+          }  hidden md:block z-50`}
+        >
+          <Image
+            src={imageLeft}
+            alt="left image"
+            width={imageLeftWidth ?? 130}
+            height={imageLeftHeight ?? 150}
+          />
         </div>
       )}
 
       {imageRight && (
-        <div className="absolute top-32 right-10 hidden md:block">
+        <div
+          className={`absolute ${
+            customRightCardStyle ?? "top-32 right-10"
+          }  hidden md:block z-50`}
+        >
           <Image
-            src={instantRight}
+            src={imageRight}
             alt="right image"
-            width={160}
-            height={150}
+            width={imageRightWidth ?? 160}
+            height={imageRightHeight ?? 150}
           />
         </div>
       )}
@@ -64,17 +97,22 @@ export default function ProfessionalToolCard({
       {/* Mobile */}
       {imageLeft && (
         <div className="absolute top-32 left-0 block md:hidden">
-          <Image src={instantLeft} alt="left image" width={90} height={150} />
+          <Image
+            src={imageLeft}
+            alt="left image"
+            width={imageLeftWidthMobile ?? 90}
+            height={imageLeftHeightMobile ?? 150}
+          />
         </div>
       )}
 
       {imageRight && (
         <div className="absolute top-10 right-0  block md:hidden">
           <Image
-            src={instantRight}
+            src={imageRight}
             alt="right image"
-            width={104}
-            height={150}
+            width={imageRightWidthMobile ?? 104}
+            height={imageRightHeightMobile ?? 150}
           />
         </div>
       )}

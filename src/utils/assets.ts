@@ -92,6 +92,8 @@ import cr10 from "../../public/cr10.svg";
 import b1 from "../../public/b1.svg";
 import b2 from "../../public/b2.svg";
 import b3 from "../../public/b3.svg";
+import cloudThree from "../../public/cloudThree.svg";
+import cloudFour from "../../public/cloudFour.svg";
 
 export {
   paperClipLogo,
@@ -188,4 +190,6 @@ export {
   b1,
   b2,
   b3,
+  cloudThree,
+  cloudFour,
 };
