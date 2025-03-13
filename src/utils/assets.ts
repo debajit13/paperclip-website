@@ -94,6 +94,11 @@ import b2 from "../../public/b2.svg";
 import b3 from "../../public/b3.svg";
 import cloudThree from "../../public/cloudThree.svg";
 import cloudFour from "../../public/cloudFour.svg";
+import ashtonMorning from "../../public/ashtonMorning.svg";
+import R1 from "../../public/R1.svg";
+import R2 from "../../public/R2.svg";
+import L1 from "../../public/L1.svg";
+import L2 from "../../public/L2.svg";
 
 export {
   paperClipLogo,
@@ -192,4 +197,9 @@ export {
   b3,
   cloudThree,
   cloudFour,
+  ashtonMorning,
+  R1,
+  R2,
+  L1,
+  L2,
 };

@@ -370,7 +370,7 @@ const GetStarted = () => {
       {/* Infinite moving Carousel */}
       <div className="mt-20 xl:mt-[296px] max-w-[1280px] mx-auto hidden xl:block">
         <section className="bg-white mx-auto pt-10 pb-8 px-6 text-center rounded-t-[56px] z-0 w-full">
-          <h2 className="text-[20px] font-poppins font-semibold text-red-500 leading-[28px] text-center">
+          <h2 className="text-[20px] font-poppins font-semibold text-[#F71D3B] leading-[28px] text-center">
             Paperclip Pro
           </h2>
           <h2 className="mt-4 text-[40px] font-poppins font-semibold text-gray-800 leading-[58px] text-center">

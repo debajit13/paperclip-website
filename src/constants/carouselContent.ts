@@ -48,7 +48,7 @@ export const carouselContent = [
     title: "Zero Seller Fees",
     subTitle: "All Profit, No Sneaky Deductions!",
     description:
-      "Because you should keep every penny for that next must-have find—or that big night out.",
+      "Because you should keep every penny for that next must have find or that big night out.",
     btnTitle: "Start Earning, Fee-Free →",
     image: pcardOne,
     imageWidth: 500,
@@ -76,7 +76,7 @@ export const carouselContent = [
     title: "AI Seller Tools",
     subTitle: "Your Secret Listing Weapon.",
     description:
-      "We polish your photos, punch up your descriptions, and get your gear noticed—so your item stands out like a rare gem.",
+      "We polish your photos, punch up your descriptions, and get your gear noticed so your item stands out like a rare gem.",
     btnTitle: "Pimp My Listing! →",
     image: cr3,
     imageWidth: 252,
@@ -105,7 +105,7 @@ export const carouselContent = [
     title: "Effortless Shipping",
     subTitle: "Pack, Post, Done.",
     description:
-      "Seamless, integrated shipping labels. No queueing at the post office or messing about with addresses—send it off and watch the kudos roll in.",
+      "Seamless, integrated shipping labels. No queueing at the post office or messing about with addresses, send it off and watch the kudos roll in.",
     btnTitle: "Ship It in a Snap →",
     image: cr4,
     imageWidth: 585,
@@ -132,10 +132,10 @@ export const carouselContent = [
     key: 5,
     value: "AUTO",
     title: "AI Automated Negotiation",
-    subTitle: "Let Our Bots Haggle—You Just Collect the Cash.",
+    subTitle: "Let Our Bots Haggle. You Just Collect the Cash.",
     description:
-      "Skip the awkward back-and-forth. AI gets you a fair price without all that ‘Is this still available?’ nonsense.",
-    btnTitle: "Activate Robo-Negotiation →",
+      "Skip the awkward back and forth. AI gets you a fair price without all that ‘Is this still available?’ nonsense.",
+    btnTitle: "Activate Robo Negotiation →",
     image: cr5,
     imageWidth: 300,
     imageHeight: 680,

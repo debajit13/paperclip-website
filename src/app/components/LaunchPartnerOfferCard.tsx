@@ -1,4 +1,4 @@
-import { mobLeft, mobRight } from "@/utils/assets";
+import { L1, L2, mobLeft, mobRight, R1, R2 } from "@/utils/assets";
 import Image from "next/image";
 
 export default function LaunchPartnerOffer() {
@@ -31,59 +31,59 @@ export default function LaunchPartnerOffer() {
         {/* Mobile/Tab */}
         <div className="absolute bottom-14 left-2 -rotate-12 w-20 h-20 bg-white rounded-lg shadow-lg overflow-hidden block xl:hidden">
           <Image
-            src={mobLeft}
+            src={L1}
             alt="Tablet"
             width={80}
             height={80}
-            className="w-full h-full object-cover"
+            className="w-full h-full"
           />
         </div>
         <div className="absolute bottom-3 right-2 rotate-12 w-20 h-20 bg-white rounded-lg shadow-lg overflow-hidden block xl:hidden">
           <Image
-            src={mobRight}
+            src={L2}
             alt="Tablet"
             width={80}
             height={80}
-            className="w-full h-full object-cover"
+            className="w-full h-full"
           />
         </div>
 
         {/* Desktop */}
-        <div className="absolute top-32 left-4 -rotate-12 bg-white w-32 h-32 rounded-lg shadow-lg overflow-hidden hidden xl:block">
+        <div className="absolute top-32 left-4 -rotate-12 bg-white w-[150px] h-[170px] rounded-lg shadow-lg overflow-hidden hidden xl:block">
           <Image
-            src={mobLeft}
+            src={L1}
             alt="Tablet"
             width={80}
             height={80}
-            className="w-full h-full object-cover"
+            className="w-full h-full"
           />
         </div>
-        <div className="absolute bottom-3 left-32 rotate-12 w-32 h-32 bg-white rounded-lg shadow-lg overflow-hidden hidden xl:block">
+        <div className="absolute bottom-3 left-32 rotate-12 w-[150px] h-[170px] bg-white rounded-lg shadow-lg overflow-hidden hidden xl:block">
           <Image
-            src={mobRight}
+            src={L2}
             alt="Tablet"
             width={80}
             height={80}
-            className="w-full h-full object-cover"
+            className="w-full h-full"
           />
         </div>
 
-        <div className="absolute top-32 right-4 rotate-12 bg-white w-32 h-32 rounded-lg shadow-lg overflow-hidden hidden xl:block">
+        <div className="absolute top-32 right-4 rotate-12 bg-white w-[150px] h-[170px] rounded-lg shadow-lg overflow-hidden hidden xl:block">
           <Image
-            src={mobLeft}
+            src={R1}
             alt="Tablet"
             width={80}
             height={80}
-            className="w-full h-full object-cover"
+            className="w-full h-full"
           />
         </div>
-        <div className="absolute bottom-3 right-32 -rotate-12 w-32 h-32 bg-white rounded-lg shadow-lg overflow-hidden hidden xl:block">
+        <div className="absolute bottom-3 right-32 -rotate-12 w-[150px] h-[170px] bg-white rounded-lg shadow-lg overflow-hidden hidden xl:block">
           <Image
-            src={mobRight}
+            src={R2}
             alt="Tablet"
             width={80}
             height={80}
-            className="w-full h-full object-cover"
+            className="w-full h-full"
           />
         </div>
       </div>

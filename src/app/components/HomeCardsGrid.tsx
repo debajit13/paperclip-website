@@ -93,7 +93,8 @@ const HomeCardsGrid = () => {
             On-Model Previews
           </h3>
           <h4 className="font-[600] text-[32px] xl:text-[40px] leading-[40px] xl:leading-[56px] mt-10 text-wrap font-poppins">
-            Get a Sneak Peek—No Surprises.
+            Get a Sneak Peek, <br />
+            No Surprises.
           </h4>
           <p className="text-gray-600 font-[500] text-[16px] xl:text-[24px] leading-[24px] xl:leading-[36px] mt-4 font-poppins">
             Wonder if that hat fits your vibe? Or if that coat matches your
@@ -157,8 +158,8 @@ const HomeCardsGrid = () => {
                 Purchase, Track, Relax.
               </h4>
               <p className="text-gray-600 font-[500] leading-[16px] xl:text-[24px] leading-[24px] xl:leading-[36px] mt-4 font-poppins">
-                Don’t stress about fakes or duds—our AI safety net ensures you
-                always get what you paid for, or your money back.
+                No more nerve-racking waiting games or shady updates, your new
+                treasure is on its way, complete with real-time tracking
               </p>
             </div>
 
@@ -180,7 +181,7 @@ const HomeCardsGrid = () => {
                 Spend with Ease!
               </h4>
               <p className="text-gray-600 font-[500] leading-[16px] xl:text-[24px] leading-[24px] xl:leading-[36px] mt-4 font-poppins">
-                Shop worry-free! AI-reviewed listings and Buyer Premium
+                Shop worry-free! AI reviewed listings and Buyer Premium
                 Protections keep your purchase safe from damage, delivery
                 issues, or surprises.
               </p>

@@ -11,6 +11,7 @@ import {
   animatedImg9,
   arrow,
   arrowFour,
+  ashtonMorning,
   downloadNow,
   downloadNow2,
   frameLeft,
@@ -115,14 +116,14 @@ export default function FooterSection() {
           AI Try-On
         </h3>
         <h2 className="text-2xl font-[600] text-[32px] leading-[40px] md:text-[40px] md:leading-[56px] mt-6 font-poppins">
-          See It on You—Instantly!
+          See It on You, Instantly!
         </h2>
         <p className="text-[#949191] font-[500] text-[16px] leading-[24px] md:text-[24px] lmd:eading-[36px] mt-4 font-poppins">
           Skip the guesswork. Our AI Mirror shows how those heels, jeans, or
           jackets look on you, minus the fitting-room queue.
         </p>
         <button className="w-[100%] xl:max-w-[350px] mt-8 md:mt-16 bg-red-500 text-white py-[12px] px-[36px] rounded-[100px] font-[600] text-[16px] leading-[16px] md:text-[24px] md:leading-[36px] font-poppins">
-          Try It On—Right Now →
+          Try It On, Right Now →
         </button>
       </div>
 
@@ -340,7 +341,7 @@ export default function FooterSection() {
 
         <div className="hidden xl:block absolute bottom-[-30px] right-60">
           <Image
-            src={animatedImg9}
+            src={ashtonMorning}
             alt="animatedImg-9"
             width={200}
             height={387}
