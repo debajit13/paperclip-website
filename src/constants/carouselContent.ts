@@ -17,7 +17,7 @@ export const carouselContent = [
     key: 1,
     value: "AI",
     title: "AI Listing",
-    subTitle: "Snap It & Sell It—That’s Literally It",
+    subTitle: "Snap It & Sell It, That’s Literally It",
     description:
       "No more battling text boxes. Point your camera at what you want to sell; we do the rest. Let AI handle those boring details while you, well, get on with life.",
     btnTitle: "Snap & Sell Now! →",
