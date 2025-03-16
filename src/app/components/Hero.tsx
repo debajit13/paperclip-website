@@ -437,7 +437,7 @@ const Hero = () => {
       {/* Background gradient that follows the video's position */}
       {videoStyles.transitionProgress > 0.3 && (
         <div
-          className="fixed left-0 w-full bg-gradient-to-b from-white via-[#FFF2F3] to-[#FFD1D6] z-10"
+          className="hidden xl:block fixed left-0 w-full bg-gradient-to-b from-white via-[#FFF2F3] to-[#FFD1D6] z-10"
           style={{
             top: `${
               (heroRef.current as any)?.clientHeight || window.innerHeight
@@ -450,7 +450,10 @@ const Hero = () => {
       )}
 
       {/* Content that should appear after the video */}
-      <div className="w-full" style={{ height: `${VIDEO_HEIGHT}px` }}></div>
+      <div
+        className="w-full hidden xl:block"
+        style={{ height: `${VIDEO_HEIGHT}px` }}
+      ></div>
     </>
   );
 };
