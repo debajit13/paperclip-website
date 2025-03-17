@@ -61,7 +61,7 @@ const Hero = () => {
       const progress = useTransform(
         scrollYProgress,
         // Adjust these ranges to control when each letter starts/completes filling
-        [0.1 + index * 0.005, 0.3 + index * 0.005],
+        [0.5 + index * 0.005, 0.6 + index * 0.005],
         [0, 1]
       );
 
@@ -95,7 +95,7 @@ const Hero = () => {
       // Calculate text opacity based on scroll position
       const heroHeight =
         (heroRef.current as any)?.clientHeight || window.innerHeight;
-      const scrollThreshold = heroHeight * 0.5; // Start revealing text earlier
+      const scrollThreshold = heroHeight * 0.3; // Start revealing text earlier
       const maxScrollForOpacity = heroHeight * 0.7; // Fully reveal by this point
 
       if (window.scrollY > scrollThreshold) {
@@ -105,7 +105,7 @@ const Hero = () => {
             (maxScrollForOpacity - scrollThreshold),
           1
         );
-        setTextOpacity(newOpacity);
+        setTextOpacity(1);
       } else {
         setTextOpacity(0);
       }
@@ -359,7 +359,7 @@ const Hero = () => {
       {/* Video container with text inside */}
       <div
         ref={videoRef}
-        className="z-40 hidden xl:block"
+        className="z-40 hidden xl:block xl:mt-10"
         style={{
           position: videoStyles.position as any,
           top:
