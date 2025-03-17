@@ -26,7 +26,6 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
-import VideoPlayer from "./video/Video1";
 
 const Hero = () => {
   const [hideImages, setHideImages] = useState(false);
