@@ -55,7 +55,7 @@ const recentSales = [
 
 export default function DashboardCard() {
   return (
-    <CardContainer className="w-full max-w-7xl mx-auto rounded-2xl border border-white/20 shadow-[0px_10px_50px_rgba(0,0,0,0.05)] p-2">
+    <CardContainer className="w-[90%] mx-auto rounded-2xl border border-white/20 shadow-[0px_10px_50px_rgba(0,0,0,0.05)] p-2">
       <div className="flex w-full max-h-[90%]">
         {/* Sidebar */}
         <aside className="w-[20%] bg-white shadow-lg p-6 flex flex-col space-y-6 rounded-l-2xl">
@@ -103,7 +103,7 @@ export default function DashboardCard() {
         </aside>
 
         {/* Main Dashboard Section */}
-        <div className="bg-white shadow-lg rounded-r-2xl p-6 w-full max-w-5xl mx-auto">
+        <div className="bg-white shadow-lg rounded-r-2xl p-6 w-full mx-auto">
           {/* Top Metrics */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <div className="p-4 border rounded-lg">

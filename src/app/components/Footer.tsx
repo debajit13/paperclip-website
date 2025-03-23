@@ -132,7 +132,7 @@ export default function FooterSection() {
         ref={containerRef}
         className="mt-28 md:mt-[172px] pb-[170px] md:pb-[800px] w-full bg-gradient-to-b from-white via-[#FFF2F3] to-[#FFD1D6] flex flex-row justify-center"
       >
-        <div className="relative w-[100%] max-w-[1280px]">
+        <div className="relative w-[100%]">
           {/* Center Video Desktop */}
           <div className="z-50 mx-auto w-[280px] h-[600px] border-[6px] border-black rounded-[60px] hidden md:block absolute top-5 left-1/2 -translate-x-1/2 overflow-hidden">
             <video
@@ -233,7 +233,7 @@ export default function FooterSection() {
 
       {/* Referral Section */}
       <div className="bg-white mt-[-50px] md:mt-[-50px] xl:mb-20 text-center rounded-t-[56px] z-0 w-screen">
-        <div className="my-[72px] md:my-20 xl:my-[200px] w-[94%] mx-auto max-w-[1280px] mx-auto rounded-t-[56px]">
+        <div className="my-[72px] md:my-20 xl:my-[200px] w-[94%] mx-auto mx-auto rounded-t-[56px]">
           <div className="w-[90%] md:w-full mx-auto relative md:col-span-2 md:h-[344px] bg-gradient-to-l from-[#FC9CA8] to-[#FFF2F3] p-6 rounded-[32px] shadow-lg flex flex-col md:flex-row md:justify-between items-center text-left">
             <div className="h-[80%] md:w-[50%] xl:w-[40%] flex flex-col justify-between md:ml-6">
               <div>
@@ -276,7 +276,7 @@ export default function FooterSection() {
       {/* Footer Section */}
       <div className="w-full pb-20 xl:pb-40 relative xl:bg-[url('/bg-dots-2.svg')] xl:bg-bottom xl:bg-cover">
         <div className="hidden xl:block xl:mt-[-100px]">
-          <div className="relative flex flex-row items-center justify-center transform mb-20 max-w-[1280px] mx-auto">
+          <div className="relative flex flex-row items-center justify-center transform mb-20 mx-auto">
             {/* Floating Text with Arrow */}
             <div className="absolute left-32 top-0 flex flex-row items-center transform rotate-6 -mt-14 ml-4">
               <div className="text-gray-900 text-xs font-bold">

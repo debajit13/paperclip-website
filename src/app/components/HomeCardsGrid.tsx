@@ -167,7 +167,7 @@ const HomeCardsGrid = () => {
               Get It Shipped →
             </button>
 
-            <div className="absolute right-5 bottom-5 hidden xl:block">
+            <div className="absolute right-5 bottom-0 hidden xl:block">
               <Image src={truck} alt="truckimage" width={254} height={260} />
             </div>
           </div>
@@ -191,8 +191,8 @@ const HomeCardsGrid = () => {
               Shop Securely →
             </button>
 
-            <div className="absolute right-5 bottom-5 hidden xl:block">
-              <Image src={shield} alt="truckimage" width={254} height={260} />
+            <div className="absolute right-5 bottom-0 hidden xl:block">
+              <Image src={shield} alt="truckimage" width={200} height={260} />
             </div>
           </div>
         </div>

@@ -63,8 +63,8 @@ import available from "../../public/available.png";
 import downloadNow2 from "../../public/downloadNow2.png";
 import heroIphone from "../../public/hero-iphone.png";
 import backShadow from "../../public/backshadow.png";
-import shield from "../../public/sheild.svg";
-import truck from "../../public/truck.svg";
+import shield from "../../public/shieldTwo.png";
+import truck from "../../public/truckTwo.png";
 import bgDotsTwo from "../../public/bg-dots-2.svg";
 import c11 from "../../public/c11.svg";
 import c12 from "../../public/c12.svg";
@@ -99,6 +99,8 @@ import R1 from "../../public/R1.svg";
 import R2 from "../../public/R2.svg";
 import L1 from "../../public/L1.svg";
 import L2 from "../../public/L2.svg";
+import tabLeft from "../../public/tabLeft.png";
+import tabRight from "../../public/tabRight.png";
 
 export {
   paperClipLogo,
@@ -202,4 +204,6 @@ export {
   R2,
   L1,
   L2,
+  tabLeft,
+  tabRight,
 };

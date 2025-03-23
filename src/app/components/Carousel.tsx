@@ -264,7 +264,7 @@ export default function Carousel({
   );
 
   return (
-    <div className="w-full mx-auto relative max-w-[1280px]" ref={carouselRef}>
+    <div className="w-full mx-auto relative max-w-[98%]" ref={carouselRef}>
       {/* Progress Bar */}
       <ProgressBar currentSlide={currentProgress} steps={carouselSteps} />
 

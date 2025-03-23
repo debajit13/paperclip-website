@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React, { useEffect, useState, useRef } from 'react';
-import Image from 'next/image';
+import React, { useEffect, useState, useRef } from "react";
+import Image from "next/image";
 import {
   animatedImg1,
   animatedImg2,
@@ -19,13 +19,13 @@ import {
   available,
   arrowFour,
   qrCode,
-} from '@/utils/assets';
+} from "@/utils/assets";
 import {
   AnimatePresence,
   motion,
   useScroll,
   useTransform,
-} from 'framer-motion';
+} from "framer-motion";
 
 const Hero = () => {
   const [hideImages, setHideImages] = useState(false);
@@ -37,12 +37,12 @@ const Hero = () => {
   const letterRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: letterRef,
-    offset: ['start end', 'end start'], // Triggers animation as it scrolls in and stops at the top
+    offset: ["start end", "end start"], // Triggers animation as it scrolls in and stops at the top
   });
 
   // Fixed dimensions for the video
-  const VIDEO_WIDTH = 663;
-  const VIDEO_HEIGHT = 829;
+  const VIDEO_WIDTH = 339;
+  const VIDEO_HEIGHT = 540;
   const BORDER_RADIUS = 55;
 
   const initialOpacity = 0;
@@ -52,11 +52,11 @@ const Hero = () => {
   const opacity = 1;
   const scale = 1;
   const transitionDuration = 0.5;
-  const easeValue = 'easeInOut';
+  const easeValue = "easeInOut";
 
   // Function to animate each letter individually with fill effect
   const renderAnimatedText = (text: string, delayOffset = 0) => {
-    return text.split('').map((char, index) => {
+    return text.split("").map((char, index) => {
       // Create a dynamic fill effect per letter based on scroll progress
       const progress = useTransform(
         scrollYProgress,
@@ -66,21 +66,21 @@ const Hero = () => {
       );
 
       return (
-        <motion.span key={index} className='inline-block relative'>
+        <motion.span key={index} className="inline-block relative">
           {/* Background letter (gray) */}
-          <span className='text-[#949191] relative'>
-            {char === ' ' ? '\u00A0' : char}
+          <span className="text-[#949191] relative">
+            {char === " " ? "\u00A0" : char}
           </span>
 
           {/* Foreground letter (black) - this will appear based on scroll progress */}
           <motion.span
-            className='absolute left-0 top-0 text-[#1B1B1B] overflow-hidden'
+            className="absolute left-0 top-0 text-[#1B1B1B] overflow-hidden"
             style={{
               opacity: progress,
-              position: 'absolute',
+              position: "absolute",
             }}
           >
-            {char === ' ' ? '\u00A0' : char}
+            {char === " " ? "\u00A0" : char}
           </motion.span>
         </motion.span>
       );
@@ -132,15 +132,15 @@ const Hero = () => {
       threshold: 1.0,
     });
 
-    const heroSection = document.getElementById('hero-section');
+    const heroSection = document.getElementById("hero-section");
     if (heroSection) {
       observer.observe(heroSection);
     }
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
       if (heroSection) {
         observer.unobserve(heroSection);
       }
@@ -152,10 +152,10 @@ const Hero = () => {
     if (!isBrowser) {
       // Return default styles for SSR
       return {
-        position: 'fixed',
-        top: 'calc(100vh - 205px)',
-        left: '50%',
-        transform: 'translateX(-50%)',
+        position: "fixed",
+        top: "calc(100vh - 205px)",
+        left: "50%",
+        transform: "translateX(-50%)",
         transitionProgress: 0,
       };
     }
@@ -171,10 +171,10 @@ const Hero = () => {
     // Before transition starts
     if (scrollPosition < scrollStartThreshold) {
       return {
-        position: 'fixed',
-        top: 'calc(100vh - 205px)',
-        left: '50%',
-        transform: 'translateX(-50%)',
+        position: "fixed",
+        top: "calc(100vh - 205px)",
+        left: "50%",
+        transform: "translateX(-50%)",
         transitionProgress: 0,
       };
     }
@@ -195,20 +195,20 @@ const Hero = () => {
       const currentTop = startTop + transitionProgress * (endTop - startTop);
 
       return {
-        position: transitionProgress > 0.95 ? 'absolute' : 'fixed',
+        position: transitionProgress > 0.95 ? "absolute" : "fixed",
         top: transitionProgress > 0.95 ? endTop : currentTop,
-        left: '50%',
-        transform: 'translateX(-50%)',
+        left: "50%",
+        transform: "translateX(-50%)",
         transitionProgress,
       };
     }
 
     // After transition completes
     return {
-      position: 'absolute',
+      position: "absolute",
       top: heroHeight - 120,
-      left: '50%',
-      transform: 'translateX(-50%)',
+      left: "50%",
+      transform: "translateX(-50%)",
       transitionProgress: 1,
     };
   };
@@ -218,26 +218,26 @@ const Hero = () => {
   return (
     <>
       <div
-        id='hero-section'
+        id="hero-section"
         ref={heroRef}
         className="pt-16 md:pt-52 xl:pt-0 relative xl:h-screen xl:w-screen xl:flex xl:flex-row xl:justify-center xl:items-center bg-[url('/bg-dots.svg')] bg-top bg-cover"
       >
-        <div className='relative'>
-          <div className='flex flex-col items-center'>
+        <div className="relative">
+          <div className="flex flex-col items-center">
             <Image
               src={paperClipLogo}
-              alt='Paperclip Logo'
+              alt="Paperclip Logo"
               width={188.06}
               height={36.06}
             />
           </div>
 
-          <h2 className='mt-4 text-[46px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[51px] sm:leading-[72px] tracking-[-0.5px] text-center max-w-[1280px] mx-auto'>
+          <h2 className="mt-4 text-[46px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[51px] sm:leading-[72px] tracking-[-0.5px] text-center mx-auto">
             The easiest way to sell
             <br />
             <span>
-              your stuff{' '}
-              <span className='text-red-500 italic font-playfair'>
+              your stuff{" "}
+              <span className="text-red-500 italic font-playfair">
                 in seconds
               </span>
             </span>
@@ -245,18 +245,18 @@ const Hero = () => {
 
           <Image
             src={sparkle}
-            alt='Paperclip Logo'
+            alt="Paperclip Logo"
             width={87.64}
             height={87.64}
-            className='absolute invisible xl:visible right-[-50px] top-0'
+            className="absolute invisible xl:visible right-[-50px] top-0"
           />
         </div>
 
         {/* Navbar Bg Shadow */}
-        <div className='absolute top-0 left-1/2 -translate-x-1/2 hidden xl:block'>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 hidden xl:block">
           <Image
             src={navShadow}
-            alt='animatedImg-1'
+            alt="animatedImg-1"
             width={1280}
             height={143}
           />
@@ -267,7 +267,7 @@ const Hero = () => {
           {!hideImages && (
             <>
               <motion.div
-                className='absolute top-0 left-0 hidden xl:block'
+                className="absolute top-0 left-0 hidden xl:block"
                 initial={{ opacity: initialOpacity, scale: initialScale }}
                 animate={{ opacity: opacity, scale: scale }}
                 exit={{ opacity: exitOpacity, scale: exitScale }}
@@ -275,14 +275,14 @@ const Hero = () => {
               >
                 <Image
                   src={animatedImg1}
-                  alt='animatedImg-1'
+                  alt="animatedImg-1"
                   width={233}
                   height={250}
                 />
               </motion.div>
 
               <motion.div
-                className='absolute my-auto left-0 hidden xl:block'
+                className="absolute my-auto left-0 hidden xl:block"
                 initial={{ opacity: initialOpacity, scale: initialScale }}
                 animate={{ opacity: opacity, scale: scale }}
                 exit={{ opacity: exitOpacity, scale: exitScale }}
@@ -290,14 +290,14 @@ const Hero = () => {
               >
                 <Image
                   src={animatedImg2}
-                  alt='animatedImg-2'
+                  alt="animatedImg-2"
                   width={180}
                   height={387}
                 />
               </motion.div>
 
               <motion.div
-                className='absolute bottom-0 left-0 hidden xl:block'
+                className="absolute bottom-0 left-0 hidden xl:block"
                 initial={{ opacity: initialOpacity, scale: initialScale }}
                 animate={{ opacity: opacity, scale: scale }}
                 exit={{ opacity: exitOpacity, scale: exitScale }}
@@ -305,14 +305,14 @@ const Hero = () => {
               >
                 <Image
                   src={animatedImg3}
-                  alt='animatedImg-3'
+                  alt="animatedImg-3"
                   width={300}
                   height={94}
                 />
               </motion.div>
 
               <motion.div
-                className='absolute bottom-[-20px] right-20 hidden xl:block z-50'
+                className="absolute bottom-[-20px] right-20 hidden xl:block z-50"
                 initial={{ opacity: initialOpacity, scale: initialScale }}
                 animate={{ opacity: opacity, scale: scale }}
                 exit={{ opacity: exitOpacity, scale: exitScale }}
@@ -320,14 +320,14 @@ const Hero = () => {
               >
                 <Image
                   src={applepay}
-                  alt='animatedImg-4'
+                  alt="animatedImg-4"
                   width={200}
                   height={240}
                 />
               </motion.div>
 
               <motion.div
-                className='absolute bottom-0 right-0 hidden xl:block z-0'
+                className="absolute bottom-0 right-0 hidden xl:block z-0"
                 initial={{ opacity: initialOpacity, scale: initialScale }}
                 animate={{ opacity: opacity, scale: scale }}
                 exit={{ opacity: exitOpacity, scale: exitScale }}
@@ -335,14 +335,14 @@ const Hero = () => {
               >
                 <Image
                   src={animatedImg5}
-                  alt='animatedImg-5'
+                  alt="animatedImg-5"
                   width={130}
                   height={240}
                 />
               </motion.div>
 
               <motion.div
-                className='absolute my-auto right-0 hidden xl:block'
+                className="absolute my-auto right-0 hidden xl:block"
                 initial={{ opacity: initialOpacity, scale: initialScale }}
                 animate={{ opacity: opacity, scale: scale }}
                 exit={{ opacity: exitOpacity, scale: exitScale }}
@@ -350,14 +350,14 @@ const Hero = () => {
               >
                 <Image
                   src={animatedImg6}
-                  alt='animatedImg-6'
+                  alt="animatedImg-6"
                   width={150}
                   height={387}
                 />
               </motion.div>
 
               <motion.div
-                className='absolute top-0 right-0 hidden xl:block'
+                className="absolute top-0 right-0 hidden xl:block"
                 initial={{ opacity: initialOpacity, scale: initialScale }}
                 animate={{ opacity: opacity, scale: scale }}
                 exit={{ opacity: exitOpacity, scale: exitScale }}
@@ -365,7 +365,7 @@ const Hero = () => {
               >
                 <Image
                   src={animatedImg7}
-                  alt='animatedImg-7'
+                  alt="animatedImg-7"
                   width={247}
                   height={250}
                 />
@@ -378,38 +378,37 @@ const Hero = () => {
       {/* Video container with text inside */}
       <div
         ref={videoRef}
-        className='z-40 hidden xl:block xl:mt-10'
+        className="z-40 hidden xl:block xl:mt-10"
         style={{
           position: videoStyles.position as any,
           top:
-            typeof videoStyles.top === 'string'
+            typeof videoStyles.top === "string"
               ? videoStyles.top
               : `${videoStyles.top}px`,
           left: videoStyles.left,
           transform: videoStyles.transform,
           width: `${VIDEO_WIDTH}px`,
           zIndex: 0,
-          transition: 'all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1.0)',
+          transition: "all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1.0)",
         }}
       >
         {/* Text above the video - part of the video container */}
         <div
-          className='absolute w-full text-center px-4 pointer-events-none'
+          className="absolute left-1/2 transform -translate-x-1/2 w-full text-center px-4 pointer-events-none"
           style={{
             opacity: textOpacity,
-            transition: 'opacity 0.3s ease-out',
-            top: '-200px', // Position above the video
-            left: '0',
-            width: '605px', // Wider than the video
-            // marginLeft: "-75px", // Offset to center
+            transition: "opacity 0.3s ease-out",
+            top: "-200px", // Position above the video
+            width: "605px",
+            // marginLeft: "-75px",
           }}
         >
           <motion.h1
             ref={letterRef}
-            className='text-2xl text-center md:text-[35.3px] font-semibold text-center font-poppins !leading-[48px]'
+            className="text-2xl text-center md:text-[35.3px] font-semibold text-center font-poppins !leading-[48px]"
           >
             {renderAnimatedText(
-              'From AI Try-On to AI enhanced product visuals, showcase items in the best possible way and',
+              "From AI Try-On to AI enhanced product visuals, showcase items in the best possible way and",
               0.5
             )}
           </motion.h1>
@@ -418,36 +417,36 @@ const Hero = () => {
         {/* Video element */}
         <div style={{ height: `${VIDEO_HEIGHT}px` }}>
           <video
-            src='/videos/output_transparent.webm'
+            src="/videos/hero_mobile.mp4"
             autoPlay
             loop
             muted
-            className='w-full h-full object-cover'
+            className=""
             style={{
               borderRadius: `${BORDER_RADIUS}px`,
             }}
           />
-          <div className='absolute left-[-40%] top-[30%] -translate-y-1/2 hidden xl:block'>
+          <div className="absolute left-[-100%] top-[50%] -translate-y-1/2 hidden xl:block">
             <Image
               src={downloadNow2}
-              alt='download now'
+              alt="download now"
               width={250}
               height={94}
             />
           </div>
-          <div className='absolute left-[-40%] top-[35%] -translate-y-1/2 hidden xl:block'>
-            <Image src={available} alt='available' width={160} height={94} />
+          <div className="absolute left-[-100%] top-[58%] -translate-y-1/2 hidden xl:block">
+            <Image src={available} alt="available" width={160} height={94} />
           </div>
-          <div className='absolute left-[-20%] top-[40%] -translate-y-1/2 hidden xl:block'>
-            <Image src={arrowFour} alt='arrow' width={100} height={120} />
+          <div className="absolute left-[-40%] top-[64%] -translate-y-1/2 hidden xl:block">
+            <Image src={arrowFour} alt="arrow" width={100} height={120} />
           </div>
-          <div className='absolute right-[-25%] top-[35%] -translate-y-1/2 hidden xl:block'>
+          <div className="absolute right-[-100%] top-[55%] -translate-y-1/2 hidden xl:block">
             <Image
               src={qrCode}
-              alt='qr code'
+              alt="qr code"
               width={200}
               height={120}
-              className='rotate-12'
+              className="rotate-12"
             />
           </div>
         </div>
@@ -456,7 +455,7 @@ const Hero = () => {
       {/* Background gradient that follows the video's position */}
       {isBrowser && videoStyles.transitionProgress > 0.3 && (
         <div
-          className='hidden xl:block fixed left-0 w-full bg-gradient-to-b from-white via-[#FFF2F3] to-[#FFD1D6] z-10'
+          className="hidden xl:block fixed left-0 w-full bg-gradient-to-b from-white via-[#FFF2F3] to-[#FFD1D6] z-10"
           style={{
             top: `${
               (heroRef.current as any)?.clientHeight ||
@@ -464,14 +463,14 @@ const Hero = () => {
             }px`,
             height: isBrowser ? window.innerHeight : 0,
             opacity: Math.min(videoStyles.transitionProgress * 2, 1),
-            transition: 'opacity 0.3s ease-out',
+            transition: "opacity 0.3s ease-out",
           }}
         />
       )}
 
       {/* Content that should appear after the video */}
       <div
-        className='w-full hidden xl:block'
+        className="w-full hidden xl:block"
         style={{ height: `${VIDEO_HEIGHT}px` }}
       ></div>
     </>
