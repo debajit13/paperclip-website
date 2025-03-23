@@ -85,7 +85,7 @@ const GetStarted = () => {
         {/* Floating Background Layer */}
         <div className="absolute inset-0 bg-[url('/backshadow.png')] bg-top bg-cover pointer-events-none h-[100%] -top-[40%]"></div>
         <div className="relative w-full">
-          <div className="w-full mx-auto w-[80%] h-64 absolute top-14 left-1/2 transform -translate-x-1/2 bg-[#F7F5F3] rounded-[24px] border border-white/40 shadow-[0px_10px_50px_rgba(0,0,0,0.24)] opacity-40 backdrop-blur-xl"></div>
+          <div className="w-full mx-auto w-[78%] h-64 absolute top-14 left-1/2 transform -translate-x-1/2 bg-[#F7F5F3] rounded-[24px] border border-white/40 shadow-[0px_10px_50px_rgba(0,0,0,0.24)] opacity-40 backdrop-blur-xl"></div>
           <DashboardCard />
         </div>
       </div>
