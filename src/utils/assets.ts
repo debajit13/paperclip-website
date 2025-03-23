@@ -101,6 +101,10 @@ import L1 from "../../public/L1.svg";
 import L2 from "../../public/L2.svg";
 import tabLeft from "../../public/tabLeft.png";
 import tabRight from "../../public/tabRight.png";
+import pos from "../../public/pos.svg";
+import sumup from "../../public/sumup.svg";
+import iZettle from "../../public/iZettle.svg";
+import square from "../../public/square.svg";
 
 export {
   paperClipLogo,
@@ -206,4 +210,8 @@ export {
   L2,
   tabLeft,
   tabRight,
+  pos,
+  sumup,
+  iZettle,
+  square,
 };

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { instantLeft, instantRight, pcardOne } from "@/utils/assets";
+import { instantLeft, instantRight, pcardOne, square } from "@/utils/assets";
 
 export default function ProfessionalToolCard({
   customStyle,
@@ -22,6 +22,7 @@ export default function ProfessionalToolCard({
   imageRightHeightMobile,
   imageLeftWidthMobile,
   imageRightWidthMobile,
+  hasOtherImage,
 }: {
   customStyle?: string;
   imgWidth?: number;
@@ -43,6 +44,7 @@ export default function ProfessionalToolCard({
   description: string;
   customLeftCardStyle?: string;
   customRightCardStyle?: string;
+  hasOtherImage?: boolean;
 }) {
   return (
     <div
@@ -91,6 +93,12 @@ export default function ProfessionalToolCard({
             width={imageRightWidth ?? 160}
             height={imageRightHeight ?? 150}
           />
+        </div>
+      )}
+
+      {hasOtherImage && (
+        <div className={`absolute top-8 right-40 hidden md:block z-50`}>
+          <Image src={square} alt="square image" width={214} height={80} />
         </div>
       )}
 

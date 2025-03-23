@@ -13,6 +13,9 @@ import {
   sparkle,
   cloudThree,
   cloudFour,
+  pos,
+  sumup,
+  iZettle,
 } from "@/utils/assets";
 import ProfessionalToolCardTwo from "../components/ProfessionalToolCardTwo";
 import LiveDemoCard from "../components/LiveDemoCard";
@@ -82,7 +85,7 @@ const GetStarted = () => {
         {/* Floating Background Layer */}
         <div className="absolute inset-0 bg-[url('/backshadow.png')] bg-top bg-cover pointer-events-none h-[100%] -top-[40%]"></div>
         <div className="relative w-full">
-          <div className="w-full mx-auto max-w-5xl h-64 absolute top-14 left-1/2 transform -translate-x-1/2 bg-[#F7F5F3] rounded-[24px] border border-white/40 shadow-[0px_10px_50px_rgba(0,0,0,0.24)] opacity-40 backdrop-blur-xl"></div>
+          <div className="w-full mx-auto w-[80%] h-64 absolute top-14 left-1/2 transform -translate-x-1/2 bg-[#F7F5F3] rounded-[24px] border border-white/40 shadow-[0px_10px_50px_rgba(0,0,0,0.24)] opacity-40 backdrop-blur-xl"></div>
           <DashboardCard />
         </div>
       </div>
@@ -159,6 +162,18 @@ const GetStarted = () => {
             description={
               "Your inventory reaches thousands of buyers instantly, with perfect sync between store and online sales—no juggling, no mistakes"
             }
+            image={pos}
+            imgWidth={686}
+            imgHeight={371}
+            imageLeft={sumup}
+            imageLeftHeight={77}
+            imageLeftWidth={210}
+            imageRight={iZettle}
+            imageRightWidth={153}
+            imageRightHeight={51}
+            customLeftCardStyle="top-52 left-10"
+            customRightCardStyle="top-80 right-20"
+            hasOtherImage={true}
           />
         </div>
       </div>
