@@ -90,7 +90,7 @@ export const carouselContent = [
       bottom: 0,
     },
     position: {
-      right: 32,
+      right: 40,
       bottom: 0,
     },
     btnMaxWidth: "max-w-[318px]",
@@ -148,7 +148,7 @@ export const carouselContent = [
       bottom: 0,
     },
     position: {
-      right: 32,
+      right: 40,
       bottom: 0,
     },
     btnMaxWidth: "max-w-[390px]",

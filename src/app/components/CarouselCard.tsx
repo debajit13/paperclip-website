@@ -210,7 +210,7 @@ export default function CarouselCard({
         )}
 
         {c10 && (
-          <div className={`hidden xl:block absolute top-20 right-[-150px] z-0`}>
+          <div className={`hidden xl:block absolute top-20 right-[-160px] z-0`}>
             <Image src={c16} alt="mobileimage" width={234} height={259} />
           </div>
         )}
