@@ -298,7 +298,7 @@ const Hero = () => {
       } else {
         // Still in transition, remain fixed but adjust the visual position
         // to match what it will be when absolute
-        const adjustedTop = currentFixedTop + transitionProgress * 15; // Small adjustment to create continuity
+        const adjustedTop = currentFixedTop + transitionProgress * 10; // Small adjustment to create continuity
 
         return {
           position: "fixed",
@@ -513,7 +513,7 @@ const Hero = () => {
           transform: videoStyles.transform,
           width: `${VIDEO_WIDTH}px`,
           transition: "all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1.0)",
-          zIndex: 50,
+          zIndex: 0,
         }}
       >
         {/* Text above the video */}
