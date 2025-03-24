@@ -97,17 +97,17 @@ const GetStarted = () => {
 
       {/* Professsional Tools Details */}
       <section className="bg-white pt-[192px] pb-[72px] md:py-[120px] px-[24px] md:px-6 text-center rounded-t-[56px] z-0 w-screen">
-        <h2 className="md:mt-4 text-[46px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[51px] md:leading-[72px] tracking-[-0.5px] text-center">
+        <h2 className="md:mt-4 text-[46px] md:text-[58px] lg:text-[56px] font-poppins font-semibold text-gray-800 leading-[51px] md:leading-[64px] tracking-[-0.5px] text-center">
           Professional Tools that
           <br />
           <span>
             drive your{" "}
-            <span className="text-[#F71D3B] text-[70px] italic font-playfair">
+            <span className="text-[#F71D3B] text-[60px] italic font-playfair">
               Sales {":)"}
             </span>
           </span>
         </h2>
-        <p className="text-[#949191] font-[400px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] mt-4 xl:mt-[24px] md:mt-10 font-poppins mx-auto">
+        <p className="text-[#949191] font-[400px] text-[16px] md:text-[20px] leading-[24px] md:leading-[28px] mt-4 xl:mt-[24px] md:mt-10 font-poppins mx-auto">
           Powerful AI tools and instant marketplace access designed to help your
           business thrive.
         </p>
@@ -330,12 +330,12 @@ const GetStarted = () => {
 
       {/* Carousel */}
       <section className="bg-white mt-[192px] md:mt-28 xl:mt-[296px] mb-[56px] md:mb-12 xl:mb-[120px] px-[24px] md:px-6 text-center rounded-t-[56px] z-0 w-screen mx-auto">
-        <h2 className="text-[36px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[48px] md:leading-[72px] tracking-[-0.5px] text-center">
+        <h2 className="text-[36px] md:text-[58px] lg:text-[56px] font-poppins font-semibold text-gray-800 leading-[48px] md:leading-[64px] tracking-[-0.5px] text-center">
           Digitalise Your Store in Minutes,
           <br />
           Instantly Expand Your Reach
         </h2>
-        <p className="text-[#949191] font-[400px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] mt-4 md:mt-8 font-poppins max-w-7xl mx-auto">
+        <p className="text-[#949191] font-[400px] text-[16px] md:text-[20px] leading-[24px] md:leading-[28px] mt-4 md:mt-8 font-poppins max-w-7xl mx-auto">
           Everything You Need to Run Your Store, 100% Free
         </p>
 
@@ -354,11 +354,11 @@ const GetStarted = () => {
 
       {/* Set in Action */}
       <section className="bg-white mt-[192px] md:mt-28 xl:mt-[252px] mb-14 md:mb-16 xl:mb-[120px] px-[24px] md:px-6 text-center rounded-t-[56px] mx-auto">
-        <h2 className="text-[40px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[48px] md:leading-[72px] tracking-[-0.5px] text-center">
+        <h2 className="text-[40px] md:text-[58px] lg:text-[56px] font-poppins font-semibold text-gray-800 leading-[48px] md:leading-[64px] tracking-[-0.5px] text-center">
           See it in
           <span className="text-red-500 italic font-playfair"> Action!</span>
         </h2>
-        <p className="text-[#949191] font-[400px] text-[16px] md:text-[24px] leading-[24px] md:leading-[36px] mt-4 md:mt-8 font-poppins max-w-7xl mx-auto">
+        <p className="text-[#949191] font-[400px] text-[16px] md:text-[20px] leading-[24px] md:leading-[28px] mt-4 md:mt-8 font-poppins max-w-7xl mx-auto">
           Test drive a live account and explore all features instantly. No
           signup,
           <br />
@@ -391,7 +391,7 @@ const GetStarted = () => {
           <h2 className="mt-4 text-[40px] font-poppins font-semibold text-gray-800 leading-[58px] text-center">
             Experience Our Free Retail SaaS
           </h2>
-          <p className="text-gray-600 font-[400px] text-[24px] leading-[36px] mt-4 font-poppins max-w-7xl mx-auto">
+          <p className="text-[#949191] font-[500px] text-[24px] leading-[36px] mt-4 font-poppins max-w-7xl mx-auto">
             Join a growing community of shops using AI-driven tools, built-in
             shipping, and a massive online marketplace to boost sales—at zero
             cost to you.
