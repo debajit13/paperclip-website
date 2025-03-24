@@ -83,25 +83,25 @@ export default function CarouselCard({
       <div className="h-[80%] w-full md:w-[50%] xl:w-[40%] flex flex-col justify-between md:ml-10">
         <div className="w-full">
           {title && (
-            <h3 className="text-red-500 font-[600] text-[16px] xl:text-[20px] leading-[28px] tracking-[2px] font-poppins">
+            <h3 className="text-[#F71D3B] font-[600] text-[16px] xl:text-[20px] leading-[28px] tracking-[2px] font-poppins">
               {title}
             </h3>
           )}
 
           {subTitle && (
-            <h4 className="text-[32px] font-[600] xl:text-[40px] leading-[40px] xl:leading-[56px] mt-6 font-poppins">
+            <h4 className="text-[32px] font-[600] xl:text-[40px] leading-[40px] xl:leading-[56px] font-semibold mt-6 font-poppins">
               {subTitle}
             </h4>
           )}
 
           {description && (
-            <p className="text-gray-600 font-[500] text-[16px] xl:text-[24px] leading-[24px] xl:leading-[36px] mt-4 font-poppins">
+            <p className="text-[#949191] font-medium text-[16px] xl:text-[24px] leading-[24px] xl:leading-[36px] mt-4 font-poppins">
               {description}
             </p>
           )}
 
           {btnTitle && (
-            <button className="block md:hidden w-[100%] my-4 bg-white text-red-500 py-[12px] xl:py-2 px-6 rounded-[100px] font-[600] text-[14px] md:text-[24px] leading-[16px] md:leading-[36px]">
+            <button className="block md:hidden w-[100%] my-4 bg-white text-[#F71D3B] py-[12px] xl:py-2 px-6 rounded-[100px] font-[600] text-[14px] md:text-[24px] leading-[16px] md:leading-[36px]">
               {btnTitle}
             </button>
           )}
@@ -109,7 +109,7 @@ export default function CarouselCard({
 
         {btnTitle && (
           <button
-            className={`${btnMaxWidth} hidden md:block md:mt-4 bg-white text-red-500 py-2 px-[36px] rounded-[100px] font-[600] text-[16px] xl:text-[24px] leading-[16px] xl:leading-[36px]`}
+            className={`${btnMaxWidth} hidden md:block md:mt-4 bg-white text-[#F71D3B] py-2 px-[36px] rounded-[100px] font-[600] text-[16px] xl:text-[24px] leading-[16px] xl:leading-[36px]`}
           >
             {btnTitle}
           </button>

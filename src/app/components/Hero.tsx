@@ -361,7 +361,7 @@ const Hero = () => {
             <br />
             <span>
               your stuff{" "}
-              <span className="text-red-500 italic font-playfair">
+              <span className="text-[#F71D3B] italic font-playfair">
                 in seconds
               </span>
             </span>

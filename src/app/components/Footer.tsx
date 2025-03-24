@@ -112,7 +112,7 @@ export default function FooterSection() {
     <section className="bg-white min-h-screen text-center flex flex-col items-center mt-[188px] md:mt-16 xl:mt-[462px]">
       {/* AI Try-On Section */}
       <div className="px-[16px] md:max-w-5xl text-center">
-        <h3 className="text-red-500 font-[600] text-[16px] md:text-[20px] leading-[24px] md:leading-[28px] tracking-[2px] font-poppins">
+        <h3 className="text-[#F71D3B] font-[600] text-[16px] md:text-[20px] leading-[24px] md:leading-[28px] tracking-[2px] font-poppins">
           AI Try-On
         </h3>
         <h2 className="text-2xl font-[600] text-[32px] leading-[40px] md:text-[40px] md:leading-[56px] mt-6 font-poppins">
@@ -122,7 +122,7 @@ export default function FooterSection() {
           Skip the guesswork. Our AI Mirror shows how those heels, jeans, or
           jackets look on you, minus the fitting-room queue.
         </p>
-        <button className="w-[100%] xl:max-w-[350px] mt-8 md:mt-16 bg-red-500 text-white py-[12px] px-[36px] rounded-[100px] font-[600] text-[16px] leading-[16px] md:text-[24px] md:leading-[36px] font-poppins">
+        <button className="w-[100%] xl:max-w-[350px] mt-8 md:mt-16 bg-[#F71D3B] text-white py-[12px] px-[36px] rounded-[100px] font-[600] text-[16px] leading-[16px] md:text-[24px] md:leading-[36px] font-poppins">
           Try It On, Right Now →
         </button>
       </div>
@@ -132,7 +132,7 @@ export default function FooterSection() {
         ref={containerRef}
         className="mt-28 md:mt-[172px] pb-[170px] md:pb-[800px] w-full bg-gradient-to-b from-white via-[#FFF2F3] to-[#FFD1D6] flex flex-row justify-center"
       >
-        <div className="relative w-[100%]">
+        <div className="relative w-[100%] max-w-[1280px]">
           {/* Center Video Desktop */}
           <div className="z-50 mx-auto w-[280px] h-[600px] border-[6px] border-black rounded-[60px] hidden md:block absolute top-5 left-1/2 -translate-x-1/2 overflow-hidden">
             <video
@@ -238,14 +238,15 @@ export default function FooterSection() {
             <div className="h-[80%] md:w-[50%] xl:w-[40%] flex flex-col justify-between md:ml-6">
               <div>
                 <h4 className="text-[32px] font-[600] xl:text-[40px] leading-[40px] xl:leading-[56px] font-poppins">
-                  Earn <span className="text-red-500">1%</span> of your Friends!
+                  Earn <span className="text-[#F71D3B]">1%</span> of your
+                  Friends!
                 </h4>
                 <p className="text-gray-600 font-[500] text-[16px] leading-[24px] xl:text-[24px] xl:leading-[36px] mt-4 font-poppins">
                   We’ll pay you 1% of everything your friends make!
                 </p>
               </div>
 
-              <button className="max-w-[405px] mt-4 bg-white text-red-500 py-[12px] xl:py-2 px-6 rounded-[100px] font-[600] font-poppins text-[16px] leading-[16px] xl:text-[24px] xl:leading-[36px]">
+              <button className="max-w-[405px] mt-4 bg-white text-[#F71D3B] py-[12px] xl:py-2 px-6 rounded-[100px] font-[600] font-poppins text-[16px] leading-[16px] xl:text-[24px] xl:leading-[36px]">
                 Refer your friends today! →
               </button>
             </div>

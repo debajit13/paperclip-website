@@ -31,7 +31,7 @@ export default function Navbar({ customStyle }: { customStyle?: string }) {
       <Link href={"/get-started"}>
         <div className="flex items-center space-x-2 bg-[#FFF2F3] px-3 py-1 rounded-[100px] font-poppins font-bold text-[14px] leading-[16px]">
           <span className="text-gray-700 font-semibold">Pro</span>
-          <span className="bg-red-500 text-white px-2 py-0.5 rounded-md text-xs font-bold">
+          <span className="bg-[#F71D3B] text-white px-2 py-0.5 rounded-md text-xs font-bold">
             FREE
           </span>
         </div>

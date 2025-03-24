@@ -43,7 +43,7 @@ const GetStarted = () => {
             <br />
             <span>
               Turbocharge{" "}
-              <span className="text-red-500 xl:text-[70px] italic font-playfair">
+              <span className="text-[#F71D3B] xl:text-[70px] italic font-playfair">
                 Your Sales!
               </span>
             </span>
@@ -356,7 +356,7 @@ const GetStarted = () => {
       <section className="bg-white mt-[192px] md:mt-28 xl:mt-[252px] mb-14 md:mb-16 xl:mb-[120px] px-[24px] md:px-6 text-center rounded-t-[56px] mx-auto">
         <h2 className="text-[40px] md:text-[58px] lg:text-[56px] font-poppins font-semibold text-gray-800 leading-[48px] md:leading-[64px] tracking-[-0.5px] text-center">
           See it in
-          <span className="text-red-500 italic font-playfair"> Action!</span>
+          <span className="text-[#F71D3B] italic font-playfair"> Action!</span>
         </h2>
         <p className="text-[#949191] font-[400px] text-[16px] md:text-[20px] leading-[24px] md:leading-[28px] mt-4 md:mt-8 font-poppins max-w-7xl mx-auto">
           Test drive a live account and explore all features instantly. No
@@ -413,14 +413,15 @@ const GetStarted = () => {
             <div className="h-[80%] md:w-[50%] xl:w-[40%] flex flex-col justify-between md:ml-6">
               <div>
                 <h4 className="text-[32px] font-[600] xl:text-[40px] leading-[40px] xl:leading-[56px] font-poppins">
-                  Earn <span className="text-red-500">1%</span> of your Friends!
+                  Earn <span className="text-[#F71D3B]">1%</span> of your
+                  Friends!
                 </h4>
                 <p className="text-gray-600 font-[500] text-[16px] leading-[24px] xl:text-[24px] xl:leading-[36px] mt-4 font-poppins">
                   We’ll pay you 1% of everything your friends make!
                 </p>
               </div>
 
-              <button className="mt-4 max-w-[405px] bg-white text-red-500 py-2 px-6 rounded-[100px] font-[600] font-poppins text-[16px] leading-[16px] xl:text-[24px] xl:leading-[36px]">
+              <button className="mt-4 max-w-[405px] bg-white text-[#F71D3B] py-2 px-6 rounded-[100px] font-[600] font-poppins text-[16px] leading-[16px] xl:text-[24px] xl:leading-[36px]">
                 Refer your friends today! →
               </button>
             </div>

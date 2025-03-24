@@ -26,10 +26,14 @@ export default function ProgressBar({
             <p className="text-left font-poppins text-[12px] md:text-[14px] leading-[16px] mb-2 hidden md:block">
               {item}
             </p>
-            <div className="w-full h-2 bg-[#94919129] rounded-lg overflow-hidden">
+            <div className="w-full h-[4px] bg-[#94919129] rounded-lg overflow-hidden">
               <div
-                className="h-full bg-[#F71D3B] transition-all duration-500"
-                style={{ width: `${fillPercentage}%` }}
+                className="h-full transition-all duration-500"
+                style={{
+                  width: `${fillPercentage}%`,
+                  background:
+                    "linear-gradient(90deg, #F71D3B 0%, #FFA4B0 100%)",
+                }}
               />
             </div>
           </div>

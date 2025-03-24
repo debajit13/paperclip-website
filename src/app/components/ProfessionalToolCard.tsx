@@ -136,7 +136,7 @@ export default function ProfessionalToolCard({
 
       {/* Description */}
       <p
-        className={`text-gray-500 text-[16px] md:text-[20px] leading-[24px] md:leading-[28px] text-left mt-2 ${customDescription}`}
+        className={`text-[#949191] text-[16px] md:text-[20px] leading-[24px] md:leading-[28px] text-left mt-2 ${customDescription}`}
       >
         {description}
       </p>
