@@ -58,8 +58,8 @@ export default function HeroTwo() {
   };
 
   return (
-    <section className="text-center relative bg-gradient-to-b from-white via-[#FFF2F3] to-[#FFD1D6] mt-8 md:mt-20 w-screen">
-      <div className="flex flex-col items-center pt-10">
+    <section className="text-center relative mt-12 mb-24 md:mt-24 md:mb-32 w-screen">
+      <div className="flex flex-col justify-center items-center">
         {/* Animated Heading */}
         <motion.h1
           ref={letterRef}
@@ -71,7 +71,7 @@ export default function HeroTwo() {
           )}
         </motion.h1>
 
-        <div className="relative mt-10 md:mt-32 ml-6">
+        <div className="relative md:my-28">
           <motion.div
             ref={ref}
             initial={{ opacity: 0, y: 50 }}
@@ -79,13 +79,13 @@ export default function HeroTwo() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <VideoPlayer
-              width={663}
-              height={829}
+              width={200}
+              height={400}
               customStyle="hidden md:block"
             />
           </motion.div>
 
-          <VideoPlayer width={500} height={500} customStyle="block md:hidden" />
+          <VideoPlayer width={172} height={374} customStyle="block md:hidden" />
 
           {/* Download Now (Appears after mobile animation) */}
           <motion.div

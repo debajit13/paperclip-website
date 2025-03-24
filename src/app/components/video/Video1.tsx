@@ -14,7 +14,7 @@ export default function VideoPlayer({
   return (
     <div className={`${customStyle} mx-auto`}>
       <ReactPlayer
-        url="/videos/output_transparent.webm"
+        url="/videos/hero_mobile.mp4"
         playing
         loop
         muted
