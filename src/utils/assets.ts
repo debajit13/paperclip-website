@@ -105,7 +105,7 @@ import pos from "../../public/pos.svg";
 import sumup from "../../public/sumup.svg";
 import iZettle from "../../public/iZettle.svg";
 import square from "../../public/square.svg";
-import posThree from "../../public/pos-3.svg";
+import posThree from "../../public/pos-3.png";
 
 export {
   paperClipLogo,
