@@ -110,7 +110,7 @@ export default function FooterSection() {
 
   return (
     <section className="bg-white min-h-screen text-center flex flex-col items-center mt-[188px] md:mt-16 xl:mt-[462px]">
-      {/* AI Try-On Section */}
+      {/* ai Try-On Section */}
       <div className="px-[16px] md:max-w-5xl text-center">
         <h3 className="text-[#F71D3B] font-[600] text-[16px] md:text-[20px] leading-[24px] md:leading-[28px] tracking-[2px] font-poppins">
           ai Try-On

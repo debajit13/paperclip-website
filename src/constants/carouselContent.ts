@@ -15,7 +15,7 @@ import {
 export const carouselContent = [
   {
     key: 1,
-    value: "AI",
+    value: "ai",
     title: "ai Listing",
     subTitle: "Snap It & Sell It, That’s Literally It",
     description:

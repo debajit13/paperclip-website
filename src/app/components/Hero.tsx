@@ -187,7 +187,7 @@ const Hero = () => {
     };
   }, [isBrowser, videoRef]);
 
-  // Updated calculateVideoStyles function for three-phase scrolling
+  // Updated calculateVideoStyles function with smoother transition to absolute positioning
   const calculateVideoStyles = () => {
     if (!isBrowser) {
       // Return default styles for SSR
@@ -216,6 +216,7 @@ const Hero = () => {
 
     // Phase 3: After this threshold, the video should start scrolling with the page
     const scrollWithPageThreshold = heroHeight + 100; // Some additional scroll after hero section
+    const scrollPageThresholdEnd = heroHeight + 600;
 
     // Phase 1: Initial position
     if (scrollPosition < scrollStartThreshold) {
@@ -232,18 +233,12 @@ const Hero = () => {
 
     // Phase 2: Transition to fixed position at top
     if (scrollPosition < fixedPositionThreshold) {
-      // Calculate progress within phase 2
       const phase2Progress =
         (scrollPosition - scrollStartThreshold) /
         (fixedPositionThreshold - scrollStartThreshold);
 
-      // Starting position (fixed at bottom of viewport)
       const startTop = viewportHeight - 190;
-
-      // Target position (where the video should end up temporarily fixed)
-      const endTop = viewportHeight * 0.15; // 15% from the top of viewport
-
-      // Calculate current position
+      const endTop = viewportHeight * 0.15;
       const currentTop = startTop - phase2Progress * (startTop - endTop);
 
       return {
@@ -257,26 +252,19 @@ const Hero = () => {
       };
     }
 
-    // Transition phase: Prepare for absolute positioning with a smooth transition
+    // Position where the fixed element would appear when positioned absolute
+    const fixedTopValue = viewportHeight * 0.15;
+    const absoluteTopValue =
+      heroHeight + (scrollPosition - fixedPositionThreshold);
+
+    // Transition phase: Fixed at top, preparing for absolute
     if (
       scrollPosition >= fixedPositionThreshold &&
       scrollPosition < prepareAbsoluteThreshold
     ) {
-      // Calculate the scroll offset needed to match positions when switching to absolute
-      const fixedTopValue = viewportHeight * 0.15; // Current fixed position from top
-
-      // Get position relative to document for the current scroll position
-      const absoluteTopValue =
-        heroHeight -
-        (viewportHeight - fixedTopValue) +
-        (scrollPosition - fixedPositionThreshold);
-
-      // Calculate the offset we'll need when switching to absolute
-      const offset = absoluteTopValue - fixedTopValue;
-
       return {
         position: "fixed",
-        top: viewportHeight * 0.15, // 15% from the top
+        top: fixedTopValue,
         left: "50%",
         transform: "translateX(-50%)",
         transitionProgress: 1,
@@ -285,76 +273,79 @@ const Hero = () => {
       };
     }
 
-    // Transition phase: Gradually adjust position before switching to absolute
+    // Key change: Create a longer, smoother transition phase before switching to absolute
     if (
       scrollPosition >= prepareAbsoluteThreshold &&
       scrollPosition <= scrollWithPageThreshold
     ) {
-      // Calculate progress of this transition phase
       const transitionProgress =
         (scrollPosition - prepareAbsoluteThreshold) /
         (scrollWithPageThreshold - prepareAbsoluteThreshold);
 
-      // Get the right absolute position for when we eventually switch
-      const targetAbsoluteTop = heroHeight + 10;
+      // Calculate position that matches where the element would be if it were absolute
+      // This is the key to the smooth transition
+      const fixedTopPosition =
+        fixedTopValue + (scrollPosition - prepareAbsoluteThreshold);
 
-      // Current fixed position (relative to viewport)
-      const currentFixedTop = viewportHeight * 0.15;
-
-      // Calculate where the element would be if it were absolute positioned
-      const currentScrollBasedPosition = scrollPosition + currentFixedTop;
-
-      // Blend between fixed and absolute during transition
+      // Only switch to absolute when we're very close to the transition point
       if (transitionProgress > 0.95) {
-        // Almost at the end, switch to absolute
+        // Final absolute position matches exactly where the fixed element was
         return {
           position: "absolute",
-          top: targetAbsoluteTop,
+          top: absoluteTopValue,
           left: "50%",
           transform: "translateX(-50%)",
           transitionProgress: 1,
-          phase: "transitioning-to-absolute",
+          phase: "absolute",
           zIndex: 30,
         };
       } else {
-        // Still in transition, remain fixed but adjust the visual position
-        // to match what it will be when absolute
-        const adjustedTop = currentFixedTop + transitionProgress * 10; // Small adjustment to create continuity
-
+        // While transitioning, adjust the fixed position to match the scroll
         return {
           position: "fixed",
-          top: adjustedTop,
+          top: fixedTopPosition,
           left: "50%",
           transform: "translateX(-50%)",
-          transitionProgress: 1,
+          transitionProgress: transitionProgress,
           phase: "transitioning-to-absolute",
-          zIndex: 35 - Math.floor(transitionProgress * 5), // Gradually reduce z-index
+          zIndex: 35 - Math.floor(transitionProgress * 5),
         };
       }
     }
 
-    // Phase 3: When we've scrolled past the threshold, switch to absolute positioning
-    if (scrollPosition > scrollWithPageThreshold) {
-      return {
-        position: "absolute",
-        top: heroHeight + 10, // Position it below the hero section
-        left: "50%",
-        transform: "translateX(-50%)",
-        transitionProgress: 1,
-        phase: "scroll-with-page",
-        zIndex: 30,
-      };
-    }
-
-    // Between fixedPositionThreshold and prepareAbsoluteThreshold, stay fixed at the top
+    // Phase 3: When we've scrolled past the threshold, maintain absolute positioning
+    // if (
+    //   scrollPosition > scrollWithPageThreshold &&
+    //   scrollPosition < scrollPageThresholdEnd
+    // ) {
+    //   return {
+    //     position: "absolute",
+    //     top: absoluteTopValue,
+    //     left: "50%",
+    //     transform: "translateX(-50%)",
+    //     transitionProgress: 1,
+    //     phase: "scroll-with-page",
+    //     zIndex: 30,
+    //   };
+    // } else {
+    //   return {
+    //     position: "fixed",
+    //     top: absoluteTopValue,
+    //     left: "50%",
+    //     transform: "translateX(-50%)",
+    //     transitionProgress: 1,
+    //     phase: "scroll-with-page",
+    //     zIndex: 30,
+    //   };
+    // }
     return {
       position: "fixed",
-      top: viewportHeight * 0.15, // 15% from the top
+      top: absoluteTopValue,
       left: "50%",
       transform: "translateX(-50%)",
       transitionProgress: 1,
-      phase: "fixed-at-top",
-      zIndex: 40,
+      phase: "scroll-with-page",
+      zIndex: 30,
     };
   };
 
@@ -367,7 +358,8 @@ const Hero = () => {
         ref={heroRef}
         className="pt-16 md:pt-52 xl:pt-0 relative xl:h-screen xl:w-screen xl:flex xl:flex-row xl:justify-center xl:items-center bg-[url('/bg-dots.svg')] bg-top bg-cover"
       >
-        <div className="relative">
+        {/* Desktop */}
+        <div className="relative hidden xl:block">
           {!hideImages && (
             <div className="flex flex-col items-center">
               <Image
@@ -379,7 +371,7 @@ const Hero = () => {
             </div>
           )}
 
-          {!hideImages ? (
+          {!hideImages && (
             <motion.h2
               className="mt-4 text-[46px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[51px] sm:leading-[72px] tracking-[-0.5px] text-center mx-auto"
               initial={{ opacity: 1 }}
@@ -395,17 +387,6 @@ const Hero = () => {
                 </span>
               </span>
             </motion.h2>
-          ) : (
-            <motion.h1
-              ref={letterRef}
-              className="mt-6 text-2xl text-center md:text-[35.3px] font-semibold text-center font-poppins !leading-[48px] max-w-2xl mx-auto"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: hideImages ? 1 : 0 }}
-              transition={{ duration: 0.8, ease: "easeInOut" }}
-            >
-              From ai Try-On to ai enhanced product visuals, showcase items in
-              the best possible way and
-            </motion.h1>
           )}
 
           {!hideImages && (
@@ -417,6 +398,37 @@ const Hero = () => {
               className="absolute invisible xl:visible right-[-50px] top-0"
             />
           )}
+        </div>
+
+        {/* Mobile & Tab */}
+        <div className="relative block: xl:hidden">
+          <div className="flex flex-col items-center">
+            <Image
+              src={paperClipLogo}
+              alt="Paperclip Logo"
+              width={188.06}
+              height={36.06}
+            />
+          </div>
+
+          <div className="mt-4 text-[46px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[51px] sm:leading-[72px] tracking-[-0.5px] text-center mx-auto">
+            The easiest way to sell
+            <br />
+            <span>
+              your stuff{" "}
+              <span className="text-[#F71D3B] italic font-playfair">
+                in seconds
+              </span>
+            </span>
+          </div>
+
+          <Image
+            src={sparkle}
+            alt="Paperclip Logo"
+            width={87.64}
+            height={87.64}
+            className="absolute invisible xl:visible right-[-50px] top-0"
+          />
         </div>
 
         {/* Navbar Bg Shadow */}
@@ -556,33 +568,37 @@ const Hero = () => {
           transform: videoStyles.transform,
           width: `${VIDEO_WIDTH}px`,
           transition: "all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1.0)",
-          zIndex: 0,
+          zIndex: 10,
         }}
       >
         {/* Text above the video */}
-        {/* <div
-          className="absolute left-1/2 transform -translate-x-1/2 w-full text-center px-4 pointer-events-none"
-          style={{
-            opacity:
-              videoStyles.phase === "fixed-at-top" ||
-              videoStyles.phase === "scroll-with-page"
-                ? 1
-                : textOpacity,
-            transition: "opacity 0.5s ease-out",
-            top: "-200px",
-            width: "605px",
-          }}
-        >
-          <motion.h1
-            ref={letterRef}
-            className="text-2xl text-center md:text-[35.3px] font-semibold text-center font-poppins !leading-[48px]"
+        {hideImages && (
+          <div
+            className="absolute left-1/2 transform -translate-x-1/2 w-full text-center px-4 pointer-events-none"
+            style={{
+              opacity:
+                videoStyles.phase === "fixed-at-top" ||
+                videoStyles.phase === "scroll-with-page"
+                  ? 1
+                  : textOpacity,
+              transition: "opacity 0.5s ease-out",
+              top: "-250px",
+              width: "605px",
+            }}
           >
-            {renderAnimatedText(
-              "From Ai Try-On to Ai enhanced product visuals, showcase items in the best possible way and",
-              0.5
-            )}
-          </motion.h1>
-        </div> */}
+            <motion.h1
+              ref={letterRef}
+              className="text-2xl text-center md:text-[35.3px] font-semibold text-center font-poppins !leading-[48px]"
+            >
+              {/* {renderAnimatedText(
+                "From Ai Try-On to Ai enhanced product visuals, showcase items in the best possible way and",
+                0.5
+              )} */}
+              From Ai Try-On to Ai enhanced product visuals, showcase items in
+              the best possible way and
+            </motion.h1>
+          </div>
+        )}
 
         {/* Video element */}
         <div style={{ height: `${VIDEO_HEIGHT}px` }}>
@@ -654,26 +670,6 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
-
-      {/* Background gradient that follows the video's position */}
-      {/* {isBrowser &&
-        (videoStyles.phase === "moving-up" ||
-          videoStyles.phase === "fixed-at-top") && (
-          <div
-            className="hidden xl:block fixed left-0 w-full bg-gradient-to-b from-white via-[#FFF2F3] to-[#FFD1D6] z-10"
-            style={{
-              top: `${
-                videoStyles.phase === "moving-up"
-                  ? (heroRef.current as any)?.clientHeight ||
-                    (isBrowser ? window.innerHeight : 0)
-                  : 0
-              }px`,
-              height: isBrowser ? window.innerHeight : 0,
-              opacity: Math.min(videoStyles.transitionProgress * 2, 1),
-              transition: "all 0.3s ease-out",
-            }}
-          />
-        )} */}
 
       {/* This spacer div ensures there's enough space in the document for proper scrolling */}
       <div
