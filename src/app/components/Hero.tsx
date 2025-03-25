@@ -629,7 +629,7 @@ const Hero = () => {
             animate={
               videoInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }
             }
-            transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+            transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
           >
             <Image src={arrowFour} alt="arrow" width={100} height={120} />
           </motion.div>
@@ -642,7 +642,7 @@ const Hero = () => {
                 ? { opacity: 1, x: 0, rotate: 12 }
                 : { opacity: 0, x: 50, rotate: 12 }
             }
-            transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
           >
             <Image
               src={qrCode}
