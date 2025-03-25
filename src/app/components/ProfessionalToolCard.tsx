@@ -1,5 +1,11 @@
 import Image from "next/image";
-import { instantLeft, instantRight, pcardOne, square } from "@/utils/assets";
+import {
+  instantLeft,
+  instantRight,
+  pcardOne,
+  posThree,
+  square,
+} from "@/utils/assets";
 
 export default function ProfessionalToolCard({
   customStyle,
@@ -53,54 +59,64 @@ export default function ProfessionalToolCard({
       {/* Top Gradient Background */}
       <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#FFD1D6] to-transparent rounded-t-2xl"></div>
 
-      {/* Image */}
-      {image && (
-        <div className="flex justify-center mt-6 relative z-50">
-          <Image
-            src={image}
-            alt="Broken Pound"
-            width={imgWidth}
-            height={imgHeight}
-          />
-        </div>
-      )}
+      <div className="relative mx-auto max-w-[1280px]">
+        {image && (
+          <div className="flex justify-center mt-6 relative z-50">
+            <Image
+              src={image}
+              alt="Broken Pound"
+              width={imgWidth}
+              height={imgHeight}
+            />
+          </div>
+        )}
 
-      {/* Desktop */}
-      {imageLeft && (
-        <div
-          className={`absolute ${
-            customLeftCardStyle ?? "top-32 left-10"
-          }  hidden md:block z-50`}
-        >
-          <Image
-            src={imageLeft}
-            alt="left image"
-            width={imageLeftWidth ?? 130}
-            height={imageLeftHeight ?? 150}
-          />
-        </div>
-      )}
+        {imageLeft && (
+          <div
+            className={`absolute ${
+              customLeftCardStyle ?? "top-32 left-10"
+            }  hidden md:block z-50`}
+          >
+            <Image
+              src={imageLeft}
+              alt="left image"
+              width={imageLeftWidth ?? 130}
+              height={imageLeftHeight ?? 150}
+            />
+          </div>
+        )}
 
-      {imageRight && (
-        <div
-          className={`absolute ${
-            customRightCardStyle ?? "top-32 right-10"
-          }  hidden md:block z-50`}
-        >
-          <Image
-            src={imageRight}
-            alt="right image"
-            width={imageRightWidth ?? 160}
-            height={imageRightHeight ?? 150}
-          />
-        </div>
-      )}
+        {imageRight && (
+          <div
+            className={`absolute ${
+              customRightCardStyle ?? "top-32 right-10"
+            }  hidden md:block z-50`}
+          >
+            <Image
+              src={imageRight}
+              alt="right image"
+              width={imageRightWidth ?? 160}
+              height={imageRightHeight ?? 150}
+            />
+          </div>
+        )}
 
-      {hasOtherImage && (
-        <div className={`absolute top-8 right-40 hidden md:block z-50`}>
-          <Image src={square} alt="square image" width={214} height={80} />
-        </div>
-      )}
+        {hasOtherImage && (
+          <>
+            <div className={`absolute top-0 right-32 hidden md:block z-50`}>
+              <Image src={square} alt="square image" width={214} height={80} />
+            </div>
+            <div className={`absolute bottom-0 left-72 hidden md:block z-50`}>
+              <Image
+                src={posThree}
+                alt="pos middle img"
+                width={480}
+                height={331}
+              />
+            </div>
+          </>
+        )}
+      </div>
 
       {/* Mobile */}
       {imageLeft && (

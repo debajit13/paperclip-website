@@ -171,8 +171,8 @@ const GetStarted = () => {
             imageRight={iZettle}
             imageRightWidth={153}
             imageRightHeight={51}
-            customLeftCardStyle="top-52 left-10"
-            customRightCardStyle="top-80 right-20"
+            customLeftCardStyle="top-32 left-10"
+            customRightCardStyle="top-60 right-20"
             hasOtherImage={true}
           />
         </div>

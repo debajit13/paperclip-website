@@ -39,6 +39,7 @@ const Hero = () => {
     target: letterRef,
     offset: ["start end", "end start"], // Triggers animation as it scrolls in and stops at the top
   });
+  const [videoInView, setVideoInView] = useState(false);
 
   // Fixed dimensions for the video
   const VIDEO_WIDTH = 339;
@@ -165,6 +166,35 @@ const Hero = () => {
       }
     };
   }, [isBrowser]); // Add isBrowser to dependencies
+
+  useEffect(() => {
+    if (!isBrowser || !videoRef.current) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVideoInView(true);
+          } else {
+            setVideoInView(false);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.7, // When 70% of the video is visible
+      }
+    );
+
+    observer.observe(videoRef.current);
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, [isBrowser, videoRef]);
 
   // Updated calculateVideoStyles function for three-phase scrolling
   const calculateVideoStyles = () => {
@@ -535,7 +565,7 @@ const Hero = () => {
             className="text-2xl text-center md:text-[35.3px] font-semibold text-center font-poppins !leading-[48px]"
           >
             {renderAnimatedText(
-              "From AI Try-On to AI enhanced product visuals, showcase items in the best possible way and",
+              "From Ai Try-On to Ai enhanced product visuals, showcase items in the best possible way and",
               0.5
             )}
           </motion.h1>
@@ -553,29 +583,62 @@ const Hero = () => {
               borderRadius: `${BORDER_RADIUS}px`,
             }}
           />
-          <div className="absolute left-[-100%] top-[50%] -translate-y-1/2 hidden xl:block">
+          <motion.div
+            className="absolute left-[-120%] top-[50%] -translate-y-1/2 hidden xl:block"
+            initial={{ opacity: 0, x: -50 }}
+            animate={
+              videoInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }
+            }
+            transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+          >
             <Image
               src={downloadNow2}
               alt="download now"
               width={250}
               height={94}
             />
-          </div>
-          <div className="absolute left-[-100%] top-[58%] -translate-y-1/2 hidden xl:block">
+          </motion.div>
+
+          <motion.div
+            className="absolute left-[-120%] top-[60%] -translate-y-1/2 hidden xl:block"
+            initial={{ opacity: 0, x: -50 }}
+            animate={
+              videoInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }
+            }
+            transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+          >
             <Image src={available} alt="available" width={160} height={94} />
-          </div>
-          <div className="absolute left-[-40%] top-[64%] -translate-y-1/2 hidden xl:block">
+          </motion.div>
+
+          <motion.div
+            className="absolute left-[-60%] top-[60%] -translate-y-1/2 hidden xl:block"
+            initial={{ opacity: 0, x: -30 }}
+            animate={
+              videoInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }
+            }
+            transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
+          >
             <Image src={arrowFour} alt="arrow" width={100} height={120} />
-          </div>
-          <div className="absolute right-[-100%] top-[55%] -translate-y-1/2 hidden xl:block">
+          </motion.div>
+
+          <motion.div
+            className="absolute right-[-100%] top-[48%] -translate-y-1/2 hidden xl:block"
+            initial={{ opacity: 0, x: 50, rotate: 12 }}
+            animate={
+              videoInView
+                ? { opacity: 1, x: 0, rotate: 12 }
+                : { opacity: 0, x: 50, rotate: 12 }
+            }
+            transition={{ duration: 0.6, delay: 1.0, ease: "easeOut" }}
+          >
             <Image
               src={qrCode}
               alt="qr code"
               width={200}
               height={120}
-              className="rotate-12"
+              className="rotate-[7.98deg]"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
 
