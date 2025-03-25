@@ -22,7 +22,7 @@ export default function AISelling() {
           </h2>
 
           <p className="mt-6 md:mt-10 text-gray-500 max-w-[90%] text-[#949191] font-poppins text-[16px] md:text-[24px] leading-[24px] md:leading-[32px] mx-auto">
-            From snap to sale in seconds—our AI auto-fills details, sets fair
+            From snap to sale in seconds—our ai auto-fills details, sets fair
             prices, and handles negotiation. No forms, no lowball offers, stress
             free shipping, and zero fees. What’s not to love?
           </p>

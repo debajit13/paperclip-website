@@ -60,7 +60,7 @@ const GetStarted = () => {
 
         <p className="text-[#949191] font-[400px] text-[16px] leading-[24px] mt-4 md:mt-10 font-poppins max-w-7xl mx-auto px-4">
           Run your brick-and-mortar and online shop in perfect harmony, with
-          effortless AI-created listings, professional product showcases and
+          effortless ai-created listings, professional product showcases and
           tools, integrated shipping, and instant marketplace reach, with no
           subscription and zero seller fees.
         </p>
@@ -108,7 +108,7 @@ const GetStarted = () => {
           </span>
         </h2>
         <p className="text-[#949191] font-[400px] text-[16px] md:text-[20px] leading-[24px] md:leading-[28px] mt-4 xl:mt-[24px] md:mt-10 font-poppins mx-auto">
-          Powerful AI tools and instant marketplace access designed to help your
+          Powerful ai tools and instant marketplace access designed to help your
           business thrive.
         </p>
       </section>
@@ -149,9 +149,9 @@ const GetStarted = () => {
             customLeftCardStyle="left-0 top-32"
             customRightCardStyle="right-0 top-5"
             imageRight={cloudFour}
-            title={<span>AI-Powered Listing & Negotiation</span>}
+            title={<span>ai-Powered Listing & Negotiation</span>}
             description={
-              "Our AI turns photos into pro listings, writes descriptions, optimises pricing, and handles buyer queries—you focus on growth."
+              "Our ai turns photos into pro listings, writes descriptions, optimises pricing, and handles buyer queries—you focus on growth."
             }
           />
         </div>
@@ -213,9 +213,9 @@ const GetStarted = () => {
             customLeftCardStyle="left-0 top-32"
             customRightCardStyle="right-0 top-5"
             imageRight={cloudFour}
-            title={<span>AI-Powered Listing & Negotiation</span>}
+            title={<span>ai-Powered Listing & Negotiation</span>}
             description={
-              "Our AI turns photos into pro listings, writes descriptions, optimises pricing, and handles buyer queries—you focus on growth."
+              "Our ai turns photos into pro listings, writes descriptions, optimises pricing, and handles buyer queries—you focus on growth."
             }
           />
 
@@ -274,9 +274,9 @@ const GetStarted = () => {
             customLeftCardStyle="left-0 top-32"
             customRightCardStyle="right-0 top-5"
             imageRight={cloudFour}
-            title={<span>AI-Powered Listing & Negotiation</span>}
+            title={<span>ai-Powered Listing & Negotiation</span>}
             description={
-              "Our AI turns photos into pro listings, writes descriptions, optimises pricing, and handles buyer queries—you focus on growth."
+              "Our ai turns photos into pro listings, writes descriptions, optimises pricing, and handles buyer queries—you focus on growth."
             }
           />
         </div>
@@ -318,7 +318,7 @@ const GetStarted = () => {
         <ProfessionalToolCard
           title={"Aligned Incentives, Bigger Profits"}
           description={
-            "We earn from buyers, so we give you AI tools to create beautiful, targeted listings with massive online reach—the same tools used by leading brands."
+            "We earn from buyers, so we give you ai tools to create beautiful, targeted listings with massive online reach—the same tools used by leading brands."
           }
           image={cr1}
           imageLeft={instantLeft}
@@ -392,7 +392,7 @@ const GetStarted = () => {
             Experience Our Free Retail SaaS
           </h2>
           <p className="text-[#949191] font-[500px] text-[24px] leading-[36px] mt-4 font-poppins max-w-7xl mx-auto">
-            Join a growing community of shops using AI-driven tools, built-in
+            Join a growing community of shops using ai-driven tools, built-in
             shipping, and a massive online marketplace to boost sales—at zero
             cost to you.
           </p>

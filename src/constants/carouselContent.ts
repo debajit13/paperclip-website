@@ -16,10 +16,10 @@ export const carouselContent = [
   {
     key: 1,
     value: "AI",
-    title: "AI Listing",
+    title: "ai Listing",
     subTitle: "Snap It & Sell It, That’s Literally It",
     description:
-      "No more battling text boxes. Point your camera at what you want to sell; we do the rest. Let AI handle those boring details while you, well, get on with life.",
+      "No more battling text boxes. Point your camera at what you want to sell; we do the rest. Let ai handle those boring details while you, well, get on with life.",
     btnTitle: "Snap & Sell Now! →",
     image: cr1,
     imageWidth: 585,
@@ -73,7 +73,7 @@ export const carouselContent = [
   {
     key: 3,
     value: "SELLER",
-    title: "AI Seller Tools",
+    title: "ai Seller Tools",
     subTitle: "Your Secret Listing Weapon.",
     description:
       "We polish your photos, punch up your descriptions, and get your gear noticed so your item stands out like a rare gem.",
@@ -131,10 +131,10 @@ export const carouselContent = [
   {
     key: 5,
     value: "AUTO",
-    title: "AI Automated Negotiation",
+    title: "ai Automated Negotiation",
     subTitle: "Let Our Bots Haggle. You Just Collect the Cash.",
     description:
-      "Skip the awkward back and forth. AI gets you a fair price without all that ‘Is this still available?’ nonsense.",
+      "Skip the awkward back and forth. ai gets you a fair price without all that ‘Is this still available?’ nonsense.",
     btnTitle: "Activate Robo Negotiation →",
     image: cr5,
     imageWidth: 300,
@@ -159,11 +159,11 @@ export const carouselContent = [
 ];
 
 export const carouselSteps = [
-  "AI Listing",
+  "ai Listing",
   "Zero Seller Fees",
-  "AI Seller Tools",
+  "ai Seller Tools",
   "Effortless Shipping",
-  "AI Negotiations",
+  "ai Negotiations",
 ];
 
 export const carouselContentTwo = [
@@ -226,7 +226,7 @@ export const carouselContentTwo = [
     title: "",
     subTitle: "Professional Tools",
     description:
-      "AI-powered listings, smart pricing, and automated customer communications",
+      "ai-powered listings, smart pricing, and automated customer communications",
     btnTitle: "Try for FREE! →",
     image: c115,
     imageWidth: 580,

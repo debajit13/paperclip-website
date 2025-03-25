@@ -12,7 +12,7 @@ export default function BuyerFeatures() {
       </h2>
       <p className="mt-6 md:mt-10 xl:mb-[181px] text-gray-500 px-[16px] text-[#949191] font-poppins text-[16px] md:text-[24px] leading-[24px] md:leading-[32px] mx-auto">
         Paperclip transforms shopping into a seamless, personalized experience
-        with smart AI tools, hassle-free deals, and fast shipping.
+        with smart ai tools, hassle-free deals, and fast shipping.
       </p>
 
       <HomeCardsGrid />

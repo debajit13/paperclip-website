@@ -27,7 +27,7 @@ const HomeCardsGrid = () => {
               Items that ‘Get’ You.
             </h4>
             <p className="text-gray-600 font-[500] text-[16px] xl:text-[24px] leading-[24px] xl:leading-[36px] mt-4 font-poppins">
-              Our AI sifts through thousands of listings to bring you only the
+              Our ai sifts through thousands of listings to bring you only the
               stuff that suits your taste. No more endless scrolling.
             </p>
           </div>
@@ -98,7 +98,7 @@ const HomeCardsGrid = () => {
           </h4>
           <p className="text-gray-600 font-[500] text-[16px] xl:text-[24px] leading-[24px] xl:leading-[36px] mt-4 font-poppins">
             Wonder if that hat fits your vibe? Or if that coat matches your
-            style? Our AI helps you see the fit before you buy
+            style? Our ai helps you see the fit before you buy
           </p>
           <button className="max-w-[100%] xl:max-w-[209px] my-4 md:mt-10 xl:mt-20 w-full md:w-[60%] bg-white text-[#F71D3B] py-[12px] xl:py-2 px-6 rounded-[100px] font-[600] font-poppins text-[16px] xl:text-[24px] leading-[16px] xl:leading-[36px] w-[50%]">
             See it IRL →
@@ -181,7 +181,7 @@ const HomeCardsGrid = () => {
                 Spend with Ease!
               </h4>
               <p className="text-gray-600 font-[500] leading-[16px] xl:text-[24px] leading-[24px] xl:leading-[36px] mt-4 font-poppins">
-                Shop worry-free! AI reviewed listings and Buyer Premium
+                Shop worry-free! ai reviewed listings and Buyer Premium
                 Protections keep your purchase safe from damage, delivery
                 issues, or surprises.
               </p>
