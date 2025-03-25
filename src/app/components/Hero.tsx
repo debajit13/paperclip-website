@@ -120,15 +120,6 @@ const Hero = () => {
       } else {
         setTextOpacity(0);
       }
-
-      // Debug logging to help see phase transitions (can be removed in production)
-      /*
-      const videoPhase = calculateVideoStyles().phase;
-      if (window.lastPhase !== videoPhase) {
-        console.log(`Phase changed to: ${videoPhase} at scroll position ${currentScrollY}`);
-        window.lastPhase = videoPhase;
-      }
-      */
     };
 
     // Intersection observer to handle visibility of hero section
@@ -377,33 +368,55 @@ const Hero = () => {
         className="pt-16 md:pt-52 xl:pt-0 relative xl:h-screen xl:w-screen xl:flex xl:flex-row xl:justify-center xl:items-center bg-[url('/bg-dots.svg')] bg-top bg-cover"
       >
         <div className="relative">
-          <div className="flex flex-col items-center">
-            <Image
-              src={paperClipLogo}
-              alt="Paperclip Logo"
-              width={188.06}
-              height={36.06}
-            />
-          </div>
+          {!hideImages && (
+            <div className="flex flex-col items-center">
+              <Image
+                src={paperClipLogo}
+                alt="Paperclip Logo"
+                width={188.06}
+                height={36.06}
+              />
+            </div>
+          )}
 
-          <h2 className="mt-4 text-[46px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[51px] sm:leading-[72px] tracking-[-0.5px] text-center mx-auto">
-            The easiest way to sell
-            <br />
-            <span>
-              your stuff{" "}
-              <span className="text-[#F71D3B] italic font-playfair">
-                in seconds
+          {!hideImages ? (
+            <motion.h2
+              className="mt-4 text-[46px] md:text-[58px] lg:text-[68px] font-poppins font-semibold text-gray-800 leading-[51px] sm:leading-[72px] tracking-[-0.5px] text-center mx-auto"
+              initial={{ opacity: 1 }}
+              animate={{ opacity: hideImages ? 0 : 1 }}
+              transition={{ duration: 1.1, ease: "easeInOut" }}
+            >
+              The easiest way to sell
+              <br />
+              <span>
+                your stuff{" "}
+                <span className="text-[#F71D3B] italic font-playfair">
+                  in seconds
+                </span>
               </span>
-            </span>
-          </h2>
+            </motion.h2>
+          ) : (
+            <motion.h1
+              ref={letterRef}
+              className="mt-6 text-2xl text-center md:text-[35.3px] font-semibold text-center font-poppins !leading-[48px] max-w-2xl mx-auto"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: hideImages ? 1 : 0 }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+            >
+              From Ai Try-On to Ai enhanced product visuals, showcase items in
+              the best possible way and
+            </motion.h1>
+          )}
 
-          <Image
-            src={sparkle}
-            alt="Paperclip Logo"
-            width={87.64}
-            height={87.64}
-            className="absolute invisible xl:visible right-[-50px] top-0"
-          />
+          {!hideImages && (
+            <Image
+              src={sparkle}
+              alt="Paperclip Logo"
+              width={87.64}
+              height={87.64}
+              className="absolute invisible xl:visible right-[-50px] top-0"
+            />
+          )}
         </div>
 
         {/* Navbar Bg Shadow */}
@@ -547,7 +560,7 @@ const Hero = () => {
         }}
       >
         {/* Text above the video */}
-        <div
+        {/* <div
           className="absolute left-1/2 transform -translate-x-1/2 w-full text-center px-4 pointer-events-none"
           style={{
             opacity:
@@ -569,7 +582,7 @@ const Hero = () => {
               0.5
             )}
           </motion.h1>
-        </div>
+        </div> */}
 
         {/* Video element */}
         <div style={{ height: `${VIDEO_HEIGHT}px` }}>
@@ -589,7 +602,7 @@ const Hero = () => {
             animate={
               videoInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }
             }
-            transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+            transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
           >
             <Image
               src={downloadNow2}
@@ -605,7 +618,7 @@ const Hero = () => {
             animate={
               videoInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }
             }
-            transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+            transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
           >
             <Image src={available} alt="available" width={160} height={94} />
           </motion.div>
@@ -616,7 +629,7 @@ const Hero = () => {
             animate={
               videoInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }
             }
-            transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
           >
             <Image src={arrowFour} alt="arrow" width={100} height={120} />
           </motion.div>
@@ -629,7 +642,7 @@ const Hero = () => {
                 ? { opacity: 1, x: 0, rotate: 12 }
                 : { opacity: 0, x: 50, rotate: 12 }
             }
-            transition={{ duration: 0.6, delay: 1.0, ease: "easeOut" }}
+            transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
           >
             <Image
               src={qrCode}
