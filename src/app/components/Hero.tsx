@@ -403,7 +403,7 @@ const Hero = () => {
               animate={{ opacity: hideImages ? 1 : 0 }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
             >
-              From Ai Try-On to Ai enhanced product visuals, showcase items in
+              From ai Try-On to ai enhanced product visuals, showcase items in
               the best possible way and
             </motion.h1>
           )}

@@ -66,7 +66,7 @@ export default function HeroTwo() {
           className="text-2xl md:text-4xl font-semibold text-center font-poppins !leading-[48px] max-w-xl hidden md:block"
         >
           {renderAnimatedText(
-            "From Ai Try-On to Ai enhanced product visuals, showcase items in the best possible way and",
+            "From ai Try-On to ai enhanced product visuals, showcase items in the best possible way and",
             0.5
           )}
         </motion.h1>
