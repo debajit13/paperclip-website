@@ -198,11 +198,12 @@ const Hero = () => {
         transform: "translateX(-50%)",
         transitionProgress: 0,
         phase: "initial",
+        zIndex: 10,
       };
     }
 
     const heroHeight =
-      (heroRef.current as any)?.clientHeight || window.innerHeight;
+      (heroRef.current as any)?.clientHeight || window.innerHeight + 150;
     const viewportHeight = window.innerHeight;
 
     // Phase 1: Initial position at bottom until scrollStartThreshold
@@ -216,7 +217,7 @@ const Hero = () => {
 
     // Phase 3: After this threshold, the video should start scrolling with the page
     const scrollWithPageThreshold = heroHeight + 100; // Some additional scroll after hero section
-    const scrollPageThresholdEnd = heroHeight + 410;
+    const scrollPageThresholdEnd = heroHeight + 320;
 
     // Phase 1: Initial position
     if (scrollPosition < scrollStartThreshold) {
@@ -227,7 +228,7 @@ const Hero = () => {
         transform: "translateX(-50%)",
         transitionProgress: 0,
         phase: "initial",
-        zIndex: 40,
+        zIndex: 10,
       };
     }
 
@@ -248,7 +249,7 @@ const Hero = () => {
         transform: "translateX(-50%)",
         transitionProgress: phase2Progress,
         phase: "moving-up",
-        zIndex: 40,
+        zIndex: 10,
       };
     }
 
@@ -269,7 +270,7 @@ const Hero = () => {
         transform: "translateX(-50%)",
         transitionProgress: 1,
         phase: "fixed-at-top",
-        zIndex: 40,
+        zIndex: 10,
       };
     }
 
@@ -297,7 +298,7 @@ const Hero = () => {
           transform: "translateX(-50%)",
           transitionProgress: 1,
           phase: "absolute",
-          zIndex: 30,
+          zIndex: 10,
         };
       } else {
         // While transitioning, adjust the fixed position to match the scroll
@@ -308,7 +309,7 @@ const Hero = () => {
           transform: "translateX(-50%)",
           transitionProgress: transitionProgress,
           phase: "transitioning-to-absolute",
-          zIndex: 35 - Math.floor(transitionProgress * 5),
+          zIndex: 10,
         };
       }
     }
@@ -345,7 +346,7 @@ const Hero = () => {
       transform: "translateX(-50%)",
       transitionProgress: 1,
       phase: "scroll-with-page",
-      zIndex: 30,
+      zIndex: 0,
     };
   };
 
@@ -568,7 +569,7 @@ const Hero = () => {
           transform: videoStyles.transform,
           width: `${VIDEO_WIDTH}px`,
           transition: "all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1.0)",
-          zIndex: 10,
+          zIndex: videoStyles.zIndex,
         }}
       >
         {/* Text above the video */}
