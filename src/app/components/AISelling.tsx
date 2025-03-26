@@ -22,7 +22,7 @@ export default function AISelling() {
             duration: 1,
             ease: "easeOut",
           }}
-          className="mt-16 mb-6 xl:mt-[240px] xl:mb-[200px] mx-auto"
+          className="mt-16 mb-6 md:mt-[200px] xl:mt-[240px] xl:mb-[200px] mx-auto"
         >
           <h2 className="hidden md:block text-[40px] md:text-[68px] font-semibold font-poppins text-gray-800 leading-[48px] md:leading-[72px]">
             Sell{" "}
