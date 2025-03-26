@@ -7,7 +7,7 @@ export default function BuyerFeatures() {
   const ref = useRef(null);
   const isInView = useInView(ref);
   return (
-    <section className="mt-[188px] md:mt-[200px] xl:mt-[491px] pt-10 text-center w-[98%] mx-auto">
+    <section className="mt-[188px] md:mt-[200px] z-50 bg-white xl:mt-0 xl:pt-[491px] text-center w-[98%] mx-auto">
       {/* Hero Section */}
       <motion.div
         ref={ref}

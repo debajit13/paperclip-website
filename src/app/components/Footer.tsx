@@ -112,7 +112,7 @@ export default function FooterSection() {
   };
 
   return (
-    <section className="bg-white min-h-screen text-center flex flex-col items-center mt-[188px] md:mt-[250px] xl:mt-[462px]">
+    <section className="bg-white relative z-50 min-h-screen text-center flex flex-col items-center mt-[188px] md:mt-[250px] xl:pt-[462px] xl:mt-0">
       {/* ai Try-On Section */}
       <motion.div
         ref={ref}
