@@ -217,7 +217,7 @@ const Hero = () => {
 
     // Phase 3: After this threshold, the video should start scrolling with the page
     const scrollWithPageThreshold = heroHeight + 100; // Some additional scroll after hero section
-    const scrollPageThresholdEnd = heroHeight + 320;
+    const scrollPageThresholdEnd = heroHeight + 400;
 
     // Phase 1: Initial position
     if (scrollPosition < scrollStartThreshold) {

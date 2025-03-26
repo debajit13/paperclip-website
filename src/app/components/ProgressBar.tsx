@@ -10,7 +10,7 @@ export default function ProgressBar({
   const totalClicks = steps.length * clicksPerCarouselMove; // 20 total clicks
 
   return (
-    <div className="w-full z-50 flex flex-row justify-between space-x-1 md:space-x-2 md:mt-6 xl:mt-0 p-4 bg-white shadow-md rounded-[16px] border-[1px] border-[#F71D3B33]">
+    <div className="w-full flex flex-row justify-between space-x-1 md:space-x-2 md:mt-6 xl:mt-0 p-4 bg-white shadow-md rounded-[16px] border-[1px] border-[#F71D3B33]">
       {steps.map((item, index) => {
         const minClick = index * clicksPerCarouselMove;
         const maxClick = (index + 1) * clicksPerCarouselMove - 1;

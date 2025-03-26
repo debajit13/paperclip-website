@@ -265,11 +265,13 @@ export default function Carousel({
 
   return (
     <div
-      className="w-full mx-auto relative max-w-[98%] relative z-50"
+      className="w-full mx-auto relative max-w-[98%] relative z-50 bg-white"
       ref={carouselRef}
     >
       {/* Progress Bar */}
-      <ProgressBar currentSlide={currentProgress} steps={carouselSteps} />
+      <div className="relative z-50">
+        <ProgressBar currentSlide={currentProgress} steps={carouselSteps} />
+      </div>
 
       {/* Carousel Content */}
       <div className="relative overflow-hidden w-full mt-4 rounded-[32px]">
