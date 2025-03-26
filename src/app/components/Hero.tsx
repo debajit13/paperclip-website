@@ -216,7 +216,7 @@ const Hero = () => {
 
     // Phase 3: After this threshold, the video should start scrolling with the page
     const scrollWithPageThreshold = heroHeight + 100; // Some additional scroll after hero section
-    const scrollPageThresholdEnd = heroHeight + 600;
+    const scrollPageThresholdEnd = heroHeight + 410;
 
     // Phase 1: Initial position
     if (scrollPosition < scrollStartThreshold) {
@@ -276,11 +276,11 @@ const Hero = () => {
     // Key change: Create a longer, smoother transition phase before switching to absolute
     if (
       scrollPosition >= prepareAbsoluteThreshold &&
-      scrollPosition <= scrollWithPageThreshold
+      scrollPosition <= scrollPageThresholdEnd
     ) {
       const transitionProgress =
         (scrollPosition - prepareAbsoluteThreshold) /
-        (scrollWithPageThreshold - prepareAbsoluteThreshold);
+        (scrollPageThresholdEnd - prepareAbsoluteThreshold);
 
       // Calculate position that matches where the element would be if it were absolute
       // This is the key to the smooth transition
