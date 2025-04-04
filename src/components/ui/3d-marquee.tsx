@@ -23,7 +23,7 @@ export const ThreeDMarquee = ({
   return (
     <div
       className={cn(
-        'mx-auto block h-[600px] overflow-hidden rounded-2xl max-sm:h-100',
+        'mx-auto block h-[600px] overflow-hidden  max-sm:h-100',
         className
       )}
     >
@@ -31,9 +31,9 @@ export const ThreeDMarquee = ({
         <div className='size-[1720px] shrink-0 scale-50 sm:scale-75 lg:scale-100'>
           <div
             style={{
-              transform: 'rotateX(55deg) rotateY(0deg) rotateZ(-45deg)',
+              transform: 'rotateX(25deg) rotateY(0deg) rotateZ(-20deg)',
             }}
-            className='relative top-96 right-[68%] grid size-full origin-top-left grid-cols-6 gap-8 transform-3d'
+            className='relative top-96 right-[12%] grid size-full origin-top-left grid-cols-6 gap-6 transform-3d'
           >
             {/* First two columns with images */}
             {chunks.slice(0, 2).map((subarray, colIndex) => (
@@ -45,7 +45,7 @@ export const ThreeDMarquee = ({
                   repeatType: 'reverse',
                 }}
                 key={colIndex + 'marquee'}
-                className='flex flex-col items-start gap-8'
+                className='flex flex-col items-start gap-9'
               >
                 {subarray.map((image, imageIndex) => (
                   <div className='relative' key={imageIndex + image}>
@@ -61,8 +61,6 @@ export const ThreeDMarquee = ({
                       src={image}
                       alt={`Image ${imageIndex + 1}`}
                       className='aspect-[9/18] rounded-3xl object-cover ring ring-gray-950/5 hover:shadow-2xl'
-                      width={970}
-                      height={700}
                     />
                   </div>
                 ))}
@@ -117,8 +115,6 @@ export const ThreeDMarquee = ({
                       src={image}
                       alt={`Image ${imageIndex + 1}`}
                       className='aspect-[9/18] rounded-3xl object-cover ring ring-gray-950/5 hover:shadow-2xl'
-                      width={970}
-                      height={700}
                     />
                   </div>
                 ))}

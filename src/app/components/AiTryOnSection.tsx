@@ -46,7 +46,7 @@ const AiTryOnSection = () => {
 
   return (
     <div className='w-full'>
-      <div className='relative mx-auto my-10 flex h-screen w-[93%]  flex-col items-center justify-center overflow-hidden rounded-3xl'>
+      <div className='relative mx-auto my-10 flex h-screen  flex-col items-center justify-center overflow-hidden'>
         <div className='z-20'>
           <div className='mb-2 text-[#F71D3B] font-poppins text-[20px] leading-[28px] font-semibold tracking-[2px]'>
             ai try-on
@@ -66,7 +66,7 @@ const AiTryOnSection = () => {
           >
             Try It On, Right Now
             <svg
-              className='w-4 h-4 ml-2'
+              className='w-[24px] h-[36px] ml-2 font-bold pt-1'
               viewBox='0 0 24 24'
               fill='none'
               xmlns='http://www.w3.org/2000/svg'
@@ -83,12 +83,7 @@ const AiTryOnSection = () => {
         </div>
 
         {/* overlay */}
-        <div
-          style={{
-            background: 'radial-gradient(#FFF 0%, transparent 95%)',
-          }}
-          className='absolute inset-0 z-10 h-full w-full m-auto rounded-3xl'
-        />
+        <div className='absolute inset-0 z-10 h-full w-full m-auto aitryon-div' />
         <ThreeDMarquee
           className='pointer-events-none absolute inset-0 h-full w-full'
           images={images}

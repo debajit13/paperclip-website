@@ -13,27 +13,34 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   overflow-y: scroll;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE/Edge */
 }
 
 html::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+  display: none;
+  /* Chrome, Safari */
 }
 
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
-  } /* Makes it loop smoothly */
+  }
+
+  /* Makes it loop smoothly */
 }
 
 .animate-scroll {
   animation: scroll 40s linear infinite;
   display: flex;
-  width: max-content; /* Prevents shrinking */
+  width: max-content;
+  /* Prevents shrinking */
 }
 
 @layer base {
@@ -64,6 +71,7 @@ html::-webkit-scrollbar {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -96,8 +104,33 @@ html::-webkit-scrollbar {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+.aitryon-div {
+  background:
+    radial-gradient(#FFF 25%, transparent 65%),
+    linear-gradient(to bottom, white 0%, transparent 25%, transparent 75%, white 100%) !important;
+}
+
+/* Tablet devices */
+@media (max-width: 1024px) {
+  .aitryon-div {
+    background:
+      radial-gradient(#FFF 45%, transparent 75%),
+      linear-gradient(to bottom, white 0%, transparent 25%, transparent 75%, white 100%) !important;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .aitryon-div {
+    background:
+      radial-gradient(#FFF 55%, transparent 85%),
+      linear-gradient(to bottom, white 0%, transparent 25%, transparent 75%, white 100%) !important;
   }
 }
 
@@ -107,6 +140,7 @@ html::-webkit-scrollbar {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
