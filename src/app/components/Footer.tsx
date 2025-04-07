@@ -113,7 +113,7 @@ export default function FooterSection() {
   };
 
   return (
-    <section className='bg-white relative z-50 min-h-screen text-center flex flex-col items-center mt-[160px] md:mt-[110px] xl:pt-[462px] xl:mt-0'>
+    <section className='bg-white relative z-50 min-h-screen text-center flex flex-col items-center mt-[160px] md:mt-[200px]'>
       <AiTryOnSection />
       {/* Referral Section */}
       <div className='bg-white  xl:mb-20 text-center rounded-t-[56px] z-0 w-screen'>

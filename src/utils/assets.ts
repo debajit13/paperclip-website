@@ -114,6 +114,18 @@ import HeroBg1 from '../../public/hero-bg1.svg';
 import HeroBg2 from '../../public/hero-bg2.svg';
 import HeroBg3 from '../../public/hero-bg3.svg';
 import HeroBg4 from '../../public/hero-bg4.svg';
+import gif1 from '../../public/aitryon/1.gif';
+import gif2 from '../../public/aitryon/2.gif';
+import gif3 from '../../public/aitryon/3.gif';
+import gif4 from '../../public/aitryon/4.gif';
+import gif5 from '../../public/aitryon/5.gif';
+import gif6 from '../../public/aitryon/6.gif';
+import gif7 from '../../public/aitryon/7.gif';
+import gif8 from '../../public/aitryon/8.gif';
+import gif9 from '../../public/aitryon/9.gif';
+import gif10 from '../../public/aitryon/10.gif';
+import gif11 from '../../public/aitryon/11.gif';
+import gif12 from '../../public/aitryon/12.gif';
 
 export {
   paperClipLogo,
@@ -232,4 +244,16 @@ export {
   HeroBg2,
   HeroBg3,
   HeroBg4,
+  gif1,
+  gif2,
+  gif3,
+  gif4,
+  gif5,
+  gif6,
+  gif7,
+  gif8,
+  gif9,
+  gif10,
+  gif11,
+  gif12,
 };
