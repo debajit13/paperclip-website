@@ -14,6 +14,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'xl-custom': '1280px',
+      },
       colors: {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
