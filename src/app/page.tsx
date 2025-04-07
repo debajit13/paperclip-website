@@ -16,7 +16,7 @@ export default function Home() {
           Download App
         </button>
       </div>
-
+ 
       <div className='block xl:hidden'>
         <HeroTwo />
       </div> */}

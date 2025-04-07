@@ -16,6 +16,7 @@ export default {
     extend: {
       screens: {
         'xl-custom': '1280px',
+        'lg-custom': '1167px',
       },
       colors: {
         background: 'hsl(var(--background))',

@@ -70,15 +70,6 @@ export default function Home() {
     };
   }, [isBrowser]);
 
-  // Auto-change content every 5 seconds
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setActiveSection((prev) => (prev === headings.length - 1 ? 0 : prev + 1));
-  //   }, 5000);
-
-  //   return () => clearInterval(interval);
-  // }, [headings.length]);
-
   // Update video when section changes
   useEffect(() => {
     if (videoRef.current) {
@@ -93,37 +84,40 @@ export default function Home() {
   return (
     <div
       ref={containerRef}
-      className="min-h-[100vh] w-full xl-custom:bg-[url('/shadow-bg.svg')] xl-custom:bg-top xl-custom:bg-cover mb-20"
+      className="min-h-[130vh] w-full xl-custom:bg-[url('/shadow-bg.svg')] xl-custom:bg-top xl-custom:bg-cover mb-20"
       id='hero-section'
     >
       <div className="min-h-screen bg-cover bg-[url('/bg-dots.svg')]">
-        <section className='relative flex flex-col md:flex-row justify-between px-4 md:px-16 pt-[100px] md:pb-0'>
+        <section className='relative flex flex-col lg-custom:flex-row justify-between px-4 md:px-16 pt-[100px] md:pb-0'>
           {/* Text content */}
-          <div className='w-full md:w-1/2 flex flex-col justify-center mb-8 md:mb-0'>
-            <AnimatePresence mode='wait'>
-              <motion.div
-                key={activeSection}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 0 }}
-                className='mb-8'
-              >
-                <h1 className='text-4xl mt-10 ml-2 leading-tight md:text-5xl lg:text-[80px] max-w-[552px] font-poppins font-[600] mb-2 text-left tracking-[-0.5px]'>
-                  {headings[activeSection].main}
-                </h1>
-                <h2 className='text-5xl md:text-6xl ml-2 lg:text-8xl leading-tight lg:leading-[100px] font-playfair font-[800] italic text-[#F71D3B] text-left'>
-                  {headings[activeSection].highlight}
-                </h2>
-              </motion.div>
-            </AnimatePresence>
+          <div className='w-full lg-custom:w-2/3  flex flex-col justify-center mb-8 md:mb-0'>
+            <div className='h-full'>
+              <AnimatePresence mode='wait'>
+                <motion.div
+                  key={activeSection}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 0 }}
+                  className='mb-8'
+                >
+                  <h1 className='text-4xl mt-10 pt-5 ml-2 md:text-5xl lg:text-[80px] max-w-[552px] font-poppins font-[600] mb-2 text-left tracking-[-0.5px]'>
+                    {headings[activeSection].main}
+                  </h1>
+                  <h2 className='text-5xl md:text-6xl ml-2 lg:text-8xl leading-tight lg:leading-[100px] font-playfair font-[800] italic text-[#F71D3B] text-left'>
+                    {headings[activeSection].highlight}
+                  </h2>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
             <div className='mt-3'>
               <TestimonialCarousel />
             </div>
           </div>
 
           {/* Video section */}
-          <div className='w-full md:w-1/2 flex items-center justify-center'>
-            <div className='relative w-full max-w-[300px] rounded-[60px] '>
+          <div className='w-full lg-custom:w-1/3 flex items-center justify-center'>
+            <div className='relative w-full max-w-[300px] mb-[155px] lg-custom:mb-5'>
               <AnimatePresence mode='wait'>
                 <motion.div
                   key={activeSection}
@@ -135,7 +129,7 @@ export default function Home() {
                 >
                   <video
                     ref={videoRef}
-                    className='sm:w-[250px] md:w-full md:h-full  object-cover rounded-[58px] '
+                    className='sm:w-[250px] md:w-full md:h-full  object-cover '
                     autoPlay
                     muted
                     playsInline

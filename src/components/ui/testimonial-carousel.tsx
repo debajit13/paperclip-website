@@ -2,8 +2,8 @@
 
 import { cn } from '@/lib/utils';
 import { user1, user2, user3 } from '@/utils/assets';
-import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
+import React, { useEffect, useRef, useState } from 'react';
+import { motion, useInView } from 'framer-motion';
 import TestimonialCard from './testimonial-card';
 
 const TestimonialCarousel = ({
@@ -23,8 +23,8 @@ const TestimonialCarousel = ({
   pauseOnHover?: boolean;
   className?: string;
 }) => {
-  const containerRef = React.useRef<HTMLDivElement>(null);
-  const scrollerRef = React.useRef<HTMLUListElement>(null);
+  const ref = useRef(null);
+  const isInView = useInView(ref);
 
   const FrameOne = () => {
     return (
@@ -78,13 +78,24 @@ const TestimonialCarousel = ({
   ];
 
   return (
-    <div
-      className={cn(
-        'scroller relative z-20  max-w-7xl overflow-hidden ',
-        className
-      )}
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={{
+        opacity: isInView ? 1 : 0,
+        y: isInView ? 0 : 50,
+      }}
+      transition={{
+        duration: 1,
+        ease: 'easeOut',
+      }}
+      className={cn('scroller relative z-20  overflow-hidden', className)}
     >
-      <ul className={cn('flex min-w-full shrink-0 py-4 w-max flex-nowrap')}>
+      <ul
+        className={cn(
+          'flex min-w-full shrink-0 py-4 w-full justify-center lg-custom:justify-start flex-nowrap flex-col md:flex-row'
+        )}
+      >
         {components.map((item, idx) => (
           <li
             className='h-full  relative flex-shrink-0 py-2 mx-2'
@@ -94,7 +105,7 @@ const TestimonialCarousel = ({
           </li>
         ))}
       </ul>
-    </div>
+    </motion.div>
   );
 };
 

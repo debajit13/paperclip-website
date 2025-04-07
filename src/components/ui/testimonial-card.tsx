@@ -7,7 +7,7 @@ const TestimonialCard = ({
 }) => {
   return (
     <div
-      className='bg-white rounded-2xl p-4  max-w-[106px] md:max-w-[216px]'
+      className='bg-white rounded-2xl lg:p-4 p-2  md:max-w-[216px]'
       style={{
         boxShadow: '0px 4px 56px 0px #00000012',
         border: '1px solid #C5C5C533',
@@ -23,8 +23,8 @@ const TestimonialCard = ({
               className='bg-[#FFF8F9] mr-1 rounded-[4px] p-1 flex items-center justify-center'
             >
               <svg
-                width='16'
-                height='16'
+                width='13'
+                height='13'
                 viewBox='0 0 16 16'
                 fill='none'
                 xmlns='http://www.w3.org/2000/svg'
@@ -40,13 +40,13 @@ const TestimonialCard = ({
       </div>
 
       {/* Testimonial Text */}
-      <p className='text-[#1B1B1B] font-poppins mb-5 text-[12px] font-[500] text-left'>
+      <p className='text-[#1B1B1B] font-poppins mb-5 text-[8px] lg:text-[12px]  font-[500] text-left'>
         {testimonial}
       </p>
 
       {/* User Info */}
       <div className='flex items-center'>
-        <div className='w-[34px] h-[34px] rounded-full overflow-hidden mr-2'>
+        <div className='w-[25px] lg:w-[34px] h-[25px] lg:h-[34px] rounded-full overflow-hidden mr-2'>
           <img
             src={avatarUrl}
             alt={`${name}'s avatar`}
@@ -54,10 +54,10 @@ const TestimonialCard = ({
           />
         </div>
         <div>
-          <p className='font-normal font-poppins text-left text-[12px] text-[#434141]'>
+          <p className='font-normal font-poppins text-left text-[10px] lg:text-[12px] text-[#434141]'>
             {name}
           </p>
-          <p className='text-[12px] font-poppins font-normal text-left text-[#F71D3B]'>
+          <p className='text-[10px] lg:text-[12px] font-poppins font-normal text-left text-[#F71D3B]'>
             {handle}
           </p>
         </div>
