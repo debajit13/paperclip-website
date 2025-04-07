@@ -106,6 +106,14 @@ import sumup from '../../public/sumup.svg';
 import iZettle from '../../public/iZettle.svg';
 import square from '../../public/square.svg';
 import posThree from '../../public/pos-3.png';
+import user1 from '../../public/testimonials/user1.svg';
+import user2 from '../../public/testimonials/user2.svg';
+import user3 from '../../public/testimonials/user3.svg';
+import PhoneFrameHand from '../../public/phone-frame-hand.png';
+import HeroBg1 from '../../public/hero-bg1.svg';
+import HeroBg2 from '../../public/hero-bg2.svg';
+import HeroBg3 from '../../public/hero-bg3.svg';
+import HeroBg4 from '../../public/hero-bg4.svg';
 import gif1 from '../../public/aitryon/1.gif';
 import gif2 from '../../public/aitryon/2.gif';
 import gif3 from '../../public/aitryon/3.gif';
@@ -228,6 +236,14 @@ export {
   iZettle,
   square,
   posThree,
+  user1,
+  user2,
+  user3,
+  PhoneFrameHand,
+  HeroBg1,
+  HeroBg2,
+  HeroBg3,
+  HeroBg4,
   gif1,
   gif2,
   gif3,

@@ -43,6 +43,17 @@ html::-webkit-scrollbar {
   /* Prevents shrinking */
 }
 
+.phone-frame-container {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.phone-frame {
+  display: block;
+  height: auto;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
