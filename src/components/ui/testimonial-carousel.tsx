@@ -1,11 +1,12 @@
 'use client';
 
 import { cn } from '@/lib/utils';
-import { frame1, frame2, frame3 } from '@/utils/assets';
+import { user1, user2, user3 } from '@/utils/assets';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
+import TestimonialCard from './testimonial-card';
 
-export const InfiniteMovingCards = ({
+const TestimonialCarousel = ({
   items,
   direction = 'left',
   speed = 'fast',
@@ -27,19 +28,37 @@ export const InfiniteMovingCards = ({
 
   const FrameOne = () => {
     return (
-      <Image src={frame1} alt={'Frame Image 1'} objectFit='cover' width={960} />
+      <TestimonialCard
+        name='Afhaat'
+        handle='@athaat'
+        rating={5}
+        testimonial='As a new seller on Paperclip, so far I’m very happy with the way the selling system works, it’s secure for both sides.'
+        avatarUrl={user2.src}
+      />
     );
   };
 
   const FrameTwo = () => {
     return (
-      <Image src={frame2} alt={'Frame Image 2'} objectFit='cover' width={960} />
+      <TestimonialCard
+        name='Jaycee'
+        handle='@loveitall0'
+        rating={5}
+        testimonial='Paperclip is such a refreshing buy and sell app that is unique from others and lovely to use!'
+        avatarUrl={user1.src}
+      />
     );
   };
 
   const FrameThree = () => {
     return (
-      <Image src={frame3} alt={'Frame Image 3'} objectFit='cover' width={960} />
+      <TestimonialCard
+        name='Four Bears Apparel'
+        handle='@fourbearsapparel'
+        rating={5}
+        testimonial='My experience with Paperclip has been great. The App is straight forward and listing items is a breeze.'
+        avatarUrl={user3.src}
+      />
     );
   };
 
@@ -54,6 +73,18 @@ export const InfiniteMovingCards = ({
     },
     {
       key: 3,
+      Component: FrameThree,
+    },
+    {
+      key: 4,
+      Component: FrameOne,
+    },
+    {
+      key: 5,
+      Component: FrameTwo,
+    },
+    {
+      key: 6,
       Component: FrameThree,
     },
   ];
@@ -132,3 +163,5 @@ export const InfiniteMovingCards = ({
     </div>
   );
 };
+
+export default TestimonialCarousel;
