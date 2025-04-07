@@ -34,12 +34,12 @@ export default function Home() {
       highlight: 'Instantly!',
     },
     {
-      main: 'Perfect fit guarantee,',
-      highlight: 'No returns!',
+      main: 'Sell your stuff in seconds',
+      highlight: 'with AI :)',
     },
     {
-      main: 'Shop with confidence,',
-      highlight: 'Every time!',
+      main: 'Scan now to',
+      highlight: 'Download  →',
     },
   ];
 
@@ -71,13 +71,13 @@ export default function Home() {
   }, [isBrowser]);
 
   // Auto-change content every 5 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveSection((prev) => (prev === headings.length - 1 ? 0 : prev + 1));
-    }, 5000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setActiveSection((prev) => (prev === headings.length - 1 ? 0 : prev + 1));
+  //   }, 5000);
 
-    return () => clearInterval(interval);
-  }, [headings.length]);
+  //   return () => clearInterval(interval);
+  // }, [headings.length]);
 
   // Update video when section changes
   useEffect(() => {
@@ -139,7 +139,11 @@ export default function Home() {
                     autoPlay
                     muted
                     playsInline
-                    loop
+                    onEnded={() => {
+                      setActiveSection((prev) =>
+                        prev === headings.length - 1 ? 0 : prev + 1
+                      );
+                    }}
                   >
                     <source src={videos[activeSection]} type='video/mp4' />
                     Your browser does not support the video tag.

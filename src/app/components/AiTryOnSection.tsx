@@ -49,7 +49,7 @@ const AiTryOnSection = () => {
       <div className='relative mx-auto my-10 flex h-screen  flex-col items-center justify-center overflow-hidden'>
         <div className='z-20'>
           <div className='mb-2 text-[#F71D3B] font-poppins text-[20px] leading-[28px] font-semibold tracking-[2px]'>
-            ai try-on
+            AI try-on
           </div>
           <h2 className='text-[40px] font-semibold mb-4 font-poppins text-[#1B1B1B] leading-[56px]'>
             See It on You, Instantly!

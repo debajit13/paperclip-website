@@ -113,11 +113,11 @@ export default function FooterSection() {
   };
 
   return (
-    <section className='bg-white relative z-50 min-h-screen text-center flex flex-col items-center mt-[160px] md:mt-[200px]'>
+    <section className='bg-white relative z-50 min-h-screen text-center flex flex-col items-center mt-[160px] md:mt-[400px]'>
       <AiTryOnSection />
       {/* Referral Section */}
       <div className='bg-white  xl:mb-20 text-center rounded-t-[56px] z-0 w-screen'>
-        <div className='my-[72px] md:my-20 xl:my-[200px] w-[94%] mx-auto rounded-t-[56px]'>
+        <div className='my-[72px] md:my-20 xl:my-[400px] w-[94%] mx-auto rounded-t-[56px]'>
           <div className='w-[90%] md:w-full mx-auto relative md:col-span-2 md:h-[344px] bg-gradient-to-l from-[#FC9CA8] to-[#FFF2F3] p-6 rounded-[32px] shadow-lg flex flex-col md:flex-row md:justify-between items-center text-left'>
             <div className='h-[80%] md:w-[50%] xl:w-[40%] flex flex-col justify-between md:ml-6'>
               <div>
