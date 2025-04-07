@@ -9,8 +9,8 @@ export default function AISelling() {
 
   return (
     <div className='relative'>
-      <div className='h-40 xl:h-[1000px] bg-gradient-to-t from-[#FFF2F3] via-[#FFD1D6] to-white absolute z-0 top-[-100px] md:top-[-210px] xl:top-[-250px] left-[-2px] w-screen mx-auto'></div>
-      <section className='bg-white mt-[-50px] md:mt-[-145px] xl:mt-[132px] py-5 md:py-10 px-[16px] text-center rounded-t-[56px] relative z-50 w-screen'>
+      <div className='h-40 h-[200px] bg-gradient-to-t from-[#FFF2F3] to-white absolute z-0 left-[-2px] w-screen mx-auto'></div>
+      <section className='bg-white rounded-xl mt-[-50px] md:mt-[-145px] xl:mt-[132px] py-5 md:py-10 px-[16px] text-center rounded-t-[56px] relative z-50 w-screen'>
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -22,9 +22,9 @@ export default function AISelling() {
             duration: 1,
             ease: 'easeOut',
           }}
-          className='mt-16 mb-6 md:mt-[200px] xl:mt-[240px] xl:mb-[200px] mx-auto'
+          className=' mb-[120px] mx-auto'
         >
-          <h2 className='hidden md:block text-[40px] md:text-[68px] font-semibold font-poppins text-gray-800 leading-[48px] md:leading-[72px]'>
+          <h2 className='hidden md:block mt-[160px] text-[40px] md:text-[68px] font-semibold font-poppins text-gray-800 leading-[48px] md:leading-[72px]'>
             Sell{' '}
             <span className='text-[#F71D3B] italic font-playfair'>Easy</span>{' '}
             {', '}

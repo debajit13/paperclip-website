@@ -84,7 +84,7 @@ export default function Home() {
   return (
     <div
       ref={containerRef}
-      className="min-h-[130vh] w-full xl-custom:bg-[url('/shadow-bg.svg')] xl-custom:bg-top xl-custom:bg-cover mb-20"
+      className="min-h-[120vh] w-full xl-custom:bg-[url('/hero-bg.svg')] xl-custom:bg-top xl-custom:bg-cover mb-20"
       id='hero-section'
     >
       <div className="min-h-screen bg-cover bg-[url('/bg-dots.svg')]">
