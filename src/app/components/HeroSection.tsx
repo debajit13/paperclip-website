@@ -151,10 +151,10 @@ export default function Home() {
                   exit={{ opacity: 0, y: 0 }}
                   className='mb-8'
                 >
-                  <h1 className='text-4xl mt-10 pt-5 ml-2 md:text-5xl lg:text-[80px]  max-w-full lg-custom:max-w-[552px] font-poppins font-[600] mb-2 text-center lg-custom:text-left tracking-[-0.5px]'>
+                  <h1 className='text-5xl mt-10 pt-5 ml-2 md:text-5xl lg:text-[80px]  max-w-full lg-custom:max-w-[552px] font-poppins font-[600] mb-2 text-center lg-custom:text-left tracking-[-0.5px]'>
                     {headings[activeSection].main}
                   </h1>
-                  <h2 className='text-5xl md:text-6xl ml-2 lg:text-8xl leading-tight lg:leading-[100px] font-playfair font-[800] italic text-[#F71D3B] text-center lg-custom:text-left'>
+                  <h2 className='text-6xl md:text-6xl ml-2 lg:text-8xl leading-tight lg:leading-[100px] font-playfair font-[800] italic text-[#F71D3B] text-center lg-custom:text-left'>
                     {headings[activeSection].highlight}
                   </h2>
                 </motion.div>
@@ -168,7 +168,7 @@ export default function Home() {
 
           {/* Video section */}
           <div className='w-full lg-custom:w-1/3 flex items-center justify-center'>
-            <div className='relative w-full max-w-[300px] mb-[155px] lg-custom:mb-5'>
+            <div className='relative w-full max-w-[300px] mb-[120px] lg-custom:mb-5'>
               <div className='w-full h-full'>
                 <video
                   ref={videoRef}
@@ -184,7 +184,7 @@ export default function Home() {
             </div>
           </div>
 
-          <button className='block sm:hidden md:hidden lg:hidden xl:hidden bg-[#F71D3B] w-full text-white py-2 px-6 rounded-full font-semibold text-base leading-6'>
+          <button className='block sm:hidden md:hidden lg:hidden xl:hidden bg-[#F71D3B] w-full text-white py-4 px-6 rounded-full font-semibold text-base leading-6'>
             Download App
           </button>
         </section>

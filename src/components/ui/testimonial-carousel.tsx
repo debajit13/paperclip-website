@@ -5,6 +5,7 @@ import { user1, user2, user3 } from '@/utils/assets';
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import TestimonialCard from './testimonial-card';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const TestimonialCarousel = ({
   items,
@@ -25,6 +26,17 @@ const TestimonialCarousel = ({
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref);
+  const scrollRef = useRef<HTMLUListElement>(null);
+
+  // Optional: scroll to next/prev card on mobile
+  const scrollByCard = (direction: 'left' | 'right') => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    const cardWidth = container.offsetWidth; // full width for 1 card
+    const scrollAmount = direction === 'left' ? -cardWidth : cardWidth;
+    container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  };
 
   const FrameOne = () => {
     return (
@@ -89,16 +101,35 @@ const TestimonialCarousel = ({
         duration: 1,
         ease: 'easeOut',
       }}
-      className={cn('scroller relative z-20  overflow-hidden', className)}
+      className={cn('relative z-20 overflow-hidden', className)}
     >
+      {/* Mobile-only navigation arrows */}
+      <div className='flex justify-between w-full absolute top-[35%] z-[100] items-center sm:hidden mb-2 px-4'>
+        <button
+          onClick={() => scrollByCard('left')}
+          className='p-2 bg-[#cbcaca59] rounded-full shadow'
+        >
+          <ChevronLeft size={20} />
+        </button>
+        <button
+          onClick={() => scrollByCard('right')}
+          className='p-2 bg-[#cbcaca59] rounded-full shadow'
+        >
+          <ChevronRight size={20} />
+        </button>
+      </div>
+
       <ul
+        ref={scrollRef}
         className={cn(
-          'flex min-w-full shrink-0 py-4 w-full justify-center lg-custom:justify-start flex-nowrap flex-col md:flex-row'
+          'flex flex-nowrap overflow-x-auto snap-x snap-mandatory',
+          'sm:flex-wrap sm:overflow-visible no-scrollbar',
+          'scroll-smooth min-w-full shrink-0 py-4 w-full justify-center lg-custom:justify-start '
         )}
       >
-        {components.map((item, idx) => (
+        {components.map((item) => (
           <li
-            className='h-full  relative flex-shrink-0 py-2 mx-2'
+            className='h-full relative flex-shrink-0 py-2 mx-2 w-[90%] sm:w-auto snap-start'
             key={item.key}
           >
             <item.Component />
