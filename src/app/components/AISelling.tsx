@@ -9,8 +9,8 @@ export default function AISelling() {
 
   return (
     <div className='relative'>
-      <div className='h-40 h-[200px] bg-gradient-to-t from-[#FFF2F3] to-white absolute z-0 left-[-2px] w-screen mx-auto'></div>
-      <section className='bg-white rounded-xl mt-[-50px] md:mt-[-145px] xl:mt-[132px] py-5 md:py-10 px-[16px] text-center rounded-t-[56px] relative z-50 w-screen'>
+      <div className='h-[200px] bg-gradient-to-t from-[#FFF2F3] to-white absolute z-0 left-[-2px] w-screen mx-auto'></div>
+      <section className='bg-white rounded-xl mt-[132px] py-5 md:py-10 px-[16px] text-center rounded-t-[56px] relative z-50 w-screen'>
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}

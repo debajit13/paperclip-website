@@ -11,15 +11,9 @@ export default function Home() {
     <div className='relative bg-white min-h-full flex flex-col items-center justify-center text-center pt-6 xl:pt-0  pb-6 pr-0 overflow-hidden'>
       <HeroSection />
 
-      {/* <div className='block md:hidden'>
-        <button className='mt-10 bg-[#F71D3B] w-[100%] text-white py-2 px-6 rounded-[100px] font-[600] text-[16px] leading-[24px]'>
-          Download App
-        </button>
-      </div>
- 
-      <div className='block xl:hidden'>
+      {/* <div className='block xl:hidden'>
         <HeroTwo />
-      </div> */}
+      </div>  */}
 
       <AISelling />
       <Carousel
