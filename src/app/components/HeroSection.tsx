@@ -139,7 +139,7 @@ export default function Home() {
       id='hero-section'
     >
       <div className="min-h-screen bg-cover bg-[url('/bg-dots.svg')]">
-        <section className='relative flex flex-col lg-custom:flex-row justify-between px-4 md:px-16 pt-[100px] md:pb-0'>
+        <section className='relative flex flex-col lg-custom:flex-row justify-between px-4 md:px-16 sm:pt-[100px] md:pb-0'>
           {/* Text content */}
           <div className='w-full lg-custom:w-2/3  flex flex-col justify-center mb-8 md:mb-0'>
             <div className='h-full'>
