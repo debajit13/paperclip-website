@@ -103,22 +103,6 @@ const TestimonialCarousel = ({
       }}
       className={cn('relative z-20 overflow-hidden', className)}
     >
-      {/* Mobile-only navigation arrows */}
-      <div className='flex justify-between w-full absolute top-[35%] z-[100] items-center sm:hidden mb-2 px-4'>
-        <button
-          onClick={() => scrollByCard('left')}
-          className='p-2 bg-[#cbcaca59] rounded-full shadow'
-        >
-          <ChevronLeft size={20} />
-        </button>
-        <button
-          onClick={() => scrollByCard('right')}
-          className='p-2 bg-[#cbcaca59] rounded-full shadow'
-        >
-          <ChevronRight size={20} />
-        </button>
-      </div>
-
       <ul
         ref={scrollRef}
         className={cn(
