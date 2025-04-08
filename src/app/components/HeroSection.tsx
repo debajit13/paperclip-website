@@ -21,25 +21,28 @@ export default function Home() {
   const transitionDuration = 0.5;
   const easeValue = 'easeInOut';
 
-  // Content for each section
-  const videos = [
-    '/videos/hero-mobile1.mp4',
-    '/videos/hero_mobile.mp4',
-    '/videos/hero-mobile2.mp4',
-  ];
+  // The single video path
+  const videoPath = '/videos/hero_listing_video_all.mp4';
 
+  // Content for each section with timestamps (in seconds)
   const headings = [
-    {
-      main: 'With AI try-on see it on you,',
-      highlight: 'Instantly!',
-    },
     {
       main: 'Sell your stuff in seconds',
       highlight: 'with AI :)',
+      startTime: 0,
+      endTime: 14.13,
+    },
+    {
+      main: 'With AI try-on see it on you,',
+      highlight: 'Instantly!',
+      startTime: 14.13,
+      endTime: 25.61, // 14.13 + 11.48 = 25.61
     },
     {
       main: 'Scan now to',
       highlight: 'Download  →',
+      startTime: 25.61,
+      endTime: 27.88, // 25.61 + 2.27 = 27.88
     },
   ];
 
@@ -70,16 +73,64 @@ export default function Home() {
     };
   }, [isBrowser]);
 
-  // Update video when section changes
+  // Set up video and time tracking
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.src = videos[activeSection];
-      videoRef.current.load();
-      videoRef.current
-        .play()
-        .catch((e) => console.log('Video autoplay prevented'));
-    }
-  }, [activeSection, videos]);
+    if (!videoRef.current) return;
+
+    // Preload the video
+    videoRef.current.preload = 'auto';
+
+    // Function to update text based on current video time
+    const handleTimeUpdate = () => {
+      if (!videoRef.current) return;
+
+      const currentTime = videoRef.current.currentTime;
+
+      // Find the active section based on the current time
+      for (let i = 0; i < headings.length; i++) {
+        if (
+          currentTime >= headings[i].startTime &&
+          currentTime < headings[i].endTime
+        ) {
+          if (activeSection !== i) {
+            setActiveSection(i);
+          }
+          break;
+        }
+      }
+
+      // If we're past the last section's end time, we'll catch it in the ended event
+      // where we reset to the beginning of the video
+    };
+
+    // Handle video ending and looping
+    const handleVideoEnd = () => {
+      if (videoRef.current) {
+        videoRef.current.currentTime = 0;
+        setActiveSection(0);
+        videoRef.current
+          .play()
+          .catch((e) => console.log('Video replay prevented:', e));
+      }
+    };
+
+    // Add event listeners
+    videoRef.current.addEventListener('timeupdate', handleTimeUpdate);
+    videoRef.current.addEventListener('ended', handleVideoEnd);
+
+    // Start playing the video
+    videoRef.current
+      .play()
+      .catch((e) => console.log('Video autoplay prevented:', e));
+
+    // Cleanup
+    return () => {
+      if (videoRef.current) {
+        videoRef.current.removeEventListener('timeupdate', handleTimeUpdate);
+        videoRef.current.removeEventListener('ended', handleVideoEnd);
+      }
+    };
+  }, [activeSection]);
 
   return (
     <div
@@ -118,32 +169,18 @@ export default function Home() {
           {/* Video section */}
           <div className='w-full lg-custom:w-1/3 flex items-center justify-center'>
             <div className='relative w-full max-w-[300px] mb-[155px] lg-custom:mb-5'>
-              <AnimatePresence mode='wait'>
-                <motion.div
-                  key={activeSection}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.8 }}
-                  className='w-full h-full'
+              <div className='w-full h-full'>
+                <video
+                  ref={videoRef}
+                  className='sm:w-[250px] md:w-full md:h-full object-cover'
+                  autoPlay
+                  muted
+                  playsInline
                 >
-                  <video
-                    ref={videoRef}
-                    className='sm:w-[250px] md:w-full md:h-full  object-cover '
-                    autoPlay
-                    muted
-                    playsInline
-                    onEnded={() => {
-                      setActiveSection((prev) =>
-                        prev === headings.length - 1 ? 0 : prev + 1
-                      );
-                    }}
-                  >
-                    <source src={videos[activeSection]} type='video/mp4' />
-                    Your browser does not support the video tag.
-                  </video>
-                </motion.div>
-              </AnimatePresence>
+                  <source src={videoPath} type='video/mp4' />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
             </div>
           </div>
 
