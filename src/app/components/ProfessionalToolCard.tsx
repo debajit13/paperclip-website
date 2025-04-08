@@ -1,11 +1,11 @@
-import Image from "next/image";
+import Image from 'next/image';
 import {
   instantLeft,
   instantRight,
   pcardOne,
   posThree,
   square,
-} from "@/utils/assets";
+} from '@/utils/assets';
 
 export default function ProfessionalToolCard({
   customStyle,
@@ -54,97 +54,104 @@ export default function ProfessionalToolCard({
 }) {
   return (
     <div
-      className={`relative w-full h-full bg-white rounded-2xl shadow-[0px_10px_50px_rgba(0,0,0,0.15)] border border-white/40 backdrop-blur-lg p-6 ${customStyle}`}
+      className={`relative w-full h-full bg-white rounded-2xl shadow-[0px_10px_50px_rgba(0,0,0,0.15)] border border-white/40 backdrop-blur-lg ${customStyle}`}
     >
       {/* Top Gradient Background */}
-      <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#FFD1D6] to-transparent rounded-t-2xl"></div>
+      <div className='absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#FFD1D6] to-transparent rounded-t-2xl'></div>
+      <div className='relative w-full pt-6 px-6'>
+        <div className='bg-gradient-to-t absolute inset-x-0 from-white to-transparent left-0 h-64 w-full z-[100] bottom-0'></div>
+        <div className='relative mx-auto max-w-[1280px]'>
+          {image && (
+            <div className='flex justify-center mt-6 relative z-50'>
+              <Image
+                src={image}
+                alt='Broken Pound'
+                width={imgWidth}
+                height={imgHeight}
+              />
+            </div>
+          )}
 
-      <div className="relative mx-auto max-w-[1280px]">
-        {image && (
-          <div className="flex justify-center mt-6 relative z-50">
-            <Image
-              src={image}
-              alt="Broken Pound"
-              width={imgWidth}
-              height={imgHeight}
-            />
-          </div>
-        )}
+          {imageLeft && (
+            <div
+              className={`absolute ${
+                customLeftCardStyle ?? 'top-32 left-10'
+              }  hidden md:block z-50`}
+            >
+              <Image
+                src={imageLeft}
+                alt='left image'
+                width={imageLeftWidth ?? 130}
+                height={imageLeftHeight ?? 150}
+              />
+            </div>
+          )}
 
+          {imageRight && (
+            <div
+              className={`absolute ${
+                customRightCardStyle ?? 'top-32 right-10'
+              }  hidden md:block z-50`}
+            >
+              <Image
+                src={imageRight}
+                alt='right image'
+                width={imageRightWidth ?? 160}
+                height={imageRightHeight ?? 150}
+              />
+            </div>
+          )}
+
+          {hasOtherImage && (
+            <>
+              <div className={`absolute top-0 right-32 hidden md:block z-50`}>
+                <Image
+                  src={square}
+                  alt='square image'
+                  width={214}
+                  height={80}
+                />
+              </div>
+              <div className={`absolute bottom-0 left-72 hidden md:block z-50`}>
+                <Image
+                  src={posThree}
+                  alt='pos middle img'
+                  width={480}
+                  height={331}
+                />
+              </div>
+            </>
+          )}
+        </div>
+
+        {/* Mobile */}
         {imageLeft && (
-          <div
-            className={`absolute ${
-              customLeftCardStyle ?? "top-32 left-10"
-            }  hidden md:block z-50`}
-          >
+          <div className='absolute top-32 left-0 block md:hidden'>
             <Image
               src={imageLeft}
-              alt="left image"
-              width={imageLeftWidth ?? 130}
-              height={imageLeftHeight ?? 150}
+              alt='left image'
+              width={imageLeftWidthMobile ?? 90}
+              height={imageLeftHeightMobile ?? 150}
             />
           </div>
         )}
 
         {imageRight && (
-          <div
-            className={`absolute ${
-              customRightCardStyle ?? "top-32 right-10"
-            }  hidden md:block z-50`}
-          >
+          <div className='absolute top-10 right-0  block md:hidden'>
             <Image
               src={imageRight}
-              alt="right image"
-              width={imageRightWidth ?? 160}
-              height={imageRightHeight ?? 150}
+              alt='right image'
+              width={imageRightWidthMobile ?? 104}
+              height={imageRightHeightMobile ?? 150}
             />
           </div>
         )}
-
-        {hasOtherImage && (
-          <>
-            <div className={`absolute top-0 right-32 hidden md:block z-50`}>
-              <Image src={square} alt="square image" width={214} height={80} />
-            </div>
-            <div className={`absolute bottom-0 left-72 hidden md:block z-50`}>
-              <Image
-                src={posThree}
-                alt="pos middle img"
-                width={480}
-                height={331}
-              />
-            </div>
-          </>
-        )}
       </div>
-
-      {/* Mobile */}
-      {imageLeft && (
-        <div className="absolute top-32 left-0 block md:hidden">
-          <Image
-            src={imageLeft}
-            alt="left image"
-            width={imageLeftWidthMobile ?? 90}
-            height={imageLeftHeightMobile ?? 150}
-          />
-        </div>
-      )}
-
-      {imageRight && (
-        <div className="absolute top-10 right-0  block md:hidden">
-          <Image
-            src={imageRight}
-            alt="right image"
-            width={imageRightWidthMobile ?? 104}
-            height={imageRightHeightMobile ?? 150}
-          />
-        </div>
-      )}
 
       {/* Title */}
       <h3
-        className={`text-[24px] font-bold font-poppins md:text-[28px] leading-[36px] md:leading-[40px] text-gray-900 text-left ${
-          image ? "mt-10" : "mt-44"
+        className={`text-[24px] px-6 font-bold font-poppins md:text-[28px] leading-[36px] md:leading-[40px] text-gray-900 text-left ${
+          image ? 'mt-10' : 'mt-44'
         } ${customTitle}`}
       >
         {title}
@@ -152,7 +159,7 @@ export default function ProfessionalToolCard({
 
       {/* Description */}
       <p
-        className={`text-[#949191] text-[16px] md:text-[20px] leading-[24px] md:leading-[28px] text-left mt-2 ${customDescription}`}
+        className={`text-[#949191] px-6 pb-6 text-[16px] md:text-[20px] leading-[24px] md:leading-[28px] text-left mt-2 ${customDescription}`}
       >
         {description}
       </p>

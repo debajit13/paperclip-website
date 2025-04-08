@@ -17,6 +17,7 @@ import {
   pos,
   sumup,
   iZettle,
+  alignedIncentives,
 } from '@/utils/assets';
 import ProfessionalToolCardTwo from '../components/ProfessionalToolCardTwo';
 import LiveDemoCard from '../components/LiveDemoCard';
@@ -341,11 +342,9 @@ const GetStarted = () => {
           description={
             'We earn from buyers, so we give you AI tools to create beautiful, targeted listings with massive online reach—the same tools used by leading brands.'
           }
-          image={cr1}
-          imageLeft={instantLeft}
-          imageRight={instantRight}
-          imgWidth={328}
-          imgHeight={328}
+          image={alignedIncentives}
+          imgWidth={450}
+          imgHeight={400}
         />
       </div>
 

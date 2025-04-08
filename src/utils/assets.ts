@@ -126,6 +126,7 @@ import gif9 from '../../public/aitryon/9.gif';
 import gif10 from '../../public/aitryon/10.gif';
 import gif11 from '../../public/aitryon/11.gif';
 import gif12 from '../../public/aitryon/12.gif';
+import alignedIncentives from '../../public/aligned-incentives.png';
 
 export {
   paperClipLogo,
@@ -256,4 +257,5 @@ export {
   gif10,
   gif11,
   gif12,
+  alignedIncentives,
 };
