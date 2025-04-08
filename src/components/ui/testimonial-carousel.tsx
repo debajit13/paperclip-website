@@ -124,7 +124,7 @@ const TestimonialCarousel = ({
         className={cn(
           'flex flex-nowrap overflow-x-auto snap-x snap-mandatory',
           'sm:flex-wrap sm:overflow-visible no-scrollbar',
-          'scroll-smooth min-w-full shrink-0 py-4 w-full justify-center lg-custom:justify-start '
+          'scroll-smooth min-w-full shrink-0 py-3 w-full justify-center lg-custom:justify-start '
         )}
       >
         {components.map((item) => (

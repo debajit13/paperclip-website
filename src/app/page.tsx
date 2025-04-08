@@ -8,7 +8,7 @@ import HeroSection from './components/HeroSection';
 
 export default function Home() {
   return (
-    <div className='relative bg-white min-h-full flex flex-col items-center justify-center text-center pt-6 xl:pt-0  pb-6 pr-0 overflow-hidden'>
+    <div className='relative bg-white min-h-full flex flex-col items-center justify-center text-center pt-1 xl:pt-0  pb-6 pr-0 overflow-hidden'>
       <HeroSection />
 
       {/* <div className='block xl:hidden'>
