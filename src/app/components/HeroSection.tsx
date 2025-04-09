@@ -184,7 +184,7 @@ export default function Home() {
             </div>
           </div>
 
-          <button className='block sm:hidden md:hidden lg:hidden xl:hidden bg-[#F71D3B] w-full text-white py-4 px-6 rounded-full font-semibold text-base leading-6'>
+          <button className='block sm:hidden md:hidden lg:hidden xl:hidden bg-[#F71D3B] w-full max-w-[320px] text-white py-3 px-6 rounded-[100px] font-semibold text-[16px] leading-[24px] font-poppins m-auto'>
             Download App
           </button>
         </section>

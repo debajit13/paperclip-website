@@ -48,25 +48,24 @@ const AiTryOnSection = () => {
     <div className='w-full'>
       <div className='relative mx-auto my-10 flex h-screen  flex-col items-center justify-center overflow-hidden'>
         <div className='z-20'>
-          <div className='mb-2 text-[#F71D3B] font-poppins text-[20px] leading-[28px] font-semibold tracking-[2px]'>
+          <div className='mb-6 text-[#F71D3B] font-poppins text-[20px] leading-[28px] font-semibold tracking-[2px]'>
             AI try-on
           </div>
-          <h2 className='text-[40px] font-semibold mb-4 font-poppins text-[#1B1B1B] leading-[56px]'>
+          <h2 className='mb-4 text-[#1B1B1B] text-[46px] md:text-[58px] xl:text-[68px] font-poppins font-semibold leading-[51px] md:leading-[72px] tracking-[-0.5px]'>
             See It on You, Instantly!
           </h2>
-          <p className='text-[#949191] text-[24px] font-[500] font-poppins leading-[36px] mb-8 max-w-[762px]'>
+          <p className='text-[#949191] font-[500] font-poppins mb-10 max-w-[762px] text-[16px] md:text-[24px] leading-[24px] md:leading-[32px]'>
             Skip the guesswork. Our AI Mirror shows how those heels, jeans, or
             jackets look on you, minus the fitting-room queue.
           </p>
 
-          <a
-            href='#try-now'
-            className='inline-flex items-center font-poppins px-[40px] py-[16px] bg-[#F71D3B] text-white font-semibold rounded-full text-[24px] leading-[36px]'
+          <button
+            className='inline-flex items-center bg-[#F71D3B] text-white  max-w-[320px] py-3 px-6 rounded-[100px] font-[600] font-poppins text-[16px] md:text-[24px] leading-[24px] md:leading-[36px]'
             role='button'
           >
             Try It On, Right Now
             <svg
-              className='w-[24px] h-[36px] ml-2 font-bold pt-1'
+              className='w-[24px] ml-2 font-bold'
               viewBox='0 0 24 24'
               fill='none'
               xmlns='http://www.w3.org/2000/svg'
@@ -79,7 +78,7 @@ const AiTryOnSection = () => {
                 strokeLinejoin='round'
               />
             </svg>
-          </a>
+          </button>
         </div>
 
         {/* overlay */}
