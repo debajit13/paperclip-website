@@ -135,11 +135,11 @@ export default function Home() {
   return (
     <div
       ref={containerRef}
-      className="min-h-[120vh] w-full xl-custom:bg-[url('/hero-bg.svg')] xl-custom:bg-top xl-custom:bg-cover mb-20"
+      className="min-h-[100vh] w-full xl-custom:bg-[url('/hero-bg.svg')] xl-custom:bg-top xl-custom:bg-cover"
       id='hero-section'
     >
       <div className="min-h-screen bg-cover bg-[url('/bg-dots.svg')]">
-        <section className='relative flex flex-col lg-custom:flex-row justify-between px-4 md:px-16 sm:pt-[100px] md:pb-0'>
+        <section className='relative flex flex-col lg-custom:flex-row justify-between px-4 md:px-16 xl-custom:px-[7.18rem] 2xl-custom:px-[8.185rem] sm:pt-[100px] md:pb-0'>
           {/* Text content */}
           <div className='w-full lg-custom:w-2/3  flex flex-col justify-center mb-8 md:mb-0'>
             <div className='h-full'>
@@ -167,8 +167,8 @@ export default function Home() {
           </div>
 
           {/* Video section */}
-          <div className='w-full lg-custom:w-1/3 flex items-center justify-center'>
-            <div className='relative w-full max-w-[300px] mb-[120px] lg-custom:mb-5'>
+          <div className='w-full lg-custom:w-1/3 flex items-center justify-center pt-10 lg-custom:pt-0'>
+            <div className='relative w-full max-w-[300px] md:mb-5'>
               <div className='w-full h-full'>
                 <video
                   ref={videoRef}
@@ -184,7 +184,7 @@ export default function Home() {
             </div>
           </div>
 
-          <button className='block sm:hidden md:hidden lg:hidden xl:hidden bg-[#F71D3B] w-full max-w-[320px] text-white py-3 px-6 rounded-[100px] font-semibold text-[16px] leading-[24px] font-poppins m-auto'>
+          <button className='block  sm:hidden md:hidden lg:hidden xl:hidden mt-12 bg-[#F71D3B] w-full max-w-[320px] text-white py-3 px-6 rounded-[100px] font-semibold text-[16px] leading-[24px] font-poppins m-auto sm-custom:mb-0 mb-3'>
             Download App
           </button>
         </section>
@@ -203,12 +203,12 @@ export default function Home() {
                 <Image
                   src={HeroBg3}
                   alt='decorative-element-1'
-                  width={120}
+                  width={158}
                   height={250}
                 />
               </motion.div>
               <motion.div
-                className='absolute top-0 left-16 hidden xl:block'
+                className='absolute top-0 left-[160px] hidden xl:block'
                 initial={{ opacity: initialOpacity, scale: initialScale }}
                 animate={{ opacity: opacity, scale: scale }}
                 exit={{ opacity: exitOpacity, scale: exitScale }}

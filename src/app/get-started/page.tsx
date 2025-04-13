@@ -68,7 +68,7 @@ const GetStarted = () => {
           />
         </div>
 
-        <p className='text-[#949191] font-[400px] text-[16px] leading-[24px] mt-4 md:mt-10 font-poppins max-w-7xl mx-auto px-4'>
+        <p className='text-[#706363] font-[400px] text-[16px] leading-[24px] mt-4 md:mt-10 font-poppins max-w-7xl mx-auto px-4'>
           Run your brick-and-mortar and online shop in perfect harmony, with
           effortless AI-created listings, professional product showcases and
           tools, integrated shipping, and instant marketplace reach, with no
@@ -129,7 +129,7 @@ const GetStarted = () => {
             </span>
           </span>
         </h2>
-        <p className='text-[#949191] font-[400px] text-[16px] md:text-[20px] leading-[24px] md:leading-[28px] mt-4 xl:mt-[24px] md:mt-10 font-poppins mx-auto'>
+        <p className='text-[#706363] font-[400px] text-[16px] md:text-[20px] leading-[24px] md:leading-[28px] mt-4 xl:mt-[24px] md:mt-10 font-poppins mx-auto'>
           Powerful AI tools and instant marketplace access designed to help your
           business thrive.
         </p>
@@ -367,7 +367,7 @@ const GetStarted = () => {
           <br />
           Instantly Expand Your Reach
         </h2>
-        <p className='text-[#949191] font-[400px] text-[16px] md:text-[20px] leading-[24px] md:leading-[28px] mt-4 md:mt-8 font-poppins max-w-7xl mx-auto'>
+        <p className='text-[#706363] font-[400px] text-[16px] md:text-[20px] leading-[24px] md:leading-[28px] mt-4 md:mt-8 font-poppins max-w-7xl mx-auto'>
           Everything You Need to Run Your Store, 100% Free
         </p>
 
@@ -402,7 +402,7 @@ const GetStarted = () => {
           See it in
           <span className='text-[#F71D3B] italic font-playfair'> Action!</span>
         </h2>
-        <p className='text-[#949191] font-[400px] text-[16px] md:text-[20px] leading-[24px] md:leading-[28px] mt-4 md:mt-8 font-poppins max-w-7xl mx-auto'>
+        <p className='text-[#706363] font-[400px] text-[16px] md:text-[20px] leading-[24px] md:leading-[28px] mt-4 md:mt-8 font-poppins max-w-7xl mx-auto'>
           Test drive a live account and explore all features instantly. No
           signup,
           <br />
@@ -435,7 +435,7 @@ const GetStarted = () => {
           <h2 className='mt-4 text-[40px] font-poppins font-semibold text-gray-800 leading-[58px] text-center'>
             Experience Our Free Retail SaaS
           </h2>
-          <p className='text-[#949191] font-[500px] text-[24px] leading-[36px] mt-4 font-poppins max-w-7xl mx-auto'>
+          <p className='text-[#706363] font-[500px] text-[24px] leading-[36px] mt-4 font-poppins max-w-7xl mx-auto'>
             Join a growing community of shops using AI-driven tools, built-in
             shipping, and a massive online marketplace to boost sales—at zero
             cost to you.

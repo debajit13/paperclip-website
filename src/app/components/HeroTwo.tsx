@@ -38,7 +38,7 @@ export default function HeroTwo() {
       return (
         <motion.span key={index} className='inline-block relative'>
           {/* Background letter (gray) */}
-          <span className='text-[#949191] relative'>
+          <span className='text-[#706363] relative'>
             {char === ' ' ? '\u00A0' : char}
           </span>
 

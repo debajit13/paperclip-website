@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import { carouselContentProps } from "./Carousel";
+import Image from 'next/image';
+import { carouselContentProps } from './Carousel';
 import {
   arrow,
   arrowFive,
@@ -29,7 +29,7 @@ import {
   sparkleFour,
   sparkleThree,
   sparkleTwo,
-} from "@/utils/assets";
+} from '@/utils/assets';
 
 export default function CarouselCard({
   title,
@@ -77,31 +77,31 @@ export default function CarouselCard({
   return (
     <div
       className={`w-full relative md:col-span-2 ${
-        customHeight ? customHeight : "h-[584px] md:h-[400px] xl:h-[584px]"
+        customHeight ? customHeight : 'h-[584px] md:h-[400px] xl:h-[584px]'
       } bg-gradient-to-t from-[#FC9CA8] to-[#FFF2F3] pt-6 md:p-5 xl:p-10 px-10 shadow-lg rounded-[32px] flex flex-col md:flex-row justify-between items-center text-left`}
     >
-      <div className="h-[80%] w-full md:w-[50%] xl:w-[40%] flex flex-col justify-between md:ml-10">
-        <div className="w-full">
+      <div className='h-[80%] w-full md:w-[50%] xl:w-[40%] flex flex-col justify-between md:ml-10'>
+        <div className='w-full'>
           {title && (
-            <h3 className="text-[#F71D3B] font-[600] text-[16px] xl:text-[20px] leading-[28px] tracking-[2px] font-poppins">
+            <h3 className='text-[#F71D3B] font-[600] text-[16px] xl:text-[20px] leading-[28px] tracking-[2px] font-poppins'>
               {title}
             </h3>
           )}
 
           {subTitle && (
-            <h4 className="text-[32px] font-[600] xl:text-[40px] leading-[40px] xl:leading-[56px] font-semibold mt-6 font-poppins">
+            <h4 className='text-[32px] font-[600] xl:text-[40px] leading-[40px] xl:leading-[56px] font-semibold mt-6 font-poppins'>
               {subTitle}
             </h4>
           )}
 
           {description && (
-            <p className="text-[#949191] font-medium text-[16px] xl:text-[24px] leading-[24px] xl:leading-[36px] mt-4 font-poppins">
+            <p className='text-[#706363] font-medium text-[16px] xl:text-[24px] leading-[24px] xl:leading-[36px] mt-4 font-poppins'>
               {description}
             </p>
           )}
 
           {btnTitle && (
-            <button className="block md:hidden w-[100%] my-4 bg-white text-[#F71D3B] py-[12px] xl:py-2 px-6 rounded-[100px] font-[600] text-[14px] md:text-[24px] leading-[16px] md:leading-[36px]">
+            <button className='block md:hidden w-[100%] my-4 bg-white text-[#F71D3B] py-[12px] xl:py-2 px-6 rounded-[100px] font-[600] text-[14px] md:text-[24px] leading-[16px] md:leading-[36px]'>
               {btnTitle}
             </button>
           )}
@@ -124,10 +124,10 @@ export default function CarouselCard({
           position && `top-${position.top}`
         }`}
       >
-        <div className="relative z-10">
+        <div className='relative z-10'>
           <Image
             src={image}
-            alt="mobileimage"
+            alt='mobileimage'
             width={imageWidth}
             height={imageHeight}
           />
@@ -135,13 +135,13 @@ export default function CarouselCard({
 
         {c1 && (
           <div className={`hidden xl:block absolute bottom-10 z-0`}>
-            <Image src={c11} alt="mobileimage" width={234} height={134} />
+            <Image src={c11} alt='mobileimage' width={234} height={134} />
           </div>
         )}
 
         {c2 && (
           <div className={`hidden xl:block absolute top-20 z-0`}>
-            <Image src={c12} alt="mobileimage" width={234} height={134} />
+            <Image src={c12} alt='mobileimage' width={234} height={134} />
           </div>
         )}
 
@@ -149,10 +149,10 @@ export default function CarouselCard({
           <div className={`hidden xl:block absolute top-20 right-5 z-0`}>
             <Image
               src={c13}
-              alt="mobileimage"
+              alt='mobileimage'
               width={234}
               height={134}
-              className="z-0"
+              className='z-0'
             />
           </div>
         )}
@@ -161,7 +161,7 @@ export default function CarouselCard({
           <div
             className={`hidden xl:block absolute top-[-20px] right-20 z-0 transform -rotate-[17.75deg]`}
           >
-            <Image src={sparkleTwo} alt="mobileimage" width={70} height={17} />
+            <Image src={sparkleTwo} alt='mobileimage' width={70} height={17} />
           </div>
         )}
 
@@ -169,7 +169,7 @@ export default function CarouselCard({
           <div
             className={`hidden xl:block absolute top-14 left-[-150px] z-0 -rotate-[60deg]`}
           >
-            <Image src={arrowFour} alt="mobileimage" width={75} height={75} />
+            <Image src={arrowFour} alt='mobileimage' width={75} height={75} />
           </div>
         )}
 
@@ -177,7 +177,7 @@ export default function CarouselCard({
           <div className={`hidden xl:block absolute top-2 left-[-100px]`}>
             <Image
               src={literallyZero}
-              alt="mobileimage"
+              alt='mobileimage'
               width={153}
               height={32}
             />
@@ -188,7 +188,7 @@ export default function CarouselCard({
           <div className={`hidden xl:block absolute top-5 right-[-40px]`}>
             <Image
               src={sparkleFour}
-              alt="mobileimage"
+              alt='mobileimage'
               width={146}
               height={32}
             />
@@ -199,19 +199,19 @@ export default function CarouselCard({
           <div
             className={`hidden xl:block absolute bottom-10 left-[-200px] z-50`}
           >
-            <Image src={c14} alt="mobileimage" width={263} height={249} />
+            <Image src={c14} alt='mobileimage' width={263} height={249} />
           </div>
         )}
 
         {c9 && (
           <div className={`hidden xl:block absolute top-0 left-[-150px] z-0`}>
-            <Image src={c15} alt="mobileimage" width={169} height={133} />
+            <Image src={c15} alt='mobileimage' width={169} height={133} />
           </div>
         )}
 
         {c10 && (
           <div className={`hidden xl:block absolute top-20 right-[-160px] z-0`}>
-            <Image src={c16} alt="mobileimage" width={234} height={259} />
+            <Image src={c16} alt='mobileimage' width={234} height={259} />
           </div>
         )}
 
@@ -219,7 +219,7 @@ export default function CarouselCard({
           <div
             className={`hidden xl:block absolute top-[-20px] right-[-90px] z-0 transform -rotate-[17.75deg]`}
           >
-            <Image src={sparkleTwo} alt="mobileimage" width={65} height={64} />
+            <Image src={sparkleTwo} alt='mobileimage' width={65} height={64} />
           </div>
         )}
 
@@ -227,7 +227,7 @@ export default function CarouselCard({
           <div
             className={`hidden xl:block absolute top-[-40px] left-[-20px] z-0 `}
           >
-            <Image src={c17} alt="mobileimage" width={332} height={88} />
+            <Image src={c17} alt='mobileimage' width={332} height={88} />
           </div>
         )}
 
@@ -235,7 +235,7 @@ export default function CarouselCard({
           <div
             className={`hidden xl:block absolute bottom-[-40px] right-0 z-0 `}
           >
-            <Image src={c18} alt="mobileimage" width={259} height={168} />
+            <Image src={c18} alt='mobileimage' width={259} height={168} />
           </div>
         )}
 
@@ -243,7 +243,7 @@ export default function CarouselCard({
           <div
             className={`hidden xl:block absolute bottom-40 left-[-40px] z-0`}
           >
-            <Image src={arrowFive} alt="mobileimage" width={126} height={125} />
+            <Image src={arrowFive} alt='mobileimage' width={126} height={125} />
           </div>
         )}
 
@@ -251,7 +251,7 @@ export default function CarouselCard({
           <div className={`hidden xl:block absolute top-[-20px] right-10 z-0`}>
             <Image
               src={sparkleThree}
-              alt="mobileimage"
+              alt='mobileimage'
               width={71}
               height={73}
             />
@@ -262,7 +262,7 @@ export default function CarouselCard({
           <div
             className={`hidden xl:block absolute bottom-10 left-[-200px] z-0`}
           >
-            <Image src={cloudOne} alt="mobileimage" width={191} height={192} />
+            <Image src={cloudOne} alt='mobileimage' width={191} height={192} />
           </div>
         )}
 
@@ -270,13 +270,13 @@ export default function CarouselCard({
           <div
             className={`hidden xl:block absolute top-[-40px] right-[-150px] z-0`}
           >
-            <Image src={cloudTwo} alt="mobileimage" width={159} height={160} />
+            <Image src={cloudTwo} alt='mobileimage' width={159} height={160} />
           </div>
         )}
 
         {c28 && (
           <div className={`hidden xl:block absolute top-5 left-[-250px] z-0`}>
-            <Image src={arrowSix} alt="mobileimage" width={138} height={138} />
+            <Image src={arrowSix} alt='mobileimage' width={138} height={138} />
           </div>
         )}
 
@@ -284,7 +284,7 @@ export default function CarouselCard({
           <div
             className={`hidden xl:block absolute bottom-4 left-[-150px] z-50`}
           >
-            <Image src={c111} alt="mobileimage" width={320} height={236} />
+            <Image src={c111} alt='mobileimage' width={320} height={236} />
           </div>
         )}
 
@@ -292,7 +292,7 @@ export default function CarouselCard({
           <div
             className={`hidden xl:block absolute top-[-100px] right-[-80px] z-50`}
           >
-            <Image src={c112} alt="mobileimage" width={320} height={350} />
+            <Image src={c112} alt='mobileimage' width={320} height={350} />
           </div>
         )}
 
@@ -300,19 +300,19 @@ export default function CarouselCard({
           <div
             className={`hidden xl:block absolute bottom-0 left-[-100px] z-50`}
           >
-            <Image src={c113} alt="mobileimage" width={385} height={350} />
+            <Image src={c113} alt='mobileimage' width={385} height={350} />
           </div>
         )}
 
         {c33 && (
           <div className={`hidden xl:block absolute top-[-20px] z-50`}>
-            <Image src={c114} alt="mobileimage" width={406} height={108} />
+            <Image src={c114} alt='mobileimage' width={406} height={108} />
           </div>
         )}
 
         {c34 && (
           <div className={`hidden xl:block absolute top-20 right-0 z-50`}>
-            <Image src={c116} alt="mobileimage" width={294} height={240} />
+            <Image src={c116} alt='mobileimage' width={294} height={240} />
           </div>
         )}
       </div>
@@ -327,7 +327,7 @@ export default function CarouselCard({
       >
         <Image
           src={image}
-          alt="mobileimage"
+          alt='mobileimage'
           width={imageTabWidth}
           height={imageTabHeight}
         />
@@ -337,7 +337,7 @@ export default function CarouselCard({
       <div className={`block md:hidden`}>
         <Image
           src={image}
-          alt="mobileimage"
+          alt='mobileimage'
           width={imageMobileWidth}
           height={imageMobileHeight}
         />

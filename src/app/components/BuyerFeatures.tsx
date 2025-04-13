@@ -7,7 +7,7 @@ export default function BuyerFeatures() {
   const ref = useRef(null);
   const isInView = useInView(ref);
   return (
-    <section className='mt-[188px] md:mt-[200px] z-50 bg-white xl:mt-0 xl:pt-[491px] text-center w-[98%] mx-auto'>
+    <section className='mt-[188px] md:mt-[200px] z-50 bg-white xl:mt-0 xl:pt-[200px] text-center w-[98%] mx-auto hidden sm-custom:block'>
       {/* Hero Section */}
       <motion.div
         ref={ref}
@@ -27,7 +27,7 @@ export default function BuyerFeatures() {
           Buy{' '}
           <span className='text-[#F71D3B] italic font-playfair'>Better!</span>
         </h2>
-        <p className='mt-6 md:mt-10 xl:mb-[181px] px-[16px] text-[#949191] font-poppins text-[16px] md:text-[24px] leading-[24px] md:leading-[32px] mx-auto'>
+        <p className='mt-6 md:mt-10 xl:mb-[181px] px-[16px] text-[#706363] font-poppins text-[16px] md:text-[24px] leading-[24px] md:leading-[32px] mx-auto'>
           Paperclip transforms shopping into a seamless, personalized experience
           with smart AI tools, hassle-free deals, and fast shipping.
         </p>

@@ -39,12 +39,12 @@ const HomeCardsGrid = () => {
 
         {/* Mobile */}
         <div className='block md:hidden mt-10 mx-auto'>
-          <Image src={mobileTwo} alt='mobileimage' width={300} height={540} />
+          <Image src={mobileTwo} alt='mobileimage' width={180} height={540} />
         </div>
 
         {/* Ipad */}
         <div className='hidden md:block xl:hidden absolute right-5 bottom-0'>
-          <Image src={mobileTwo} alt='mobileimage' width={350} height={540} />
+          <Image src={mobileTwo} alt='mobileimage' width={240} height={540} />
         </div>
 
         <div className='hidden md:block xl:hidden absolute right-5 bottom-0'>
@@ -57,18 +57,18 @@ const HomeCardsGrid = () => {
         </div>
 
         {/* Desktop */}
-        <div className='hidden xl:block absolute right-5 bottom-0'>
-          <Image src={mobileTwo} alt='mobileimage' width={585} height={540} />
+        <div className='hidden xl:block absolute right-[7rem] bottom-0'>
+          <Image src={mobileTwo} alt='mobileimage' width={330} height={540} />
         </div>
-        <div className='hidden xl:block absolute right-5 bottom-0'>
+        <div className='hidden xl:block absolute right-3 bottom-0'>
           <Image
             src={mobileTwoOverlap}
             alt='mobileimageoverlap'
-            width={365}
+            width={335}
             height={354}
           />
         </div>
-        <div className='hidden xl:block absolute right-10 top-10'>
+        <div className='hidden xl:block absolute right-5 top-10'>
           <Image src={sparkleTwo} alt='sparkle' width={71} height={70} />
         </div>
         <div className='hidden xl:block absolute top-[40%] left-[50%]'>

@@ -14,7 +14,6 @@ export default function Home() {
       {/* <div className='block xl:hidden'>
         <HeroTwo />
       </div>  */}
-
       <AISelling />
       <Carousel
         carouselContent={carouselContent}

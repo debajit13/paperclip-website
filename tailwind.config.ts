@@ -15,8 +15,10 @@ export default {
   theme: {
     extend: {
       screens: {
+        'sm-custom': '440px',
         'xl-custom': '1280px',
         'lg-custom': '1167px',
+        '2xl-custom': '1440px',
       },
       colors: {
         background: 'hsl(var(--background))',

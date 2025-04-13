@@ -10,7 +10,6 @@ const TestimonialCard = ({
       className='bg-white rounded-2xl lg:p-4 p-2  md:max-w-[216px]'
       style={{
         boxShadow: '0px 4px 56px 0px #00000012',
-        border: '1px solid #C5C5C533',
       }}
     >
       {/* Star Rating */}

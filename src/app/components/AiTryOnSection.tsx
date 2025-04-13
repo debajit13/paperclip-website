@@ -54,7 +54,7 @@ const AiTryOnSection = () => {
           <h2 className='mb-4 text-[#1B1B1B] text-[46px] md:text-[58px] xl:text-[68px] font-poppins font-semibold leading-[51px] md:leading-[72px] tracking-[-0.5px]'>
             See It on You, Instantly!
           </h2>
-          <p className='text-[#949191] font-[500] font-poppins mb-10 max-w-[762px] text-[16px] md:text-[24px] leading-[24px] md:leading-[32px]'>
+          <p className='text-[#706363] font-[500] font-poppins mb-10 max-w-[762px] text-[16px] md:text-[24px] leading-[24px] md:leading-[32px]'>
             Skip the guesswork. Our AI Mirror shows how those heels, jeans, or
             jackets look on you, minus the fitting-room queue.
           </p>

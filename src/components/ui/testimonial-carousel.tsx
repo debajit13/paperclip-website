@@ -101,7 +101,7 @@ const TestimonialCarousel = ({
         duration: 1,
         ease: 'easeOut',
       }}
-      className={cn('relative z-20 overflow-hidden', className)}
+      className={cn('relative z-20', className)}
     >
       <ul
         ref={scrollRef}

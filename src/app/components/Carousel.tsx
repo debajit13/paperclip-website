@@ -304,7 +304,7 @@ export default function Carousel({
 
   return (
     <div
-      className='w-full mx-auto relative max-w-[98%] z-50 bg-white'
+      className='w-full mx-auto relative max-w-[98%] z-50 bg-white hidden sm-custom:block'
       ref={carouselRef}
     >
       {/* Progress Bar */}
