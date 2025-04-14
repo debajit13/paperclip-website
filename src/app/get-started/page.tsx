@@ -343,8 +343,8 @@ const GetStarted = () => {
             'We earn from buyers, so we give you AI tools to create beautiful, targeted listings with massive online reach—the same tools used by leading brands.'
           }
           image={alignedIncentives}
-          imgWidth={450}
-          imgHeight={400}
+          imgWidth={328}
+          imgHeight={328}
         />
       </div>
 

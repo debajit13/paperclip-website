@@ -149,7 +149,7 @@ export default function Home() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 0 }}
-                  className='mb-8'
+                  className='mb-8 min-h-[160px] md:min-h-[352px] sm-custom:min-h-auto'
                 >
                   <h1 className='text-4xl mt-10 pt-3 ml-2 md:text-5xl lg:text-[80px]  max-w-full lg-custom:max-w-[552px] font-poppins font-[600] mb-2 text-center lg-custom:text-left tracking-[-0.5px]'>
                     {headings[activeSection].main}

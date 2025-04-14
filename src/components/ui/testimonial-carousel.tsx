@@ -44,7 +44,7 @@ const TestimonialCarousel = ({
         name='Afhaat'
         handle='@athaat'
         rating={5}
-        testimonial='As a new seller on Paperclip, so far I’m very happy with the way the selling system works, it’s secure for both sides.'
+        testimonial="As a new seller on Paperclip, so far I'm very happy with the way the selling system works, it's secure for both sides."
         avatarUrl={user2.src}
       />
     );
@@ -101,25 +101,29 @@ const TestimonialCarousel = ({
         duration: 1,
         ease: 'easeOut',
       }}
-      className={cn('relative z-20', className)}
+      className={cn('relative z-20 overflow-hidden pb-4', className)}
     >
-      <ul
-        ref={scrollRef}
-        className={cn(
-          'flex flex-nowrap overflow-x-auto snap-x snap-mandatory',
-          'sm:flex-wrap sm:overflow-visible no-scrollbar',
-          'scroll-smooth min-w-full shrink-0 py-3 w-full justify-center lg-custom:justify-start '
-        )}
-      >
-        {components.map((item) => (
-          <li
-            className='h-full relative flex-shrink-0 py-2 mx-2 w-[90%] sm:w-auto snap-start'
-            key={item.key}
-          >
-            <item.Component />
-          </li>
-        ))}
-      </ul>
+      <div className='overflow-visible px-4 sm:px-0'>
+        <ul
+          ref={scrollRef}
+          className={cn(
+            'flex flex-nowrap overflow-x-auto snap-x snap-mandatory',
+            'sm:flex-wrap sm:overflow-visible no-scrollbar',
+            'scroll-smooth min-w-full shrink-0 py-3 w-full justify-start'
+          )}
+        >
+          {components.map((item, index) => (
+            <li
+              className={cn(
+                'h-full relative flex-shrink-0 py-2 mx-3 w-[85%] sm:w-auto snap-center'
+              )}
+              key={item.key}
+            >
+              <item.Component />
+            </li>
+          ))}
+        </ul>
+      </div>
     </motion.div>
   );
 };

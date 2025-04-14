@@ -163,7 +163,7 @@ export default function FooterSection() {
         <div className='hidden xl:block xl:mt-[-100px]'>
           <div className='relative flex flex-row items-center justify-center transform mb-20 mx-auto'>
             {/* Floating Text with Arrow */}
-            <div className='absolute left-[10rem] top-0 flex flex-row items-center transform rotate-6 -mt-14 ml-4'>
+            <div className='absolute  left-[18%] top-5 flex flex-row items-center transform rotate-6 -mt-14 ml-4'>
               <div className='text-gray-900 text-xs font-bold'>
                 <Image
                   src={downloadNow2}
