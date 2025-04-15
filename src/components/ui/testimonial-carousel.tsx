@@ -101,28 +101,38 @@ const TestimonialCarousel = ({
         duration: 1,
         ease: 'easeOut',
       }}
-      className={cn('relative z-20 overflow-hidden pb-4', className)}
+      className={cn('relative z-20', className)}
     >
-      <div className='overflow-visible px-4 sm:px-0'>
-        <ul
-          ref={scrollRef}
-          className={cn(
-            'flex flex-nowrap overflow-x-auto snap-x snap-mandatory',
-            'sm:flex-wrap sm:overflow-visible no-scrollbar',
-            'scroll-smooth min-w-full shrink-0 py-3 w-full justify-start'
-          )}
-        >
-          {components.map((item, index) => (
-            <li
-              className={cn(
-                'h-full relative flex-shrink-0 py-2 mx-3 w-[85%] sm:w-auto snap-center'
-              )}
-              key={item.key}
-            >
-              <item.Component />
-            </li>
-          ))}
-        </ul>
+      {/* Main container with no overflow restriction */}
+      <div className='w-full relative pb-6'>
+        {/* Scrollable container with padding to allow shadows to show */}
+        <div className='overflow-hidden px-4 sm:px-6'>
+          <ul
+            ref={scrollRef}
+            className={cn(
+              'flex flex-nowrap px-6', // Negative margin technique to hide scrollbar but keep content scrollable
+              'overflow-x-scroll touch-pan-x', // Enable horizontal scroll
+              'sm:flex-wrap sm:overflow-visible sm:mx-0 sm:px-0', // Reset on desktop
+              'scroll-smooth min-w-full py-3 w-full justify-start snap-x snap-mandatory',
+              'no-scrollbar' // Hide scrollbar but keep functionality
+            )}
+            style={{
+              paddingBottom: '20px', // Extra padding to ensure shadow is visible
+              marginBottom: '-20px', // Negative margin to compensate for padding
+            }}
+          >
+            {components.map((item, index) => (
+              <li
+                className={cn(
+                  'h-full relative flex-shrink-0 py-2 mx-3 w-[85%] sm:w-auto snap-center'
+                )}
+                key={item.key}
+              >
+                <item.Component />
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </motion.div>
   );
