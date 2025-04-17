@@ -77,7 +77,9 @@ export default function CarouselCard({
   return (
     <div
       className={`w-full relative md:col-span-2 ${
-        customHeight ? customHeight : 'h-[584px] md:h-[400px] xl:h-[584px]'
+        customHeight
+          ? customHeight
+          : 'h-[584px] md:h-[400px] 3xl-custom:h-[800px] xl:h-[584px]'
       } bg-gradient-to-t from-[#FC9CA8] to-[#FFF2F3] pt-6 md:p-5 xl:p-10 px-10 shadow-lg rounded-[32px] flex flex-col md:flex-row justify-between items-center text-left`}
     >
       <div className='h-[80%] w-full md:w-[50%] xl:w-[40%] flex flex-col justify-between md:ml-10'>

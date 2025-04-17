@@ -7,7 +7,7 @@ const TestimonialCard = ({
 }) => {
   return (
     <div
-      className='bg-white rounded-2xl lg:p-4 p-2  md:max-w-[216px]'
+      className='bg-white rounded-2xl 3xl-custom:p-8 lg:p-4 p-2 3xl-custom:max-w-[336px]  md:max-w-[216px]'
       style={{
         boxShadow: '0px 4px 56px 0px #00000012',
         margin: '4px 1px 8px 1px',
@@ -40,13 +40,13 @@ const TestimonialCard = ({
       </div>
 
       {/* Testimonial Text */}
-      <p className='text-[#1B1B1B] font-poppins mb-5 text-[8px] lg:text-[12px]  font-[500] text-left'>
+      <p className='text-[#1B1B1B] font-poppins mb-5 text-[8px] 3xl-custom:text-[18px] lg:text-[12px]  font-[500] text-left'>
         {testimonial}
       </p>
 
       {/* User Info */}
       <div className='flex items-center'>
-        <div className='w-[25px] lg:w-[34px] h-[25px] lg:h-[34px] rounded-full overflow-hidden mr-2'>
+        <div className='w-[25px] 3xl-custom:w-[45px] 3xl-custom:h-[45px] lg:w-[34px] h-[25px] lg:h-[34px] rounded-full overflow-hidden mr-2'>
           <img
             src={avatarUrl}
             alt={`${name}'s avatar`}
@@ -54,10 +54,10 @@ const TestimonialCard = ({
           />
         </div>
         <div>
-          <p className='font-normal font-poppins text-left text-[10px] lg:text-[12px] text-[#434141]'>
+          <p className='font-normal font-poppins text-left text-[10px] 3xl-custom:text-[18px] lg:text-[12px] text-[#434141]'>
             {name}
           </p>
-          <p className='text-[10px] lg:text-[12px] font-poppins font-normal text-left text-[#F71D3B]'>
+          <p className='text-[10px] 3xl-custom:text-[18px] lg:text-[12px] font-poppins font-normal text-left text-[#F71D3B]'>
             {handle}
           </p>
         </div>

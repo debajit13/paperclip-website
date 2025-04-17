@@ -18,7 +18,8 @@ export default {
         'sm-custom': '440px',
         'xl-custom': '1280px',
         'lg-custom': '1167px',
-        '2xl-custom': '1440px',
+        '2xl-custom': '1490px',
+        '3xl-custom': '2400px',
       },
       colors: {
         background: 'hsl(var(--background))',

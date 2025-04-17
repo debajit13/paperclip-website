@@ -1,28 +1,28 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
-import "./globals.css";
-import Navbar from "./components/Navbar";
-import NavbarMobile from "./components/NavbarMobile";
-import PaperclipCursor from "./components/PaperclipCursor";
+import type { Metadata } from 'next';
+import { Geist, Geist_Mono, Inter } from 'next/font/google';
+import './globals.css';
+import Navbar from './components/Navbar';
+import NavbarMobile from './components/NavbarMobile';
+import PaperclipCursor from './components/PaperclipCursor';
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: "Paperclip",
-  description: "Paperclip",
+  title: 'Paperclip',
+  description: 'Paperclip',
 };
 
 const poppins = Inter({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
 });
 
 export default function RootLayout({
@@ -31,16 +31,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* <PaperclipCursor /> */}
-        <div className="hidden md:block">
-          <Navbar customStyle="w-[361px] md:w-[464px] absolute top-10 left-1/2 transform -translate-x-1/2" />
+        <div className='hidden md:block'>
+          <Navbar customStyle='w-[361px] 3xl-custom:w-[600px] md:w-[464px] absolute top-10 left-1/2 transform -translate-x-1/2' />
         </div>
 
-        <div className="block md:hidden">
+        <div className='block md:hidden'>
           <NavbarMobile />
         </div>
 

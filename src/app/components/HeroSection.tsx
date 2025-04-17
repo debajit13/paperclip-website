@@ -151,10 +151,10 @@ export default function Home() {
                   exit={{ opacity: 0, y: 0 }}
                   className='mb-8 min-h-[160px] md:min-h-[352px] sm-custom:min-h-auto'
                 >
-                  <h1 className='text-4xl mt-10 pt-3 ml-2 md:text-5xl lg:text-[80px]  max-w-full lg-custom:max-w-[552px] font-poppins font-[600] mb-2 text-center lg-custom:text-left tracking-[-0.5px]'>
+                  <h1 className='text-4xl mt-10 pt-3 ml-2 md:text-5xl lg:text-[80px]  max-w-full 3xl-custom:text-[100px] 3xl-custom:max-w-[700px] lg-custom:max-w-[552px] font-poppins font-[600] mb-2 text-center lg-custom:text-left tracking-[-0.5px]'>
                     {headings[activeSection].main}
                   </h1>
-                  <h2 className='text-5xl md:text-6xl ml-2 lg:text-8xl leading-tight lg:leading-[100px] font-playfair font-[800] italic text-[#F71D3B] text-center lg-custom:text-left'>
+                  <h2 className='text-5xl md:text-6xl ml-2 lg:text-8xl 3xl-custom:text-9xl leading-tight lg:leading-[100px] font-playfair font-[800] italic text-[#F71D3B] text-center lg-custom:text-left'>
                     {headings[activeSection].highlight}
                   </h2>
                 </motion.div>
@@ -168,7 +168,7 @@ export default function Home() {
 
           {/* Video section */}
           <div className='w-full lg-custom:w-1/3 flex items-center justify-center pt-10 lg-custom:pt-0'>
-            <div className='relative w-full max-w-[300px] md:mb-5'>
+            <div className='relative w-full 3xl-custom:max-w-[500px] max-w-[300px] md:mb-5'>
               <div className='w-full h-full'>
                 <video
                   ref={videoRef}
