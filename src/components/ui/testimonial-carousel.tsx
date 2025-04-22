@@ -106,7 +106,7 @@ const TestimonialCarousel = ({
       {/* Main container with no overflow restriction */}
       <div className='w-full relative pb-6'>
         {/* Scrollable container with padding to allow shadows to show */}
-        <div className='overflow-hidden px-4 sm:px-6'>
+        <div className='overflow-hidden pr-0 sm:pr-6'>
           <ul
             ref={scrollRef}
             className={cn(
@@ -124,7 +124,7 @@ const TestimonialCarousel = ({
             {components.map((item, index) => (
               <li
                 className={cn(
-                  'h-full relative flex-shrink-0 py-2 mx-3 w-[85%] sm:w-auto snap-center'
+                  'h-full relative flex-shrink-0 py-2 mr-3 w-[95%] sm:w-auto snap-center'
                 )}
                 key={item.key}
               >
