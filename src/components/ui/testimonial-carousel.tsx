@@ -106,7 +106,7 @@ const TestimonialCarousel = ({
       {/* Main container with no overflow restriction */}
       <div className='w-full relative pb-6'>
         {/* Scrollable container with padding to allow shadows to show */}
-        <div className='overflow-hidden pr-0 sm:pr-6'>
+        <div className='overflow-hidden pr-0 pl-0 sm:pl-[15px] sm:pr-6'>
           <ul
             ref={scrollRef}
             className={cn(

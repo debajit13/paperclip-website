@@ -62,12 +62,21 @@ export default function NavbarMobile() {
 
             {/* Menu Options */}
             <div className='mt-4 text-lg space-y-2'>
-              {/* <p className="text-black text-left font-semibold font-poppins text-[24px] leading-[36px]">
-                Seller
-              </p>
-              <p className="text-black text-left font-semibold font-poppins text-[24px] leading-[36px]">
-                Buyer
-              </p> */}
+              <Link href={'/'} target='_blank' className='leading-[36px]'>
+                <p className='text-black text-left font-semibold font-poppins text-[24px] '>
+                  Contact Us
+                </p>
+              </Link>
+              <Link href={'/'} target='_blank' className='leading-[36px]'>
+                <p className='text-black text-left font-semibold font-poppins text-[24px]'>
+                  Terms
+                </p>
+              </Link>
+              <Link href={'/'} target='_blank' className='leading-[36px]'>
+                <p className='text-black text-left font-semibold font-poppins text-[24px]'>
+                  Privacy
+                </p>
+              </Link>
               <Link
                 onClick={() => setIsOpen(false)}
                 href={'/get-started'}

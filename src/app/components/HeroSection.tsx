@@ -142,7 +142,7 @@ export default function Home() {
         <section className='relative flex flex-col lg-custom:h-[100vh] lg-custom:flex-row justify-between px-4 md:px-16 xl-custom:px-[7.18rem] 2xl-custom:px-[10.185rem] sm:pt-[100px] md:pb-0'>
           {/* Text content */}
           <div className='w-full lg-custom:w-2/3  flex flex-col justify-center mb-8 md:mb-0'>
-            <div className='h-[40%] z-[100] flex items-center md:justify-start justify-center pt-10'>
+            <div className='h-[40%] z-[49] flex items-center md:justify-start justify-center pt-10'>
               <AnimatePresence mode='wait'>
                 <motion.div
                   key={activeSection}
@@ -161,7 +161,7 @@ export default function Home() {
               </AnimatePresence>
             </div>
 
-            <div className='mt-1'>
+            <div className='mt-1 ml-[-15px]'>
               <TestimonialCarousel />
             </div>
           </div>

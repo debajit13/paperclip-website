@@ -23,8 +23,15 @@ export default function Navbar({ customStyle }: { customStyle?: string }) {
 
       {/* Navigation Links */}
       <div className='flex items-center space-x-1 mx-2 md:mx-6 font-poppins font-bold text-[14px] leading-[16px] text-gray-700'>
-        {/* <span className="px-2">Seller</span>
-        <span className="px-2">Buyer</span> */}
+        <Link href={'/'} target='_blank' className='px-2'>
+          Contact Us
+        </Link>
+        <Link href={'/'} target='_blank' className='px-2'>
+          Terms
+        </Link>
+        <Link href={'/'} target='_blank' className='px-2'>
+          Privacy
+        </Link>
       </div>
 
       {/* Pro Badge */}
