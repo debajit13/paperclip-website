@@ -5,7 +5,6 @@ import { user1, user2, user3 } from '@/utils/assets';
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import TestimonialCard from './testimonial-card';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const TestimonialCarousel = ({
   items,

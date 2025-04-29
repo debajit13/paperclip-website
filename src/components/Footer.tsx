@@ -6,24 +6,17 @@ import {
   animatedImg11,
   animatedImg2,
   animatedImg3,
-  animatedImg5,
   animatedImg8,
-  animatedImg9,
-  arrow,
   arrowFour,
   ashtonMorning,
-  downloadNow,
   downloadNow2,
-  frameLeft,
-  frameRight,
-  mobile,
   qrCode,
   referral,
 } from '@/utils/assets';
 import Navbar from './Navbar';
 import NavbarMobile from './NavbarMobile';
 import { useEffect, useRef, useState } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { useInView } from 'framer-motion';
 import AiTryOnSection from './AiTryOnSection';
 
 export default function FooterSection() {
@@ -36,8 +29,6 @@ export default function FooterSection() {
   const leftVideoRef = useRef(null);
   const rightVideoRef = useRef(null);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const ref = useRef(null);
-  const isInView = useInView(ref);
 
   // IntersectionObserver to detect when component is in viewport
   useEffect(() => {
