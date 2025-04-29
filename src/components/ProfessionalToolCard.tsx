@@ -1,11 +1,5 @@
 import Image from 'next/image';
-import {
-  instantLeft,
-  instantRight,
-  pcardOne,
-  posThree,
-  square,
-} from '@/utils/assets';
+import { posThree, square } from '@/utils/assets';
 
 export default function ProfessionalToolCard({
   customStyle,
