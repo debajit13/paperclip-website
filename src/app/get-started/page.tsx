@@ -1,7 +1,7 @@
 'use client';
 import React, { useRef } from 'react';
-import DashboardCard from '../components/DashboardCard';
-import ProfessionalToolCard from '../components/ProfessionalToolCard';
+import DashboardCard from '../../components/DashboardCard';
+import ProfessionalToolCard from '../../components/ProfessionalToolCard';
 import {
   pcardOne,
   pcardTwo,
@@ -19,20 +19,18 @@ import {
   iZettle,
   alignedIncentives,
 } from '@/utils/assets';
-import ProfessionalToolCardTwo from '../components/ProfessionalToolCardTwo';
-import LiveDemoCard from '../components/LiveDemoCard';
-import SellingEffortlesslyCard from '../components/SellingEffortlessCard';
-import Navbar from '../components/Navbar';
+import LiveDemoCard from '../../components/LiveDemoCard';
+import SellingEffortlesslyCard from '../../components/SellingEffortlessCard';
+import Navbar from '../../components/Navbar';
 import Image from 'next/image';
-import Carousel from '../components/Carousel';
+import Carousel from '../../components/Carousel';
 import {
   carouselContentTwo,
   carouselStepsTwo,
 } from '@/constants/carouselContent';
-import ScrollingCarousel from '../components/ScrollingCarousel';
-import LaunchPartnerOffer from '../components/LaunchPartnerOfferCard';
-import NavbarMobile from '../components/NavbarMobile';
-import { InfiniteMovingCardsDemo } from '../components/InfiniteMovingCards';
+import LaunchPartnerOffer from '../../components/LaunchPartnerOfferCard';
+import NavbarMobile from '../../components/NavbarMobile';
+import { InfiniteMovingCardsDemo } from '../../components/InfiniteMovingCards';
 import { motion, useInView } from 'framer-motion';
 
 const GetStarted = () => {
