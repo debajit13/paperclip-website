@@ -30,26 +30,30 @@ npm install
 
 # or
 
+```
 yarn install
+```
 
 ## 🛠️ Development
 
 To run the project locally:
 
+```
 npm run dev
+```
 
 # or
 
 yarn dev
 
-The app will be available at http://localhost:3000.
+The app will be available at `http://localhost:3000`.
 
 ## 📄 Scripts
 
-• dev — Start the development server
-• build — Build the production application
-• start — Start the production server
-• lint — Run linter to check code quality
+- dev — Start the development server
+- build — Build the production application
+- start — Start the production server
+- lint — Run linter to check code quality
 
 ## 📁 Folder Structure
 
@@ -83,7 +87,3 @@ The app will be available at http://localhost:3000.
 ## 🤝 Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request to collaborate.
-
-## 📜 License
-
-This project is licensed under the MIT License.
