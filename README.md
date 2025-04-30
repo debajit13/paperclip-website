@@ -80,9 +80,9 @@ The app will be available at `http://localhost:3000`.
 
 ## 🧠 Future Improvements
 
-• Integrate AI recommendation system for products
-• Enhance search and filter capabilities
-• Implement chat system for buyers and sellers
+- Integrate AI recommendation system for products
+- Enhance search and filter capabilities
+- Implement chat system for buyers and sellers
 
 ## 🤝 Contributing
 
